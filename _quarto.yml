@@ -1,0 +1,129 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "DATA 202: Statistically Measuring and Modeling Social Justice"
+  description: "Homepage for DATA 202: Statistically Measuring and Modeling Social Justice"
+  site-url: "https://github.com/data-202/"
+  
+  repo-url: https://github.com/data-202/
+  
+  open-graph: true
+
+  page-footer:
+    right: "This page was built by Nathan Alexander, PhD in [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2024, Nathan Alexander"
+    background: "#D9E3E4"
+   
+  sidebar:
+    background: "#D9E3E4"
+    logo: "img/dubois-loc.jpg"
+    pinned: true
+    align: center
+    tools: 
+      - icon: github
+        href: https://github.com/data-202/
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://canvas.howard.edu/courses/55030
+        text: "Canvas site"
+  
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:  
+    - section: "Course information"
+      contents:
+        - href: index.qmd
+          text: Course landing page
+        - href: course-overview.qmd
+          text: Overview
+        - href: assignments.qmd
+          text: Assignments
+        - href: computing.qmd
+          text: Computing
+        - href: schedule.qmd
+          text: Schedule
+    - section: "Modules"
+      contents:
+        - href: module01.qmd
+          text: Module 1
+        - href: module02.qmd
+          text: Module 2
+        - href: module03.qmd
+          text: Module 3
+        - href: module04.qmd
+          text: Module 4
+        - href: module05.qmd
+          text: Module 5
+        - href: module06.qmd
+          text: Module 6
+        - href: module07.qmd
+          text: Module 7
+        - href: module08.qmd
+          text: Module 8
+        - href: module09.qmd
+          text: Module 9
+        - href: module10.qmd
+          text: Module 10
+        - href: module11.qmd
+          text: Module 11
+        - href: module12.qmd
+          text: Module 12
+        - href: module14.qmd
+          text: Module 14
+        - href: module15.qmd
+          text: Module 15
+    - section: "Appendix"
+      contents:
+        - section: "Papers"
+          contents:
+            - href: papers/paper1.qmd
+              text: Paper 1
+            - href: papers/paper2.qmd
+              text: Paper 2
+            - href: papers/papers-instructions.qmd
+              text: Instructions for each paper
+            - href: papers/papers-more-info.qmd
+              text: More information for papers
+        - section: "Labs"
+          contents: 
+            - href: labs/lab1.qmd
+              text: Lab 1
+            - href: labs/lab2.qmd
+              text: Lab 2
+            - href: labs/lab3.qmd
+              text: Lab 3
+            - href: labs/lab4.qmd
+              text: Lab 4
+        - section: "HW"
+          contents:
+            - href: hw/hw1.qmd
+              text: HW 1
+            - href: hw/hw2.qmd
+              text: HW 2
+            - href: hw/hw3.qmd
+              text: HW 3
+            - href: hw/hw4.qmd
+              text: HW 4
+        - href: solutions.qmd
+          text: "Solutions"
+
+format:
+  html:
+    theme: 
+      light: [cosmo, style/data202.scss]
+      dark: [cosmo, style/data202.scss, style/theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    callout-appearance: simple
+    colorlinnks: true
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+execute: 
+  freeze: auto
+    
+editor: visual
