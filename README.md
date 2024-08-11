@@ -1,3 +1,7 @@
-# Welcome to Data 202
+# Data 202
 
-Please read below for information on how to get set-up for our course.
+Statistically Measuring and Modeling Social Justice
+
+Fall 2024
+
+Prof. Nathan Alexander
