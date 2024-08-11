@@ -4,4 +4,6 @@ Statistically Measuring and Modeling Social Justice
 
 Fall 2024
 
-Prof. Nathan Alexander
+Instrutor: Prof. Nathan Alexander
+
+TA: TBD
