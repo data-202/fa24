@@ -1,0 +1,41 @@
+---
+title: "Data sets"
+format: html
+---
+
+-   [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
+-   [Bikeshare data portal](https://www.bikeshare.com/data/)
+-   [CDC](https://www.cdc.gov/datastatistics/)
+-   [Data.gov](https://www.data.gov/)
+-   [Data is Plural](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+-   [Durham Open Data Portal](https://live-durhamnc.opendata.arcgis.com/)
+-   [Edinburgh Open Data](https://edinburghopendata.info/)
+-   [Election Studies](https://electionstudies.org//)
+-   [European Statistics](https://ec.europa.eu/eurostat/)
+-   [CORGIS: The Collection of Really Great, Interesting, Situated Datasets](https://think.cs.vt.edu/corgis/csv/)
+-   [General Social Survey](https://gss.norc.org/)
+-   [Google Dataset Search](https://datasetsearch.research.google.com/)
+-   [Harvard Dataverse](https://dataverse.harvard.edu/)
+-   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
+-   [IPUMS survey data from around the world](https://ipums.org/)
+-   [Los Angeles Open Data](https://data.lacity.org/browse)
+-   [National Crime Victimization Survey](https://www.icpsr.umich.edu/web/NACJD/studies/38090/summary)
+-   [NHS Scotland Open Data](https://www.opendata.nhs.scot/)
+-   [NYC OpenData](https://opendata.cityofnewyork.us/)
+-   [Open access to Scotland's official statistics](https://statistics.gov.scot/home)
+-   [Pew Research](https://www.pewresearch.org/download-datasets/)
+-   [PRISM Data Archive Project](https://www.icpsr.umich.edu/icpsrweb/content/ICPSR/fenway.html)
+-   [Statistics Canada](https://www.statcan.gc.ca/en/start)
+-   [The National Bureau of Economic Research](https://www.nber.org/research/data?page=1&perPage=50)
+-   [TidyTuesday](https://github.com/rfordatascience/tidytuesday)
+-   [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+-   [UK Government Data](https://data.gov.uk/)
+-   [UNICEF Data](https://data.unicef.org/)
+-   [United Nations Data](http://data.un.org/)
+-   [United Nations Statistics Division](https://unstats.un.org/UNSDWebsite/)
+-   [US Census Data](https://www.census.gov/data.html)
+-   [US Government Data](https://sctyner.github.io/static/presentations/Misc/GraphicsGroupISU/2018-11-16-us-govt-data.html)
+-   [World Bank Data](https://datacatalog.worldbank.org/home)
+-   [Youth Risk Behavior Surveillance System (YRBSS)](https://chronicdata.cdc.gov/Youth-Risk-Behaviors/DASH-Youth-Risk-Behavior-Surveillance-System-YRBSS/q6p7-56au)
+
+
