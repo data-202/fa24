@@ -12,7 +12,7 @@ format:
     reference_docx: "word-styles-reference.docx"
     fig_caption: true
   revealjs:
-    output-file: module02-slides.html
+    output-file: week02-slides.html
     height: 900
     width: 1600
     smaller: false

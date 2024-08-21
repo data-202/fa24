@@ -677,7 +677,7 @@ flowchart LR
 <u>Levels of measurement</u> are used to describe variable types.
 
 | Level of measurement | Brief description                                                                      | Examples               |
-|-----------------|--------------------------------------|-----------------|
+|----------------------|----------------------------------------------------------------------------------------|------------------------|
 | **Nominal**          | Data cannot be arranged in some order. Only categories are used.                       | Eye color, city        |
 | **Ordinal**          | Data can be arranged in some order but differences cannot be found or are meaningless. | Rankings, likert scale |
 | **Interval**         | There is not a natural zero starting point and rations are meaningless.                | Temperatures, years    |
