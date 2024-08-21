@@ -35,15 +35,14 @@ A high-level view of the course.
 
     **Course meeting location**: Zoom (see Canvas)
 
-| Course component               | Weeks   | Dates[^1]       |
-|--------------------------------|---------|-----------------|
-| Part I: Statistics and society | 4 weeks | Jan 8 - Feb 2 |
-| Part II: Data and people       | 4 weeks | Feb 5 - Mar 1 |
-| Part III: Data and policy      | 4 weeks | Mar 4 - Mar 29 |
-| Part IV: Data in practice      | 3 weeks | Apr 1 - Apr 19  |
-| Course wrap-up                 | 2 weeks | Apr 22 - May 3  |
+| Course component               | Weeks   | Dates[^1]      |
+|--------------------------------|---------|----------------|
+| Part I: Statistics and society | 4 weeks | Aug 21 - Sep 13  |
+| Part II: Data and people       | 4 weeks | Sep 16 - Oct 11  |
+| Part III: Data and policy      | 4 weeks | Oct 14 - Nov 8 |
+| Part IV: Data in practice      | 3 weeks | Nov 11 - Nov 29 |
 
-: DATA 202 course schedule (spring 2024) {#tbl-schedule}
+: DATA 202 course schedule (fall 2024) {#tbl-schedule}
 
 [^1]: Please note that these are rough estimates
 
@@ -56,10 +55,9 @@ Canvas is the go-to for submissions, and where you can find readings and assignm
 ::: incremental
 The four categories for **assignments** in this course are as follows:
 
--   **Homework** (hw). Regular practice problems \[10 points\]
--   **Mini-projects: Labs**. \[10 points\]
--   **Mini-projects: Papers**. Four papers \[50 points\]
--   **Exams**. Midterm exam \[30 points\]
+-   **Mini-projects: Labs reports**. \[25 points\]
+-   **Mini-projects: Papers**. Four papers \[60 points\]
+-   **Exam**. Midterm examination \[15 points\]
 :::
 
 #### Canvas has your readings
