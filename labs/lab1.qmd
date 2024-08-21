@@ -940,7 +940,7 @@ Note: The use of internet resources like `Chat GPT` are discouraged when generat
 
 Please complete the following reporting tasks for each part of the Lab 1 assignment.
 
-In the future, you will submit your reports using what is called a *Quarto Markdown* file `(.qmd)`.
+You will submit your reports using what is called a *RMarkdown* file `(.Rmd)`.
 
 For Lab 1, you may submit your lab reports to Canvas in any format that you prefer. That is, you can submit our lab reports as a `.pdf` or an *R Script* or even as a `.txt` file; that said, I prefer that you <u>not</u> submit `.doc` or `.docx` files.
 
