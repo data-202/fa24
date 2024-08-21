@@ -8,11 +8,9 @@ format:
 editor: visual
 ---
 
-For Lab 1, you should submit your solutions to Canvas as a `.pdf` and include an *R Script* or your code in an appendix or .txt file.
+For Lab 1, you should submit your solutions to Canvas as a `.pdf` and include an *RMarkdown* file of your code. Please see the *Preparing Lab Reports* section at the bottom of this assignment.
 
-Please see the *Preparing Lab Reports* section at the bottom of this assignment.
-
-Your file name should read: FirstName_LastName_Lab#
+Your file name should read: FirstName_LastName_Lab1.Rmd
 
 ## Learning Objectives
 
@@ -44,7 +42,7 @@ This lab will help you explore and create your own workflow. The goal of a codin
 
 The topics in Lab 1 cover one way to approach a new data set. In this lab, you'll cover how to load data from a package, generate a set of outputs using small code chunks, and produce and submit a few simple plots.
 
-You will submit your final output on Canvas [here](https://canvas.howard.edu/courses/46792).
+You will submit your final output on Canvas [here](https://canvas.howard.edu/courses/55030).
 
 ------------------------------------------------------------------------
 
@@ -71,8 +69,6 @@ getwd()
 
 If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of and set up in lecture five.
 
-For example, `stats-pt2/lab1`.
-
 ```{r}
 #| echo: true
 #| output: false
@@ -83,21 +79,42 @@ For example, `stats-pt2/lab1`.
 
 You can add a new sub-folder manually or under the **Files** tab in the RStudio IDE.
 
-## Task 0.2: Start a new R Script
+## Task 0.2: Start a new RMarkdown file
 
-Once you have confirmed that you are in the correct directory, start a new R Script.
-
-## Task 0.3: Write a preamble
+Once you have confirmed that you are in the correct directory, start a new RMarkdown file (.Rmd) and write your preamble.
 
 ```{r}
 #| echo: true
 #| output: false
 #| warning: false
-## Name: <include your full name>
-## Assignment: Lab 1
-## Date: <here you may want to add a date>
-## Purpose: <insert the goals or purpose of the RScript>
+
+# ---
+# title: "Lab 1"
+# author: "Your Full Name"
+# date: "2024-09-09"
+# output:
+#   pdf_document: default
+#   html_document:
+#     theme: flatly
+# editor_options:
+#   markdown:
+#     wrap: sentence
+# ---
+
 ```
+
+## Task 0.3: Write setup code chunks
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+
+# ```{r, eval=F}
+# install.packages("devtools")
+# library(devtools)
+```
+
 
 ## Task 0.4: Packages and libraries
 
@@ -105,17 +122,19 @@ Once you have confirmed that you are in the correct directory, start a new R Scr
 #| echo: true
 #| output: false
 #| warning: false
-# install the tidyverse package
+
+# install package
 install.packages("tidyverse", repos = "http://cran.us.r-project.org")
 install.packages("remotes", repos = "http://cran.us.r-project.org")
-                 
-# load the libraries needed for today's analyses
+ 
+# load the necessary libraries
+library(tidyverse) #collection of R packages designed for data science
+library(here) #helps with filepaths
 library(tidyverse)
 library(dplyr)
 library(remotes)
 
-## update packages if needed; remove # to run code
-# update.packages("package-name")
+here::i_am("lab1.qmd")
 ```
 
 The `dplyr` package supports data analyst with efficient data manipulation. As a part of the `tidyverse` package, the functions included in `dplyr` we loaded earlier will help you generate efficient workflows. Though, in reality, most analysts transition between classic code found widely on the internet and the more recent `dplyr` commands.
