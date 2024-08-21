@@ -77,7 +77,7 @@ The landing page for our companion site can be found [here](https://data-202.git
 
 ### Paper #1
 
-[<u>**REMINDER: Paper 1 is due Tuesday January 23**</u>]{style="color:red;"}
+[<u>**REMINDER: Paper 1 is due Friday September 25**</u>]{style="color:red;"}
 
 You can read more about paper #1 [here](/papers/paper1.qmd).
 
