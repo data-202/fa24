@@ -16,10 +16,10 @@ Our course assignments will be split between reading and typing (code and analyt
 | Course component                   | Assignment          | Date(s)          |
 |------------------------|-----------------------------|-------------------|
 | **Part I: Statistics and society** |                     |                  |
-|                                    | Lab 0               | Due: Tue Aug 27  |
+|                                    | Lab #0               | Due: Tue Aug 27  |
 |                                    | Lab #1              | Due: Fri Sept 13 |
 | **Part II: Data and people**       |                     |                  |
-|                                    | Paper 1             | Due: Fri Sept 25 |
+|                                    | Paper #1             | Due: Fri Sept 25 |
 |                                    | Midterm examination | Due: Sun Oct 6   |
 | **Part III: Data and policy**      |                     |                  |
 |                                    | Lab #2              | Due: Fri Oct 18  |
@@ -38,8 +38,6 @@ Below are a few sample exercises. This work is ungraded, and while there is no p
 **Exercise 0.2**. What is an integer? What is the sum of the first 100 positive integers? Explain your solution. Cite any sources. Bonus points (but definitely not required for our course): write a proof of the solution.
 
 **Exercise 0.3**. Have you ever heard of p-hacking? P-hacking is where a researcher conducts multiple tests and only reports the significant results from those tests. What are some main issues here?
-
-I will <u>**not**</u> collect hw-0 but I am happy to review it if you'd like; upload it to Canvas [here](https://canvas.howard.edu/courses/46792).
 
 ### **Lab 0**
 

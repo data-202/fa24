@@ -493,6 +493,5 @@ Let's head over to Lab 1 to continue.
 
 ------------------------------------------------------------------------
 
-### **Next up**: Week 5
+# References
 
-We will continue with our statistical work and focus on some basics for statistical models.
