@@ -84,6 +84,8 @@ website:
               text: Paper 1
             - href: papers/paper2.qmd
               text: Paper 2
+            - href: papers/paper3.qmd
+              text: Paper 3
             - href: papers/papers-instructions.qmd
               text: Instructions for each paper
             - href: papers/papers-more-info.qmd
@@ -96,8 +98,6 @@ website:
               text: Lab 2
             - href: labs/lab3.qmd
               text: Lab 3
-            - href: labs/lab4.qmd
-              text: Lab 4
         - section: "HW"
           contents:
             - href: hw/hw1.qmd
