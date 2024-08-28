@@ -114,6 +114,7 @@ x <- c(2, 2, 4, 4)
 
 # compute the mean
 m = sum(x)/4
+m
 ```
 
 ---
