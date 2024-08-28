@@ -76,7 +76,10 @@ website:
           contents: 
             - href: labs/lab1.qmd
               text: Lab 1
-
+        - section: "Resources"
+          contents:
+            - href: resources.qmd
+            
 format:
   html:
     theme: 
