@@ -8,7 +8,7 @@
 
 <meta name="author" content="Nathan Alexander, PhD">
 
-<title>DATA 202: Statistically Measuring and Modeling Social Justice - DATA 202 - Module 2</title>
+<title>DATA 202: Statistically Measuring and Modeling Social Justice - DATA 202 - Week 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="DATA 202: Statistically Measuring and Modeling Social Justice - DATA 202 - Module 2">
+<meta property="og:title" content="DATA 202: Statistically Measuring and Modeling Social Justice - DATA 202 - Week 2">
 <meta property="og:description" content="Foundations">
 <meta property="og:image" content="https://github.com/data-202/weeks/week02_files/figure-html/unnamed-chunk-8-1.png">
 <meta property="og:site-name" content="DATA 202: Statistically Measuring and Modeling Social Justice">
@@ -244,6 +244,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../papers/annotated.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Annotated Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../papers/paper1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Paper 1</span></a>
   </div>
@@ -332,7 +338,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#notes-from-pelham-2013-reading" id="toc-notes-from-pelham-2013-reading" class="nav-link" data-scroll-target="#notes-from-pelham-2013-reading">Notes from <em>Pelham (2013)</em> reading</a></li>
   </ul></li>
-  <li><a href="#s-sqrtdfracsigma-x---m2n" id="toc-s-sqrtdfracsigma-x---m2n" class="nav-link" data-scroll-target="#s-sqrtdfracsigma-x---m2n"><span class="math display">\[ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}\]</span></a></li>
   <li><a href="#what-should-it-mean-to-be-critical-in-the-context-of-statistics" id="toc-what-should-it-mean-to-be-critical-in-the-context-of-statistics" class="nav-link" data-scroll-target="#what-should-it-mean-to-be-critical-in-the-context-of-statistics">What should it mean to be critical in the context of statistics?</a>
   <ul class="collapse">
   <li><a href="#notes-from-duncan-n.d.-reading." id="toc-notes-from-duncan-n.d.-reading." class="nav-link" data-scroll-target="#notes-from-duncan-n.d.-reading.">Notes from <em>Duncan (n.d.)</em> reading.</a></li>
@@ -357,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DATA 202 - Module 2</h1>
+<h1 class="title">DATA 202 - Week 2</h1>
 <p class="subtitle lead">Foundations</p>
 </div>
 
@@ -425,10 +430,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate sample data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the mean</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="fu">sum</span>(x)<span class="sc">/</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the median</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -436,6 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
+<hr>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the mode</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -450,6 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 2 2 </code></pre>
 </div>
 </div>
+<hr>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a histogram</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -458,23 +467,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<p>You also may recall the standard deviation, <span class="math inline">\(S\)</span>, of a set of values is calculated using:</p>
+<p>You also may recall the standard deviation, <span class="math inline">\(S\)</span>, of a set of values is calculated using: <span class="math display">\[ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}\]</span></p>
 </section>
-</section>
-</section>
-</section>
-<section id="s-sqrtdfracsigma-x---m2n" class="level2">
-<h2 class="anchored" data-anchor-id="s-sqrtdfracsigma-x---m2n"><span class="math display">\[ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}\]</span></h2>
 <section id="example-standard-deviation-of-a-set" class="level5">
 <h5 class="anchored" data-anchor-id="example-standard-deviation-of-a-set"><strong>EXAMPLE – Standard deviation of a set</strong></h5>
 <p>Assume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where <span class="math inline">\(x\)</span> is the score, <span class="math inline">\(m\)</span> is the mean (sometimes referred to as <span class="math inline">\(\bar{x}\)</span>), and <span class="math inline">\(n\)</span> is the sample size, we get the following:</p>
 <p><span class="math display">\[\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \dfrac{1 + 1 + 1 + 1}{4} = 1 \]</span> Most formulas of this nature are programmed into <em>R/RStudio</em>, but for more advanced modeling, we learn how to input raw data and formula into the software.</p>
 <hr>
 </section>
+</section>
 <section id="inferential-measures" class="level4">
 <h4 class="anchored" data-anchor-id="inferential-measures">Inferential measures</h4>
 <p>Pelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p.&nbsp;13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of <strong>theory</strong> and <strong>context</strong> in making inferences about data.</p>
 <hr>
+</section>
 </section>
 </section>
 <section id="what-should-it-mean-to-be-critical-in-the-context-of-statistics" class="level2">
@@ -515,14 +521,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="part-ii-content" class="level1">
 <h1>Part II: Content</h1>
 <hr>
-<p>The quantification of information can help us understand and represent important situations.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/wk2-quant.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
+<p>The quantification of information can help us understand and represent important situations. We’ll begin by exploring the concept of a set, and how it is defined in mathematics and used to frame various situations.</p>
 <hr>
-<p>We’ll begin by exploring the concept of a set, and how it is defined in mathematics and used to frame various situations.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

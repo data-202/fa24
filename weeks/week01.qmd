@@ -1,5 +1,5 @@
 ---
-title: "DATA 202 - Module 1"
+title: "DATA 202 - Week 1"
 subtitle: "Introduction to the Course"
 author: "Nathan Alexander, PhD"
 institute: "Center for Applied Data Science and Analytics"
@@ -31,7 +31,6 @@ editor_options:
 ```{r, echo=F, eval=F, warning=FALSE}
 install.packages("devtools")
 library(devtools)
-
 ```
 
 ```{r, include=F, warning=F}

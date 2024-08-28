@@ -310,49 +310,49 @@
   {
     "objectID": "weeks/week01.html",
     "href": "weeks/week01.html",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "",
     "text": "In this course, students will develop an understanding of statistics as a research tool. Students are expected to have some basic knowledge of statistics from a prior course. Emphasis will be placed on understanding statistical concepts and applying and interpreting tests of statistical inference for real-life applications. The content will include, but not be limited to, visual representations of data, descriptive statistics, correlation and simple regression, sampling distributions, and the assumptions associated with and the application of selected inferential statistical procedures. Throughout the course, there will be a strong emphasis on how statistical modeling can be a driving force for social justice."
   },
   {
     "objectID": "weeks/week01.html#course-description",
     "href": "weeks/week01.html#course-description",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "",
     "text": "In this course, students will develop an understanding of statistics as a research tool. Students are expected to have some basic knowledge of statistics from a prior course. Emphasis will be placed on understanding statistical concepts and applying and interpreting tests of statistical inference for real-life applications. The content will include, but not be limited to, visual representations of data, descriptive statistics, correlation and simple regression, sampling distributions, and the assumptions associated with and the application of selected inferential statistical procedures. Throughout the course, there will be a strong emphasis on how statistical modeling can be a driving force for social justice."
   },
   {
     "objectID": "weeks/week01.html#course-learning-objectives",
     "href": "weeks/week01.html#course-learning-objectives",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "Course Learning Objectives",
     "text": "Course Learning Objectives\n\nAppreciate and understand the role of statistics in your field\nEvaluate, comprehend, and explain the statistical findings in a data set\nExplore data in R\nApply appropriate application and interpretation of various inferential statistical procedures\nWrite a simple description of methodology and results from analysis\nDevelop an ability to apply appropriate statistical methods to summarize and analyze data\nMake sense of data and be able to report the results in appropriate tables or statistical terms"
   },
   {
     "objectID": "weeks/week01.html#course-canvas-site",
     "href": "weeks/week01.html#course-canvas-site",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "Course CANVAS site",
     "text": "Course CANVAS site"
   },
   {
     "objectID": "weeks/week01.html#course-companion-site",
     "href": "weeks/week01.html#course-companion-site",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "Course companion site",
     "text": "Course companion site\nThe landing page for our companion site can be found here."
   },
   {
     "objectID": "weeks/week01.html#initial-assignments",
     "href": "weeks/week01.html#initial-assignments",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "Initial assignments",
     "text": "Initial assignments\n\nPaper #1\nREMINDER: Paper 1 is due Friday September 25\nYou can read more about paper #1 here.\nSee the instructions for paper assignments here.\nAlso, learn more about paper assignments here.\n\n\nCase Study: Tuskegee Experiement of Untreated Syphillis\nTo help you prepare for our forthcoming discussions and readings, you should explore information about our first case study. One place to start is here: “The Tuskegee Experiment: Crash Course Black American History #29” in the video below:"
   },
   {
     "objectID": "weeks/week01.html#references",
     "href": "weeks/week01.html#references",
-    "title": "DATA 202 - Module 1",
+    "title": "DATA 202 - Week 1",
     "section": "References",
     "text": "References"
   },
@@ -1082,7 +1082,7 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "This page contains three sections:\n\nBrief overview of all course assignments.\nInformation about lab 0 (ungraded).\n\n\nOverview of course assignments\nOur course assignments will be split between reading and typing (code and analytic results).\n\n\n\n\n\n\n\n\nCourse component\nAssignment\nDate(s)\n\n\n\n\nPart I: Statistics and society\n\n\n\n\n\nLab #0\nDue: Tue Aug 27\n\n\n\nLab #1\nDue: Fri Sept 13\n\n\n\nAnnotated Bibliography\nDue: Fri Sept 5\n\n\nPart II: Data and people\n\n\n\n\n\nPaper #1\nDue: Fri Sept 25\n\n\n\nMidterm examination\nDue: Sun Oct 6\n\n\nPart III: Data and policy\n\n\n\n\n\nLab #2\nDue: Fri Oct 18\n\n\n\nPaper #2\nDue: Fri Nov 1\n\n\nPart IV: Data in practice\n\n\n\n\n\nLab #3\nDue: Fri Nov 15\n\n\n\nPaper #3\nDue: Fri Nov 29\n\n\n\nPaper #4 (optional)\nDue: Mon Dec 9\n\n\n\n\n\nSample exercises\nBelow are a few sample exercises. This work is ungraded, and while there is no prerequisite for this course, these problems should serve as a review and a preview of content that we’ll explore for the course. Please do not hesitate to reach out with questions.\nExercise 0.1. If an individual’s projected income is to be converted to a z-score, which of these z-scores would a “rational agent” prefer: -2.00, -1.00, 0, 1.00, or 2.00? What is a “rational agent”? Explain why the “rational agent” would prefer the z-score you selected? Cite any sources.\nExercise 0.2. What is an integer? What is the sum of the first 100 positive integers? Explain your solution. Cite any sources. Bonus points (but definitely not required for our course): write a proof of the solution.\nExercise 0.3. Have you ever heard of p-hacking? P-hacking is where a researcher conducts multiple tests and only reports the significant results from those tests. What are some main issues here?\n\n\nLab 0\nFor your first lab, you will install two software programs on your local machine: the first is base R and the second is the RStudio Integrated Development Environment, or IDE. Both programs are required.\n\n\n\n\n\n\nYou must download both R and RStudio!\n\n\n\n\n\nIn order to complete assignments, you must download base R and RStudio to your computer.\n\n\n\nRStudio is now called Posit. When you are searching online you will begin to see language differences.\nIt can all get very confusing. In order to reduce confusion, I am requesting that you watch this short tutorial so that we’re all on the same page. I will discuss this more when we meet.\n\n\nNext up: Computing\nOn the next page, I will walk you through downloading the appropriate software for our work this term."
+    "text": "This page contains three sections:\n\nBrief overview of all course assignments.\nInformation about lab 0 (ungraded).\n\n\nOverview of course assignments\nOur course assignments will be split between reading and typing (code and analytic results).\n\n\n\n\n\n\n\n\nCourse component\nAssignment\nDate(s)\n\n\n\n\nPart I: Statistics and society\n\n\n\n\n\nLab #0\nDue: Tue Aug 27\n\n\n\nAnnotated Bibliography\nDue: Fri Sept 5\n\n\n\nLab #1\nDue: Fri Sept 13\n\n\nPart II: Data and people\n\n\n\n\n\nPaper #1\nDue: Fri Sept 25\n\n\n\nMidterm examination\nDue: Sun Oct 6\n\n\nPart III: Data and policy\n\n\n\n\n\nLab #2\nDue: Fri Oct 18\n\n\n\nPaper #2\nDue: Fri Nov 1\n\n\nPart IV: Data in practice\n\n\n\n\n\nLab #3\nDue: Fri Nov 15\n\n\n\nPaper #3\nDue: Fri Nov 29\n\n\n\nPaper #4 (optional)\nDue: Mon Dec 9\n\n\n\n\n\nSample exercises\nBelow are a few sample exercises. This work is ungraded, and while there is no prerequisite for this course, these problems should serve as a review and a preview of content that we’ll explore for the course. Please do not hesitate to reach out with questions.\nExercise 0.1. If an individual’s projected income is to be converted to a z-score, which of these z-scores would a “rational agent” prefer: -2.00, -1.00, 0, 1.00, or 2.00? What is a “rational agent”? Explain why the “rational agent” would prefer the z-score you selected? Cite any sources.\nExercise 0.2. What is an integer? What is the sum of the first 100 positive integers? Explain your solution. Cite any sources. Bonus points (but definitely not required for our course): write a proof of the solution.\nExercise 0.3. Have you ever heard of p-hacking? P-hacking is where a researcher conducts multiple tests and only reports the significant results from those tests. What are some main issues here?\n\n\nLab 0\nFor your first lab, you will install two software programs on your local machine: the first is base R and the second is the RStudio Integrated Development Environment, or IDE. Both programs are required.\n\n\n\n\n\n\nYou must download both R and RStudio!\n\n\n\n\n\nIn order to complete assignments, you must download base R and RStudio to your computer.\n\n\n\nRStudio is now called Posit. When you are searching online you will begin to see language differences.\nIt can all get very confusing. In order to reduce confusion, I am requesting that you watch this short tutorial so that we’re all on the same page. I will discuss this more when we meet.\n\n\nNext up: Computing\nOn the next page, I will walk you through downloading the appropriate software for our work this term."
   },
   {
     "objectID": "weeks/week08.html",
@@ -1360,105 +1360,105 @@
   {
     "objectID": "weeks/week02-slides.html#what-is-statistics",
     "href": "weeks/week02-slides.html#what-is-statistics",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "What is statistics?",
     "text": "What is statistics?\nStatistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.\n\n\n\nDEFINITION: Statistics\n\n\nStatistics is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.\n\n\n\nThere are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements."
   },
   {
     "objectID": "weeks/week02-slides.html#s-sqrtdfracsigma-x---m2n",
     "href": "weeks/week02-slides.html#s-sqrtdfracsigma-x---m2n",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "\\[ S = \\sqrt{\\dfrac{\\Sigma (x - m)^2}{n}}\\]",
     "text": "\\[ S = \\sqrt{\\dfrac{\\Sigma (x - m)^2}{n}}\\]\nEXAMPLE – Standard deviation of a set\nAssume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where \\(x\\) is the score, \\(m\\) is the mean (sometimes referred to as \\(\\bar{x}\\)), and \\(n\\) is the sample size, we get the following:\n\\[\\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \\dfrac{1 + 1 + 1 + 1}{4} = 1 \\] Most formulas of this nature are programmed into R/RStudio, but for more advanced modeling, we learn how to input raw data and formula into the software."
   },
   {
     "objectID": "weeks/week02-slides.html#what-should-it-mean-to-be-critical-in-the-context-of-statistics",
     "href": "weeks/week02-slides.html#what-should-it-mean-to-be-critical-in-the-context-of-statistics",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "What should it mean to be critical in the context of statistics?",
     "text": "What should it mean to be critical in the context of statistics?\nNotes from Duncan (n.d.) reading.\nOn Canvas, in the Week 2 folder, there is a document titled “Critical Thinking” by Jennifer Duncan. This document is one example of how we can frame what it could or should mean to be critical in statistics. Please review this document."
   },
   {
     "objectID": "weeks/week02-slides.html#sets-and-numbers",
     "href": "weeks/week02-slides.html#sets-and-numbers",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Sets and numbers",
     "text": "Sets and numbers\n\n\n\nDEFINITIONS: Sets of numbers\n\n\n– Natural numbers: \\(\\mathbb{N} = \\{1, 2, 3, ...\\}\\)\n– Whole numbers: \\(\\mathbb{N_0} = \\{0, 1, 2, 3, ...\\}\\)\n– Integers: \\(\\mathbb{Z} = \\{..., -3, -2, -1, 0, 1, 2, 3, ...\\}\\)\n– Rational numbers: \\(\\mathbb{Q} = \\Big\\{\\dfrac{p}{q}, p \\in \\mathbb{Z}, q \\in \\mathbb{Z}, q \\neq 0 \\Big\\}\\)"
   },
   {
     "objectID": "weeks/week02-slides.html#getting-started-in-rstudio",
     "href": "weeks/week02-slides.html#getting-started-in-rstudio",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Getting started in RStudio",
     "text": "Getting started in RStudio\nIn Lab 0, you downloaded and installed base R and RStudio. In this section, we will learn more about R and RStudio.\nLet’s start with a little fun!"
   },
   {
     "objectID": "weeks/week02-slides.html#arithmetic-in-r",
     "href": "weeks/week02-slides.html#arithmetic-in-r",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Arithmetic in R",
     "text": "Arithmetic in R\nWe will learn how to calculate values in R."
   },
   {
     "objectID": "weeks/week02-slides.html#variables-in-r",
     "href": "weeks/week02-slides.html#variables-in-r",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Variables in R",
     "text": "Variables in R\nWe will learn to give a variable (or character) a value."
   },
   {
     "objectID": "weeks/week02.html",
     "href": "weeks/week02.html",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "",
-    "text": "Statistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.\n\n\n\n\n\n\nDEFINITION: Statistics\n\n\n\nStatistics is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.\n\n\nThere are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements.\n\n\n\n“Statistics are a set of mathematical procedures for summarizing and interpreting observations” (p.5).\nDescriptive statistics vs. Inferential statistics\nPelham describes descriptive statistics as “statistics used to summarize or describe a set of observations”, whereas inferential statistics are defined as “statistics used to draw inferences about a set of observations” (p. 5).\n\n\n\n\nCentral tendency: the “average” of a set of observations (i.e., mean, median, mode)\nDispersion: how data vary (i.e., range, variance, standard deviation)\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. We can input and compute this data in R using the following code:\n\n# Generate sample data\nx &lt;- c(2, 2, 4, 4)\n\n\n# compute the mean\nm = sum(x)/4\n\n\n# compute the median\nmedian(x)\n\n[1] 3\n\n\n\n# compute the mode\nmode(x)\n\n[1] \"numeric\"\n\ntable.x &lt;- table(x)\ntable.x\n\nx\n2 4 \n2 2 \n\n\n\n# create a histogram\nhist(x)\n\n\n\n\n\nYou also may recall the standard deviation, \\(S\\), of a set of values is calculated using:\n\n\n\n\n\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where \\(x\\) is the score, \\(m\\) is the mean (sometimes referred to as \\(\\bar{x}\\)), and \\(n\\) is the sample size, we get the following:\n\\[\\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \\dfrac{1 + 1 + 1 + 1}{4} = 1 \\] Most formulas of this nature are programmed into R/RStudio, but for more advanced modeling, we learn how to input raw data and formula into the software.\n\n\n\n\nPelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p. 13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of theory and context in making inferences about data.\n\n\n\n\n\n\n\nOn Canvas, in the Week 2 folder, there is a document titled “Critical Thinking” by Jennifer Duncan. This document is one example of how we can frame what it could or should mean to be critical in statistics. Please review this document.\n\n\nUsing a higher order of thinking. Duncan emphasizes that critical thinking is a higher order of thinking with different advanced thinking skills, and offers a few suggestions.\n\nWe base our thinking on logic and not on feelings.\nWe should look deeper into inferences for hidden assumptions or values.\nAsk complex questions that help build a critical inquiry.\n\n\n\n\nAsking complex questions. Duncan breaks down the process into a few sub-questions.\n\nWho is the implied audience?\nWhat are the strengths and weaknesses of the argument?\nWhat are the underlying assumptions and values?\n\n\n\n\nUsing a variety of thinking processes. Duncan defines a process around analyzing, synthesizing, interpreting, and evaluating information that helps with our thinking.\n\n\n\nReflecting on how we answer a question. Duncan ends with a set of questions that help us think about different points of view, if we have clarity, and if more details are needed."
+    "text": "Statistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.\n\n\n\n\n\n\nDEFINITION: Statistics\n\n\n\nStatistics is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.\n\n\nThere are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements.\n\n\n\n“Statistics are a set of mathematical procedures for summarizing and interpreting observations” (p.5).\nDescriptive statistics vs. Inferential statistics\nPelham describes descriptive statistics as “statistics used to summarize or describe a set of observations”, whereas inferential statistics are defined as “statistics used to draw inferences about a set of observations” (p. 5).\n\n\n\n\nCentral tendency: the “average” of a set of observations (i.e., mean, median, mode)\nDispersion: how data vary (i.e., range, variance, standard deviation)\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. We can input and compute this data in R using the following code:\n\n# Generate sample data\nx &lt;- c(2, 2, 4, 4)\n\n\n\n# compute the mean\nm = sum(x)/4\n\n\n\n# compute the median\nmedian(x)\n\n[1] 3\n\n\n\n\n# compute the mode\nmode(x)\n\n[1] \"numeric\"\n\ntable.x &lt;- table(x)\ntable.x\n\nx\n2 4 \n2 2 \n\n\n\n\n# create a histogram\nhist(x)\n\n\n\n\n\nYou also may recall the standard deviation, \\(S\\), of a set of values is calculated using: \\[ S = \\sqrt{\\dfrac{\\Sigma (x - m)^2}{n}}\\]\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where \\(x\\) is the score, \\(m\\) is the mean (sometimes referred to as \\(\\bar{x}\\)), and \\(n\\) is the sample size, we get the following:\n\\[\\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \\dfrac{1 + 1 + 1 + 1}{4} = 1 \\] Most formulas of this nature are programmed into R/RStudio, but for more advanced modeling, we learn how to input raw data and formula into the software.\n\n\n\n\n\nPelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p. 13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of theory and context in making inferences about data.\n\n\n\n\n\n\n\n\nOn Canvas, in the Week 2 folder, there is a document titled “Critical Thinking” by Jennifer Duncan. This document is one example of how we can frame what it could or should mean to be critical in statistics. Please review this document.\n\n\nUsing a higher order of thinking. Duncan emphasizes that critical thinking is a higher order of thinking with different advanced thinking skills, and offers a few suggestions.\n\nWe base our thinking on logic and not on feelings.\nWe should look deeper into inferences for hidden assumptions or values.\nAsk complex questions that help build a critical inquiry.\n\n\n\n\nAsking complex questions. Duncan breaks down the process into a few sub-questions.\n\nWho is the implied audience?\nWhat are the strengths and weaknesses of the argument?\nWhat are the underlying assumptions and values?\n\n\n\n\nUsing a variety of thinking processes. Duncan defines a process around analyzing, synthesizing, interpreting, and evaluating information that helps with our thinking.\n\n\n\nReflecting on how we answer a question. Duncan ends with a set of questions that help us think about different points of view, if we have clarity, and if more details are needed."
   },
   {
     "objectID": "weeks/week02.html#what-is-statistics",
     "href": "weeks/week02.html#what-is-statistics",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "",
-    "text": "Statistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.\n\n\n\n\n\n\nDEFINITION: Statistics\n\n\n\nStatistics is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.\n\n\nThere are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements.\n\n\n\n“Statistics are a set of mathematical procedures for summarizing and interpreting observations” (p.5).\nDescriptive statistics vs. Inferential statistics\nPelham describes descriptive statistics as “statistics used to summarize or describe a set of observations”, whereas inferential statistics are defined as “statistics used to draw inferences about a set of observations” (p. 5).\n\n\n\n\nCentral tendency: the “average” of a set of observations (i.e., mean, median, mode)\nDispersion: how data vary (i.e., range, variance, standard deviation)\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. We can input and compute this data in R using the following code:\n\n# Generate sample data\nx &lt;- c(2, 2, 4, 4)\n\n\n# compute the mean\nm = sum(x)/4\n\n\n# compute the median\nmedian(x)\n\n[1] 3\n\n\n\n# compute the mode\nmode(x)\n\n[1] \"numeric\"\n\ntable.x &lt;- table(x)\ntable.x\n\nx\n2 4 \n2 2 \n\n\n\n# create a histogram\nhist(x)\n\n\n\n\n\nYou also may recall the standard deviation, \\(S\\), of a set of values is calculated using:"
+    "text": "Statistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.\n\n\n\n\n\n\nDEFINITION: Statistics\n\n\n\nStatistics is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.\n\n\nThere are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements.\n\n\n\n“Statistics are a set of mathematical procedures for summarizing and interpreting observations” (p.5).\nDescriptive statistics vs. Inferential statistics\nPelham describes descriptive statistics as “statistics used to summarize or describe a set of observations”, whereas inferential statistics are defined as “statistics used to draw inferences about a set of observations” (p. 5).\n\n\n\n\nCentral tendency: the “average” of a set of observations (i.e., mean, median, mode)\nDispersion: how data vary (i.e., range, variance, standard deviation)\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. We can input and compute this data in R using the following code:\n\n# Generate sample data\nx &lt;- c(2, 2, 4, 4)\n\n\n\n# compute the mean\nm = sum(x)/4\n\n\n\n# compute the median\nmedian(x)\n\n[1] 3\n\n\n\n\n# compute the mode\nmode(x)\n\n[1] \"numeric\"\n\ntable.x &lt;- table(x)\ntable.x\n\nx\n2 4 \n2 2 \n\n\n\n\n# create a histogram\nhist(x)\n\n\n\n\n\nYou also may recall the standard deviation, \\(S\\), of a set of values is calculated using: \\[ S = \\sqrt{\\dfrac{\\Sigma (x - m)^2}{n}}\\]\n\n\n\nAssume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where \\(x\\) is the score, \\(m\\) is the mean (sometimes referred to as \\(\\bar{x}\\)), and \\(n\\) is the sample size, we get the following:\n\\[\\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \\dfrac{1 + 1 + 1 + 1}{4} = 1 \\] Most formulas of this nature are programmed into R/RStudio, but for more advanced modeling, we learn how to input raw data and formula into the software.\n\n\n\n\n\nPelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p. 13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of theory and context in making inferences about data."
   },
   {
     "objectID": "weeks/week02.html#s-sqrtdfracsigma-x---m2n",
     "href": "weeks/week02.html#s-sqrtdfracsigma-x---m2n",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "",
     "text": "Assume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where \\(x\\) is the score, \\(m\\) is the mean (sometimes referred to as \\(\\bar{x}\\)), and \\(n\\) is the sample size, we get the following:\n\\[\\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \\dfrac{1 + 1 + 1 + 1}{4} = 1 \\] Most formulas of this nature are programmed into R/RStudio, but for more advanced modeling, we learn how to input raw data and formula into the software.\n\n\n\n\nPelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p. 13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of theory and context in making inferences about data."
   },
   {
     "objectID": "weeks/week02.html#what-should-it-mean-to-be-critical-in-the-context-of-statistics",
     "href": "weeks/week02.html#what-should-it-mean-to-be-critical-in-the-context-of-statistics",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "",
     "text": "On Canvas, in the Week 2 folder, there is a document titled “Critical Thinking” by Jennifer Duncan. This document is one example of how we can frame what it could or should mean to be critical in statistics. Please review this document.\n\n\nUsing a higher order of thinking. Duncan emphasizes that critical thinking is a higher order of thinking with different advanced thinking skills, and offers a few suggestions.\n\nWe base our thinking on logic and not on feelings.\nWe should look deeper into inferences for hidden assumptions or values.\nAsk complex questions that help build a critical inquiry.\n\n\n\n\nAsking complex questions. Duncan breaks down the process into a few sub-questions.\n\nWho is the implied audience?\nWhat are the strengths and weaknesses of the argument?\nWhat are the underlying assumptions and values?\n\n\n\n\nUsing a variety of thinking processes. Duncan defines a process around analyzing, synthesizing, interpreting, and evaluating information that helps with our thinking.\n\n\n\nReflecting on how we answer a question. Duncan ends with a set of questions that help us think about different points of view, if we have clarity, and if more details are needed."
   },
   {
     "objectID": "weeks/week02.html#sets-and-numbers",
     "href": "weeks/week02.html#sets-and-numbers",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Sets and numbers",
     "text": "Sets and numbers\n\n\n\n\n\n\nDEFINITIONS: Sets of numbers\n\n\n\n– Natural numbers: \\(\\mathbb{N} = \\{1, 2, 3, ...\\}\\)\n– Whole numbers: \\(\\mathbb{N_0} = \\{0, 1, 2, 3, ...\\}\\)\n– Integers: \\(\\mathbb{Z} = \\{..., -3, -2, -1, 0, 1, 2, 3, ...\\}\\)\n– Rational numbers: \\(\\mathbb{Q} = \\Big\\{\\dfrac{p}{q}, p \\in \\mathbb{Z}, q \\in \\mathbb{Z}, q \\neq 0 \\Big\\}\\)\n\n\n\n\n\n\n\n\n\nDEFINITIONS: Sets of numbers, continued…\n\n\n\n\nIrrational numbers\n\nany number that is not a rational number; irrational means not rational (no ratio)\ne.g., you may know some irrational numbers such as \\(\\pi\\), \\(\\sqrt{2}\\), \\(\\sqrt{3}\\), \\(e\\) (Euler’s number)\n\nReal numbers: \\(\\mathbb{R}\\)\n\nThe set of numbers on the real number line\nThis set is constructed by combining the rational and irrational numbers\n\nImaginary numbers: \\(\\mathbb{I}\\)\n\na number that has a negative value when it is squared\n\\(i\\) is the unit imaginary number, \\(\\sqrt{-1} = i\\) by definition\nso \\(i\\) is a complex number since \\(i^2 = -1\\)\n\nComplex numbers: \\(\\mathbb{C}\\)\n\na number in the form \\(a + bi\\) where \\(a \\in \\mathbb{R}\\), \\(b \\in \\mathbb{R}\\), and \\(i\\) is an imaginary number"
   },
   {
     "objectID": "weeks/week02.html#getting-started-in-rstudio",
     "href": "weeks/week02.html#getting-started-in-rstudio",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Getting started in RStudio",
     "text": "Getting started in RStudio\nIn Lab 0, you downloaded and installed base R and RStudio. In this section, we will learn more about R and RStudio.\nLet’s start with a little fun!\n\nFirst, install the ‘praise’ package.\n\n# install the package\ninstall.packages(\"praise\", repos = \"http://cran.us.r-project.org\")\n\n\nNext, load the library for the ‘praise’ package.\n\n# load library\nlibrary(praise)\n\n\nNow, get some praise!\n\n# get some praise\npraise()\n\nYou can keep inserting the code above to get praise when you need it!"
   },
   {
     "objectID": "weeks/week02.html#arithmetic-in-r",
     "href": "weeks/week02.html#arithmetic-in-r",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Arithmetic in R",
     "text": "Arithmetic in R\nWe will learn how to calculate values in R.\n\n\n1 + 2  # the 'plus sign' computes the sum\n\n[1] 3\n\n\n\n\n2 - 3  # the 'minus sign' computes the difference\n\n[1] -1\n\n\n\n\n3 * 4  # the 'asterisk' computes the product\n\n[1] 12\n\n\n\n\n4 / 5 # the 'forward slash' computes the quotient\n\n[1] 0.8\n\n\n\n\n# from hw exercise 0.2, we can compute the sum of the first 100 positive integers\nsum(1:100) \n\n[1] 5050"
   },
   {
     "objectID": "weeks/week02.html#variables-in-r",
     "href": "weeks/week02.html#variables-in-r",
-    "title": "DATA 202 - Module 2",
+    "title": "DATA 202 - Week 2",
     "section": "Variables in R",
     "text": "Variables in R\nWe will learn to give a variable (or character) a value.\n\nUse the different assignment operators\n\ny = 2 # the equal sign can be used as an assignment operator\n\ny &lt;-2 # a \"less than\" sign and dash can also be used as an assignment operator\n\ny # R stores all values you assign, so you must \"call\" any variables to see their values\n\n[1] 2\n\n\n\nSet x equal to two added to three\n\nx = 2 + 3\nx\n\n[1] 5\n\n\n\nSet y equal to two minus three\n\ny = 2 - 3\ny\n\n[1] -1\n\n\n\nSet z equal to two times three\n\nz = 2 * 3\nz\n\n[1] 6\n\n\n\nOverwrite the value of y by setting y equal to x divided by z\n\ny = x / z\ny\n\n[1] 0.8333333\n\n\n\n\n\n\n\n\n\nPaper 1 is due on Monday September 16 at 11:59pm ET\n\n\n\n\nIn the next module, we will continue our explorations in R by learning how to load data sets into our data frame, and perform some basic operations using some additional packages. These packages will allow us to consider how we can construct original data sets to develop unique questions for our analysis."
   },

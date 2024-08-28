@@ -1,5 +1,5 @@
 ---
-title: "DATA 202 - Module 2"
+title: "DATA 202 - Week 2"
 subtitle: "Foundations"
 author: "Nathan Alexander, PhD"
 institute: "Center for Applied Data Science and Analytics"
@@ -96,7 +96,7 @@ x <- c(2, 2, 4, 4)
 Assume we have a small set of data: 2, 2, 4, 4.
 We can input and compute this data in *R* using the following code:
 
-```{r}
+```{r, eval = T}
 #| echo: true
 #| output: true
 #| warning: false
@@ -105,7 +105,9 @@ We can input and compute this data in *R* using the following code:
 x <- c(2, 2, 4, 4)
 ```
 
-```{r}
+---
+
+```{r, eval = T}
 #| echo: true
 #| output: true
 #| warning: false
@@ -114,7 +116,9 @@ x <- c(2, 2, 4, 4)
 m = sum(x)/4
 ```
 
-```{r}
+---
+
+```{r, eval = T}
 #| echo: true
 #| output: true
 #| warning: false
@@ -123,7 +127,9 @@ m = sum(x)/4
 median(x)
 ```
 
-```{r}
+---
+
+```{r, eval = T}
 #| echo: true
 #| output: true
 #| warning: false
@@ -133,8 +139,9 @@ mode(x)
 table.x <- table(x)
 table.x
 ```
+---
 
-```{r}
+```{r, eval = T}
 #| echo: true
 #| output: true
 #| warning: false
@@ -145,9 +152,7 @@ hist(x)
 
 ------------------------------------------------------------------------
 
-You also may recall the standard deviation, $S$, of a set of values is calculated using:
-
-## $$ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}$$
+You also may recall the standard deviation, $S$, of a set of values is calculated using: $$ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}$$
 
 ##### **EXAMPLE -- Standard deviation of a set**
 
@@ -209,13 +214,9 @@ Please review this document.
 
 ------------------------------------------------------------------------
 
-The quantification of information can help us understand and represent important situations.
+The quantification of information can help us understand and represent important situations. We'll begin by exploring the concept of a set, and how it is defined in mathematics and used to frame various situations.
 
-![](img/wk2-quant.png){fig-align="center"}
-
-------------------------------------------------------------------------
-
-We'll begin by exploring the concept of a set, and how it is defined in mathematics and used to frame various situations.
+---
 
 ::: {.callout-caution icon="false"}
 ## **DEFINITION**: Set
@@ -359,7 +360,7 @@ library(praise)
 
 Now, get some praise!
 
-```{r}
+```{r, eval = T}
 #| warning: false
 #| output: false
 # get some praise
