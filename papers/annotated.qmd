@@ -1,28 +1,10 @@
 ---
-title: "Annotated Bibliography and Paper 1 (updates)"
+title: "Annotated Bibliography"
 format: 
   html: default
 ---
 
-This page will support you with the re-submission of Paper #1 with **edits** and <mark>highlighting citations</mark>.
-
-The highlighted citations will be used to inform the contents of your annotated bibligography.
-
-# Annotated Bibliography
-
-When resubmitting updates for Paper #1 you should identify (<mark>by highlighting</mark>) a minimum of four citations.
-
-By highlighting these various citations, you will commit to reading and reviewing each of the articles.
-
--   See an example of how to highlight citations in [Sample paper #1](https://docs.google.com/document/d/1yOsQlGJEDNxQOy7bjV1HgZ3FM-yMtBXQwXcStvUdgAE/edit).
-
--   Preferably, highlighted citations should be *journal articles* and quantitative/statistical in nature.
-
--   I will read and review these highlighted papers along with you over the next several weeks.
-
-<u>Due date</u>: You may [turn in your full annotated bibliography on Canvas](https://canvas.howard.edu/courses/40683) any time on or before November 22.
-
-## Some guidance on doing an <u> annotated bibliography </u>
+This page will support you with annotated bibliography assignment. In class, we will review how to develop a single file in Markdown format (.Rmd) to produce your annotated bibliography and course papers.
 
 ### Purpose
 
@@ -49,35 +31,3 @@ An annotated bibliography is a list of sources about a specific research questio
 Each source included in an annotated bibliography should begin with an appropriate citation of the source (in APA, MLA, or Chicago style) and a brief description of the purpose and contents of the source, as well as an evaluation or reflection. The inclusion of an evaluation or reflection when summarizing a published source is one effective way to tell the difference between the abstract and the annotation.
 
 [View samples of annotated bibliographies](https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html).
-
-# Paper #1 Assignment
-
-<u>Due date</u>: All edits to Paper #1 are due on Friday October 6 by 11:59pm PT.
-
-As a thought exercise for your first assignment, you will write a short paper based on a social justice issue you are familiar with or wish to learn more about. In this paper, you should write about a theory concerning the relationships between and among some dependent variable and particular independent variables (you may have one or more than one independent variables of interest at the outset). After introducing your theory and assuming you had unlimited research funding, propose a research design and measurement plan for a study that would use real-world data and statistical analysis to examine the theory. Your paper should be clear on the following:
-
--   What are the variables (especially the dependent one that is explained by the independent variable(s))?
-
--   What is the unit of analysis?
-
--   Draw and discuss a path diagram (flow graph) for the theory.
-
--   What are the measurement, data collection, and sampling strategies?
-
--   How are the variables to be measured?
-
--   What are the categories of the variables/measures?
-
--   What are the hypotheses concerning the relationships among the variables/measures?
-
--   Explain how this study would offer evidence bearing on the relationship(s) of interest.
-
-This is an individual paper. Your paper should be no longer than five (5) pages in length and written as a narrative essay in 12-point Times New Roman font with one-inch margins. In writing the paper, you should structure it by using section headings and relevant citations for any referenced work.
-
-# More information for course papers
-
-There are two additional documents to help you complete the paper assignments:
-
--   Document 1: [Instructions for papers](https://docs.google.com/document/d/1Qsswuu50PXcPePPTTNSDLrHYJb7IX6f8x26J63e2beA/edit?usp=sharing)
-
--   Document 2: [More information for course papers](https://docs.google.com/document/d/1JNFSQAkIqLzJeR1ZFdfFcBbWPE3m1MwbLvjdtuJaMzI/edit?usp=sharing)
