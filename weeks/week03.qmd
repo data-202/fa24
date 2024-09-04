@@ -677,7 +677,7 @@ flowchart LR
 <u>Levels of measurement</u> are used to describe variable types.
 
 | Level of measurement | Brief description                                                                      | Examples               |
-|----------------------|----------------------------------------------------------------------------------------|------------------------|
+|----------------|---------------------------------------|----------------|
 | **Nominal**          | Data cannot be arranged in some order. Only categories are used.                       | Eye color, city        |
 | **Ordinal**          | Data can be arranged in some order but differences cannot be found or are meaningless. | Rankings, likert scale |
 | **Interval**         | There is not a natural zero starting point and rations are meaningless.                | Temperatures, years    |
@@ -697,25 +697,75 @@ flowchart LR
 
 ------------------------------------------------------------------------
 
-## Task 1: Create an R Script
+## Task 1: Create an RMarkdown file (.Rmd)
 
-We will conduct most of our work using what is called an *RScript*.
+We will conduct most of our work using what is called an *RMarkdown*.
 
-The *RScript* allows us to save and annotate our code for future use.
+The *RMarkdown* files allows us to save and annotate our code for future use.
 
-When you run code from an *RScript*, it will show up in the Console (bottom left pane in *RStudio*).
+When you run code from an *RMarkdownt*, it will show up in the Console (bottom left pane in *RStudio*).
 
-In the RStudio IDE, open an RScript by using the following navigation:
+In the RStudio IDE, open an RMarkdown by using the following navigation:
 
--   File \> New File \> R Script
+-   File \> New File \> R Markdown
 
 ------------------------------------------------------------------------
 
-### Using the RScript
+### Using the RMarkdown file
 
-## ![RStudio IDE with an RScript](img/wk3-g-1.png)
+### Preamble
 
-### Inserting code into an RScript
+The preamble begins at the top of your RMarkdown file with three dashes.
+
+```{r}
+# ---
+# title: "Title goes here"
+# bibliography: references.bib # include references file
+# csl: apa.csl # include cls file for your references
+# always_allow_html: true
+# output:
+#  word_document: 
+#    reference_docx: "word-styles-reference.docx" # include style file
+#    fig_caption: true
+#  pdf_document:
+#    toc: false
+#    toc_depth: 2
+#    number_section: true 
+#  html_document:
+#    toc: true
+#    toc_depth: 2
+#    number_sections: true
+#    theme: flatly
+# geometry: margin=1.0in
+# editor_options:
+#  markdown:
+#    wrap: sentence
+# ---
+```
+
+### Setup
+The set-up chunk gives the file further instructions.
+
+```{r}
+# ```{r setup, include=FALSE}
+# knitr::opts_chunk$set(
+#  echo = FALSE, # By default, hide code; set to TRUE to see code
+#  fig.pos = 'th', # Places figures at top or here
+#  out.width = '100%', dpi = 300, # Figure resolution and size
+#  fig.env="figure"
+# ) # Latex figure environment
+
+# install.packages("praise")
+# library(praise)
+
+# layout="l-body-outset"
+# library(rmarkdown)
+
+# options(knitr.table.format = "latex") # For kable tables to write LaTeX table directly
+# ```
+```
+
+### Inserting code into an RMarkdown
 
 ```{r}
 y <- 2 + 2
