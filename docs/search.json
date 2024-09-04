@@ -182,18 +182,11 @@
     "text": "Task 0: Understanding the RStudio IDE\n\n\n\nRStudio IDE"
   },
   {
-    "objectID": "weeks/week03.html#task-1-create-an-r-script",
-    "href": "weeks/week03.html#task-1-create-an-r-script",
+    "objectID": "weeks/week03.html#task-1-create-an-rmarkdown-file-.rmd",
+    "href": "weeks/week03.html#task-1-create-an-rmarkdown-file-.rmd",
     "title": "DATA 202 - Week 3",
-    "section": "Task 1: Create an R Script",
-    "text": "Task 1: Create an R Script\nWe will conduct most of our work using what is called an RScript.\nThe RScript allows us to save and annotate our code for future use.\nWhen you run code from an RScript, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RScript by using the following navigation:\n\nFile &gt; New File &gt; R Script\n\n\n\nUsing the RScript"
-  },
-  {
-    "objectID": "weeks/week03.html#rstudio-ide-with-an-rscript",
-    "href": "weeks/week03.html#rstudio-ide-with-an-rscript",
-    "title": "DATA 202 - Week 3",
-    "section": "",
-    "text": "Inserting code into an RScript\n\ny &lt;- 2 + 2\n\n\n# You can use the `#` symbol to leave notes above your code.\ny &lt;- 2 + 2 # You can use the `#` symbol to leave notes in-line with your code.\n\nWe just defined an object y. We can see its value by running this syntax and typing y into the Console.\n\ny\n\n[1] 4\n\n\nThe output on your screen should match the last line above - with the hashtags.\n\n[ 1 ] indicates a single line of results.\nThe output tells us that y has a value of 4, so we say that y is numeric or that it has a numeric value.\n\nYou can run code by clicking ‘Run’ at the top of the Source window, or by typing CMD+Enter"
+    "section": "Task 1: Create an RMarkdown file (.Rmd)",
+    "text": "Task 1: Create an RMarkdown file (.Rmd)\nWe will conduct most of our work using what is called an RMarkdown.\nThe RMarkdown files allows us to save and annotate our code for future use.\nWhen you run code from an RMarkdownt, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RMarkdown by using the following navigation:\n\nFile &gt; New File &gt; R Markdown\n\n\n\nUsing the RMarkdown file\n\n\nPreamble\nThe preamble begins at the top of your RMarkdown file with three dashes.\n\n# ---\n# title: \"Title goes here\"\n# bibliography: references.bib # include references file\n# csl: apa.csl # include cls file for your references\n# always_allow_html: true\n# output:\n#  word_document: \n#    reference_docx: \"word-styles-reference.docx\" # include style file\n#    fig_caption: true\n#  pdf_document:\n#    toc: false\n#    toc_depth: 2\n#    number_section: true \n#  html_document:\n#    toc: true\n#    toc_depth: 2\n#    number_sections: true\n#    theme: flatly\n# geometry: margin=1.0in\n# editor_options:\n#  markdown:\n#    wrap: sentence\n# ---\n\n\n\nSetup\nThe set-up chunk gives the file further instructions.\n\n# ```{r setup, include=FALSE}\n# knitr::opts_chunk$set(\n#  echo = FALSE, # By default, hide code; set to TRUE to see code\n#  fig.pos = 'th', # Places figures at top or here\n#  out.width = '100%', dpi = 300, # Figure resolution and size\n#  fig.env=\"figure\"\n# ) # Latex figure environment\n\n# install.packages(\"praise\")\n# library(praise)\n\n# layout=\"l-body-outset\"\n# library(rmarkdown)\n\n# options(knitr.table.format = \"latex\") # For kable tables to write LaTeX table directly\n# ```\n\n\n\nInserting code into an RMarkdown\n\ny &lt;- 2 + 2\n\n\n# You can use the `#` symbol to leave notes above your code.\ny &lt;- 2 + 2 # You can use the `#` symbol to leave notes in-line with your code.\n\nWe just defined an object y. We can see its value by running this syntax and typing y into the Console.\n\ny\n\n[1] 4\n\n\nThe output on your screen should match the last line above - with the hashtags.\n\n[ 1 ] indicates a single line of results.\nThe output tells us that y has a value of 4, so we say that y is numeric or that it has a numeric value.\n\nYou can run code by clicking ‘Run’ at the top of the Source window, or by typing CMD+Enter"
   },
   {
     "objectID": "weeks/week03.html#task-2-explore-different-object-types",
@@ -273,18 +266,11 @@
     "text": "Task 0: Understanding the RStudio IDE\n\nRStudio IDE"
   },
   {
-    "objectID": "weeks/week03-slides.html#task-1-create-an-r-script",
-    "href": "weeks/week03-slides.html#task-1-create-an-r-script",
+    "objectID": "weeks/week03-slides.html#task-1-create-an-rmarkdown-file-.rmd",
+    "href": "weeks/week03-slides.html#task-1-create-an-rmarkdown-file-.rmd",
     "title": "DATA 202 - Week 3",
-    "section": "Task 1: Create an R Script",
-    "text": "Task 1: Create an R Script\nWe will conduct most of our work using what is called an RScript.\nThe RScript allows us to save and annotate our code for future use.\nWhen you run code from an RScript, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RScript by using the following navigation:\n\nFile &gt; New File &gt; R Script"
-  },
-  {
-    "objectID": "weeks/week03-slides.html#rstudio-ide-with-an-rscript",
-    "href": "weeks/week03-slides.html#rstudio-ide-with-an-rscript",
-    "title": "DATA 202 - Week 3",
-    "section": "",
-    "text": "Inserting code into an RScript\n\ny &lt;- 2 + 2\n\n\n# You can use the `#` symbol to leave notes above your code.\ny &lt;- 2 + 2 # You can use the `#` symbol to leave notes in-line with your code.\n\nWe just defined an object y. We can see its value by running this syntax and typing y into the Console.\n\ny\n\n[1] 4\n\n\nThe output on your screen should match the last line above - with the hashtags.\n\n[ 1 ] indicates a single line of results.\nThe output tells us that y has a value of 4, so we say that y is numeric or that it has a numeric value.\n\nYou can run code by clicking ‘Run’ at the top of the Source window, or by typing CMD+Enter"
+    "section": "Task 1: Create an RMarkdown file (.Rmd)",
+    "text": "Task 1: Create an RMarkdown file (.Rmd)\nWe will conduct most of our work using what is called an RMarkdown.\nThe RMarkdown files allows us to save and annotate our code for future use.\nWhen you run code from an RMarkdownt, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RMarkdown by using the following navigation:\n\nFile &gt; New File &gt; R Markdown"
   },
   {
     "objectID": "weeks/week03-slides.html#task-2-explore-different-object-types",
@@ -1503,19 +1489,5 @@
     "title": "Schedule",
     "section": "",
     "text": "Part\nWeek\nDay\nTopics\nLabs\nPapers\nKey readings, exams, other\n\n\n\n\nI\n1\nWed, Aug 21\nIntroduction\nLab 0\n\nCase study 1 files\n\n\n\n2\nWed, Aug 28\nFoundations\n\n\nPelham (2013, ch. 1)\n\n\n\n3\nWed, Sept 4\nTheory construction\n\n\nAnnotated bibliography\n\n\n\n4\nWed, Sept 11\nProbability theory\nLab 1\n\nShore (2008); Zuberi (2000)\n\n\nII\n5\nWed, Sept 18\nUnivariate analysis\n\n\nWilson et al. (2017)\n\n\n\n6\nWed, Sept 25\nBivariate analysis\n\nPaper 1\n\n\n\n\n7\nWed, Oct 2\nExploratory analysis\n\n\nMidterm examination\n\n\n\n8\nWed, Oct 9\nNotes on causal theories\n\n\n\n\n\nIII\n9\nWed, Oct 16\nHypothesis testing\nLab 2\n\n\n\n\n\n10\nWed, Oct 23\nBivariate regression analysis\n\n\n\n\n\n\n11\nWed, Oct 30\nMultivariate regression analysis\n\nPaper 2\n\n\n\n\n12\nWed, Nov 6\nMultiple variable regression\n\n\n\n\n\nIV\n13\nWed, Nov 13\nRegression and classification\nLab 3\n\n\n\n\n\n14\nWed, Nov 20\nStatistical learning\n\n\n\n\n\n\n15\nWed, Nov 27\nOverview of additional models\n\nPaper 3"
-  },
-  {
-    "objectID": "weeks/week03.html#task-1-create-an-rmarkdown-file-.rmd",
-    "href": "weeks/week03.html#task-1-create-an-rmarkdown-file-.rmd",
-    "title": "DATA 202 - Week 3",
-    "section": "Task 1: Create an RMarkdown file (.Rmd)",
-    "text": "Task 1: Create an RMarkdown file (.Rmd)\nWe will conduct most of our work using what is called an RMarkdown.\nThe RMarkdown files allows us to save and annotate our code for future use.\nWhen you run code from an RMarkdownt, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RMarkdown by using the following navigation:\n\nFile &gt; New File &gt; R Markdown\n\n\n\nUsing the RMarkdown file\n\n\nPreamble\nThe preamble begins at the top of your RMarkdown file with three dashes.\n\n# ---\n# title: \"Title goes here\"\n# bibliography: references.bib # include references file\n# csl: apa.csl # include cls file for your references\n# always_allow_html: true\n# output:\n#  word_document: \n#    reference_docx: \"word-styles-reference.docx\" # include style file\n#    fig_caption: true\n#  pdf_document:\n#    toc: false\n#    toc_depth: 2\n#    number_section: true \n#  html_document:\n#    toc: true\n#    toc_depth: 2\n#    number_sections: true\n#    theme: flatly\n# geometry: margin=1.0in\n# editor_options:\n#  markdown:\n#    wrap: sentence\n# ---\n\n\n\nSetup\nThe set-up chunk gives the file further instructions.\n\n# ```{r setup, include=FALSE}\n# knitr::opts_chunk$set(\n#  echo = FALSE, # By default, hide code; set to TRUE to see code\n#  fig.pos = 'th', # Places figures at top or here\n#  out.width = '100%', dpi = 300, # Figure resolution and size\n#  fig.env=\"figure\"\n# ) # Latex figure environment\n\n# install.packages(\"praise\")\n# library(praise)\n\n# layout=\"l-body-outset\"\n# library(rmarkdown)\n\n# options(knitr.table.format = \"latex\") # For kable tables to write LaTeX table directly\n# ```\n\n\n\nInserting code into an RMarkdown\n\ny &lt;- 2 + 2\n\n\n# You can use the `#` symbol to leave notes above your code.\ny &lt;- 2 + 2 # You can use the `#` symbol to leave notes in-line with your code.\n\nWe just defined an object y. We can see its value by running this syntax and typing y into the Console.\n\ny\n\n[1] 4\n\n\nThe output on your screen should match the last line above - with the hashtags.\n\n[ 1 ] indicates a single line of results.\nThe output tells us that y has a value of 4, so we say that y is numeric or that it has a numeric value.\n\nYou can run code by clicking ‘Run’ at the top of the Source window, or by typing CMD+Enter"
-  },
-  {
-    "objectID": "weeks/week03-slides.html#task-1-create-an-rmarkdown-file-.rmd",
-    "href": "weeks/week03-slides.html#task-1-create-an-rmarkdown-file-.rmd",
-    "title": "DATA 202 - Week 3",
-    "section": "Task 1: Create an RMarkdown file (.Rmd)",
-    "text": "Task 1: Create an RMarkdown file (.Rmd)\nWe will conduct most of our work using what is called an RMarkdown.\nThe RMarkdown files allows us to save and annotate our code for future use.\nWhen you run code from an RMarkdownt, it will show up in the Console (bottom left pane in RStudio).\nIn the RStudio IDE, open an RMarkdown by using the following navigation:\n\nFile &gt; New File &gt; R Markdown"
   }
 ]
