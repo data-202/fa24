@@ -17,7 +17,7 @@ Our course assignments will be split between reading and typing (code and analyt
 |------------------------|-----------------------------|-------------------|
 | **Part I: Statistics and society** |                        |                  |
 |                                    | Lab #0                 | Due: Tue Aug 27  |
-|                                    | Annotated Bibliography | Due: Fri Sept 5  |
+|                                    | Annotated Bibliography | Due: Sun Sept 8  |
 |                                    | Lab #1                 | Due: Fri Sept 13 |
 | **Part II: Data and people**       |                        |                  |
 |                                    | Paper #1               | Due: Fri Sept 25 |
