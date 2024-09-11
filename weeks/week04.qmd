@@ -524,4 +524,4 @@ geometry: margin=1.0in
 ---
 ```
 
-Let's head over to [Lab 1](labs/lab1.html) to continue.
+Let's head over to Lab 1 to continue.
