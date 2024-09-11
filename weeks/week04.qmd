@@ -1,6 +1,6 @@
 ---
 title: "DATA 202 - Week 4"
-subtitle: "More on theory construction"
+subtitle: "Probability Theory"
 author: "Nathan Alexander, PhD"
 institute: "Center for Applied Data Science and Analytics"
 format: 
@@ -18,6 +18,13 @@ format:
     echo: true
     incremental: false
 ---
+
+```{r setup}
+#| echo: false
+library(quarto)
+library(DiagrammeR)
+knitr::opts_chunk$set(echo = F)
+```
 
 # Part I: Context
 
@@ -111,7 +118,7 @@ Across research methodologies, a *limitation* is any feature of a study that may
 
 ### Developing a logic model
 
-Logic is an important component in theory construction. **Logical reasoning** is the use of critical thinking in the applications of statistics. However, *logic* in relation to theory is based on a set of ideas that help build sound and consistent arguments.
+Logic is an important component in theory construction. **Logical reasoning** is the use of critical thinking in the applications of statistics, and relates to our forthcoming focus on probability. However, *logic* in relation to theory is based on a set of ideas that help build sound and consistent arguments that can be analyzed, measured, and support model construction and development.
 
 A few key considerations:
 
@@ -154,9 +161,9 @@ As we move further into our analyses, we will learn more about path analysis.
 This is a simple two-variable path diagram
 
 ```{mermaid}
-%%| fig-height: 16
 %%| echo: false
 %%| fig-responsive: false
+%%| fig-width: 10
 flowchart LR
   A[X] --> B[Y]
 ```
@@ -192,6 +199,7 @@ Three variable path diagram
 ```{mermaid}
 %%| echo: false
 %%| fig-responsive: false
+%%| fig-width: 10
 flowchart LR
   A[Variable 1] --> B[Y]
   C[Variable 2] --> B
@@ -202,6 +210,7 @@ A path diagram made of multiple variables
 ```{mermaid}
 %%| echo: false
 %%| fig-responsive: false
+%%| fig-width: 10
 flowchart LR
   A[Variable 1] --> B[Y]
   C[Variable 2] --> B
@@ -212,7 +221,7 @@ flowchart LR
 
 ------------------------------------------------------------------------
 
-Our main goal for content this week will be to better frame and understand the relationship between mathematics and statistics. The two concepts are closely related but different in both their forms and functions.
+Our main goal for content this week will be to better frame and understand the relationship between mathematics and statistics through the lens of probability theory. These concepts are closely related but differ in both their forms and functions.
 
 ::: incremental
 -   Understand the role of mathematics in modern statistics
@@ -224,59 +233,75 @@ Our main goal for content this week will be to better frame and understand the r
 
 ------------------------------------------------------------------------
 
-#### <u>Objective 1</u>: Understand the role of mathematics in modern statistics
+#### <u>Objective 1</u>: Frame the role of probability in statistics
 
-Statistical data analysis relies on a variety of mathematical models in order to describe and make inferences about the variables in a set of data. In particular, mathematical and statistical models allow us to make predictions about various phenomena in the world.
+Probability theory forms the backbone of statistical inference and modeling.
 
-*Mathematical statistics* is the application of probability, the branch of mathematics concerned with how likely an event is to occur or how true a proposition is, to the field of statistics.
+Key Concepts
 
-Techniques in both areas rely on topics in linear algebra, numerical analysis, and a host of other sub-areas. It is important to understand the basis of these mathematical foundations to engage in further critical statistical thinking.
+- **Probability Space**: A probability space is a mathematical construct that contains the results of a random process, generally known as an experiment. The probability space consists of: 
+
+  - Sample space ($\Omega$): The set of all possible outcomes
+    
+  - Event space ($F$): A collection of subsets of $\Omega$ containing the various events, $E$
+    
+  - Probability measure ($P$): A function assigning probabilities to events
+
+Classic example: Tossing a fair coin
+
+  - $\Omega = \{Heads, Tails\}$
+
+  - $F$ = \{∅, \{Heads\}, \{Tails\}, \{Heads, Tails\}\}
+
+  - $P({Heads}) = P({Tails}) = 0.5$, $P(∅) = 0$, $P({Heads, Tails}) = 1$
+
+---
+
+- *Random Variables**: Random variables (RVs) are functions mapping the sample space to real numbers. We generally study:
+
+  - Discrete random variables: Take on countable values
+    
+  - Continuous random variables: Take on uncountable values
+
+  - Probability mass function (PMF): $P(X = x)$ for discrete RVs
+
+  - Probability density function (PDF): $f(x)$ for continuous RVs
+
+  - Cumulative distribution function (CDF): $F(x) = P(X \leq x)$
+
+---
+
+- *Expectation and Moments*
+
+  - Expected value: $E[X] = ∑xP(X=x)$ or $∫xf(x) dx$
+
+  - Variance: Var(X) = $E[(X - E[X])^2]$
+
+  - Standard deviation: $\sigma = \sqrt{Var(X)}$
+    
+  - Higher-order moments: $E[X^n]$
+   
+  - Moment generating function: $M_X(t) = E[e^(tX)]$
+
+Classic example: Standard normal distribution $N(0, 1)$ i.e., where $0$ is the mean, $\mu$, and $1$ is the variance, $\sigma^2$.
+
+  - $E[X] = 0$
+  
+  - $Var(X) = 1$
+  
+  - Recall, the Standard normal distribution: 
+  
+    It's symmetric around the mean of 0; it's bell-shaped curve has a peak at x = 0.
+    
+    - ~68% of the data falls within one standard deviation of the mean (between -1 and 1).
+    
+    - ~95% of the data falls within two standard deviations of the mean (between -2 and 2).
+    
+    - ~99.7% of the data falls within three standard deviations of the mean (between -3 and 3).
 
 ------------------------------------------------------------------------
 
-```{r}
-#| echo: false
-#| output: false
-#| warning: false
-## Sample outline of a bivariate regression analysis
-
-# Generate sample data
-set.seed(4)
-x <- rnorm(100)
-y <- 2 + 3*x + rnorm(100)
-```
-
-@fig-correlation shows the relationship between two variables, x and y.
-
-```{r}
-#| echo: false
-#| output: true
-#| warning: false
-#| label: fig-correlation 
-#| fig-cap: "Correlation plot of two variables, x and y"
-plot(x, y)
-```
-
-------------------------------------------------------------------------
-
-@fig-regression illustrates the regression line that describes the relationship between x and y.
-
-In statistical modeling, regression allows us to estimate the relationship between a dependent variable, $Y$, and an independent variable, $X$.
-
-```{r}
-#| echo: false
-#| output: true
-#| warning: false
-#| label: fig-regression
-#| fig-cap: "Illustration of a linear regression on a set of coordinates $(x_i, y_i)$"
-model <- lm(y ~ x)
-plot(x, y)
-abline(model, col ="blue")
-```
-
-------------------------------------------------------------------------
-
-#### <u>Objective 2</u>: Distinguish between algebra and statistics
+#### <u>Objective 3</u>: Distinguish between algebra and statistics
 
 ::: incremental
 At its core, statistics is a branch of applied mathematics.
@@ -308,7 +333,7 @@ Generally, in the algebra equations, we model "exactness." In statistical models
 
 ------------------------------------------------------------------------
 
-#### <u>Objective 3</u>: Identify basic mathematical terms useful for statistical analysis
+#### <u>Objective 4</u>: Identify basic mathematical terms useful for statistical analysis
 
 Today we will consider three terms:
 
@@ -398,7 +423,7 @@ If we wanted to square our values before adding them up, we would write: $$\sum_
 
 ------------------------------------------------------------------------
 
-#### Databases
+### Databases
 
 Last week, we created a small data set called a data frame. This week, we'll briefly introduce databases for later.
 
@@ -426,7 +451,7 @@ Hillman College maintains data on all enrolled students in an electronic databas
 
 ------------------------------------------------------------------------
 
-## ![A database containing k datasets](img/wk3-e-5.jpg)
+![A database containing k datasets](img/wk3-e-5.jpg)
 
 In the first example, we can consider a "small" example to help us answer the question. Take only the first few data sets of the database. For example, assume we start collecting data in the current year (year 1) and do so for the following two years:
 
@@ -440,13 +465,6 @@ Note, however, when we rush to subtract the index on the last data set, $d_3$ fr
 
 This week, we will prepare for Lab 1.
 
-## Task 1: Open a new RScript and write a preamble
-
-Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this *preamble* at the very top of our RScript file.
-
-A *preamble* is simply an introduction to your code. The structure of a preamble can vary widely.
-
-In an RScript file, we use hashtags (#) to write certain sections in our preamble. The \# symbol informs R that it should ignore that line in our code.
 
 #### Task 0.1: Check your working directory
 
@@ -459,7 +477,7 @@ In your console, type in the following code to ensure you are in the desired dir
 getwd()
 ```
 
-If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of and set up in lecture five.
+If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for our course.
 
 For example, `stats/lab1`
 
@@ -473,25 +491,37 @@ For example, `stats/lab1`
 
 You can also add a sub-folder manually or under the **Files** tab in the RStudio IDE.
 
-#### Task 0.2: Start a new R Script
+#### Task 0.2: Start a new RMarkdown
 
-Once you have confirmed that you are in the correct directory, start a new R Script.
+Once you have confirmed that you are in the correct directory, start a new RMarkdown file.
 
-#### Task 0.3: Write a preamble
+## Task 1: Open a RMarkdown file
 
-```{r}
-#| echo: true
-#| output: false
-#| warning: false
-## Name: <include your full name>
-## Assignment: Lab 1
-## Date: <here you may want to add a date>
-## Purpose: <insert the goals or purpose of the RScript>
+Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this *preamble* at the very top of our RMarkdown file.
+
+A *preamble* is simply an introduction to your code. The structure of a preamble can vary widely. In an RMarkdown file, we can use hashtags (#) to write certain sections in our preamble. The \# symbol informs R that it should ignore that line in our code.
+
+```         
+---
+title: "Lab No. #"
+author: 
+  - name: "Insert Your Name"
+    affiliation: "DATA 202, Fall 2024, Howard University"
+date: "2024-08-15"
+always_allow_html: true
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+geometry: margin=1.0in
+---
 ```
 
-Let's head over to Lab 1 to continue.
-
-------------------------------------------------------------------------
-
-# References
-
+Let's head over to [Lab 1](labs/lab1.html) to continue.

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../papers/annotated.html" rel="next">
+<link href="../weeks/week05.html" rel="next">
 <link href="../weeks/week03.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -105,8 +105,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="DATA 202: Statistically Measuring and Modeling Social Justice - DATA 202 - Week 4">
-<meta property="og:description" content="More on theory construction">
-<meta property="og:image" content="https://github.com/data-202/weeks/img/wk3-e-5.jpg">
+<meta property="og:description" content="Probability Theory">
+<meta property="og:image" content="https://github.com/data-202/weeks/img/wk3-e-0.jpg">
 <meta property="og:site-name" content="DATA 202: Statistically Measuring and Modeling Social Justice">
 </head>
 
@@ -221,6 +221,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../weeks/week04.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/week05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
   </div>
 </li>
       </ul>
@@ -345,13 +351,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#part-ii-content" id="toc-part-ii-content" class="nav-link" data-scroll-target="#part-ii-content">Part II: Content</a>
   <ul class="collapse">
-  <li><a href="#a-database-containing-k-datasets" id="toc-a-database-containing-k-datasets" class="nav-link" data-scroll-target="#a-database-containing-k-datasets"><img src="img/wk3-e-5.jpg" class="img-fluid" alt="A database containing k datasets"></a></li>
+  <li><a href="#databases" id="toc-databases" class="nav-link" data-scroll-target="#databases">Databases</a></li>
   </ul></li>
   <li><a href="#part-iii-code" id="toc-part-iii-code" class="nav-link" data-scroll-target="#part-iii-code">Part III: Code</a>
   <ul class="collapse">
-  <li><a href="#task-1-open-a-new-rscript-and-write-a-preamble" id="toc-task-1-open-a-new-rscript-and-write-a-preamble" class="nav-link" data-scroll-target="#task-1-open-a-new-rscript-and-write-a-preamble">Task 1: Open a new RScript and write a preamble</a></li>
+  <li><a href="#task-1-open-a-rmarkdown-file" id="toc-task-1-open-a-rmarkdown-file" class="nav-link" data-scroll-target="#task-1-open-a-rmarkdown-file">Task 1: Open a RMarkdown file</a></li>
   </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week04-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
@@ -361,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">DATA 202 - Week 4</h1>
-<p class="subtitle lead">More on theory construction</p>
+<p class="subtitle lead">Probability Theory</p>
 </div>
 
 
@@ -460,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="developing-a-logic-model" class="level3">
 <h3 class="anchored" data-anchor-id="developing-a-logic-model">Developing a logic model</h3>
-<p>Logic is an important component in theory construction. <strong>Logical reasoning</strong> is the use of critical thinking in the applications of statistics. However, <em>logic</em> in relation to theory is based on a set of ideas that help build sound and consistent arguments.</p>
+<p>Logic is an important component in theory construction. <strong>Logical reasoning</strong> is the use of critical thinking in the applications of statistics, and relates to our forthcoming focus on probability. However, <em>logic</em> in relation to theory is based on a set of ideas that help build sound and consistent arguments that can be analyzed, measured, and support model construction and development.</p>
 <p>A few key considerations:</p>
 <div class="incremental">
 <ul class="incremental">
@@ -488,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>As we move further into our analyses, we will learn more about path analysis.</p>
 <hr>
 <p>This is a simple two-variable path diagram</p>
-<div class="cell" data-fig-height="16" data-fig-responsive="false">
+<div class="cell" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -517,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 <p>Three variable path diagram</p>
-<div class="cell" data-fig-responsive="false">
+<div class="cell" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -530,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>A path diagram made of multiple variables</p>
-<div class="cell" data-fig-responsive="false">
+<div class="cell" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -549,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="part-ii-content" class="level1">
 <h1>Part II: Content</h1>
 <hr>
-<p>Our main goal for content this week will be to better frame and understand the relationship between mathematics and statistics. The two concepts are closely related but different in both their forms and functions.</p>
+<p>Our main goal for content this week will be to better frame and understand the relationship between mathematics and statistics through the lens of probability theory. These concepts are closely related but differ in both their forms and functions.</p>
 <div class="incremental">
 <ul class="incremental">
 <li><p>Understand the role of mathematics in modern statistics</p></li>
@@ -558,40 +563,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 <hr>
-<section id="objective-1-understand-the-role-of-mathematics-in-modern-statistics" class="level4">
-<h4 class="anchored" data-anchor-id="objective-1-understand-the-role-of-mathematics-in-modern-statistics"><u>Objective 1</u>: Understand the role of mathematics in modern statistics</h4>
-<p>Statistical data analysis relies on a variety of mathematical models in order to describe and make inferences about the variables in a set of data. In particular, mathematical and statistical models allow us to make predictions about various phenomena in the world.</p>
-<p><em>Mathematical statistics</em> is the application of probability, the branch of mathematics concerned with how likely an event is to occur or how true a proposition is, to the field of statistics.</p>
-<p>Techniques in both areas rely on topics in linear algebra, numerical analysis, and a host of other sub-areas. It is important to understand the basis of these mathematical foundations to engage in further critical statistical thinking.</p>
+<section id="objective-1-frame-the-role-of-probability-in-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="objective-1-frame-the-role-of-probability-in-statistics"><u>Objective 1</u>: Frame the role of probability in statistics</h4>
+<p>Probability theory forms the backbone of statistical inference and modeling.</p>
+<p>Key Concepts</p>
+<ul>
+<li><p><strong>Probability Space</strong>: A probability space is a mathematical construct that contains the results of a random process, generally known as an experiment. The probability space consists of:</p>
+<ul>
+<li><p>Sample space (<span class="math inline">\(\Omega\)</span>): The set of all possible outcomes</p></li>
+<li><p>Event space (<span class="math inline">\(F\)</span>): A collection of subsets of <span class="math inline">\(\Omega\)</span> containing the various events, <span class="math inline">\(E\)</span></p></li>
+<li><p>Probability measure (<span class="math inline">\(P\)</span>): A function assigning probabilities to events</p></li>
+</ul></li>
+</ul>
+<p>Classic example: Tossing a fair coin</p>
+<ul>
+<li><p><span class="math inline">\(\Omega = \{Heads, Tails\}\)</span></p></li>
+<li><p><span class="math inline">\(F\)</span> = {∅, {Heads}, {Tails}, {Heads, Tails}}</p></li>
+<li><p><span class="math inline">\(P({Heads}) = P({Tails}) = 0.5\)</span>, <span class="math inline">\(P(∅) = 0\)</span>, <span class="math inline">\(P({Heads, Tails}) = 1\)</span></p></li>
+</ul>
 <hr>
-<p><a href="#fig-correlation">Figure&nbsp;1</a> shows the relationship between two variables, x and y.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-correlation" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="week04_files/figure-html/fig-correlation-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Correlation plot of two variables, x and y</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<ul>
+<li><p>*Random Variables**: Random variables (RVs) are functions mapping the sample space to real numbers. We generally study:</p>
+<ul>
+<li><p>Discrete random variables: Take on countable values</p></li>
+<li><p>Continuous random variables: Take on uncountable values</p></li>
+<li><p>Probability mass function (PMF): <span class="math inline">\(P(X = x)\)</span> for discrete RVs</p></li>
+<li><p>Probability density function (PDF): <span class="math inline">\(f(x)\)</span> for continuous RVs</p></li>
+<li><p>Cumulative distribution function (CDF): <span class="math inline">\(F(x) = P(X \leq x)\)</span></p></li>
+</ul></li>
+</ul>
 <hr>
-<p><a href="#fig-regression">Figure&nbsp;2</a> illustrates the regression line that describes the relationship between x and y.</p>
-<p>In statistical modeling, regression allows us to estimate the relationship between a dependent variable, <span class="math inline">\(Y\)</span>, and an independent variable, <span class="math inline">\(X\)</span>.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-regression" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="week04_files/figure-html/fig-regression-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Illustration of a linear regression on a set of coordinates <span class="math inline">\((x_i, y_i)\)</span></figcaption>
-</figure>
-</div>
-</div>
-</div>
+<ul>
+<li><p><em>Expectation and Moments</em></p>
+<ul>
+<li><p>Expected value: <span class="math inline">\(E[X] = ∑xP(X=x)\)</span> or <span class="math inline">\(∫xf(x) dx\)</span></p></li>
+<li><p>Variance: Var(X) = <span class="math inline">\(E[(X - E[X])^2]\)</span></p></li>
+<li><p>Standard deviation: <span class="math inline">\(\sigma = \sqrt{Var(X)}\)</span></p></li>
+<li><p>Higher-order moments: <span class="math inline">\(E[X^n]\)</span></p></li>
+<li><p>Moment generating function: <span class="math inline">\(M_X(t) = E[e^(tX)]\)</span></p></li>
+</ul></li>
+</ul>
+<p>Classic example: Standard normal distribution <span class="math inline">\(N(0, 1)\)</span> i.e., where <span class="math inline">\(0\)</span> is the mean, <span class="math inline">\(\mu\)</span>, and <span class="math inline">\(1\)</span> is the variance, <span class="math inline">\(\sigma^2\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(E[X] = 0\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = 1\)</span></p></li>
+<li><p>Recall, the Standard normal distribution:</p>
+<p>It’s symmetric around the mean of 0; it’s bell-shaped curve has a peak at x = 0.</p>
+<ul>
+<li><p>~68% of the data falls within one standard deviation of the mean (between -1 and 1).</p></li>
+<li><p>~95% of the data falls within two standard deviations of the mean (between -2 and 2).</p></li>
+<li><p>~99.7% of the data falls within three standard deviations of the mean (between -3 and 3).</p></li>
+</ul></li>
+</ul>
 <hr>
 </section>
-<section id="objective-2-distinguish-between-algebra-and-statistics" class="level4">
-<h4 class="anchored" data-anchor-id="objective-2-distinguish-between-algebra-and-statistics"><u>Objective 2</u>: Distinguish between algebra and statistics</h4>
+<section id="objective-3-distinguish-between-algebra-and-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="objective-3-distinguish-between-algebra-and-statistics"><u>Objective 3</u>: Distinguish between algebra and statistics</h4>
 <div class="incremental">
 <p>At its core, statistics is a branch of applied mathematics.</p>
 <ul class="incremental">
@@ -623,8 +650,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Generally, in the algebra equations, we model “exactness.” In statistical models, we produce estimates.</p>
 <hr>
 </section>
-<section id="objective-3-identify-basic-mathematical-terms-useful-for-statistical-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="objective-3-identify-basic-mathematical-terms-useful-for-statistical-analysis"><u>Objective 3</u>: Identify basic mathematical terms useful for statistical analysis</h4>
+<section id="objective-4-identify-basic-mathematical-terms-useful-for-statistical-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="objective-4-identify-basic-mathematical-terms-useful-for-statistical-analysis"><u>Objective 4</u>: Identify basic mathematical terms useful for statistical analysis</h4>
 <p>Today we will consider three terms:</p>
 <div class="incremental">
 <ul class="incremental">
@@ -718,8 +745,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Columns</strong>. A <em>column</em> in a data set is generally used to refer to individual <strong>variables</strong>.</p>
 <hr>
 </section>
-<section id="databases" class="level4">
-<h4 class="anchored" data-anchor-id="databases">Databases</h4>
+<section id="databases" class="level3">
+<h3 class="anchored" data-anchor-id="databases">Databases</h3>
 <p>Last week, we created a small data set called a data frame. This week, we’ll briefly introduce databases for later.</p>
 <p>Databases are collections of data sets or multiple data frames.</p>
 <p>For example, a set of state records can be stored by year, or the same information can be restructured into a set of sets defined by state. In either case, we will define the elements of a <em>database as a set of k sets</em> where each set is a data set. As before, we index items in a set using a lower case <span class="math inline">\(i\)</span> and start with 1 such that <span class="math inline">\(i = 1, 2, 3, ...,k-1, k\)</span> (note the use of <span class="math inline">\(k\)</span> instead of <span class="math inline">\(n\)</span>).</p>
@@ -753,9 +780,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-</section>
-<section id="a-database-containing-k-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="a-database-containing-k-datasets"><img src="img/wk3-e-5.jpg" class="img-fluid" alt="A database containing k datasets"></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/wk3-e-5.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">A database containing k datasets</figcaption>
+</figure>
+</div>
 <p>In the first example, we can consider a “small” example to help us answer the question. Take only the first few data sets of the database. For example, assume we start collecting data in the current year (year 1) and do so for the following two years:</p>
 <p>Let <span class="math inline">\(d_1\)</span> correspond to this year, <span class="math inline">\(d_2\)</span> correspond to next year, and <span class="math inline">\(d_3\)</span> correspond to the year after.</p>
 <p>Note, however, when we rush to subtract the index on the last data set, <span class="math inline">\(d_3\)</span> from the first data set <span class="math inline">\(d_1\)</span>, we end up with a value of 2. However, we see that there are, in fact, a total of three (3) data sets in the database: this year’s data set, next year’s data set, and the year after next year’s data set. This is due to the method we use to index a database.</p>
@@ -765,18 +795,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="part-iii-code" class="level1">
 <h1>Part III: Code</h1>
 <p>This week, we will prepare for Lab 1.</p>
-<section id="task-1-open-a-new-rscript-and-write-a-preamble" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-open-a-new-rscript-and-write-a-preamble">Task 1: Open a new RScript and write a preamble</h2>
-<p>Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this <em>preamble</em> at the very top of our RScript file.</p>
-<p>A <em>preamble</em> is simply an introduction to your code. The structure of a preamble can vary widely.</p>
-<p>In an RScript file, we use hashtags (#) to write certain sections in our preamble. The # symbol informs R that it should ignore that line in our code.</p>
 <section id="task-0.1-check-your-working-directory" class="level4">
 <h4 class="anchored" data-anchor-id="task-0.1-check-your-working-directory">Task 0.1: Check your working directory</h4>
 <p>In your console, type in the following code to ensure you are in the desired directory:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of and set up in lecture five.</p>
+<p>If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for our course.</p>
 <p>For example, <code>stats/lab1</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># insert your desired path in the parenthesis and remove the #</span></span>
@@ -784,27 +809,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>You can also add a sub-folder manually or under the <strong>Files</strong> tab in the RStudio IDE.</p>
 </section>
-<section id="task-0.2-start-a-new-r-script" class="level4">
-<h4 class="anchored" data-anchor-id="task-0.2-start-a-new-r-script">Task 0.2: Start a new R Script</h4>
-<p>Once you have confirmed that you are in the correct directory, start a new R Script.</p>
+<section id="task-0.2-start-a-new-rmarkdown" class="level4">
+<h4 class="anchored" data-anchor-id="task-0.2-start-a-new-rmarkdown">Task 0.2: Start a new RMarkdown</h4>
+<p>Once you have confirmed that you are in the correct directory, start a new RMarkdown file.</p>
 </section>
-<section id="task-0.3-write-a-preamble" class="level4">
-<h4 class="anchored" data-anchor-id="task-0.3-write-a-preamble">Task 0.3: Write a preamble</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Name: &lt;include your full name&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Assignment: Lab 1</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Date: &lt;here you may want to add a date&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Purpose: &lt;insert the goals or purpose of the RScript&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Let’s head over to Lab 1 to continue.</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
+<section id="task-1-open-a-rmarkdown-file" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-open-a-rmarkdown-file">Task 1: Open a RMarkdown file</h2>
+<p>Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this <em>preamble</em> at the very top of our RMarkdown file.</p>
+<p>A <em>preamble</em> is simply an introduction to your code. The structure of a preamble can vary widely. In an RMarkdown file, we can use hashtags (#) to write certain sections in our preamble. The # symbol informs R that it should ignore that line in our code.</p>
+<pre><code>---
+title: "Lab No. #"
+author: 
+  - name: "Insert Your Name"
+    affiliation: "DATA 202, Fall 2024, Howard University"
+date: "2024-08-15"
+always_allow_html: true
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+geometry: margin=1.0in
+---</code></pre>
+<p>Let’s head over to <a href="labs/lab1.html">Lab 1</a> to continue.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1163,8 +1199,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../papers/annotated.html" class="pagination-link">
-        <span class="nav-page-text">Annotated Bibliography</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../weeks/week05.html" class="pagination-link">
+        <span class="nav-page-text">Week 5</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

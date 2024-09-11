@@ -1,0 +1,113 @@
+---
+title: "Lab Template"
+author: 
+  - name: "Sample Student"
+    affiliation: "DATA 202, Fall 2024, Howard University"
+date: "2024-09-07"
+always_allow_html: true
+output: 
+  html_document:
+    code-copy: true
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+geometry: margin=1.0in
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+# Preparing a lab report
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("reticulate",repos = "http://cran.us.r-project.org")
+install.packages("educationdata",repos = "http://cran.us.r-project.org")
+library(reticulate)
+library(educationdata)
+```
+
+## Using R Markdown
+
+In RStudio, open an R Markdown document by selecting File \> New File \> R Markdown.
+When the dialog box opens, you can add a preliminary name to the file (but this is not yet required until you save the file), so you can simply click 'OK'.
+At the top of the R Markdown document, enter the following code (include the three dashes at the top and bottom):
+
+```         
+---
+title: "Lab No. #"
+author: 
+  - name: "Your Name"
+    affiliation: "DATA 202, Fall 2024, Howard University"
+date: "2024-09-07"
+always_allow_html: true
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+geometry: margin=1.0in
+---
+```
+
+This is an R Markdown document.
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
+For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{python}
+x = [1, 2, 3]
+```
+
+```{r}
+py$x
+```
+
+```{r}
+py$y <- head(cars)
+```
+
+```{python}
+print(y)
+```
+
+# Using different code {.tabset}
+
+## R
+
+(tab content)
+
+## Python
+
+(tab content)

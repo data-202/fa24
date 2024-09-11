@@ -3,7 +3,9 @@ title: "Computing"
 subtitle: "DATA 202: Statistically Measuring and Modeling Social Justice"
 ---
 
-### Setting up your computer.
+## Getting started in RMarkdown.
+
+## Setting up your reference and style files.
 
 ## Lab 0: Downloading R and RStudio.
 
