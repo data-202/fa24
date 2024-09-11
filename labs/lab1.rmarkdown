@@ -8,6 +8,7 @@ format:
 editor: visual
 ---
 
+
 For Lab 1, you should submit your solutions to Canvas as a `.pdf` and include your *RMarkdown* syntax (i.e., you can render an html file or push your code to GitHub, or share the .Rmd file). Please see the *Preparing Lab Reports* section at the bottom of this assignment.
 
 Your file name should read: FirstName_LastName_Lab1.Rmd
@@ -60,6 +61,7 @@ You will submit your final output on Canvas [here](https://canvas.howard.edu/cou
 
 In your console, type in the following code to ensure you are in the desired directory:
 
+
 ```{r}
 #| echo: true
 #| output: false
@@ -67,7 +69,9 @@ In your console, type in the following code to ensure you are in the desired dir
 getwd()
 ```
 
+
 If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of and set up in lecture five.
+
 
 ```{r}
 #| echo: true
@@ -77,11 +81,13 @@ If you are not in the desired directory, you can change your directory using the
 # setwd("/your/working/directory/goes/here") 
 ```
 
+
 You can add a new sub-folder manually or under the **Files** tab in the RStudio IDE.
 
 ## Task 0.2: Start a new RMarkdown file
 
 Once you have confirmed that you are in the correct directory, start a new RMarkdown file (.Rmd) and write your preamble.
+
 
 ```{r}
 #| echo: true
@@ -103,7 +109,9 @@ Once you have confirmed that you are in the correct directory, start a new RMark
 
 ```
 
+
 ## Task 0.3: Write setup code chunks
+
 
 ```{r}
 #| echo: true
@@ -115,7 +123,9 @@ Once you have confirmed that you are in the correct directory, start a new RMark
 # library(devtools)
 ```
 
+
 ## Task 0.4: Packages and libraries
+
 
 ```{r}
 #| echo: true
@@ -135,6 +145,7 @@ library(remotes)
 
 here::i_am("lab1.Rmd")
 ```
+
 
 The `dplyr` package supports data analyst with efficient data manipulation. As a part of the `tidyverse` package, the functions included in `dplyr` we loaded earlier will help you generate efficient workflows. Though, in reality, most analysts transition between classic code found widely on the internet and the more recent `dplyr` commands.
 
@@ -182,6 +193,7 @@ In this part of the lab, you will complete the following tasks:
 
 To begin, we will install and/or update the installation of `critstats`.
 
+
 ```{r}
 #| echo: true
 #| output: false
@@ -196,20 +208,25 @@ library(critstats)
 # update.packages("critstats")
 ```
 
+
 ### Task 1.2.2: Call the `true_size` data
+
 
 ```{r}
 #| output: false
 true_size
 ```
 
+
 ### Task 1.2.3: Inspect the `true_size` documentation
 
 Using the `??data` prompt, you can inspect the contents of the data frame.
 
+
 ```{r}
 ??true_size
 ```
+
 
 As noted before, this serves as the data's documentation and is the basis of a code book (or codebook). A codebook contains very specific details about a database, data set, and the variables each contains. We will explore codebooks more in the future.
 
@@ -221,9 +238,11 @@ As noted before, this serves as the data's documentation and is the basis of a c
 
 Use the assignment operator to assign the `true_size` data frame to the object `df1`.
 
+
 ```{r}
 df1 <- true_size
 ```
+
 
 ### Task 1.3.2: Inspect your data
 
@@ -231,9 +250,11 @@ Use the `str()` function to inspect your data frame.
 
 `str()` displays the structure of R objects.
 
+
 ```{r}
 str(df1)
 ```
+
 
 You can also run similar commands separately:
 
@@ -241,10 +262,12 @@ You can also run similar commands separately:
 
 Use the `dim()` function to check the dimensions of your data.
 
+
 ```{r}
 # check the dimensions of your data
 dim(df1)
 ```
+
 
 Note that the dimensions are reported as a $n \times m$ matrix with $n$ rows and $m$ columns.
 
@@ -252,55 +275,67 @@ Note that the dimensions are reported as a $n \times m$ matrix with $n$ rows and
 
 Use the `view()` function to see all of your data in a separate window.
 
+
 ```{r}
 # view the data
 view(df1)
 ```
 
+
 #### Task 1.3.2c: `glimpse()`
 
 Take a glimpse of your data using the `glimpse()` function.
+
 
 ```{r}
 # get a glimpse of your data frame
 glimpse(df1)
 ```
 
+
 #### Task 1.3.2d: `head()`
 
 View the first six observations in your data using the `head()` function.
+
 
 ```{r}
 # view the "top" of your data
 head(df1)
 ```
 
+
 #### Task 1.3.2e: `tail()`
 
 View the last six observations in your data using the `tail()` function.
+
 
 ```{r}
 # view the "bottom" of your data
 tail(df1)
 ```
 
+
 #### Task 1.3.2f: Specify `n` in `head()` or `tail()`
 
 You can change the number of observations viewed by being more explicit in your code.
+
 
 ```{r}
 head(df1, n = 10) # view the top 10 observations
 tail(df1, n = 3) # view the bottom 3 observations
 ```
 
+
 #### Task 1.3.2g: `summary()`
 
 Get a summary of all variables in the data set.
+
 
 ```{r}
 # get a summary of your data frame
 summary(df1)
 ```
+
 
 ------------------------------------------------------------------------
 
@@ -314,6 +349,7 @@ The `select()` command retains only those columns that are listed.
 
 It uses the logic `select(data, variable1, variable2, ...)`.
 
+
 ```{r}
 # keep only the Country and percent.africa columns
 select(df1, Country, percent.africa) 
@@ -322,9 +358,11 @@ select(df1, Country, percent.africa)
 select(df1, Country, area.sq.mi)
 ```
 
+
 We can also subset columns by deleting others
 
 To do so, we use a minus sign ahead of the column names.
+
 
 ```{r}
 # remove the area.sq.mi variable
@@ -334,9 +372,11 @@ select(df1, -area.sq.km)
 select(df1, -area.sq.km, -area.sq.mi) 
 ```
 
+
 ### Task 1.4.2: Filter rows (cases) using `filter()`
 
 `filter()` allows us to select rows based on specific criteria.
+
 
 ```{r}
 # keep only those rows where the percent.africa value is grater than 30
@@ -352,6 +392,7 @@ filter(df1, percent.africa < 10 & percent.africa > 1)
 filter(df1, Country == "China")
 ```
 
+
 Notice the use of a `==` equal sign when referencing a cell's value. This will become an important component of base logic and analysis when writing code.
 
 ### Task 1.4.3: Add/remove columns (variables) using `mutate()`
@@ -362,14 +403,17 @@ It is not clear what `area.sq.mi` and `area.sq.km` refer to in our data. Further
 
 We can transform these as follows:
 
+
 ```{r}
 # add a new column with a more accurate label for land area estimate (sq mi)
 mutate(df1, est.square.miles = df1$area.sq.mi * 1000000) 
 ```
 
+
 #### Task 1.4.3a: Add new variables using the pipe `%>%`
 
 We can also use the `pipe` operator to mutate the variable.
+
 
 ```{r}
 # we can create the same output when using the %>% (pipe)
@@ -381,9 +425,11 @@ df1 %>%
   mutate(est.square.km = df1$area.sq.km * 1000000)
 ```
 
+
 #### Task 1.4.3b: Add new variables and remove old variables
 
 It is easiest to put all of the verbs together in a single chunk of code.
+
 
 ```{r}
 # remove the old column; use the pipe command to do both operations at once
@@ -393,11 +439,13 @@ df1 %>%
   select(-area.sq.mi, -area.sq.km) # remove the columns we do not want
 ```
 
+
 These values seem to represent the data more clearly.
 
 ### Task 1.4.4: Rename a column using `rename()`
 
 We can also use `rename()` to modify a column's label.
+
 
 ```{r}
 df1 %>%
@@ -407,7 +455,9 @@ df1 %>%
   rename(country = Country)  # make the 'C' in country lowercase
 ```
 
+
 ### Task 1.4.5: Use `relocate()` to reorder the columns
+
 
 ```{r}
 df1 %>%
@@ -418,9 +468,11 @@ df1 %>%
   relocate(country, percent.africa, est.square.miles) # reorder the columns
 ```
 
+
 ### Task 1.4.6: Overwrite your data frame
 
 Now that we've restructured the data into a format that is more accurate, we can reassign our data frame using the pipe operator. Take note of how the code is built with new commands starting on a new line and ending with the `%>%` operator.
+
 
 ```{r}
 true_size_modified <- df1 %>%
@@ -431,11 +483,14 @@ true_size_modified <- df1 %>%
   relocate(country, percent.africa, est.square.miles) # reorder the columns
 ```
 
+
 Now view your modified data frame.
+
 
 ```{r}
 true_size_modified
 ```
+
 
 ### Task 1.4.7: Explore `summarise()`, `arrange()`, and other verbs
 
@@ -477,11 +532,13 @@ The data frame contains data on African countries and territories for two years:
 
 We begin by taking a look at the data.
 
+
 ```{r}
 #| echo: true
 #| output: false
 africa_data_all 
 ```
+
 
 What are some of your early observations?
 
@@ -489,11 +546,13 @@ What are some of your early observations?
 
 The documentation can help us get a better idea of the data frame's content.
 
+
 ```{r}
 #| echo: true
 #| output: false
 ??africa_data_all 
 ```
+
 
 If, by chance, you cannot load the documentation or experience issues with the `critstats` data package, you may need to restart your RStudio session.
 
@@ -509,9 +568,11 @@ The approach taken below is one of many possibiliites.
 
 Use the assignment operator to assign the `africa_data_all` data frame to the object df2.
 
+
 ```{r}
 df2 <- africa_data_all
 ```
+
 
 We can now work more efficiently by typing `df2` when we want to call the data frame. Notice that I did not overwrite `df1` in the event you want to return to Part 1 of this lab.
 
@@ -519,33 +580,43 @@ We can now work more efficiently by typing `df2` when we want to call the data f
 
 The str() function displays the structure of R objects.
 
+
 ```{r}
 str(df2)
 ```
 
+
 Use `head()` to view the "top" of your data.
+
 
 ```{r}
 head(df2)
 ```
 
+
 Use `tail()` to view the "bottom" of your data.
+
 
 ```{r}
 tail(df2)
 ```
 
+
 View your data using the `view()` command.
+
 
 ```{r}
 view(df2)
 ```
 
+
 Get a summary of your data with `summary()`.
+
 
 ```{r}
 summary(df2)
 ```
+
 
 Take note of the content and values of the data and its structure.
 
@@ -561,10 +632,12 @@ Specifically, the variable `year` separates the 2020 and 2023 data.
 
 To examine how many data values are listed by year we can use `table()`.
 
+
 ```{r}
 # create a table of the number of observations by year
 table(df2$year)
 ```
+
 
 We notice 58 values for each year. What does this say about our data?
 
@@ -574,13 +647,16 @@ There are different ways to gather summary statistics by year.
 
 I can nest the request using some logic and the year 2020 as follows:
 
+
 ```{r}
 summary(filter(df2, year == 2020))
 ```
 
+
 Consider why `filter(summary(df2, year == 2020))` returns an error.
 
 We can also use the `%>%` operator to list the commands in order for 2020.
+
 
 ```{r}
 # gather summary statistics for all variables for year == 2020
@@ -589,7 +665,9 @@ df2 %>%
   summary()
 ```
 
+
 We can use the same commands to filter the data for 2023.
+
 
 ```{r}
 # gather summary statistics for all variables for year == 2023
@@ -597,6 +675,7 @@ df2 %>%
   filter(year == 2023) %>% 
   summary()
 ```
+
 
 ## Task 2.4: Get univariate statistics
 
@@ -636,6 +715,7 @@ Each of the above functions provides a different perspective on the distribution
 
 From our earlier observations, we see that the `africa_data_all` (`df2`) contains data across two years: 2020 and 2023. Let's use pipes `%>%` to create separate data from for each year.
 
+
 ```{r}
 # create a separate data frame for 2020
 data_2020 <- df2 %>% 
@@ -644,9 +724,11 @@ data_2020 <- df2 %>%
 data_2020 # view the data for 2020
 ```
 
+
 It is not clear that this data is for 2020. As a result, we can reorganize the columns and overwrite the data frame.
 
 I am moving the `year` variable to the second position in the data frame.
+
 
 ```{r}
 data_2020 <- df2 %>% 
@@ -656,7 +738,9 @@ data_2020 <- df2 %>%
 data_2020 # view the data for 2020
 ```
 
+
 We can run the same functions for `year == 2023`.
+
 
 ```{r}
 # create a separate data frame for 2023
@@ -667,11 +751,13 @@ data_2023 <- df2 %>%
 data_2023 # view the data for 2023
 ```
 
+
 It is now clearer which year we are loading when we view the data frames.
 
 ### Task 2.4.1a: Check for missing data
 
 We can check the entire data frame for missing values using `is.na()`.
+
 
 ```{r}
 #| output: false
@@ -679,6 +765,7 @@ is.na(data_2020)
 
 is.na(data_2023)
 ```
+
 
 You can see that this output is far too extensive.
 
@@ -688,17 +775,21 @@ Let's use the `migrants` variable in the `df2` data frame by inserting `df2$migr
 
 The code to check for missing values in the 2020 data frame for the variable `migrant` is as follows:
 
+
 ```{r}
 is.na(data_2020$migrants)
 ```
+
 
 Notice that there is a missing value for the variable `migrant` in the 2020 data.
 
 It may be important to see the total number of missing values in the data frame. We can check the number of missing values for each variable using `sapply()`. The `sapply()` is a base-R function and it is used for different purposes. Here is an example:
 
+
 ```{r}
 sapply(data_2020, function(x) sum(is.na(x)))
 ```
+
 
 `sapply()` is a loop function and the above code iterates the function for each variable in the `df2` data set.
 
@@ -716,17 +807,21 @@ In class, we will learn how to deal with missing values. For now, you can remove
 
 When conducting univariate statistics, we can simply tell R to ignore missing values.
 
+
 ```{r}
 # mean returns `NA` since there are missing values
 mean(data_2020$migrants)
 ```
 
+
 Use `na.rm = TRUE` to remove missing values from a numeric variable
+
 
 ```{r}
 # instruct R to remove missing values from the analysis using `
 mean(data_2020$migrants, na.rm = TRUE)
 ```
+
 
 There are some exceptions here and it relates to the type of variable being used. We'll explore missing values in class.
 
@@ -740,6 +835,7 @@ Recall that `data_2020` was used as a label for `africa_data_all` when `year == 
 
 The `mean()` function returns the mean of a single numeric variable.
 
+
 ```{r}
 # find the average population in 2020
 mean(data_2020$pop)
@@ -751,9 +847,11 @@ mean(data_2020$urban.pop)
 mean(data_2020$med.age)
 ```
 
+
 Notice that the last command returns `NA` due to missing values.
 
 We can correct this by using `na.rm = TRUE`.
+
 
 ```{r}
 # check to see missing data in the variable
@@ -763,15 +861,19 @@ is.na(data_2020$med.age)
 mean(data_2020$med.age, na.rm = TRUE)
 ```
 
+
 ### Task 2.4.3: `median()`
 
 The `median()` function returns the middle value of a single numeric variable.
+
 
 ```{r}
 median(data_2020$pop)
 ```
 
+
 We can also use pipe operators to filter the countries that are above and below the `median` values.
+
 
 ```{r}
 # filter data to show countries that are below the median
@@ -785,27 +887,33 @@ data_2020 %>%
   select(country, pop)
 ```
 
+
 ### Task 2.4.4: `mode()` and `table()`
 
 The `mode()` function returns the variable type for the mode of a single variable.
+
 
 ```{r}
 # what does this output tell us about the mode of the med.age variable?
 mode(data_2020$med.age) 
 ```
 
+
 We can use the `table()` function to get our mode.
 
 The `table()` function returns a frequency table with counts of each level for a single variable.
+
 
 ```{r}
 # what does this updated output tell us about the mode of the med.age variable?
 table(data_2020$med.age) 
 ```
 
+
 ### Task 2.4.5: `max()` and `min()`
 
 The `max()` function returns the maximum value of a single numeric variable.
+
 
 ```{r}
 # get the maximum value
@@ -817,7 +925,9 @@ data_2020 %>%
   select(country, pop)
 ```
 
+
 The `min()` function returns the minimum value of a single numeric variable.
+
 
 ```{r}
 # get the minimum value
@@ -829,15 +939,19 @@ data_2020 %>%
   select(country, pop)
 ```
 
+
 ### Task 2.4.6: `range()`
 
 The `range()` function returns the min() and max() values of a single numeric variable.
+
 
 ```{r}
 range(data_2020$pop)
 ```
 
+
 However, we can manually compute the `range` by using arithmetic with our functions.
+
 
 ```{r}
 # generate a new variable call population range that is the maximum minus the minimum value
@@ -845,7 +959,9 @@ pop_range_2020 <- max(data_2020$pop) - min(data_2020$pop)
 pop_range_2020 # we must call the object back to see its value
 ```
 
+
 ### Task 2.4.7: `IQR()`
+
 
 ```{r}
 # find the IQR for the 2020 population variable
@@ -855,9 +971,11 @@ IQR(data_2020$pop)
 IQR(data_2020$urban.pop)
 ```
 
+
 ### Task 2.4.8: `sd()`
 
 The `sd()` function returns the standard deviation for a single numeric variable.
+
 
 ```{r}
 # find the standard deviation of the 2020 population variable
@@ -867,13 +985,16 @@ sd(data_2020$pop)
 sd(data_2020$urban.pop)
 ```
 
+
 ### Task 2.4.8: Use `summary()`
 
 The `summary()` function is often more efficient for a quick check of univariate statistics.
 
+
 ```{r}
 summary(data_2020)
 ```
+
 
 Not, however, the values that `summary()` returns and those that it does not. While the function can be used to be more efficient, it should not replace a thorough inspection of your data. We will discuss this more in exploratory data anlaysis.
 
@@ -883,41 +1004,51 @@ Not, however, the values that `summary()` returns and those that it does not. Wh
 
 `boxplot()` returns a box plot of a numeric variable or variables.
 
+
 ```{r}
 boxplot(data_2020$pop)
 ```
+
 
 ### Task 2.5.2: `hist()`
 
 `hist()` returns a histogram of a single numeric variable.
 
+
 ```{r}
 hist(data_2020$pop)
 ```
+
 
 ### Task 2.5.3: `stem()`
 
 `stem()` provides a stem-and-leaf plot when a single numeric variable is input.
 
+
 ```{r}
 stem(data_2020$med.age)
 ```
+
 
 ### Task 2.5.4: `plot()`
 
 `plot()` provides a scatter plot of data values by its index, $i$.
 
+
 ```{r}
 plot(data_2020$med.age)
 ```
+
 
 ### Task 2.5.5: `plot(density())`
 
 `plot(density())` provides a density plot of a single numeric variable
 
+
 ```{r}
 plot(density(data_2020$pop))
 ```
+
 
 ------------------------------------------------------------------------
 
@@ -953,11 +1084,13 @@ What are some of the main concepts in [Vaughan (2018)](https://www.jstor.org/sta
 
 If the data in `true_size_modified` is accurate, what is the expected correlation between the percent.africa and est.square.miles variables? Specifically, why do we get the below scatter plot based on the data values?
 
+
 ```{r}
 #| echo: false
 #| output: true
 plot(percent.africa ~ est.square.miles, true_size_modified)
 ```
+
 
 ## Report 1.3
 
@@ -971,6 +1104,7 @@ Use `mutate()` and arithmetic to generate the new variable.
 
 Hint: If $Y$ = `proportion`, then $y_i = \dfrac{x_i}{sum(x)}$ for some variable $X$ in data set.
 
+
 ```{r}
 #| echo: false
 #| output: true
@@ -981,9 +1115,11 @@ true_size_modified %>%
   tail()
 ```
 
+
 Overwrite `true_size_modified` with a new data framed titled `true_size_updated`.
 
 You should be able to call the data as follows:
+
 
 ```{r}
 #| echo: false
@@ -1009,11 +1145,13 @@ true_size_updated
 true_size_updated
 ```
 
+
 ## Report 1.5
 
 To confirm that you have generated the new variable and overwritten the data frame, create the plot below using the following code. Be sure to add your first name and last name in the quotes.
 
 The code should be verbatim with the exception of your name.
+
 
 ```{r}
 #| echo: true
@@ -1022,7 +1160,9 @@ plot(true_size_updated$proportion, true_size_updated$percent.africa)
 title("first.name last.name") # Add your first name and last name
 ```
 
+
 For example, my code would read:
+
 
 ```{r}
 #| echo: true
@@ -1030,6 +1170,7 @@ For example, my code would read:
 plot(true_size_updated$proportion, true_size_updated$percent.africa)
 title("Nathan Alexander") # Add your first name and last name
 ```
+
 
 Notice the use of quotes when using `title()` under a plot.
 
@@ -1080,3 +1221,4 @@ If you experience issues executing your code, it is likely that you have made an
 Remember that R is case sensitive in all instances, and space sensitive in some instances.
 
 Please be sure to go back and carefully check your code.
+
