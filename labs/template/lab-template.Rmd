@@ -1,30 +1,72 @@
 ---
-title: "Lab Template"
-author: 
-  - name: "Sample Student"
-    affiliation: "DATA 202, Fall 2024, Howard University"
-date: "2024-09-07"
-always_allow_html: true
-output: 
+title: "Lab 1"
+author: "Nathan Alexander"
+date: "2024-09-11"
+output:
   html_document:
-    code-copy: true
-    toc: true
-    toc_depth: 2
-    toc_float:
-      collapsed: false
-      smooth_scroll: true
-    number_sections: true
-    self_contained: yes
-    mode: selfcontained
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    number_sections: true
-geometry: margin=1.0in
+    theme: flatly
+  pdf_document: default
 editor_options:
   markdown:
     wrap: sentence
 ---
+
+```{r, eval=F}
+install.packages("devtools")
+library(devtools)
+```
+
+You can write you own syntax, tell me how your day is going, or what you plan to do in this lab.
+
+```{r, eval=F}
+# install package
+install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+install.packages("remotes", repos = "http://cran.us.r-project.org")
+ 
+# load the necessary libraries
+library(tidyverse) #collection of R packages designed for data science
+library(here) #helps with filepaths
+library(dplyr)
+library(remotes)
+
+here::i_am("lab-template.Rmd")
+```
+
+Type a note.
+
+
+
+```{r, eval=F}
+
+
+```
+
+
+```{r, eval=F}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Preparing a lab report
 
@@ -43,26 +85,7 @@ When the dialog box opens, you can add a preliminary name to the file (but this 
 At the top of the R Markdown document, enter the following code (include the three dashes at the top and bottom):
 
 ```         
----
-title: "Lab No. #"
-author: 
-  - name: "Your Name"
-    affiliation: "DATA 202, Fall 2024, Howard University"
-date: "2024-09-07"
-always_allow_html: true
-output: 
-  html_document:
-    toc: true
-    toc_depth: 2
-    number_sections: true
-    self_contained: yes
-    mode: selfcontained
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    number_sections: true
-geometry: margin=1.0in
----
+
 ```
 
 This is an R Markdown document.
