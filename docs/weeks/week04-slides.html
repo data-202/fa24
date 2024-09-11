@@ -515,7 +515,7 @@ Nathan Alexander, PhD
 <section class="slide level2">
 
 <p>This is a simple two-variable path diagram</p>
-<div class="cell" data-reveal="true" data-fig-height="16" data-fig-responsive="false">
+<div class="cell" data-reveal="true" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -546,7 +546,7 @@ Nathan Alexander, PhD
 <section class="slide level2">
 
 <p>Three variable path diagram</p>
-<div class="cell" data-reveal="true" data-fig-responsive="false">
+<div class="cell" data-reveal="true" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -559,7 +559,7 @@ Nathan Alexander, PhD
 </div>
 </div>
 <p>A path diagram made of multiple variables</p>
-<div class="cell" data-reveal="true" data-fig-responsive="false">
+<div class="cell" data-reveal="true" data-fig-responsive="false" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <div>
@@ -591,25 +591,65 @@ Nathan Alexander, PhD
 </section>
 <section class="slide level2">
 
-<h4 id="objective-1-understand-the-role-of-mathematics-in-modern-statistics"><u>Objective 1</u>: Understand the role of mathematics in modern statistics</h4>
-<p>Statistical data analysis relies on a variety of mathematical models in order to describe and make inferences about the variables in a set of data. In particular, mathematical and statistical models allow us to make predictions about various phenomena in the world.</p>
-<p><em>Mathematical statistics</em> is the application of probability, the branch of mathematics concerned with how likely an event is to occur or how true a proposition is, to the field of statistics.</p>
-<p>Techniques in both areas rely on topics in linear algebra, numerical analysis, and a host of other sub-areas. It is important to understand the basis of these mathematical foundations to engage in further critical statistical thinking.</p>
+<h4 id="objective-1-frame-the-role-of-probability-in-statistics"><u>Objective 1</u>: Frame the role of probability in statistics</h4>
+<p>Probability theory forms the backbone of statistical inference and modeling.</p>
+<p>Key Concepts</p>
+<ul>
+<li><p><strong>Probability Space</strong>: A probability space is a mathematical construct that contains the results of a random process, generally known as an experiment. The probability space consists of:</p>
+<ul>
+<li><p>Sample space (<span class="math inline">\(\Omega\)</span>): The set of all possible outcomes</p></li>
+<li><p>Event space (<span class="math inline">\(F\)</span>): A collection of subsets of <span class="math inline">\(\Omega\)</span> containing the various events, <span class="math inline">\(E\)</span></p></li>
+<li><p>Probability measure (<span class="math inline">\(P\)</span>): A function assigning probabilities to events</p></li>
+</ul></li>
+</ul>
+<p>Classic example: Tossing a fair coin</p>
+<ul>
+<li><p><span class="math inline">\(\Omega = \{Heads, Tails\}\)</span></p></li>
+<li><p><span class="math inline">\(F\)</span> = {∅, {Heads}, {Tails}, {Heads, Tails}}</p></li>
+<li><p><span class="math inline">\(P({Heads}) = P({Tails}) = 0.5\)</span>, <span class="math inline">\(P(∅) = 0\)</span>, <span class="math inline">\(P({Heads, Tails}) = 1\)</span></p></li>
+</ul>
 </section>
 <section class="slide level2">
 
-<p><a href="#/fig-correlation">Figure&nbsp;1</a> shows the relationship between two variables, x and y.</p>
-
-<img data-src="week04_files/figure-html/fig-correlation-1.png" width="672" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: Correlation plot of two variables, x and y</p></section>
+<ul>
+<li><p>*Random Variables**: Random variables (RVs) are functions mapping the sample space to real numbers. We generally study:</p>
+<ul>
+<li><p>Discrete random variables: Take on countable values</p></li>
+<li><p>Continuous random variables: Take on uncountable values</p></li>
+<li><p>Probability mass function (PMF): <span class="math inline">\(P(X = x)\)</span> for discrete RVs</p></li>
+<li><p>Probability density function (PDF): <span class="math inline">\(f(x)\)</span> for continuous RVs</p></li>
+<li><p>Cumulative distribution function (CDF): <span class="math inline">\(F(x) = P(X \leq x)\)</span></p></li>
+</ul></li>
+</ul>
+</section>
 <section class="slide level2">
 
-<p><a href="#/fig-regression">Figure&nbsp;2</a> illustrates the regression line that describes the relationship between x and y.</p>
-<p>In statistical modeling, regression allows us to estimate the relationship between a dependent variable, <span class="math inline">\(Y\)</span>, and an independent variable, <span class="math inline">\(X\)</span>.</p>
-
-<img data-src="week04_files/figure-html/fig-regression-1.png" width="672" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;2: Illustration of a linear regression on a set of coordinates <span class="math inline">\((x_i, y_i)\)</span></p></section>
+<ul>
+<li><p><em>Expectation and Moments</em></p>
+<ul>
+<li><p>Expected value: <span class="math inline">\(E[X] = ∑xP(X=x)\)</span> or <span class="math inline">\(∫xf(x) dx\)</span></p></li>
+<li><p>Variance: Var(X) = <span class="math inline">\(E[(X - E[X])^2]\)</span></p></li>
+<li><p>Standard deviation: <span class="math inline">\(\sigma = \sqrt{Var(X)}\)</span></p></li>
+<li><p>Higher-order moments: <span class="math inline">\(E[X^n]\)</span></p></li>
+<li><p>Moment generating function: <span class="math inline">\(M_X(t) = E[e^(tX)]\)</span></p></li>
+</ul></li>
+</ul>
+<p>Classic example: Standard normal distribution <span class="math inline">\(N(0, 1)\)</span> i.e., where <span class="math inline">\(0\)</span> is the mean, <span class="math inline">\(\mu\)</span>, and <span class="math inline">\(1\)</span> is the variance, <span class="math inline">\(\sigma^2\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(E[X] = 0\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = 1\)</span></p></li>
+<li><p>Recall, the Standard normal distribution:</p>
+<p>It’s symmetric around the mean of 0; it’s bell-shaped curve has a peak at x = 0.</p>
+<ul>
+<li><p>~68% of the data falls within one standard deviation of the mean (between -1 and 1).</p></li>
+<li><p>~95% of the data falls within two standard deviations of the mean (between -2 and 2).</p></li>
+<li><p>~99.7% of the data falls within three standard deviations of the mean (between -3 and 3).</p></li>
+</ul></li>
+</ul>
+</section>
 <section class="slide level2">
 
-<h4 id="objective-2-distinguish-between-algebra-and-statistics"><u>Objective 2</u>: Distinguish between algebra and statistics</h4>
+<h4 id="objective-3-distinguish-between-algebra-and-statistics"><u>Objective 3</u>: Distinguish between algebra and statistics</h4>
 <div>
 <p>At its core, statistics is a branch of applied mathematics.</p>
 <ul>
@@ -644,7 +684,7 @@ Nathan Alexander, PhD
 </section>
 <section class="slide level2">
 
-<h4 id="objective-3-identify-basic-mathematical-terms-useful-for-statistical-analysis"><u>Objective 3</u>: Identify basic mathematical terms useful for statistical analysis</h4>
+<h4 id="objective-4-identify-basic-mathematical-terms-useful-for-statistical-analysis"><u>Objective 4</u>: Identify basic mathematical terms useful for statistical analysis</h4>
 <p>Today we will consider three terms:</p>
 <div>
 <ul>
@@ -749,7 +789,7 @@ Nathan Alexander, PhD
 </section>
 <section class="slide level2">
 
-<h4 id="databases">Databases</h4>
+<h3 id="databases">Databases</h3>
 <p>Last week, we created a small data set called a data frame. This week, we’ll briefly introduce databases for later.</p>
 <p>Databases are collections of data sets or multiple data frames.</p>
 <p>For example, a set of state records can be stored by year, or the same information can be restructured into a set of sets defined by state. In either case, we will define the elements of a <em>database as a set of k sets</em> where each set is a data set. As before, we index items in a set using a lower case <span class="math inline">\(i\)</span> and start with 1 such that <span class="math inline">\(i = 1, 2, 3, ...,k-1, k\)</span> (note the use of <span class="math inline">\(k\)</span> instead of <span class="math inline">\(n\)</span>).</p>
@@ -781,9 +821,10 @@ Nathan Alexander, PhD
 </div>
 </div>
 </section>
-<section id="a-database-containing-k-datasets" class="slide level2">
-<h2><img data-src="img/wk3-e-5.jpg" alt="A database containing k datasets"></h2>
-<p>In the first example, we can consider a “small” example to help us answer the question. Take only the first few data sets of the database. For example, assume we start collecting data in the current year (year 1) and do so for the following two years:</p>
+<section class="slide level2">
+
+
+<img data-src="img/wk3-e-5.jpg" class="r-stretch quarto-figure-center"><p class="caption">A database containing k datasets</p><p>In the first example, we can consider a “small” example to help us answer the question. Take only the first few data sets of the database. For example, assume we start collecting data in the current year (year 1) and do so for the following two years:</p>
 <p>Let <span class="math inline">\(d_1\)</span> correspond to this year, <span class="math inline">\(d_2\)</span> correspond to next year, and <span class="math inline">\(d_3\)</span> correspond to the year after.</p>
 <p>Note, however, when we rush to subtract the index on the last data set, <span class="math inline">\(d_3\)</span> from the first data set <span class="math inline">\(d_1\)</span>, we end up with a value of 2. However, we see that there are, in fact, a total of three (3) data sets in the database: this year’s data set, next year’s data set, and the year after next year’s data set. This is due to the method we use to index a database.</p>
 </section>
@@ -795,45 +836,51 @@ Nathan Alexander, PhD
 <h1>Part III: Code</h1>
 <p>This week, we will prepare for Lab 1.</p>
 </section>
-<section id="task-1-open-a-new-rscript-and-write-a-preamble" class="slide level2">
-<h2>Task 1: Open a new RScript and write a preamble</h2>
-<p>Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this <em>preamble</em> at the very top of our RScript file.</p>
-<p>A <em>preamble</em> is simply an introduction to your code. The structure of a preamble can vary widely.</p>
-<p>In an RScript file, we use hashtags (#) to write certain sections in our preamble. The # symbol informs R that it should ignore that line in our code.</p>
 <h4 id="task-0.1-check-your-working-directory">Task 0.1: Check your working directory</h4>
 <p>In your console, type in the following code to ensure you are in the desired directory:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of and set up in lecture five.</p>
+<p>If you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for our course.</p>
 <p>For example, <code>stats/lab1</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># insert your desired path in the parenthesis and remove the #</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="co"># setwd("/your/working/directory/goes/here") </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can also add a sub-folder manually or under the <strong>Files</strong> tab in the RStudio IDE.</p>
-<h4 id="task-0.2-start-a-new-r-script">Task 0.2: Start a new R Script</h4>
-<p>Once you have confirmed that you are in the correct directory, start a new R Script.</p>
-<h4 id="task-0.3-write-a-preamble">Task 0.3: Write a preamble</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="do">## Name: &lt;include your full name&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="do">## Assignment: Lab 1</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="do">## Date: &lt;here you may want to add a date&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="do">## Purpose: &lt;insert the goals or purpose of the RScript&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Let’s head over to Lab 1 to continue.</p>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section id="references" class="title-slide slide level1 center">
-<h1>References</h1>
+<h4 id="task-0.2-start-a-new-rmarkdown">Task 0.2: Start a new RMarkdown</h4>
+<p>Once you have confirmed that you are in the correct directory, start a new RMarkdown file.</p>
+<section id="task-1-open-a-rmarkdown-file" class="slide level2">
+<h2>Task 1: Open a RMarkdown file</h2>
+<p>Prior to conducting any analyses in R, we want to include a brief summary of our work so that we (and others who read our code) know what we are prioritizing. This is an important step to documenting our research. We will write this <em>preamble</em> at the very top of our RMarkdown file.</p>
+<p>A <em>preamble</em> is simply an introduction to your code. The structure of a preamble can vary widely. In an RMarkdown file, we can use hashtags (#) to write certain sections in our preamble. The # symbol informs R that it should ignore that line in our code.</p>
+<pre><code>---
+title: "Lab No. #"
+author: 
+  - name: "Insert Your Name"
+    affiliation: "DATA 202, Fall 2024, Howard University"
+date: "2024-08-15"
+always_allow_html: true
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+geometry: margin=1.0in
+---</code></pre>
+<p>Let’s head over to <a href="labs/lab1.html">Lab 1</a> to continue.</p>
 
 
 <img src="img/howard-logo.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/data-202">Course Data GitHub</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
