@@ -43,5 +43,5 @@ library(critstats)
 ```
 
 ```{r, eval=T}
-true_size
+critstats::true_size
 ```
