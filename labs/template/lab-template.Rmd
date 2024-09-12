@@ -42,7 +42,6 @@ library(critstats)
 # update.packages("critstats")
 ```
 
-
 ```{r, eval=T}
 true_size
 ```
