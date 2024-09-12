@@ -5,7 +5,9 @@ date: "2024-09-11"
 output:
   html_document:
     theme: flatly
-  pdf_document: default
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
 editor_options:
   markdown:
     wrap: sentence
@@ -19,118 +21,28 @@ library(devtools)
 You can write you own syntax, tell me how your day is going, or what you plan to do in this lab.
 
 ```{r, eval=F}
-# install package
-install.packages("tidyverse", repos = "http://cran.us.r-project.org")
-install.packages("remotes", repos = "http://cran.us.r-project.org")
- 
 # load the necessary libraries
 library(tidyverse) #collection of R packages designed for data science
 library(here) #helps with filepaths
 library(dplyr)
 library(remotes)
-
-here::i_am("lab-template.Rmd")
+here::i_am("lab-template.Rmd") # this should match your file name exactly
 ```
 
-Type a note.
-
-
+Loading the `critstats` package.
 
 ```{r, eval=F}
+# use the remote install function to call in your data
+# remotes::install_github("professornaite/critstats", force=TRUE)
 
+# load the `critstats` library
+library(critstats)
 
+# update the `critstats` package if needed
+# update.packages("critstats")
 ```
 
 
-```{r, eval=F}
-
-
+```{r, eval=T}
+true_size
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Preparing a lab report
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-# install.packages("reticulate",repos = "http://cran.us.r-project.org")
-install.packages("educationdata",repos = "http://cran.us.r-project.org")
-library(reticulate)
-library(educationdata)
-```
-
-## Using R Markdown
-
-In RStudio, open an R Markdown document by selecting File \> New File \> R Markdown.
-When the dialog box opens, you can add a preliminary name to the file (but this is not yet required until you save the file), so you can simply click 'OK'.
-At the top of the R Markdown document, enter the following code (include the three dashes at the top and bottom):
-
-```         
-
-```
-
-This is an R Markdown document.
-Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
-For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-```{python}
-x = [1, 2, 3]
-```
-
-```{r}
-py$x
-```
-
-```{r}
-py$y <- head(cars)
-```
-
-```{python}
-print(y)
-```
-
-# Using different code {.tabset}
-
-## R
-
-(tab content)
-
-## Python
-
-(tab content)
