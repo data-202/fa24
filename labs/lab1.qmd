@@ -200,7 +200,7 @@ library(critstats)
 
 ```{r}
 #| output: false
-true_size
+critstats::true_size
 ```
 
 ### Task 1.2.3: Inspect the `true_size` documentation
@@ -208,7 +208,7 @@ true_size
 Using the `??data` prompt, you can inspect the contents of the data frame.
 
 ```{r}
-??true_size
+??critstats::true_size
 ```
 
 As noted before, this serves as the data's documentation and is the basis of a code book (or codebook). A codebook contains very specific details about a database, data set, and the variables each contains. We will explore codebooks more in the future.
@@ -222,7 +222,7 @@ As noted before, this serves as the data's documentation and is the basis of a c
 Use the assignment operator to assign the `true_size` data frame to the object `df1`.
 
 ```{r}
-df1 <- true_size
+df1 <- critstats::true_size
 ```
 
 ### Task 1.3.2: Inspect your data
@@ -480,7 +480,7 @@ We begin by taking a look at the data.
 ```{r}
 #| echo: true
 #| output: false
-africa_data_all 
+critstats::africa_data_all 
 ```
 
 What are some of your early observations?
@@ -492,7 +492,7 @@ The documentation can help us get a better idea of the data frame's content.
 ```{r}
 #| echo: true
 #| output: false
-??africa_data_all 
+??critstats::africa_data_all 
 ```
 
 If, by chance, you cannot load the documentation or experience issues with the `critstats` data package, you may need to restart your RStudio session.
@@ -510,7 +510,7 @@ The approach taken below is one of many possibiliites.
 Use the assignment operator to assign the `africa_data_all` data frame to the object df2.
 
 ```{r}
-df2 <- africa_data_all
+df2 <- critstats::africa_data_all
 ```
 
 We can now work more efficiently by typing `df2` when we want to call the data frame. Notice that I did not overwrite `df1` in the event you want to return to Part 1 of this lab.
