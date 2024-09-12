@@ -1,6 +1,6 @@
 ---
 title: "Lab 1"
-subtitle: "DATA 202 - Alexander - Spring 2024"
+subtitle: "DATA 202 - Alexander - Fall 2024"
 format: 
   html:
     self-contained: true
