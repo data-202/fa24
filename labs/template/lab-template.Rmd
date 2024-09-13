@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup}
-install.packages("gssr") # general social survey (GSS) data
+# install.packages("gssr") # general social survey (GSS) data
 ```
 
 This is an area where you can put in some text.
