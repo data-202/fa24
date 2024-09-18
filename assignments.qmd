@@ -14,7 +14,7 @@ This page contains three sections:
 Our course assignments will be split between reading and typing (code and analytic results).
 
 | Course component                   | Assignment             | Date(s)          |
-|------------------------|-----------------------------|-------------------|
+|------------------------------------|------------------------|------------------|
 | **Part I: Statistics and society** |                        |                  |
 |                                    | Lab #0                 | Due: Tue Aug 27  |
 |                                    | Annotated Bibliography | Due: Sun Sept 8  |

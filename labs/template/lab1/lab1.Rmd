@@ -1,0 +1,117 @@
+---
+title: "Lab 1"
+author: "Your Full Name"
+date: "2024-09-18"
+output:
+  html_document:
+    theme: flatly
+  pdf_document:
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+# Part 0: Pre-lab tasks
+
+First, setup your RMarkdown file. The preamble (above) should have the `---` before and after any text. Tabs and spacing matter here, so please pay attention. In the code chunk below, take note of the `setup` included after `r` in the first line. Only one chunk of code should be used as a `setup` chunk.
+
+```{r setup, eval=F}
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("devtools", repos = "http://cran.us.r-project.org")
+library(devtools)
+```
+
+You only need to install a package once. You should and can do this manually even though it is located in your .Rmd file. First, run the *individual* line of code and then comment out the code by adding the `#` to start the line.
+
+I also commented out the `remotes` package here, as it is installed with the `devtools` package.
+
+Be sure to also change the `here` location of your file to the same name as the file name and use the .Rmd extension.
+
+```{r, eval=F}
+# install package
+# install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+# install.packages("remotes", repos = "http://cran.us.r-project.org")
+ 
+# load the necessary libraries
+library(tidyverse) #collection of R packages designed for data science
+library(here) #helps with filepaths
+library(tidyverse)
+library(dplyr)
+library(remotes)
+
+here::i_am("lab1.Rmd")
+```
+
+# Part 1: The true size of Africa
+
+Next, we will install the data package for our course. I have completed some maintenance and added a new data set but there were no error identified. That said, if you have any issues in the next step, please read the instructions immediately following this next block of code.
+
+```{r, eval=F}
+# use the remote install function to call in your data
+remotes::install_github("professornaite/critstats", force=TRUE)
+
+# load the `critstats` library
+library(critstats)
+
+# update the `critstats` package if needed
+# update.packages("critstats")
+```
+
+If you get the following error:
+
+`lazy-load database ‘…rdb’ is corrupt`
+
+Try the following steps and re-install the package.
+
+  1. Restart your R session by running `.rs.restartR()` in your RStudio Console. The package might have been installed in your computer (even though it does not work). 
+  
+  2. You can also remove it using `?remove.packages()`.
+  
+  3. Re-install the package using the steps in the code chunk above.
+
+---
+
+Note, in the line below, I am going to change the evaluation (eval) option to `TRUE`. 
+
+Here a capital `T` or the entire word `TRUE` (capitalized) will work.
+
+```{r, eval=T}
+critstats::true_size
+```
+
+```{r, eval=T}
+
+```
+
+
+
+```{r, eval=T}
+
+```
+
+
+```{r, eval=T}
+
+```
+
+
+```{r, eval=T}
+
+```
+
+
+```{r, eval=T}
+
+```
+
+```{r, eval=T}
+
+```
+
+```{r, eval=T}
+
+```
+
+```{r, eval=T}
+
+```

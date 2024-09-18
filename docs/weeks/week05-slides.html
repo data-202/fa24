@@ -948,7 +948,7 @@ $ year              &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 
 <div class="cell-output-display">
 <div id="fig-correlation" class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="week05_files/figure-html/fig-correlation-1.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/fig-correlation-1.png" width="960"></p>
 <figcaption>Figure&nbsp;1: Correlation plot of two variables, x and y</figcaption>
 </figure>
 </div>
@@ -1084,33 +1084,33 @@ $ year              &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="co"># boxplot</span></span>
 <span id="cb57-2"><a href="#cb57-2"></a><span class="fu">boxplot</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-34-1.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">boxplot</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-34-2.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-34-2.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co"># histogram</span></span>
 <span id="cb59-2"><a href="#cb59-2"></a><span class="fu">hist</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-35-1.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">hist</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-35-2.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-35-2.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># density curve</span></span>
 <span id="cb61-2"><a href="#cb61-2"></a><span class="fu">plot</span>(<span class="fu">density</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-36-1.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="week05_files/figure-html/unnamed-chunk-36-2.png" width="672"></p>
+<p><img data-src="week05_files/figure-revealjs/unnamed-chunk-36-2.png" width="960"></p>
 </div>
 </div>
 <h3 id="next-up-week-6"><strong>Next up</strong>: Week 6</h3>
@@ -1332,6 +1332,44 @@ $ year              &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

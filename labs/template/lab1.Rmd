@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Your Name Here"
+output: 
+  html_document:
+    self_contained: yes
+    mode: selfcontained
+  pdf_document:
+date: "2024-09-18"
+---
+
+Setup the RMarkdown file.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("devtools")
+library(devtools)
+```
+
+Next, we're going to load other packages and libraries.
+
+```{r}
+# install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+library(tidyverse)
+library(dplyr)
+library(here)
+
+here::i_am("lab1.Rmd")
+```
