@@ -1075,8 +1075,20 @@ Create basic plots (i.e., `boxplot()`, `hist()`, `plot()`, and `plot(density())`
 
 # Experiencing issues?
 
-If you experience issues executing your code, it is likely that you have made an error in the previous steps.
+If you experience issues executing your code, check the notes below.
 
-Remember that R is case sensitive in all instances, and space sensitive in some instances.
+Remember that R is case sensitive in all instances, and space sensitive in some instances. Please be sure to go back and carefully check your code.
 
-Please be sure to go back and carefully check your code.
+If you get the following error: 
+
+`lazy-load database ‘…rdb’ is corrupt`
+
+Try the following method and re-install the package.
+
+Restart your R session by running `.rs.restartR()` in your RStudio Console.
+
+The package might have been installed in your computer (even though it does not work). Remove it using `'`?remove.packages()`'`.
+
+Do not hesitate to contact me via email.
+
+
