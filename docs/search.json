@@ -588,13 +588,6 @@
     "text": "Part II: Content\n\n\nA guiding example\nLet us begin with a summary of responses to a survey sparked by the killing of George Floyd.\n\nSummary of survey response data1\n\n\nResponse\nTotal\n\n\n\n\nNo\n700\n\n\nYes\n236\n\n\n\nThe study sample \\(n = 936\\). Please take note of the table’s footnote.\nAs of now, we know very little about the survey (i.e., the context has been stripped away).\n\nAn initial question\nIs there a difference in the survey responses?\n\n\n\nFraming proportions\nAs you learn about hypothesis testing, you want to understand the nature of variable associations. There are many approaches to how we measure associations. One we’ll explore extensively is differences in proportions of two dichotomous variables.\nFirst, we add a third column to our table by computing the proportion in each row:\n\\[ P(No) = \\frac{\\text{Number of respondents who replied No}}{n} \\]\n\\[ P(Yes) = \\frac{\\text{Number of respondents who replied Yes}}{n} \\]\n\n\n\nUnderstanding proportions\n\nSummary of survey response data with proportion column\n\n\nResponse\nTotal\nProportion\n\n\n\n\nNo\n700\n\\(0.7478\\)\n\n\nYes\n236\n\\(0.2522\\)\n\n\n\nSo we have \\(P(No) = 0.7478\\) and \\(P(Yes) = 0.2522\\).\nThis is a sample. Be mindful of the notes about sampling and sampling error.\nWhat can these proportions tell us about the data?\n\n\n\n\nA closer look\nLet’s look at a preview panel of the full data set.\n\nPreview of full survey response data set\n\n\nID\nRace\nResponse\n\n\n\n\n1\nWhite\nYes\n\n\n2\nWhite\nYes\n\n\n.\n.\n.\n\n\n773\nBlack\nYes\n\n\n774\nBlack\nYes\n\n\n..\n..\n..\n\n\n874\nHispanic\nYes\n\n\n875\nHispanic\nYes\n\n\n…\n…\n…\n\n\n\\(1059\\)\nOther\nNot sure\n\n\n\n\nWhen we format the data into tables, there are multiple categories to consider.\nIn the table below, the race variable is listed in rows.\n\n\nTable 1: Race in rows\n\n\nRace\nNo\nYes\n\n\n\n\nBlack\nBlack \\(\\cap\\) No\nBlack \\(\\cap\\) Yes\n\n\nHispanic\nHispanic \\(\\cap\\) No\nHispanic \\(\\cap\\) Yes\n\n\nOther\nOther \\(\\cap\\) No\nOther \\(\\cap\\) Yes\n\n\nWhite\nWhite \\(\\cap\\) No\nWhite \\(\\cap\\) Yes\n\n\n\n\nRecall that the \\(\\cap\\) represents “and” while the \\(\\cup\\) represents “or” in logic.\n\nIn the table below, the response variable is listed in rows.\n\n\nTable 2: Response in rows\n\n\n\n\n\n\n\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\nNo \\(\\cap\\) Black\nNo \\(\\cap\\) Hispanic\nNo \\(\\cap\\) Other\nNo \\(\\cap\\) White\n\n\nYes\nYes \\(\\cap\\) Black\nYes \\(\\cap\\) Hispanic\nYes \\(\\cap\\) Other\nYes \\(\\cap\\) White\n\n\n\n\n\nWe use our understanding of probability to generate a reconstruction for the response ‘No’.\n\\[ P(No) = \\dfrac{\\text{No} \\cap \\text{Black}}{n} + \\dfrac{\\text{No} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{No} \\cap \\text{Other}}{n} + \\dfrac{\\text{No} \\cap \\text{White}}{n} \\]\nWe generate a parallel construction for the response ‘Yes’.\n\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\n\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201\n\n\n\n\nUse the table to calculate Response probabilities:\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\nTotal\n\n\n\n\nNo\n92\n75\n47\n486\n700\n\n\nYes\n6\n15\n14\n201\n236\n\n\n\nGather response probabilities for No by dividing each cell by the sample size.\n\\[ P(No) = \\dfrac{92}{936} + \\dfrac{75}{936} + \\dfrac{47}{936} + \\dfrac{486}{936} = \\dfrac{700}{936} = 0.7478 \\] Gather response probabilities for Yes by dividing each cell by the sample size.\n\\[ P(Yes) = \\dfrac{6}{936} + \\dfrac{15}{936} + \\dfrac{14}{936} + \\dfrac{201}{936} = \\dfrac{236}{936} = 0.2522 \\] We will use this framing to compute proportions for each cell but in R.\n\nGiven that we want to explore the data in more detail and understand any base associations, we need to revisit our framing and consider some additional tasks.\n\n\n\nReturning to the framework\nA basic analysis goes a long way in determining our next steps.\nWith this base analytic exercises, you may want to ask: What is the research question?\nWhat are the main or primary theoretical constructions?\n\nFirst, examine the literature and annotate specific citations.\nNext, construct a framework for the various interpretations.\n\nWhat are the similarities across theoretical constructions?\nWhat are the main differences across theoretical constructions?\nHow does a nuanced view of the history of the issue improve our understanding?\n\n\nBased on your background analyses, what is the hypothesis?"
   },
   {
-    "objectID": "weeks/week08.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
-    "href": "weeks/week08.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
-    "title": "DATA 202 - Week 8",
-    "section": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]",
-    "text": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\n\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201\n\n\n\n\nUse the table to calculate Response probabilities:\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\nTotal\n\n\n\n\nNo\n92\n75\n47\n486\n700\n\n\nYes\n6\n15\n14\n201\n236\n\n\n\nGather response probabilities for No by dividing each cell by the sample size.\n\\[ P(No) = \\dfrac{92}{936} + \\dfrac{75}{936} + \\dfrac{47}{936} + \\dfrac{486}{936} = \\dfrac{700}{936} = 0.7478 \\] Gather response probabilities for Yes by dividing each cell by the sample size.\n\\[ P(Yes) = \\dfrac{6}{936} + \\dfrac{15}{936} + \\dfrac{14}{936} + \\dfrac{201}{936} = \\dfrac{236}{936} = 0.2522 \\] We will use this framing to compute proportions for each cell but in R.\n\nGiven that we want to explore the data in more detail and understand any base associations, we need to revisit our framing and consider some additional tasks.\n\n\nReturning to the framework\nA basic analysis goes a long way in determining our next steps.\nWith this base analytic exercises, you may want to ask: What is the research question?\nWhat are the main or primary theoretical constructions?\n\nFirst, examine the literature and annotate specific citations.\nNext, construct a framework for the various interpretations.\n\nWhat are the similarities across theoretical constructions?\nWhat are the main differences across theoretical constructions?\nHow does a nuanced view of the history of the issue improve our understanding?\n\n\nBased on your background analyses, what is the hypothesis?"
-  },
-  {
     "objectID": "weeks/week08.html#part-iii-code",
     "href": "weeks/week08.html#part-iii-code",
     "title": "DATA 202 - Week 8",
@@ -621,13 +614,6 @@
     "title": "DATA 202 - Week 8",
     "section": "Part II: Content",
     "text": "Part II: Content"
-  },
-  {
-    "objectID": "weeks/week08-slides.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
-    "href": "weeks/week08-slides.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
-    "title": "DATA 202 - Week 8",
-    "section": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]",
-    "text": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201"
   },
   {
     "objectID": "weeks/week08-slides.html#part-iii-code",
@@ -935,14 +921,14 @@
     "href": "labs/lab2.html",
     "title": "Lab 2",
     "section": "",
-    "text": "For Lab 2, you may submit your solutions to Canvas as a .pdf or an R Script or even as a .txt file.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
+    "text": "For Lab 2, you may submit your solutions to Canvas as a .pdf or an RMarkdown.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
   },
   {
     "objectID": "labs/lab2.html#learning-objectives",
     "href": "labs/lab2.html#learning-objectives",
     "title": "Lab 2",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe Lab 2 assignment focuses on you exploring any two variables located in one of the data frames in the critstats package or in gss_cat. You will also return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on a bivariate analysis between two categorical variables, two numeric variables, or one numeric variable and one categorical variable.\nPlease note: you should not use the same variables from a previous assignment but you may use the same data set."
+    "text": "Learning Objectives\nThe Lab 2 assignment focuses on you exploring any two variables located in one of the data frames in the critstats package or in gss_cat, or a data set that you have identified and would like to explore. You will also return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on a bivariate analysis between two categorical variables, two numeric variables, or one numeric variable and one categorical variable."
   },
   {
     "objectID": "labs/lab2.html#learning-activities",
@@ -952,11 +938,11 @@
     "text": "Learning Activities\nBy the end of this lab you will be able to:\n\nLocate data sets in the critstats package, or use gss_cat\nDevelop an original research question\nClean and manipulate data for analysis\nExamine the relationship between two variables\n\nYou should submit your final output on Canvas here."
   },
   {
-    "objectID": "labs/lab2.html#task-0.1-create-a-new-project",
-    "href": "labs/lab2.html#task-0.1-create-a-new-project",
+    "objectID": "labs/lab2.html#task-0.1-create-a-new-rmarkdown",
+    "href": "labs/lab2.html#task-0.1-create-a-new-rmarkdown",
     "title": "Lab 2",
-    "section": "Task 0.1: Create a new project",
-    "text": "Task 0.1: Create a new project\nIn your R session, navigate to: File &gt; New Project. Create a new project using an appropriate title"
+    "section": "Task 0.1: Create a new RMarkdown",
+    "text": "Task 0.1: Create a new RMarkdown\nIn your R session, navigate to: File &gt; New File &gt; R Markdown. Create a new markdown file using an appropriate title."
   },
   {
     "objectID": "labs/lab2.html#task-0.2-check-your-working-directory",
@@ -966,25 +952,18 @@
     "text": "Task 0.2: Check your working directory\nCheck your working directory by typing getwd().\nIf you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for the next several weeks.\n\n# insert your desired path in the parenthesis and remove the #\n# setwd(\"/your/working/directory/goes/here\") \n\nYou can add a new sub-folder manually or under the Files tab in the RStudio IDE."
   },
   {
-    "objectID": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
-    "href": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
+    "objectID": "labs/lab2.html#task-0.3-write-a-preamble",
+    "href": "labs/lab2.html#task-0.3-write-a-preamble",
     "title": "Lab 2",
-    "section": "Task 0.3: Start a new file in your session",
-    "text": "Task 0.3: Start a new file in your session\nOnce you have confirmed that you are in the correct directory, start a new R Script."
+    "section": "Task 0.3: Write a preamble",
+    "text": "Task 0.3: Write a preamble\n\n## Name: &lt;include your full name&gt;\n## Assignment: Lab 2\n## Date: &lt;here you may want to add a date&gt;\n## Purpose: &lt;insert the goals or purpose of the RScript&gt;"
   },
   {
-    "objectID": "labs/lab2.html#task-0.4-write-a-preamble",
-    "href": "labs/lab2.html#task-0.4-write-a-preamble",
+    "objectID": "labs/lab2.html#task-0.4-packages-and-libraries",
+    "href": "labs/lab2.html#task-0.4-packages-and-libraries",
     "title": "Lab 2",
-    "section": "Task 0.4: Write a preamble",
-    "text": "Task 0.4: Write a preamble\n\n## Name: &lt;include your full name&gt;\n## Assignment: Lab 2\n## Date: &lt;here you may want to add a date&gt;\n## Purpose: &lt;insert the goals or purpose of the RScript&gt;"
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.5-packages-and-libraries",
-    "href": "labs/lab2.html#task-0.5-packages-and-libraries",
-    "title": "Lab 2",
-    "section": "Task 0.5: Packages and libraries",
-    "text": "Task 0.5: Packages and libraries\n\n# install the tidyverse package\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\n\n# load the libraries needed for today's analyses\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(critstats)\n\n## update packages if needed; remove # to run code\n# update.packages(\"package-name\")"
+    "section": "Task 0.4: Packages and libraries",
+    "text": "Task 0.4: Packages and libraries\n\n# install the tidyverse package\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\n\n# load the libraries needed for today's analyses\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(critstats)\n\n## update packages if needed; remove # to run code\n# update.packages(\"package-name\")"
   },
   {
     "objectID": "labs/lab2.html#report-1.1",
@@ -1103,35 +1082,49 @@
     "href": "weeks/week09-slides.html#part-i-context",
     "title": "DATA 202 - Week 9",
     "section": "Part I: Context",
-    "text": "Part I: Context"
+    "text": "Part I: Context\nHypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases."
   },
   {
     "objectID": "weeks/week09-slides.html#part-ii-content",
     "href": "weeks/week09-slides.html#part-ii-content",
     "title": "DATA 202 - Week 9",
     "section": "Part II: Content",
-    "text": "Part II: Content"
+    "text": "Part II: Content\nMathematical foundation of hypothesis testing\nNull and Alternative Hypotheses Null hypothesis (H₀): Statement of no effect or no difference Alternative hypothesis (H₁): Statement of an effect or difference\nTest Statistic A measure that allows us to quantify the difference between the observed data and what we’d expect under the null hypothesis Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic\nProbability Distribution The distribution of the test statistic under the null hypothesis Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution\np-value The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)\nSignificance Level (α) The threshold below which we reject the null hypothesis Common values: 0.05, 0.01\nDecision Rule Reject H₀ if p-value ≤ α Fail to reject H₀ if p-value &gt; α\nType I and Type II Errors Type I error: Rejecting H₀ when it’s actually true (false positive) Type II error: Failing to reject H₀ when it’s actually false (false negative)\nPower The probability of correctly rejecting a false null hypothesis Power = 1 - P(Type II error)"
   },
   {
     "objectID": "weeks/week09-slides.html#part-iii-code",
     "href": "weeks/week09-slides.html#part-iii-code",
     "title": "DATA 202 - Week 9",
     "section": "Part III: Code",
-    "text": "Part III: Code\nWe will work through lab 2 files in class.\n\n\n\nCourse Data GitHub"
+    "text": "Part III: Code\nTwo Categorical Variables: Chi-Square Test of Independence\n\n# Example: Testing association between gender and voting preference\n\n# Create sample data\ngender &lt;- c(rep(\"Male\", 100), rep(\"Female\", 100))\nvote &lt;- c(rep(\"Party A\", 55), rep(\"Party B\", 45), rep(\"Party A\", 65), rep(\"Party B\", 35))\ndata &lt;- data.frame(gender, vote)\n\n# Perform chi-square test\nresult &lt;- chisq.test(table(data$gender, data$vote))\n\n# Print results\nprint(result)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(data$gender, data$vote)\nX-squared = 1.6875, df = 1, p-value = 0.1939\n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(\"There is a significant association between gender and voting preference.\")\n} else {\n  print(\"There is no significant association between gender and voting preference.\")\n}\n\n[1] \"There is no significant association between gender and voting preference.\"\n\n\nTwo Numeric Variables: Pearson Correlation Test\n\n# Example: Testing correlation between study hours and exam scores\n\n# Create sample data\nstudy_hours &lt;- rnorm(100, mean = 20, sd = 5)\nexam_scores &lt;- 2 * study_hours + rnorm(100, mean = 0, sd = 10)\ndata &lt;- data.frame(study_hours, exam_scores)\n\n# Perform correlation test\nresult &lt;- cor.test(data$study_hours, data$exam_scores)\n\n# Print results\nprint(result)\n\n\n    Pearson's product-moment correlation\n\ndata:  data$study_hours and data$exam_scores\nt = 9.0927, df = 98, p-value = 1.127e-14\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5535951 0.7705006\nsample estimates:\n      cor \n0.6764578 \n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(paste(\"There is a significant correlation between study hours and exam scores. Correlation coefficient:\", round(result$estimate, 2)))\n} else {\n  print(\"There is no significant correlation between study hours and exam scores.\")\n}\n\n[1] \"There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.68\"\n\n\nOne Categorical and One Numeric Variable: Independent Samples t-test\n\n# Example: Testing difference in exam scores between two teaching methods\n\n# Create sample data\nmethod &lt;- c(rep(\"Method A\", 50), rep(\"Method B\", 50))\nscores &lt;- c(rnorm(50, mean = 75, sd = 10), rnorm(50, mean = 80, sd = 10))\ndata &lt;- data.frame(method, scores)\n\n# Perform t-test\nresult &lt;- t.test(scores ~ method, data = data)\n\n# Print results\nprint(result)\n\n\n    Welch Two Sample t-test\n\ndata:  scores by method\nt = -1.7067, df = 96.803, p-value = 0.09108\nalternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0\n95 percent confidence interval:\n -6.7750712  0.5103444\nsample estimates:\nmean in group Method A mean in group Method B \n              75.78354               78.91590 \n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(\"There is a significant difference in exam scores between the two teaching methods.\")\n} else {\n  print(\"There is no significant difference in exam scores between the two teaching methods.\")\n}\n\n[1] \"There is no significant difference in exam scores between the two teaching methods.\"\n\n\n\n\n\nCourse Data GitHub"
+  },
+  {
+    "objectID": "weeks/week09.html",
+    "href": "weeks/week09.html",
+    "title": "DATA 202 - Week 9",
+    "section": "",
+    "text": "Hypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases.\n\nSome basic but important real-world examples:\nGender pay gap: Testing whether there's a significant difference in salaries between men and women in a particular industry.\n\nRacial disparities in healthcare: Examining if there's a significant difference in health outcomes between different racial groups.\n\nEducational achievement: Investigating the relationship between socioeconomic status and academic performance.\nIn each of these cases, it’s essential to consider:\n\nWho formulated the hypothesis and why?\nWhat assumptions are built into the statistical methods?\nHow might the results be interpreted or misinterpreted?\nWhat are the potential consequences of the findings?\n\n\n\n\nAs you think about your own work, what are some of the main hypothesis that you hold as it relates to the relationship between your study variables? What are the variable types? How might you measure and make sense of the relationship between the variables?"
+  },
+  {
+    "objectID": "weeks/week09.html#part-i-context",
+    "href": "weeks/week09.html#part-i-context",
+    "title": "DATA 202 - Week 9",
+    "section": "",
+    "text": "Hypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases.\n\nSome basic but important real-world examples:\nGender pay gap: Testing whether there's a significant difference in salaries between men and women in a particular industry.\n\nRacial disparities in healthcare: Examining if there's a significant difference in health outcomes between different racial groups.\n\nEducational achievement: Investigating the relationship between socioeconomic status and academic performance.\nIn each of these cases, it’s essential to consider:\n\nWho formulated the hypothesis and why?\nWhat assumptions are built into the statistical methods?\nHow might the results be interpreted or misinterpreted?\nWhat are the potential consequences of the findings?\n\n\n\n\nAs you think about your own work, what are some of the main hypothesis that you hold as it relates to the relationship between your study variables? What are the variable types? How might you measure and make sense of the relationship between the variables?"
   },
   {
     "objectID": "weeks/week09.html#part-ii-content",
     "href": "weeks/week09.html#part-ii-content",
     "title": "DATA 202 - Week 9",
     "section": "Part II: Content",
-    "text": "Part II: Content"
+    "text": "Part II: Content\nMathematical foundation of hypothesis testing\nNull and Alternative Hypotheses Null hypothesis (H₀): Statement of no effect or no difference Alternative hypothesis (H₁): Statement of an effect or difference\nTest Statistic A measure that allows us to quantify the difference between the observed data and what we’d expect under the null hypothesis Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic\nProbability Distribution The distribution of the test statistic under the null hypothesis Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution\np-value The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)\nSignificance Level (α) The threshold below which we reject the null hypothesis Common values: 0.05, 0.01\nDecision Rule Reject H₀ if p-value ≤ α Fail to reject H₀ if p-value &gt; α\nType I and Type II Errors Type I error: Rejecting H₀ when it’s actually true (false positive) Type II error: Failing to reject H₀ when it’s actually false (false negative)\nPower The probability of correctly rejecting a false null hypothesis Power = 1 - P(Type II error)"
   },
   {
     "objectID": "weeks/week09.html#part-iii-code",
     "href": "weeks/week09.html#part-iii-code",
     "title": "DATA 202 - Week 9",
     "section": "Part III: Code",
-    "text": "Part III: Code\nWe will work through lab 2 files in class."
+    "text": "Part III: Code\n\nTwo Categorical Variables: Chi-Square Test of Independence\n\n# Example: Testing association between gender and voting preference\n\n# Create sample data\ngender &lt;- c(rep(\"Male\", 100), rep(\"Female\", 100))\nvote &lt;- c(rep(\"Party A\", 55), rep(\"Party B\", 45), rep(\"Party A\", 65), rep(\"Party B\", 35))\ndata &lt;- data.frame(gender, vote)\n\n# Perform chi-square test\nresult &lt;- chisq.test(table(data$gender, data$vote))\n\n# Print results\nprint(result)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(data$gender, data$vote)\nX-squared = 1.6875, df = 1, p-value = 0.1939\n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(\"There is a significant association between gender and voting preference.\")\n} else {\n  print(\"There is no significant association between gender and voting preference.\")\n}\n\n[1] \"There is no significant association between gender and voting preference.\"\n\n\n\n\nTwo Numeric Variables: Pearson Correlation Test\n\n# Example: Testing correlation between study hours and exam scores\n\n# Create sample data\nstudy_hours &lt;- rnorm(100, mean = 20, sd = 5)\nexam_scores &lt;- 2 * study_hours + rnorm(100, mean = 0, sd = 10)\ndata &lt;- data.frame(study_hours, exam_scores)\n\n# Perform correlation test\nresult &lt;- cor.test(data$study_hours, data$exam_scores)\n\n# Print results\nprint(result)\n\n\n    Pearson's product-moment correlation\n\ndata:  data$study_hours and data$exam_scores\nt = 9.0927, df = 98, p-value = 1.127e-14\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5535951 0.7705006\nsample estimates:\n      cor \n0.6764578 \n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(paste(\"There is a significant correlation between study hours and exam scores. Correlation coefficient:\", round(result$estimate, 2)))\n} else {\n  print(\"There is no significant correlation between study hours and exam scores.\")\n}\n\n[1] \"There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.68\"\n\n\n\n\nOne Categorical and One Numeric Variable: Independent Samples t-test\n\n# Example: Testing difference in exam scores between two teaching methods\n\n# Create sample data\nmethod &lt;- c(rep(\"Method A\", 50), rep(\"Method B\", 50))\nscores &lt;- c(rnorm(50, mean = 75, sd = 10), rnorm(50, mean = 80, sd = 10))\ndata &lt;- data.frame(method, scores)\n\n# Perform t-test\nresult &lt;- t.test(scores ~ method, data = data)\n\n# Print results\nprint(result)\n\n\n    Welch Two Sample t-test\n\ndata:  scores by method\nt = -1.7067, df = 96.803, p-value = 0.09108\nalternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0\n95 percent confidence interval:\n -6.7750712  0.5103444\nsample estimates:\nmean in group Method A mean in group Method B \n              75.78354               78.91590 \n\n# Interpret results\nif (result$p.value &lt; 0.05) {\n  print(\"There is a significant difference in exam scores between the two teaching methods.\")\n} else {\n  print(\"There is no significant difference in exam scores between the two teaching methods.\")\n}\n\n[1] \"There is no significant difference in exam scores between the two teaching methods.\""
   },
   {
     "objectID": "weeks/week06-slides.html#part-i-context",

@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -346,13 +411,148 @@ Nathan Alexander, PhD
 </section>
 <section id="part-i-context" class="slide level2">
 <h2>Part I: Context</h2>
+<p>Hypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases.</p>
+</section>
+<section class="slide level2">
+
+<p>Some basic but important real-world examples:</p>
+<pre><code>Gender pay gap: Testing whether there's a significant difference in salaries between men and women in a particular industry.
+
+Racial disparities in healthcare: Examining if there's a significant difference in health outcomes between different racial groups.
+
+Educational achievement: Investigating the relationship between socioeconomic status and academic performance.</code></pre>
+<p>In each of these cases, it’s essential to consider:</p>
+<ul>
+<li><p>Who formulated the hypothesis and why?</p></li>
+<li><p>What assumptions are built into the statistical methods?</p></li>
+<li><p>How might the results be interpreted or misinterpreted?</p></li>
+<li><p>What are the potential consequences of the findings?</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="considering-your-work">Considering your work</h3>
+<p>As you think about your own work, what are some of the main hypothesis that you hold as it relates to the relationship between your study variables? What are the variable types? How might you measure and make sense of the relationship between the variables?</p>
 </section>
 <section id="part-ii-content" class="slide level2">
 <h2>Part II: Content</h2>
+<p>Mathematical foundation of hypothesis testing</p>
+<p>Null and Alternative Hypotheses Null hypothesis (H₀): Statement of no effect or no difference Alternative hypothesis (H₁): Statement of an effect or difference</p>
+<p>Test Statistic A measure that allows us to quantify the difference between the observed data and what we’d expect under the null hypothesis Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic</p>
+<p>Probability Distribution The distribution of the test statistic under the null hypothesis Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution</p>
+<p>p-value The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)</p>
+<p>Significance Level (α) The threshold below which we reject the null hypothesis Common values: 0.05, 0.01</p>
+<p>Decision Rule Reject H₀ if p-value ≤ α Fail to reject H₀ if p-value &gt; α</p>
+<p>Type I and Type II Errors Type I error: Rejecting H₀ when it’s actually true (false positive) Type II error: Failing to reject H₀ when it’s actually false (false negative)</p>
+<p>Power The probability of correctly rejecting a false null hypothesis Power = 1 - P(Type II error)</p>
 </section>
 <section id="part-iii-code" class="slide level2">
 <h2>Part III: Code</h2>
-<p>We will work through lab 2 files in class.</p>
+<h3 id="two-categorical-variables-chi-square-test-of-independence">Two Categorical Variables: Chi-Square Test of Independence</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Example: Testing association between gender and voting preference</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Male"</span>, <span class="dv">100</span>), <span class="fu">rep</span>(<span class="st">"Female"</span>, <span class="dv">100</span>))</span>
+<span id="cb2-5"><a href="#cb2-5"></a>vote <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">55</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">45</span>), <span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">65</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">35</span>))</span>
+<span id="cb2-6"><a href="#cb2-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(gender, vote)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Perform chi-square test</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>result <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(data<span class="sc">$</span>gender, data<span class="sc">$</span>vote))</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Print results</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test with Yates' continuity correction
+
+data:  table(data$gender, data$vote)
+X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant association between gender and voting preference."</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant association between gender and voting preference."</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "There is no significant association between gender and voting preference."</code></pre>
+</div>
+</div>
+<h3 id="two-numeric-variables-pearson-correlation-test">Two Numeric Variables: Pearson Correlation Test</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Example: Testing correlation between study hours and exam scores</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>study_hours <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>exam_scores <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> study_hours <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(study_hours, exam_scores)</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># Perform correlation test</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>result <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(data<span class="sc">$</span>study_hours, data<span class="sc">$</span>exam_scores)</span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="co"># Print results</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  data$study_hours and data$exam_scores
+t = 9.0927, df = 98, p-value = 1.127e-14
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.5535951 0.7705006
+sample estimates:
+      cor 
+0.6764578 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"There is a significant correlation between study hours and exam scores. Correlation coefficient:"</span>, <span class="fu">round</span>(result<span class="sc">$</span>estimate, <span class="dv">2</span>)))</span>
+<span id="cb8-4"><a href="#cb8-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.68"</code></pre>
+</div>
+</div>
+<h3 id="one-categorical-and-one-numeric-variable-independent-samples-t-test">One Categorical and One Numeric Variable: Independent Samples t-test</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Example: Testing difference in exam scores between two teaching methods</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>method <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Method A"</span>, <span class="dv">50</span>), <span class="fu">rep</span>(<span class="st">"Method B"</span>, <span class="dv">50</span>))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>))</span>
+<span id="cb10-6"><a href="#cb10-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(method, scores)</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># Perform t-test</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(scores <span class="sc">~</span> method, <span class="at">data =</span> data)</span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co"># Print results</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  scores by method
+t = -1.7067, df = 96.803, p-value = 0.09108
+alternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0
+95 percent confidence interval:
+ -6.7750712  0.5103444
+sample estimates:
+mean in group Method A mean in group Method B 
+              75.78354               78.91590 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant difference in exam scores between the two teaching methods."</span>)</span>
+<span id="cb12-4"><a href="#cb12-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant difference in exam scores between the two teaching methods."</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "There is no significant difference in exam scores between the two teaching methods."</code></pre>
+</div>
+</div>
 
 
 <img src="img/howard-logo.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
