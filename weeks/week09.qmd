@@ -143,6 +143,8 @@ if (result$p.value < 0.05) {
 }
 ```
 
+---
+
 ### Two Numeric Variables: Pearson Correlation Test
 
 ```{r}
@@ -166,6 +168,8 @@ if (result$p.value < 0.05) {
   print("There is no significant correlation between study hours and exam scores.")
 }
 ```
+
+---
 
 ### One Categorical and One Numeric Variable: Independent Samples t-test
 
