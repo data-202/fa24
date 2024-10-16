@@ -436,14 +436,34 @@ Educational achievement: Investigating the relationship between socioeconomic st
 </section>
 <section id="part-ii-content" class="slide level2">
 <h2>Part II: Content</h2>
-<p>Mathematical foundation of hypothesis testing</p>
 <p>Null and Alternative Hypotheses Null hypothesis (H₀): Statement of no effect or no difference Alternative hypothesis (H₁): Statement of an effect or difference</p>
+</section>
+<section class="slide level2">
+
 <p>Test Statistic A measure that allows us to quantify the difference between the observed data and what we’d expect under the null hypothesis Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic</p>
+</section>
+<section class="slide level2">
+
 <p>Probability Distribution The distribution of the test statistic under the null hypothesis Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution</p>
+</section>
+<section class="slide level2">
+
 <p>p-value The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)</p>
+</section>
+<section class="slide level2">
+
 <p>Significance Level (α) The threshold below which we reject the null hypothesis Common values: 0.05, 0.01</p>
+</section>
+<section class="slide level2">
+
 <p>Decision Rule Reject H₀ if p-value ≤ α Fail to reject H₀ if p-value &gt; α</p>
+</section>
+<section class="slide level2">
+
 <p>Type I and Type II Errors Type I error: Rejecting H₀ when it’s actually true (false positive) Type II error: Failing to reject H₀ when it’s actually false (false negative)</p>
+</section>
+<section class="slide level2">
+
 <p>Power The probability of correctly rejecting a false null hypothesis Power = 1 - P(Type II error)</p>
 </section>
 <section id="part-iii-code" class="slide level2">
@@ -498,13 +518,13 @@ X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
     Pearson's product-moment correlation
 
 data:  data$study_hours and data$exam_scores
-t = 9.0927, df = 98, p-value = 1.127e-14
+t = 11.139, df = 98, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.5535951 0.7705006
+ 0.6458589 0.8230403
 sample estimates:
-      cor 
-0.6764578 </code></pre>
+     cor 
+0.747456 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
@@ -513,7 +533,7 @@ sample estimates:
 <span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
 <span id="cb8-6"><a href="#cb8-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.68"</code></pre>
+<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.75"</code></pre>
 </div>
 </div>
 <h3 id="one-categorical-and-one-numeric-variable-independent-samples-t-test">One Categorical and One Numeric Variable: Independent Samples t-test</h3>
@@ -535,13 +555,13 @@ sample estimates:
     Welch Two Sample t-test
 
 data:  scores by method
-t = -1.7067, df = 96.803, p-value = 0.09108
+t = -3.095, df = 97.071, p-value = 0.002572
 alternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0
 95 percent confidence interval:
- -6.7750712  0.5103444
+ -8.351586 -1.825418
 sample estimates:
 mean in group Method A mean in group Method B 
-              75.78354               78.91590 </code></pre>
+              73.95674               79.04524 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
@@ -550,7 +570,7 @@ mean in group Method A mean in group Method B
 <span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant difference in exam scores between the two teaching methods."</span>)</span>
 <span id="cb12-6"><a href="#cb12-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is no significant difference in exam scores between the two teaching methods."</code></pre>
+<pre><code>[1] "There is a significant difference in exam scores between the two teaching methods."</code></pre>
 </div>
 </div>
 
@@ -770,6 +790,44 @@ mean in group Method A mean in group Method B
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
