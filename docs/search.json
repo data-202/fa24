@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Welcome to DATA 202",
     "section": "",
-    "text": "Part\nWeek\nDay\nTopics\nLabs\nPapers\nKey readings, exams, other\n\n\n\n\nI\n1\nWed, Aug 21\nIntroduction\nLab 0\n\nCase study 1 files\n\n\n\n2\nWed, Aug 28\nFoundations\n\n\nPelham (2013, ch. 1)\n\n\n\n3\nWed, Sept 4\nTheory construction\n\n\nAnnotated bibliography\n\n\n\n4\nWed, Sept 11\nProbability theory\nLab 1\n\nShore (2008); Zuberi (2000)\n\n\nII\n5\nWed, Sept 18\nUnivariate analysis\n\n\nWilson et al. (2017)\n\n\n\n6\nWed, Sept 25\nBivariate analysis\n\nPaper 1\n\n\n\n\n7\nWed, Oct 2\nExploratory analysis\n\n\nMidterm examination\n\n\n\n8\nWed, Oct 9\nNotes on causal theories\n\n\n\n\n\nIII\n9\nWed, Oct 16\nHypothesis testing\nLab 2\n\n\n\n\n\n10\nWed, Oct 23\nBivariate regression analysis\n\n\n\n\n\n\n11\nWed, Oct 30\nMultivariate regression analysis\n\nPaper 2\n\n\n\n\n12\nWed, Nov 6\nMultiple variable regression\n\n\n\n\n\nIV\n13\nWed, Nov 13\nRegression and classification\nLab 3\n\n\n\n\n\n14\nWed, Nov 20\nStatistical learning\n\n\n\n\n\n\n15\nWed, Nov 27\nOverview of additional models\n\nPaper 3"
+    "text": "Part\nWeek\nDay\nTopics\nLabs\nPapers\nKey readings, exams, other\n\n\n\n\nI\n1\nWed, Aug 21\nIntroduction\nLab 0\n\nCase study 1 files\n\n\n\n2\nWed, Aug 28\nFoundations\n\n\nPelham (2013, ch. 1)\n\n\n\n3\nWed, Sept 4\nTheory construction\n\n\nAnnotated bibliography\n\n\n\n4\nWed, Sept 11\nProbability theory\nLab 1\n\nShore (2008); Zuberi (2000)\n\n\nII\n5\nWed, Sept 18\nUnivariate analysis\n\n\nWilson et al. (2017)\n\n\n\n6\nWed, Sept 25\nBivariate analysis\n\nPaper 1\n\n\n\n\n7\nWed, Oct 2\n\n\n\n\n\n\n\n8\nWed, Oct 9\nExploratory analysis\n\n\n\n\n\nIII\n9\nWed, Oct 16\nHypothesis testing\n\n\n\n\n\n\n10\nWed, Oct 23\nBivariate regression analysis\nLab 2\n\n\n\n\n\n11\nWed, Oct 30\nMultivariate regression analysis\n\n\n\n\n\n\n12\nWed, Nov 6\nMultiple variable regression\n\nPaper 2\n\n\n\nIV\n13\nWed, Nov 13\nRegression and classification\nLab 3\n\n\n\n\n\n14\nWed, Nov 20\nStatistical learning\n\n\n\n\n\n\n15\nWed, Nov 27\nOverview of additional models\n\nPaper 3"
   },
   {
     "objectID": "index.html#site-description",
@@ -518,275 +518,226 @@
     "text": "Task 16: Run univariate statistics in R\nWe will generate some code to examine univariate statistics in R. This will help you with HW 2.\nTake the plot of data for two variables, \\(x\\) and \\(y\\) below.\n\n\n\n\n\nFigure 1: Correlation plot of two variables, x and y\n\n\n\n\nNoticing that there is a relationship between \\(x\\) and \\(y\\), a first step is to run univariate functions on each variable individually."
   },
   {
-    "objectID": "weeks/week07.html",
-    "href": "weeks/week07.html",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week12.html",
+    "href": "weeks/week12.html",
+    "title": "DATA 202 - Week 12",
     "section": "",
-    "text": "This week we will outline exploratory data analysis through a set of case studies. Each case study provides one example of the various decision making processes needed in a critical quantitative research framework. The included cases focus on more heavily on theories and frameworks and the related practices around modeling and statistical inference.\n\n\n\nWhat do you know about a man named George Floyd and the events that occurred on May 25, 2020?\n\n\n\nImage from Time.com\n\n\n\nGeorge Floyd was murdered by a police officer in broad daylight. His murder resulted in a series of protests and expanded the already longstanding discussions around racism, state violence, and police brutality in the United States. Consider How George Floyd Was Killed in Police Custody to get a step-by-step reconstruction of the murder.\n\n\nThe Yahoo! News Race and Justice poll was conducted in 2020 after the killing of George Floyd. There is pre-loaded data set located in R. A complete description of the data is as follows:\n\nResults from a Yahoo! News poll conducted by YouGov on May 29-31, 2020. In total 1060 U.S. adults were asked a series of questions regarding race and justice in the wake of the killing of George Floyd by a police officer. Results in this data set are percentages for the question, “Do you think Blacks and Whites receive equal treatment from the police?” For this particular question there were 1059 respondents.\n\nFor efficient access, poll results are stored in a replica of the yahoo_data data frame located in the critstats package.\n\n\n\n\nThe process of exploratory data analysis will vary across projects. It is helpful if your exploratory analysis is directed by a set of clear questions and introductory tasks. The exploring data phase should not be solely used for cleaning data, although the two steps are often intertwined.\nWe will structure our exploratory analysis around three steps:\n\nInformation: Gaining a solid understanding of each variable and its observations\nShape: Gaining a better feel for the “shape” and distribution of the observations\nMeasures: Checking base assumptions for any forthcoming analysis\n\nThese steps can help guide more concrete theory building and modeling.\n\n\n\n\n\nlibrary(critstats)\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\n\n\nLoad the yahoo_data data frame and use the str() command.\n\nyahoo &lt;- critstats::yahoo_data\n\n\nsummary(yahoo)\n\n   race_eth           response        \n Length:1059        Length:1059       \n Class :character   Class :character  \n Mode  :character   Mode  :character  \n\nglimpse(yahoo)\n\nRows: 1,059\nColumns: 2\n$ race_eth &lt;chr&gt; \"White\", \"White\", \"White\", \"White\", \"White\", \"White\", \"White\"…\n$ response &lt;chr&gt; \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\"…\n\n\n\n\nhead(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 White    Yes     \n2 White    Yes     \n3 White    Yes     \n4 White    Yes     \n5 White    Yes     \n6 White    Yes     \n\ntail(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 Other    Not sure\n2 Other    Not sure\n3 Other    Not sure\n4 Other    Not sure\n5 Other    Not sure\n6 Other    Not sure\n\n\n\n\n\n\nAs an early start, we can use the output above to start our exploration.\nTo help focus these explorations, it is helpful to outline a set of questions or tasks. These tasks and questions can help identify some of the key goals of the exploratory data analysis. Wickham, Çetinkaya-Rundel, & Grolemund (2023) talk about this at length in the Exploratory Data Analysis section of the R for Data Science text.\nFor this exploration, our goal is to understand the proportion of observations in each variable.\nTo accomplish this goal, we can outline two questions around three tasks.\n\n\n\n\n\n\n\nQuestions\nTasks & Detail\n\n\n\n\nQuestion 1: How are observations distributed?\nTask 1.1: Create a table of variable counts\n\n\n\nTask 1.2: Create a table of variable proportions\n\n\nQuestion 2: How can we visualize distributions?\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\n\n\nTask 1.1: Create a table of variable counts\nTask 1.2: Create a table of variable proportions\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\nGain a solid understanding of each variable and its observations.\n\n\n\n\ntable(yahoo$race_eth)\n\n\n   Black Hispanic    Other    White \n     101      104       82      772 \n\ntable(yahoo$response)\n\n\n      No Not sure      Yes \n     700      123      236 \n\n\n\n\n\n\nprop.table(table(yahoo$race_eth))\n\n\n     Black   Hispanic      Other      White \n0.09537299 0.09820585 0.07743154 0.72898961 \n\nprop.table(table(yahoo$response))\n\n\n       No  Not sure       Yes \n0.6610009 0.1161473 0.2228517 \n\n\n\n\n\n\nThe previous output provides more information than may be immediately noted:\n\nLists the various labels for each variable\nPresents the distribution of observations across each label\nSpecific relations can be pointed to the study framing\nEarly insight into base assumptions\n\n\n\n\n\n\n\nGain a better feel for the “shape” and distribution of the observations.\n\n\n\nWe introduce some basic features of `ggplot() here to complete the task.\n\n# start with the plot outline\nggplot(yahoo)\n\n\n\n\n\n\n# add the variable categories to the plot using aes()\nggplot(yahoo, aes(x = race_eth))\n\n\n\n\n\n\n# add the bars to the plot using + geom_bar()\nggplot(yahoo, aes(x = race_eth)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\n\nEXERCISE\n\n\n\nCreate a bar plot for the response variable.\nWhat other plots could you create?\n\n\nWickham, Çetinkaya-Rundel, & Grolemund (2023) have a detailed section on data visualization in the R for Data Science text.\n\n\n\n\n\nCheck base assumptions for any forthcoming analysis.\nTo complete this step, we delve into some of the assumptions and foundations surrounding the use of sample data versus population data. The mathematical foundations allow us to understand how to compute measures and differences. The assumptions provide direction for any further modeling practices.\nWe explore this more in part II."
+    "text": "We explore the case of bivariate regression when attempting to measure and model conceptions of in/justice."
   },
   {
-    "objectID": "weeks/week07.html#part-i-context",
-    "href": "weeks/week07.html#part-i-context",
-    "title": "DATA 202 - Week 7",
-    "section": "",
-    "text": "This week we will outline exploratory data analysis through a set of case studies. Each case study provides one example of the various decision making processes needed in a critical quantitative research framework. The included cases focus on more heavily on theories and frameworks and the related practices around modeling and statistical inference.\n\n\n\nWhat do you know about a man named George Floyd and the events that occurred on May 25, 2020?\n\n\n\nImage from Time.com\n\n\n\nGeorge Floyd was murdered by a police officer in broad daylight. His murder resulted in a series of protests and expanded the already longstanding discussions around racism, state violence, and police brutality in the United States. Consider How George Floyd Was Killed in Police Custody to get a step-by-step reconstruction of the murder.\n\n\nThe Yahoo! News Race and Justice poll was conducted in 2020 after the killing of George Floyd. There is pre-loaded data set located in R. A complete description of the data is as follows:\n\nResults from a Yahoo! News poll conducted by YouGov on May 29-31, 2020. In total 1060 U.S. adults were asked a series of questions regarding race and justice in the wake of the killing of George Floyd by a police officer. Results in this data set are percentages for the question, “Do you think Blacks and Whites receive equal treatment from the police?” For this particular question there were 1059 respondents.\n\nFor efficient access, poll results are stored in a replica of the yahoo_data data frame located in the critstats package.\n\n\n\n\nThe process of exploratory data analysis will vary across projects. It is helpful if your exploratory analysis is directed by a set of clear questions and introductory tasks. The exploring data phase should not be solely used for cleaning data, although the two steps are often intertwined.\nWe will structure our exploratory analysis around three steps:\n\nInformation: Gaining a solid understanding of each variable and its observations\nShape: Gaining a better feel for the “shape” and distribution of the observations\nMeasures: Checking base assumptions for any forthcoming analysis\n\nThese steps can help guide more concrete theory building and modeling.\n\n\n\n\n\nlibrary(critstats)\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\n\n\nLoad the yahoo_data data frame and use the str() command.\n\nyahoo &lt;- critstats::yahoo_data\n\n\nsummary(yahoo)\n\n   race_eth           response        \n Length:1059        Length:1059       \n Class :character   Class :character  \n Mode  :character   Mode  :character  \n\nglimpse(yahoo)\n\nRows: 1,059\nColumns: 2\n$ race_eth &lt;chr&gt; \"White\", \"White\", \"White\", \"White\", \"White\", \"White\", \"White\"…\n$ response &lt;chr&gt; \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\"…\n\n\n\n\nhead(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 White    Yes     \n2 White    Yes     \n3 White    Yes     \n4 White    Yes     \n5 White    Yes     \n6 White    Yes     \n\ntail(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 Other    Not sure\n2 Other    Not sure\n3 Other    Not sure\n4 Other    Not sure\n5 Other    Not sure\n6 Other    Not sure\n\n\n\n\n\n\nAs an early start, we can use the output above to start our exploration.\nTo help focus these explorations, it is helpful to outline a set of questions or tasks. These tasks and questions can help identify some of the key goals of the exploratory data analysis. Wickham, Çetinkaya-Rundel, & Grolemund (2023) talk about this at length in the Exploratory Data Analysis section of the R for Data Science text.\nFor this exploration, our goal is to understand the proportion of observations in each variable.\nTo accomplish this goal, we can outline two questions around three tasks.\n\n\n\n\n\n\n\nQuestions\nTasks & Detail\n\n\n\n\nQuestion 1: How are observations distributed?\nTask 1.1: Create a table of variable counts\n\n\n\nTask 1.2: Create a table of variable proportions\n\n\nQuestion 2: How can we visualize distributions?\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\n\n\nTask 1.1: Create a table of variable counts\nTask 1.2: Create a table of variable proportions\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\nGain a solid understanding of each variable and its observations.\n\n\n\n\ntable(yahoo$race_eth)\n\n\n   Black Hispanic    Other    White \n     101      104       82      772 \n\ntable(yahoo$response)\n\n\n      No Not sure      Yes \n     700      123      236 \n\n\n\n\n\n\nprop.table(table(yahoo$race_eth))\n\n\n     Black   Hispanic      Other      White \n0.09537299 0.09820585 0.07743154 0.72898961 \n\nprop.table(table(yahoo$response))\n\n\n       No  Not sure       Yes \n0.6610009 0.1161473 0.2228517 \n\n\n\n\n\n\nThe previous output provides more information than may be immediately noted:\n\nLists the various labels for each variable\nPresents the distribution of observations across each label\nSpecific relations can be pointed to the study framing\nEarly insight into base assumptions\n\n\n\n\n\n\n\nGain a better feel for the “shape” and distribution of the observations.\n\n\n\nWe introduce some basic features of `ggplot() here to complete the task.\n\n# start with the plot outline\nggplot(yahoo)\n\n\n\n\n\n\n# add the variable categories to the plot using aes()\nggplot(yahoo, aes(x = race_eth))\n\n\n\n\n\n\n# add the bars to the plot using + geom_bar()\nggplot(yahoo, aes(x = race_eth)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\n\nEXERCISE\n\n\n\nCreate a bar plot for the response variable.\nWhat other plots could you create?\n\n\nWickham, Çetinkaya-Rundel, & Grolemund (2023) have a detailed section on data visualization in the R for Data Science text.\n\n\n\n\n\nCheck base assumptions for any forthcoming analysis.\nTo complete this step, we delve into some of the assumptions and foundations surrounding the use of sample data versus population data. The mathematical foundations allow us to understand how to compute measures and differences. The assumptions provide direction for any further modeling practices.\nWe explore this more in part II."
+    "objectID": "weeks/week12.html#part-i-context",
+    "href": "weeks/week12.html#part-i-context",
+    "title": "DATA 202 - Week 12",
+    "section": "Part I: Context",
+    "text": "Part I: Context\nThis week we focus on more examples from our darta sources; we’ll take a closer look at the General Social Survey data, or GSS.\nThe data is located in the gssr package in R (see part III). You should become very familiar with the GSS data. Please explore the website as we will be prioritizing the use of the GSS data for the remainder of our course. The use of the GSS data will allow us to consider the meaning of social justice in the context of attitudes and beliefs around social issues.\nAhead of modeling multiple variables, we’ll examine the importance of underlying theoretical anlayses ahead of solely doing statistical investigations.\n\nLet us begin with a set of three variables: \\(x\\), \\(y\\), and \\(z\\).\nWe will assume that there is a hypothesized association between all three variables. However, let us also assume that we have not yet taken time to properly structure the relationships between the variables. Namely, we have yet to consider if \\(z\\), for example, is a mediator, moderator, or spurious variable.\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(x, y)\n\n\n\ncor(x, y)\n\n[1] -0.09107752\n\n\nTake note of the value of the correlation coefficient.\n\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(x, z)\n\n\n\ncor(x, z)\n\n[1] 0.9284953\n\n\nTake note of the value of the correlation coefficient.\n\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(y, z)\n\n\n\ncor(y, z)\n\n[1] -0.04660941\n\n\nTake note of the value of the correlation coefficient.\n\n\nRegression assumptions\nIn our previous lectures, we have discussed the function of assumptions and principles in regression analysis. In progressing towards different types of tests, it is important to consider the specific assumptions for any given test.\nAnalyzing relationships among social science variables has an assumptions of linearity. However, this assumptions is not always correct. The adoption of this assumption is based on a host of factors. Most notably, that many relationships have been found to be linear when considered in the empirical sense.\nSome additional assumptions are as follows:\n\nThe sample is representative of the population\nThe variables of interest are normally distributed\nThere are no outliers in the data\nIndependence\nThere is a linear relationship between the independent variable(s) and dependent variable(s)"
   },
   {
-    "objectID": "weeks/week07.html#part-ii-content",
-    "href": "weeks/week07.html#part-ii-content",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week12.html#part-ii-content",
+    "href": "weeks/week12.html#part-ii-content",
+    "title": "DATA 202 - Week 12",
     "section": "Part II: Content",
-    "text": "Part II: Content\n\n\nA guiding example\nLet us begin with a summary of responses to a survey sparked by the killing of George Floyd.\n\nSummary of survey response data1\n\n\nResponse\nTotal\n\n\n\n\nNo\n700\n\n\nYes\n236\n\n\n\nThe study sample \\(n = 936\\). Please take note of the table’s footnote.\nAs of now, we know very little about the survey (i.e., the context has been stripped away).\n\nAn initial question\nIs there a difference in the survey responses?\n\n\n\nFraming proportions\nAs you learn about hypothesis testing, you want to understand the nature of variable associations. There are many approaches to how we measure associations. One we’ll explore extensively is differences in proportions of two dichotomous variables.\nFirst, we add a third column to our table by computing the proportion in each row:\n\\[ P(No) = \\frac{\\text{Number of respondents who replied No}}{n} \\]\n\\[ P(Yes) = \\frac{\\text{Number of respondents who replied Yes}}{n} \\]\n\n\n\nUnderstanding proportions\n\nSummary of survey response data with proportion column\n\n\nResponse\nTotal\nProportion\n\n\n\n\nNo\n700\n\\(0.7478\\)\n\n\nYes\n236\n\\(0.2522\\)\n\n\n\nSo we have \\(P(No) = 0.7478\\) and \\(P(Yes) = 0.2522\\).\nThis is a sample. Be mindful of the notes about sampling and sampling error.\nWhat can these proportions tell us about the data?\n\n\n\n\nA closer look\nLet’s look at a preview panel of the full data set.\n\nPreview of full survey response data set\n\n\nID\nRace\nResponse\n\n\n\n\n1\nWhite\nYes\n\n\n2\nWhite\nYes\n\n\n.\n.\n.\n\n\n773\nBlack\nYes\n\n\n774\nBlack\nYes\n\n\n..\n..\n..\n\n\n874\nHispanic\nYes\n\n\n875\nHispanic\nYes\n\n\n…\n…\n…\n\n\n\\(1059\\)\nOther\nNot sure\n\n\n\n\nWhen we format the data into tables, there are multiple categories to consider.\nIn the table below, the race variable is listed in rows.\n\n\nTable 1: Race in rows\n\n\nRace\nNo\nYes\n\n\n\n\nBlack\nBlack \\(\\cap\\) No\nBlack \\(\\cap\\) Yes\n\n\nHispanic\nHispanic \\(\\cap\\) No\nHispanic \\(\\cap\\) Yes\n\n\nOther\nOther \\(\\cap\\) No\nOther \\(\\cap\\) Yes\n\n\nWhite\nWhite \\(\\cap\\) No\nWhite \\(\\cap\\) Yes\n\n\n\n\nRecall that the \\(\\cap\\) represents “and” while the \\(\\cup\\) represents “or” in logic.\n\nIn the table below, the response variable is listed in rows.\n\n\nTable 2: Response in rows\n\n\n\n\n\n\n\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\nNo \\(\\cap\\) Black\nNo \\(\\cap\\) Hispanic\nNo \\(\\cap\\) Other\nNo \\(\\cap\\) White\n\n\nYes\nYes \\(\\cap\\) Black\nYes \\(\\cap\\) Hispanic\nYes \\(\\cap\\) Other\nYes \\(\\cap\\) White\n\n\n\n\n\nWe use our understanding of probability to generate a reconstruction for the response ‘No’.\n\\[ P(No) = \\dfrac{\\text{No} \\cap \\text{Black}}{n} + \\dfrac{\\text{No} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{No} \\cap \\text{Other}}{n} + \\dfrac{\\text{No} \\cap \\text{White}}{n} \\]\nWe generate a parallel construction for the response ‘Yes’.\n\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\n\n\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201\n\n\n\n\nUse the table to calculate Response probabilities:\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\nTotal\n\n\n\n\nNo\n92\n75\n47\n486\n700\n\n\nYes\n6\n15\n14\n201\n236\n\n\n\nGather response probabilities for No by dividing each cell by the sample size.\n\\[ P(No) = \\dfrac{92}{936} + \\dfrac{75}{936} + \\dfrac{47}{936} + \\dfrac{486}{936} = \\dfrac{700}{936} = 0.7478 \\] Gather response probabilities for Yes by dividing each cell by the sample size.\n\\[ P(Yes) = \\dfrac{6}{936} + \\dfrac{15}{936} + \\dfrac{14}{936} + \\dfrac{201}{936} = \\dfrac{236}{936} = 0.2522 \\] We will use this framing to compute proportions for each cell but in R.\n\nGiven that we want to explore the data in more detail and understand any base associations, we need to revisit our framing and consider some additional tasks.\n\n\n\nReturning to the framework\nA basic analysis goes a long way in determining our next steps.\nWith this base analytic exercises, you may want to ask: What is the research question?\nWhat are the main or primary theoretical constructions?\n\nFirst, examine the literature and annotate specific citations.\nNext, construct a framework for the various interpretations.\n\nWhat are the similarities across theoretical constructions?\nWhat are the main differences across theoretical constructions?\nHow does a nuanced view of the history of the issue improve our understanding?\n\n\nBased on your background analyses, what is the hypothesis?"
+    "text": "Part II: Content\n\nA tradition: Fitting a straight line\nIn statistics, we often inquire about the relationship between two variables, \\(X\\) and \\(Y\\).\nThese variables are sets that contain values (observations) as noted before. To launch our discussion, we will begin with a sample line.\n\nplot(0:10, type=\"l\", main = \"A sample line\", xlab = \"X-axis\", ylab = \"Y-axis\")\n\n\n\n\n\nMatheamtics and exact relationships\nIn mathematics, two variables, \\(x\\) and \\(y\\) may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.\n\nA straight line\nThe line in the graphic above follows the standard notation: \\[y = a + bX\\]\n\n\n\nStatistical modeling and inexact relationships\nRegression analysis is a standard analysis in many statistical studies.\nThere are many different types of regression. We’ll continue with our exploration of bivariate regression analysis and focus on some of the base assumptions as it relates to study development.\nWe will begin by looking at the underlying assumptions of regression analysis.\nThese assumptions are the technical (or structural) components of our analyses, and should be checked at the initiation of a research study, starting with data collection or understanding how data was collected if it is a secondary analysis.\n\n\nAnalyzing two numeric variables\nLet us take two variables, \\(x\\) and \\(y\\).\n\ncor(x, y)\n\n[1] 0.7293926\n\n\n\n# Fit simple linear regression model\nmodel &lt;- lm(y ~ x)\n\n\n# Examine regression outputs\nsummary(model)\n\n\nCall:\nlm(formula = y ~ x)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.4027 -1.0071  0.1154  1.0017  5.8115 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  0.07185    0.20452   0.351    0.726    \nx            2.36515    0.22408  10.555   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.035 on 98 degrees of freedom\nMultiple R-squared:  0.532, Adjusted R-squared:  0.5272 \nF-statistic: 111.4 on 1 and 98 DF,  p-value: &lt; 2.2e-16\n\n\n\n# Check regression coefficients\ncoeff &lt;- coef(model)\ncoeff\n\n(Intercept)           x \n 0.07184615  2.36514669 \n\n\n\n# Check R-squared value\nrsq &lt;- summary(model)$r.squared\nrsq\n\n[1] 0.5320136\n\n\n\n# Generate predictions\npred &lt;- predict(model) # call this object to show the predicted values of the model\n\n\n# Plot the regression line\nplot(x, y)\nabline(model, col=\"blue\")\n\n\n\n\n\n# Check residuals\nresids &lt;- residuals(model)\nplot(x, resids)\n\n\n\n\n\n# Diagnostic plots\npar(mfrow=c(2,2))\nplot(model)\n\n\n\n\n\n# Check significance of predictor\nanova(model)\n\nAnalysis of Variance Table\n\nResponse: y\n          Df Sum Sq Mean Sq F value    Pr(&gt;F)    \nx          1 461.44  461.44  111.41 &lt; 2.2e-16 ***\nResiduals 98 405.91    4.14                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nExamining plots\n\nScatter plots\n\n\nBar plots\n\n\nHistograms\n\n\n\nAnalyzing a categorical and a numeric variable\n\ndesc(df$income)\n\n [1] -25000 -35000 -42000 -31000 -27000 -38000 -29000 -40000 -32000 -39000\n\n# Bar plot of the categorical variable (race)\nggplot(df, aes(x = race)) +\n  geom_bar(fill = \"steelblue\") +\n  labs(x = \"Race\", y = \"Count\") +\n  ggtitle(\"Distribution of Races\")\n\n\n\n# Box plot of income by race\nggplot(df, aes(x = race, y = income)) +\n  geom_boxplot(fill = \"lightgray\", color = \"steelblue\") +\n  labs(x = \"Race\", y = \"Income\") +\n  ggtitle(\"Income by Race\")\n\n\n\n\n\n\nAnalyzing two categorical variables\nIn previous lectures, we discussed some methods to hypothesize around the relationship between two variables that are categorical in nature."
   },
   {
-    "objectID": "weeks/week07.html#part-iii-code",
-    "href": "weeks/week07.html#part-iii-code",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week12.html#part-iii-code",
+    "href": "weeks/week12.html#part-iii-code",
+    "title": "DATA 202 - Week 12",
+    "section": "Part III: Code",
+    "text": "Part III: Code\nThis week we’ll explore the GSS data in more detail. This is a reminder to deepen your understanding of the General Social Survey (GSS) using the notes provided below from week 11.\n\nGeneral Social Survey\nThis week we’ll return to our examination of the General Social Survey (GSS) data.\nAs a first task, please identify up to two or three variables that you can utilize to follow along with your analysis.\n\n\nNext up: Week 13"
+  },
+  {
+    "objectID": "weeks/week12-slides.html#part-i-context",
+    "href": "weeks/week12-slides.html#part-i-context",
+    "title": "DATA 202 - Week 12",
+    "section": "Part I: Context",
+    "text": "Part I: Context\nThis week we focus on more examples from our darta sources; we’ll take a closer look at the General Social Survey data, or GSS.\nThe data is located in the gssr package in R (see part III). You should become very familiar with the GSS data. Please explore the website as we will be prioritizing the use of the GSS data for the remainder of our course. The use of the GSS data will allow us to consider the meaning of social justice in the context of attitudes and beliefs around social issues.\nAhead of modeling multiple variables, we’ll examine the importance of underlying theoretical anlayses ahead of solely doing statistical investigations."
+  },
+  {
+    "objectID": "weeks/week12-slides.html#part-ii-content",
+    "href": "weeks/week12-slides.html#part-ii-content",
+    "title": "DATA 202 - Week 12",
+    "section": "Part II: Content",
+    "text": "Part II: Content\nA tradition: Fitting a straight line\nIn statistics, we often inquire about the relationship between two variables, \\(X\\) and \\(Y\\).\nThese variables are sets that contain values (observations) as noted before. To launch our discussion, we will begin with a sample line.\n\nplot(0:10, type=\"l\", main = \"A sample line\", xlab = \"X-axis\", ylab = \"Y-axis\")\n\n\nMatheamtics and exact relationships\nIn mathematics, two variables, \\(x\\) and \\(y\\) may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.\nA straight line\nThe line in the graphic above follows the standard notation: \\[y = a + bX\\]\nStatistical modeling and inexact relationships\nRegression analysis is a standard analysis in many statistical studies.\nThere are many different types of regression. We’ll continue with our exploration of bivariate regression analysis and focus on some of the base assumptions as it relates to study development.\nWe will begin by looking at the underlying assumptions of regression analysis.\nThese assumptions are the technical (or structural) components of our analyses, and should be checked at the initiation of a research study, starting with data collection or understanding how data was collected if it is a secondary analysis."
+  },
+  {
+    "objectID": "weeks/week12-slides.html#part-iii-code",
+    "href": "weeks/week12-slides.html#part-iii-code",
+    "title": "DATA 202 - Week 12",
+    "section": "Part III: Code",
+    "text": "Part III: Code\nThis week we’ll explore the GSS data in more detail. This is a reminder to deepen your understanding of the General Social Survey (GSS) using the notes provided below from week 11.\nGeneral Social Survey\nThis week we’ll return to our examination of the General Social Survey (GSS) data.\nAs a first task, please identify up to two or three variables that you can utilize to follow along with your analysis.\nNext up: Week 13\n\n\n\nCourse Data GitHub"
+  },
+  {
+    "objectID": "weeks/week08.html",
+    "href": "weeks/week08.html",
+    "title": "DATA 202 - Week 8",
+    "section": "",
+    "text": "This week we will outline exploratory data analysis through a set of case studies. Each case study provides one example of the various decision making processes needed in a critical quantitative research framework. The included cases focus on more heavily on theories and frameworks and the related practices around modeling and statistical inference.\n\n\n\nWhat do you know about a man named George Floyd and the events that occurred on May 25, 2020?\n\n\n\nImage from Time.com\n\n\n\nGeorge Floyd was murdered by a police officer in broad daylight. His murder resulted in a series of protests and expanded the already longstanding discussions around racism, state violence, and police brutality in the United States. Consider How George Floyd Was Killed in Police Custody to get a step-by-step reconstruction of the murder.\n\n\nThe Yahoo! News Race and Justice poll was conducted in 2020 after the killing of George Floyd. There is pre-loaded data set located in R. A complete description of the data is as follows:\n\nResults from a Yahoo! News poll conducted by YouGov on May 29-31, 2020. In total 1060 U.S. adults were asked a series of questions regarding race and justice in the wake of the killing of George Floyd by a police officer. Results in this data set are percentages for the question, “Do you think Blacks and Whites receive equal treatment from the police?” For this particular question there were 1059 respondents.\n\nFor efficient access, poll results are stored in a replica of the yahoo_data data frame located in the critstats package.\n\n\n\n\nThe process of exploratory data analysis will vary across projects. It is helpful if your exploratory analysis is directed by a set of clear questions and introductory tasks. The exploring data phase should not be solely used for cleaning data, although the two steps are often intertwined.\nWe will structure our exploratory analysis around three steps:\n\nInformation: Gaining a solid understanding of each variable and its observations\nShape: Gaining a better feel for the “shape” and distribution of the observations\nMeasures: Checking base assumptions for any forthcoming analysis\n\nThese steps can help guide more concrete theory building and modeling.\n\n\n\n\n\nlibrary(critstats)\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\n\n\nLoad the yahoo_data data frame and use the str() command.\n\nyahoo &lt;- critstats::yahoo_data\n\n\nsummary(yahoo)\n\n   race_eth           response        \n Length:1059        Length:1059       \n Class :character   Class :character  \n Mode  :character   Mode  :character  \n\nglimpse(yahoo)\n\nRows: 1,059\nColumns: 2\n$ race_eth &lt;chr&gt; \"White\", \"White\", \"White\", \"White\", \"White\", \"White\", \"White\"…\n$ response &lt;chr&gt; \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\"…\n\n\n\n\nhead(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 White    Yes     \n2 White    Yes     \n3 White    Yes     \n4 White    Yes     \n5 White    Yes     \n6 White    Yes     \n\ntail(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 Other    Not sure\n2 Other    Not sure\n3 Other    Not sure\n4 Other    Not sure\n5 Other    Not sure\n6 Other    Not sure\n\n\n\n\n\n\nAs an early start, we can use the output above to start our exploration.\nTo help focus these explorations, it is helpful to outline a set of questions or tasks. These tasks and questions can help identify some of the key goals of the exploratory data analysis. Wickham, Çetinkaya-Rundel, & Grolemund (2023) talk about this at length in the Exploratory Data Analysis section of the R for Data Science text.\nFor this exploration, our goal is to understand the proportion of observations in each variable.\nTo accomplish this goal, we can outline two questions around three tasks.\n\n\n\n\n\n\n\nQuestions\nTasks & Detail\n\n\n\n\nQuestion 1: How are observations distributed?\nTask 1.1: Create a table of variable counts\n\n\n\nTask 1.2: Create a table of variable proportions\n\n\nQuestion 2: How can we visualize distributions?\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\n\n\nTask 1.1: Create a table of variable counts\nTask 1.2: Create a table of variable proportions\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\nGain a solid understanding of each variable and its observations.\n\n\n\n\ntable(yahoo$race_eth)\n\n\n   Black Hispanic    Other    White \n     101      104       82      772 \n\ntable(yahoo$response)\n\n\n      No Not sure      Yes \n     700      123      236 \n\n\n\n\n\n\nprop.table(table(yahoo$race_eth))\n\n\n     Black   Hispanic      Other      White \n0.09537299 0.09820585 0.07743154 0.72898961 \n\nprop.table(table(yahoo$response))\n\n\n       No  Not sure       Yes \n0.6610009 0.1161473 0.2228517 \n\n\n\n\n\n\nThe previous output provides more information than may be immediately noted:\n\nLists the various labels for each variable\nPresents the distribution of observations across each label\nSpecific relations can be pointed to the study framing\nEarly insight into base assumptions\n\n\n\n\n\n\n\nGain a better feel for the “shape” and distribution of the observations.\n\n\n\nWe introduce some basic features of `ggplot() here to complete the task.\n\n# start with the plot outline\nggplot(yahoo)\n\n\n\n\n\n\n# add the variable categories to the plot using aes()\nggplot(yahoo, aes(x = race_eth))\n\n\n\n\n\n\n# add the bars to the plot using + geom_bar()\nggplot(yahoo, aes(x = race_eth)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\n\nEXERCISE\n\n\n\nCreate a bar plot for the response variable.\nWhat other plots could you create?\n\n\nWickham, Çetinkaya-Rundel, & Grolemund (2023) have a detailed section on data visualization in the R for Data Science text.\n\n\n\n\n\nCheck base assumptions for any forthcoming analysis.\nTo complete this step, we delve into some of the assumptions and foundations surrounding the use of sample data versus population data. The mathematical foundations allow us to understand how to compute measures and differences. The assumptions provide direction for any further modeling practices.\nWe explore this more in part II."
+  },
+  {
+    "objectID": "weeks/week08.html#part-i-context",
+    "href": "weeks/week08.html#part-i-context",
+    "title": "DATA 202 - Week 8",
+    "section": "",
+    "text": "This week we will outline exploratory data analysis through a set of case studies. Each case study provides one example of the various decision making processes needed in a critical quantitative research framework. The included cases focus on more heavily on theories and frameworks and the related practices around modeling and statistical inference.\n\n\n\nWhat do you know about a man named George Floyd and the events that occurred on May 25, 2020?\n\n\n\nImage from Time.com\n\n\n\nGeorge Floyd was murdered by a police officer in broad daylight. His murder resulted in a series of protests and expanded the already longstanding discussions around racism, state violence, and police brutality in the United States. Consider How George Floyd Was Killed in Police Custody to get a step-by-step reconstruction of the murder.\n\n\nThe Yahoo! News Race and Justice poll was conducted in 2020 after the killing of George Floyd. There is pre-loaded data set located in R. A complete description of the data is as follows:\n\nResults from a Yahoo! News poll conducted by YouGov on May 29-31, 2020. In total 1060 U.S. adults were asked a series of questions regarding race and justice in the wake of the killing of George Floyd by a police officer. Results in this data set are percentages for the question, “Do you think Blacks and Whites receive equal treatment from the police?” For this particular question there were 1059 respondents.\n\nFor efficient access, poll results are stored in a replica of the yahoo_data data frame located in the critstats package.\n\n\n\n\nThe process of exploratory data analysis will vary across projects. It is helpful if your exploratory analysis is directed by a set of clear questions and introductory tasks. The exploring data phase should not be solely used for cleaning data, although the two steps are often intertwined.\nWe will structure our exploratory analysis around three steps:\n\nInformation: Gaining a solid understanding of each variable and its observations\nShape: Gaining a better feel for the “shape” and distribution of the observations\nMeasures: Checking base assumptions for any forthcoming analysis\n\nThese steps can help guide more concrete theory building and modeling.\n\n\n\n\n\nlibrary(critstats)\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\n\n\nLoad the yahoo_data data frame and use the str() command.\n\nyahoo &lt;- critstats::yahoo_data\n\n\nsummary(yahoo)\n\n   race_eth           response        \n Length:1059        Length:1059       \n Class :character   Class :character  \n Mode  :character   Mode  :character  \n\nglimpse(yahoo)\n\nRows: 1,059\nColumns: 2\n$ race_eth &lt;chr&gt; \"White\", \"White\", \"White\", \"White\", \"White\", \"White\", \"White\"…\n$ response &lt;chr&gt; \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\", \"Yes\"…\n\n\n\n\nhead(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 White    Yes     \n2 White    Yes     \n3 White    Yes     \n4 White    Yes     \n5 White    Yes     \n6 White    Yes     \n\ntail(yahoo)\n\n# A tibble: 6 × 2\n  race_eth response\n  &lt;chr&gt;    &lt;chr&gt;   \n1 Other    Not sure\n2 Other    Not sure\n3 Other    Not sure\n4 Other    Not sure\n5 Other    Not sure\n6 Other    Not sure\n\n\n\n\n\n\nAs an early start, we can use the output above to start our exploration.\nTo help focus these explorations, it is helpful to outline a set of questions or tasks. These tasks and questions can help identify some of the key goals of the exploratory data analysis. Wickham, Çetinkaya-Rundel, & Grolemund (2023) talk about this at length in the Exploratory Data Analysis section of the R for Data Science text.\nFor this exploration, our goal is to understand the proportion of observations in each variable.\nTo accomplish this goal, we can outline two questions around three tasks.\n\n\n\n\n\n\n\nQuestions\nTasks & Detail\n\n\n\n\nQuestion 1: How are observations distributed?\nTask 1.1: Create a table of variable counts\n\n\n\nTask 1.2: Create a table of variable proportions\n\n\nQuestion 2: How can we visualize distributions?\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\n\n\nTask 1.1: Create a table of variable counts\nTask 1.2: Create a table of variable proportions\nTask 2.1: Create two to three basic visualizations\n\n\n\n\n\nGain a solid understanding of each variable and its observations.\n\n\n\n\ntable(yahoo$race_eth)\n\n\n   Black Hispanic    Other    White \n     101      104       82      772 \n\ntable(yahoo$response)\n\n\n      No Not sure      Yes \n     700      123      236 \n\n\n\n\n\n\nprop.table(table(yahoo$race_eth))\n\n\n     Black   Hispanic      Other      White \n0.09537299 0.09820585 0.07743154 0.72898961 \n\nprop.table(table(yahoo$response))\n\n\n       No  Not sure       Yes \n0.6610009 0.1161473 0.2228517 \n\n\n\n\n\n\nThe previous output provides more information than may be immediately noted:\n\nLists the various labels for each variable\nPresents the distribution of observations across each label\nSpecific relations can be pointed to the study framing\nEarly insight into base assumptions\n\n\n\n\n\n\n\nGain a better feel for the “shape” and distribution of the observations.\n\n\n\nWe introduce some basic features of `ggplot() here to complete the task.\n\n# start with the plot outline\nggplot(yahoo)\n\n\n\n\n\n\n# add the variable categories to the plot using aes()\nggplot(yahoo, aes(x = race_eth))\n\n\n\n\n\n\n# add the bars to the plot using + geom_bar()\nggplot(yahoo, aes(x = race_eth)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\n\nEXERCISE\n\n\n\nCreate a bar plot for the response variable.\nWhat other plots could you create?\n\n\nWickham, Çetinkaya-Rundel, & Grolemund (2023) have a detailed section on data visualization in the R for Data Science text.\n\n\n\n\n\nCheck base assumptions for any forthcoming analysis.\nTo complete this step, we delve into some of the assumptions and foundations surrounding the use of sample data versus population data. The mathematical foundations allow us to understand how to compute measures and differences. The assumptions provide direction for any further modeling practices.\nWe explore this more in part II."
+  },
+  {
+    "objectID": "weeks/week08.html#part-ii-content",
+    "href": "weeks/week08.html#part-ii-content",
+    "title": "DATA 202 - Week 8",
+    "section": "Part II: Content",
+    "text": "Part II: Content\n\n\nA guiding example\nLet us begin with a summary of responses to a survey sparked by the killing of George Floyd.\n\nSummary of survey response data1\n\n\nResponse\nTotal\n\n\n\n\nNo\n700\n\n\nYes\n236\n\n\n\nThe study sample \\(n = 936\\). Please take note of the table’s footnote.\nAs of now, we know very little about the survey (i.e., the context has been stripped away).\n\nAn initial question\nIs there a difference in the survey responses?\n\n\n\nFraming proportions\nAs you learn about hypothesis testing, you want to understand the nature of variable associations. There are many approaches to how we measure associations. One we’ll explore extensively is differences in proportions of two dichotomous variables.\nFirst, we add a third column to our table by computing the proportion in each row:\n\\[ P(No) = \\frac{\\text{Number of respondents who replied No}}{n} \\]\n\\[ P(Yes) = \\frac{\\text{Number of respondents who replied Yes}}{n} \\]\n\n\n\nUnderstanding proportions\n\nSummary of survey response data with proportion column\n\n\nResponse\nTotal\nProportion\n\n\n\n\nNo\n700\n\\(0.7478\\)\n\n\nYes\n236\n\\(0.2522\\)\n\n\n\nSo we have \\(P(No) = 0.7478\\) and \\(P(Yes) = 0.2522\\).\nThis is a sample. Be mindful of the notes about sampling and sampling error.\nWhat can these proportions tell us about the data?\n\n\n\n\nA closer look\nLet’s look at a preview panel of the full data set.\n\nPreview of full survey response data set\n\n\nID\nRace\nResponse\n\n\n\n\n1\nWhite\nYes\n\n\n2\nWhite\nYes\n\n\n.\n.\n.\n\n\n773\nBlack\nYes\n\n\n774\nBlack\nYes\n\n\n..\n..\n..\n\n\n874\nHispanic\nYes\n\n\n875\nHispanic\nYes\n\n\n…\n…\n…\n\n\n\\(1059\\)\nOther\nNot sure\n\n\n\n\nWhen we format the data into tables, there are multiple categories to consider.\nIn the table below, the race variable is listed in rows.\n\n\nTable 1: Race in rows\n\n\nRace\nNo\nYes\n\n\n\n\nBlack\nBlack \\(\\cap\\) No\nBlack \\(\\cap\\) Yes\n\n\nHispanic\nHispanic \\(\\cap\\) No\nHispanic \\(\\cap\\) Yes\n\n\nOther\nOther \\(\\cap\\) No\nOther \\(\\cap\\) Yes\n\n\nWhite\nWhite \\(\\cap\\) No\nWhite \\(\\cap\\) Yes\n\n\n\n\nRecall that the \\(\\cap\\) represents “and” while the \\(\\cup\\) represents “or” in logic.\n\nIn the table below, the response variable is listed in rows.\n\n\nTable 2: Response in rows\n\n\n\n\n\n\n\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\nNo \\(\\cap\\) Black\nNo \\(\\cap\\) Hispanic\nNo \\(\\cap\\) Other\nNo \\(\\cap\\) White\n\n\nYes\nYes \\(\\cap\\) Black\nYes \\(\\cap\\) Hispanic\nYes \\(\\cap\\) Other\nYes \\(\\cap\\) White\n\n\n\n\n\nWe use our understanding of probability to generate a reconstruction for the response ‘No’.\n\\[ P(No) = \\dfrac{\\text{No} \\cap \\text{Black}}{n} + \\dfrac{\\text{No} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{No} \\cap \\text{Other}}{n} + \\dfrac{\\text{No} \\cap \\text{White}}{n} \\]\nWe generate a parallel construction for the response ‘Yes’.\n\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\n\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201\n\n\n\n\nUse the table to calculate Response probabilities:\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\nTotal\n\n\n\n\nNo\n92\n75\n47\n486\n700\n\n\nYes\n6\n15\n14\n201\n236\n\n\n\nGather response probabilities for No by dividing each cell by the sample size.\n\\[ P(No) = \\dfrac{92}{936} + \\dfrac{75}{936} + \\dfrac{47}{936} + \\dfrac{486}{936} = \\dfrac{700}{936} = 0.7478 \\] Gather response probabilities for Yes by dividing each cell by the sample size.\n\\[ P(Yes) = \\dfrac{6}{936} + \\dfrac{15}{936} + \\dfrac{14}{936} + \\dfrac{201}{936} = \\dfrac{236}{936} = 0.2522 \\] We will use this framing to compute proportions for each cell but in R.\n\nGiven that we want to explore the data in more detail and understand any base associations, we need to revisit our framing and consider some additional tasks.\n\n\n\nReturning to the framework\nA basic analysis goes a long way in determining our next steps.\nWith this base analytic exercises, you may want to ask: What is the research question?\nWhat are the main or primary theoretical constructions?\n\nFirst, examine the literature and annotate specific citations.\nNext, construct a framework for the various interpretations.\n\nWhat are the similarities across theoretical constructions?\nWhat are the main differences across theoretical constructions?\nHow does a nuanced view of the history of the issue improve our understanding?\n\n\nBased on your background analyses, what is the hypothesis?"
+  },
+  {
+    "objectID": "weeks/week08.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
+    "href": "weeks/week08.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
+    "title": "DATA 202 - Week 8",
+    "section": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]",
+    "text": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\n\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201\n\n\n\n\nUse the table to calculate Response probabilities:\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\nTotal\n\n\n\n\nNo\n92\n75\n47\n486\n700\n\n\nYes\n6\n15\n14\n201\n236\n\n\n\nGather response probabilities for No by dividing each cell by the sample size.\n\\[ P(No) = \\dfrac{92}{936} + \\dfrac{75}{936} + \\dfrac{47}{936} + \\dfrac{486}{936} = \\dfrac{700}{936} = 0.7478 \\] Gather response probabilities for Yes by dividing each cell by the sample size.\n\\[ P(Yes) = \\dfrac{6}{936} + \\dfrac{15}{936} + \\dfrac{14}{936} + \\dfrac{201}{936} = \\dfrac{236}{936} = 0.2522 \\] We will use this framing to compute proportions for each cell but in R.\n\nGiven that we want to explore the data in more detail and understand any base associations, we need to revisit our framing and consider some additional tasks.\n\n\nReturning to the framework\nA basic analysis goes a long way in determining our next steps.\nWith this base analytic exercises, you may want to ask: What is the research question?\nWhat are the main or primary theoretical constructions?\n\nFirst, examine the literature and annotate specific citations.\nNext, construct a framework for the various interpretations.\n\nWhat are the similarities across theoretical constructions?\nWhat are the main differences across theoretical constructions?\nHow does a nuanced view of the history of the issue improve our understanding?\n\n\nBased on your background analyses, what is the hypothesis?"
+  },
+  {
+    "objectID": "weeks/week08.html#part-iii-code",
+    "href": "weeks/week08.html#part-iii-code",
+    "title": "DATA 202 - Week 8",
     "section": "Part III: Code",
     "text": "Part III: Code\n\n\nSetting things up\nAs a general rule, always load the appropriate libraries at the start of your analyses.\n\n# load our libraries\nlibrary(critstats)\nlibrary(tidyverse)\nlibrary(descr)\nlibrary(Hmisc)\n\nIn this case:\n\ncritstats contains the yahoo_data that we’d like to analyze.\ntidyverse contains the set of functions to help us work with our data\ndescr and Hmisc contain useful functions to analyze social science data.\n\nIf you receive an error, you may need to use the install.packages() commands first.\n\n\n\nLoad the data\nInspect the data documentation and contents of the data.\n\n# access the yahoo_data\n??yahoo_data\nyahoo_data # \"Do you think Blacks and Whites receive equal treatment from the police?\"\n\nWhile the specific wording of the question may not fit our theoretical framing (e.g. Blacks and Whites), it is useful to consider what information and insights can be gathered from the data.\nHere, theory and the literature become important components to outlining your analytic plan.\n\n\n\nClean your data\nThe data in the yahoo_data set is already cleaned and prepped. However, when you conduct your own analyses, you will need to follow the series of steps outlined in previous assignments.\nAs example, Lab 1 is a great resource on cleaning.\n\n\n\nExplore your data\nGiven that we are analyzing categorical data, we will continue from earlier when we created a series of tables. These tables will allow us to gather a sense of the data.\nOur first table will be of the variable race_eth.\n\n# create a table of the race_eth\ntable(yahoo_data$race_eth)\n\n\n   Black Hispanic    Other    White \n     101      104       82      772 \n\n\nWhat do you notice? What do you wonder?\n\n\n\nExplore your data\nOur second table will be of the variable response.\n\n# create a table of the race_eth\ntable(yahoo_data$response)\n\n\n      No Not sure      Yes \n     700      123      236 \n\n\nWhat do you notice? What do you wonder?\n\n\n\nModify your data\nMake the necessary modifications to your data.\nHere I set the yahoo_data to df and rename the race_eth variable.\n\ndf &lt;- yahoo_data # set the yahoo_data to df\ndf &lt;- df %&gt;% \n  rename(\"race\" = \"race_eth\") # rename the race_eth variable to race\n\n\n\n\nGet the sample size\nWhen looking at the table, it may be useful to get a sense of the proportions.\nWe’ll begin with getting the sample size.\n\n# get a quick count of the sample size\ncount(df) # the count function can collect the sample size, n, of a tibble\n\n# A tibble: 1 × 1\n      n\n  &lt;int&gt;\n1  1059\n\n\nThe tables give us the frequency of each category.\nThe sample size will help us get the relative frequency of each category.\n\n\n\nRelative frequencies by race\nGet the relative frequencies for the race variable.\n\ndf %&gt;% \n  count(race) %&gt;% \n  mutate(prop = prop.table(n))\n\n# A tibble: 4 × 3\n  race         n   prop\n  &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;\n1 Black      101 0.0954\n2 Hispanic   104 0.0982\n3 Other       82 0.0774\n4 White      772 0.729 \n\n\n\n\n\nRelative frequencies by response\nGet the relative frequencies for the response variable.\n\ndf %&gt;% \n  count(response) %&gt;% \n  mutate(prop = prop.table(n))\n\n# A tibble: 3 × 3\n  response     n  prop\n  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt;\n1 No         700 0.661\n2 Not sure   123 0.116\n3 Yes        236 0.223\n\n\n\n\n\nGenerate a crosstab of race and response\n\ncrosstab(df$response, df$race, plot=F)\n\n   Cell Contents \n|-------------------------|\n|                   Count | \n|-------------------------|\n\n=======================================================\n               df$race\ndf$response    Black   Hispanic   Other   White   Total\n-------------------------------------------------------\nNo                92         75      47     486     700\n-------------------------------------------------------\nNot sure           3         14      21      85     123\n-------------------------------------------------------\nYes                6         15      14     201     236\n-------------------------------------------------------\nTotal            101        104      82     772    1059\n=======================================================\n\n\nSet plot=T if you want to see a visual plot of the data. What do you notice? What do you wonder?\n\n\n\nStandardize the frequencies\nRaw frequencies can be hard to read in a crosstab, especially since column totals are not equal.\nAdd prop.c = T to get column percentages\n\ncrosstab(df$response, df$race, plot=F, prop.c=T)\n\n   Cell Contents \n|-------------------------|\n|                   Count | \n|          Column Percent | \n|-------------------------|\n\n=======================================================\n               df$race\ndf$response    Black   Hispanic   Other   White   Total\n-------------------------------------------------------\nNo               92         75      47     486     700 \n               91.1%      72.1%   57.3%   63.0%        \n-------------------------------------------------------\nNot sure          3         14      21      85     123 \n                3.0%      13.5%   25.6%   11.0%        \n-------------------------------------------------------\nYes               6         15      14     201     236 \n                5.9%      14.4%   17.1%   26.0%        \n-------------------------------------------------------\nTotal           101        104      82     772    1059 \n                9.5%       9.8%    7.7%   72.9%        \n=======================================================\n\n\nWe also refer to crosstabs as contingency tables; the percentages provide conditional probabilities. What do you notice? What do you wonder?\n\n\n\nHypothesis testing with crosstab\nDevelop (or refine) your research question(s).\nExamining the relationship between two variables.\n\n# research inquiry: is there a relationship between the race and response variables?\n# data: survey results from the Yahoo! News race and justice poll\n# note(s): response contains three levels: Yes, No, and Not sure\n\nAdd your research inquiry/question to your preamble.\nNotes help you remember import information for writing code. You can also put them in-line.\n\n\n\nNull and alternative hypothesis for a \\(\\chi^2\\) test are:\n\n\\(H_0\\): No relationship. The two variables are statistically independent.\n\\(H_1\\): There is a relationship. The two variables are not statistically independent.\n\nNotice that \\(H_1\\) does not give us information about the direction or strength of the relationships. To test the null hypothesis, we will calculate the \\(\\chi^2\\) statistic:\n\\[\\chi^2 = \\sum \\dfrac{(O-E)^2}{E}\\]\nWhere\n\n\\(O\\) is the observed frequency for each cell\n\\(E\\) is the expected frequency for each cell\n\nThe expected frequency is what we’d expected if there is no relationship (\\(H_0\\) is true)\n\n\n\n\nCreate a crosstab with raw frequencies\n\ncrosstab(df$response, df$race, plot=F)\n\n   Cell Contents \n|-------------------------|\n|                   Count | \n|-------------------------|\n\n=======================================================\n               df$race\ndf$response    Black   Hispanic   Other   White   Total\n-------------------------------------------------------\nNo                92         75      47     486     700\n-------------------------------------------------------\nNot sure           3         14      21      85     123\n-------------------------------------------------------\nYes                6         15      14     201     236\n-------------------------------------------------------\nTotal            101        104      82     772    1059\n=======================================================\n\n\n\n\n\nSampling error\nAn important note about sampling error\nThere appears to be a relationship between the variable response and race.\nHowever, the data are from a sample. We do not and should not infer that there is a relationship at the population level, but only for the sample data we are analyzing.\nEarlier, we saw the difference in proportions by the column differences for “Yes” and “No”. Since we found that the overall population said “No” to the question of fair treatment, we want to take this into consideration when analyzing our data.\n\n\n\nGather the expected frequencies\n\ncrosstab(df$response, df$race,\n         expected=T, #Add expected frequency to each cell\n         plot=F)\n\n   Cell Contents \n|-------------------------|\n|                   Count | \n|         Expected Values | \n|-------------------------|\n\n=======================================================\n               df$race\ndf$response    Black   Hispanic   Other   White   Total\n-------------------------------------------------------\nNo                92         75      47     486     700\n                66.8       68.7    54.2   510.3        \n-------------------------------------------------------\nNot sure           3         14      21      85     123\n                11.7       12.1     9.5    89.7        \n-------------------------------------------------------\nYes                6         15      14     201     236\n                22.5       23.2    18.3   172.0        \n-------------------------------------------------------\nTotal            101        104      82     772    1059\n=======================================================\n\n\n\n\n\nAdd the chi-square contributions\n\ncrosstab(df$response, df$race,\n         expected=T, #Add expected frequency to each cell\n         prop.chisq = T, #Total contribution of each cell \n         plot=F)\n\n   Cell Contents \n|-------------------------|\n|                   Count | \n|         Expected Values | \n| Chi-square contribution | \n|-------------------------|\n\n=========================================================\n               df$race\ndf$response     Black   Hispanic    Other   White   Total\n---------------------------------------------------------\nNo                 92         75       47     486     700\n                 66.8       68.7     54.2   510.3        \n                9.542      0.569    0.957   1.156        \n---------------------------------------------------------\nNot sure            3         14       21      85     123\n                 11.7       12.1      9.5    89.7        \n                6.498      0.305   13.828   0.243        \n---------------------------------------------------------\nYes                 6         15       14     201     236\n                 22.5       23.2     18.3   172.0        \n               12.107      2.885    1.000   4.874        \n---------------------------------------------------------\nTotal             101        104       82     772    1059\n=========================================================\n\n\n\n\n\nCalculate degrees of freedom\nWe have \\[df_{\\chi^2} = (r-1)(c-1)\\]\nwhere r = number of rows in the table and c = number of columns in the table\n\nChi-square critical values\n\n\n\nChi-square critical values\n\n\n\n\n\nGather critical value of chi-square\n\nqchisq(.05, 6, lower.tail=F)\n\n[1] 12.59159\n\n\n\n\n\nGet the chi-square statistic from R\n\n## get chi-square statistic\nchisq.test(df$response, df$race)\n\n\n    Pearson's Chi-squared test\n\ndata:  df$response and df$race\nX-squared = 53.964, df = 6, p-value = 7.5e-10\n\n\n\nOur focus should be on interpreting the output values.\nIn the output, you want to examine the following:\n\nConfirm \\(\\chi^2\\) value and degrees of freedom.\nNotice more precise information about the p-value\n\nUse this value to make sense of your research inquiry\n\nDoes this p-value make sense statistically and substantively?\n\n\n\n\ndescribe some initial limitations of analysis\nAlways close out your analyses with a write up of limitations.\n\n### limitation 1: sampling error\n\n### limitation 2: category reductions\n\n### limitation 3: cases dropped\n\n### limitation 4: chi-square test\n\n\n\n\n\nNext up: Week 8"
   },
   {
-    "objectID": "weeks/week07.html#footnotes",
-    "href": "weeks/week07.html#footnotes",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week08.html#footnotes",
+    "href": "weeks/week08.html#footnotes",
+    "title": "DATA 202 - Week 8",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nRespondents who selected ‘Not sure’ on the survey were moved from this analysis.↩︎"
   },
   {
-    "objectID": "weeks/week07-slides.html#part-i-context",
-    "href": "weeks/week07-slides.html#part-i-context",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week08-slides.html#part-i-context",
+    "href": "weeks/week08-slides.html#part-i-context",
+    "title": "DATA 202 - Week 8",
     "section": "Part I: Context",
     "text": "Part I: Context\nThis week we will outline exploratory data analysis through a set of case studies. Each case study provides one example of the various decision making processes needed in a critical quantitative research framework. The included cases focus on more heavily on theories and frameworks and the related practices around modeling and statistical inference."
   },
   {
-    "objectID": "weeks/week07-slides.html#part-ii-content",
-    "href": "weeks/week07-slides.html#part-ii-content",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week08-slides.html#part-ii-content",
+    "href": "weeks/week08-slides.html#part-ii-content",
+    "title": "DATA 202 - Week 8",
     "section": "Part II: Content",
     "text": "Part II: Content"
   },
   {
-    "objectID": "weeks/week07-slides.html#part-iii-code",
-    "href": "weeks/week07-slides.html#part-iii-code",
-    "title": "DATA 202 - Week 7",
+    "objectID": "weeks/week08-slides.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
+    "href": "weeks/week08-slides.html#pyes-dfractextyes-cap-textblackn-dfractextyes-cap-texthispanicn-dfractextyes-cap-textothern-dfractextyes-cap-textwhiten",
+    "title": "DATA 202 - Week 8",
+    "section": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]",
+    "text": "\\[ P(Yes) = \\dfrac{\\text{Yes} \\cap \\text{Black}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Hispanic}}{n} + \\dfrac{\\text{Yes} \\cap \\text{Other}}{n} + \\dfrac{\\text{Yes} \\cap \\text{White}}{n} \\]\nSummary values\nAdding values to the table will give us a more complete picture of the data.\n\nResponses to a survey question by race\n\n\nResponse\nBlack\nHispanic\nOther\nWhite\n\n\n\n\nNo\n92\n75\n47\n486\n\n\nYes\n6\n15\n14\n201"
+  },
+  {
+    "objectID": "weeks/week08-slides.html#part-iii-code",
+    "href": "weeks/week08-slides.html#part-iii-code",
+    "title": "DATA 202 - Week 8",
     "section": "Part III: Code",
     "text": "Part III: Code"
   },
   {
-    "objectID": "weeks/week06.html",
-    "href": "weeks/week06.html",
-    "title": "DATA 202 - Week 6",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
     "section": "",
-    "text": "Building theories and empirical inquiries around various injustices requires a solid foundation.\n\nOne method is to read recent articles in peer-reviewed journals.\nAnother method is to explore the various ways one may view injustice.\nFrom a logical perspective, you may test the validity of certain claims.\n\nHow should we define social justice?\n\nIdentify two to three definitions of social justice to share.\n\nLocate a few open source articles or periodicals.\n\nWhat are the similarities between the different definitions?\nWhat are the differences between the different definitions?\n\n\n\n\n\nThere are many different frameworks that have been developed to examine social justice.\nNorth (2006), as one example, discuss three spheres of social justice in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:\n\n“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”\n\n\n\n\nThree Spheres of Social Justice by North (2006)\n\n\nIn her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.\n\nThere are different ways to consider these interrelated systems in your theory construction.\n\n\n\nMacro: Large-scale analyses, typically on systems or observations in the aggregate\nMicro: Smaller-scale analyses, typically on individuals or localized contexts\n\n\n\n\n\nSameness: Considering homogeneous structures or characteristics; similarity\nDifference: Considering heterogeneous structures or characteristics; non-uniformity\n\n\n\n\n\nRedistribution: Primary considerations in economic or material conditions\nRecognition: Primary considerations in cultural or social conditions"
+    "text": "This page contains three sections:\n\nBrief overview of all course assignments.\nInformation about lab 0 (ungraded).\n\n\nOverview of course assignments\nOur course assignments will be split between reading and typing (code and analytic results).\n\n\n\n\n\n\n\n\nCourse component\nAssignment\nDate(s)\n\n\n\n\nPart I: Statistics and society\n\n\n\n\n\nLab #0\nDue: Tue Aug 27\n\n\n\nAnnotated Bibliography\nDue: Sun Sept 8\n\n\n\nLab #1\nDue: Sun Sept 22\n\n\nPart II: Data and people\n\n\n\n\n\nPaper #1\nDue: Fri Sept 25\n\n\n\nMidterm examination\nDue: Sun Oct 6\n\n\nPart III: Data and policy\n\n\n\n\n\nLab #2\nDue: Fri Oct 18\n\n\n\nPaper #2\nDue: Fri Nov 1\n\n\nPart IV: Data in practice\n\n\n\n\n\nLab #3\nDue: Fri Nov 15\n\n\n\nPaper #3\nDue: Fri Nov 29\n\n\n\nPaper #4 (optional)\nDue: Mon Dec 9\n\n\n\n\n\nSample exercises\nBelow are a few sample exercises. This work is ungraded, and while there is no prerequisite for this course, these problems should serve as a review and a preview of content that we’ll explore for the course. Please do not hesitate to reach out with questions.\nExercise 0.1. If an individual’s projected income is to be converted to a z-score, which of these z-scores would a “rational agent” prefer: -2.00, -1.00, 0, 1.00, or 2.00? What is a “rational agent”? Explain why the “rational agent” would prefer the z-score you selected? Cite any sources.\nExercise 0.2. What is an integer? What is the sum of the first 100 positive integers? Explain your solution. Cite any sources. Bonus points (but definitely not required for our course): write a proof of the solution.\nExercise 0.3. Have you ever heard of p-hacking? P-hacking is where a researcher conducts multiple tests and only reports the significant results from those tests. What are some main issues here?\n\n\nLab 0\nFor your first lab, you will install two software programs on your local machine: the first is base R and the second is the RStudio Integrated Development Environment, or IDE. Both programs are required.\n\n\n\n\n\n\nYou must download both R and RStudio!\n\n\n\n\n\nIn order to complete assignments, you must download base R and RStudio to your computer.\n\n\n\nRStudio is now called Posit. When you are searching online you will begin to see language differences.\nIt can all get very confusing. In order to reduce confusion, I am requesting that you watch this short tutorial so that we’re all on the same page. I will discuss this more when we meet.\n\n\nNext up: Computing\nOn the next page, I will walk you through downloading the appropriate software for our work this term."
   },
   {
-    "objectID": "weeks/week06.html#part-i-context",
-    "href": "weeks/week06.html#part-i-context",
-    "title": "DATA 202 - Week 6",
+    "objectID": "labs/template/lab-template.html",
+    "href": "labs/template/lab-template.html",
+    "title": "Lab 1",
     "section": "",
-    "text": "Building theories and empirical inquiries around various injustices requires a solid foundation.\n\nOne method is to read recent articles in peer-reviewed journals.\nAnother method is to explore the various ways one may view injustice.\nFrom a logical perspective, you may test the validity of certain claims.\n\nHow should we define social justice?\n\nIdentify two to three definitions of social justice to share.\n\nLocate a few open source articles or periodicals.\n\nWhat are the similarities between the different definitions?\nWhat are the differences between the different definitions?\n\n\n\n\n\nThere are many different frameworks that have been developed to examine social justice.\nNorth (2006), as one example, discuss three spheres of social justice in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:\n\n“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”\n\n\n\n\nThree Spheres of Social Justice by North (2006)\n\n\nIn her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.\n\nThere are different ways to consider these interrelated systems in your theory construction.\n\n\n\nMacro: Large-scale analyses, typically on systems or observations in the aggregate\nMicro: Smaller-scale analyses, typically on individuals or localized contexts\n\n\n\n\n\nSameness: Considering homogeneous structures or characteristics; similarity\nDifference: Considering heterogeneous structures or characteristics; non-uniformity\n\n\n\n\n\nRedistribution: Primary considerations in economic or material conditions\nRecognition: Primary considerations in cultural or social conditions"
+    "text": "# install.packages(\"gssr\") # general social survey (GSS) data\n\nThis is an area where you can put in some text.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(dplyr)\n\n\n# remotes::install_github(\"professornaite/critstats\", force=TRUE)\nlibrary(critstats) # make sure you have loaded the library AFTER the pakcage\n\n\ndf1 &lt;- critstats::true_size\n\nIf I want to include my math inline with the text, $ y = mx + b$.\nIf I would like to write a math equation \\[ \\dfrac{1}{3} - x^2 \\]"
   },
   {
-    "objectID": "weeks/week06.html#part-ii-content",
-    "href": "weeks/week06.html#part-ii-content",
-    "title": "DATA 202 - Week 6",
-    "section": "Part II: Content",
-    "text": "Part II: Content\nThis week’s topics focus on bivariate analysis.\nThe goal of a bivariate analysis is to understand the relationship between two variables.\nThere are a few common ways to perform bivariate analysis:\n\nEstimating differences in proportions\nScatter plots\nCorrelation coefficients\nSimple linear regression\n\n\n\nSimple linear regression\nA simple linear regression (sometimes referenced as a bivariate regression) is a linear equation describing the relationship between an explanatory variable and an outcome variable.\nThere is an assumption that the explanatory variable influences the outcome variable, and not the other way around.\nTake, for example, a variable \\(y_i\\) which denotes the income of some individual in a sample, and we index this data using \\(i\\) where \\(i \\in \\{1, 2, ..., n\\}\\). We can let some other variable in our data \\(x_i\\) represent the years of education for the same individual. A simple linear regression equation of these variables take the following form: \\[y_i = b_0 + b_{1}x_{i} + e_i\\]\nwhere \\(b_1\\) is the sample estimate of the slope of the regression line with respect to the years of education and \\(b_0\\) is the sample estimate for the vertical intercept of the regression line.\n\n\n\nCorrelation coefficients and scatterplots\nAs a reminder, correlation ranges from -1 to 1. It gives us an indication on two things:\n\nThe direction of the relationship between the two variables\nThe strength of the relationship between the two variables\n\nAny outliers can greatly impact the value of a correlation coefficient.\n\nplot(x,y)\n\n\n\n\n\n\n\nEstimating differences in proportions\nWhen generating cross tabulations, we can make sense of a few bivariate tests:\n\nDifferences in proportions\nStandard errors of the difference in proportions\nConfidence intervals for the differences\nT-test for differences in proportions"
-  },
-  {
-    "objectID": "weeks/week06.html#part-iii-code",
-    "href": "weeks/week06.html#part-iii-code",
-    "title": "DATA 202 - Week 6",
-    "section": "Part III: Code",
-    "text": "Part III: Code\nThe code for this week will prepare you to run analyses for Paper #2.\nPaper #2 is a short exploration of a data set in the forcats package.\nRecall that lab 2 will guide you through your analyses; a sample RScript and workflow is also provided here.\n\n\nWrite preamble\n\n# ---\n# title: Exploring associations between income and political party in the US\n# subtitle: sample paper 2\n# author: Nathan Alexander\n# course: DATA 202 - fall 2023\n# ---\n\n# research inquiry: does income relate to political party support in the US?\n# data: 2020 sample data from the General Social Survey (GSS)\n# note(s): variables should be mutated and recoded into two levels\n\n\n\n\nstep 0: install packages and load libraries\n\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(tidyr)\n\n\n\n\nstep 1: view gss_cat data in the package forcats\n\ngetwd() # check working directory\n?gss_cat # view data documentation\ngss_cat # call data frame\nglimpse(gss_cat) # glimpse data\nsummary(gss_cat) # view summary of data\n\n\n\n\nstep 2: clean and manage data\n\ngss_cat_clean &lt;- gss_cat %&gt;% \n  na.omit() %&gt;% \n  select(year, rincome, partyid) %&gt;% \n  rename(income = rincome) %&gt;% \n  rename(party = partyid)\n\ngss_cat_clean # view cleaned data\n\n\n\n\nstep 3: subset data: year == 2000\n\ndf &lt;- gss_cat_clean %&gt;% \n  filter(year==2000)\n\nhead(df) # view top of data\ntail(df) # view bottom of data\nsummary(df) # check data\n\n\n\n\nstep 4: inspect and transform income variable into two levels\n\n## create a frequency table of each level in the income variable\ndf %&gt;% count(party)\n\n## drop 'No answer', 'Don't know', 'Refused', and 'Not applicable' levels\ndf &lt;- df %&gt;%  \n  filter(income != \"No answer\",\n         income != \"Don't know\",\n         income != \"Refused\",\n         income != \"Not applicable\") %&gt;% \n  droplevels() # use droplevels() to remove levels from variable for factors\n\n## use levels() function to view levels for income variable\nlevels(df$income)\n\n## create two levels: below $20,000 and above $20,000\ndf &lt;- df %&gt;% \n  mutate(income = fct_recode(income, \n                             \"More than 20000\" = \"$25000 or more\",\n                             \"More than 20000\" = \"$20000 - 24999\",\n                             \"Less than 20000\" = \"$15000 - 19999\",\n                             \"Less than 20000\" = \"$10000 - 14999\",\n                             \"Less than 20000\" = \"$8000 to 9999\",\n                             \"Less than 20000\" = \"$7000 to 7999\",\n                             \"Less than 20000\" = \"$6000 to 6999\",\n                             \"Less than 20000\" = \"$5000 to 5999\",\n                             \"Less than 20000\" = \"$4000 to 4999\",\n                             \"Less than 20000\" = \"$3000 to 3999\",\n                             \"Less than 20000\" = \"$1000 to 2999\",\n                             \"Less than 20000\" = \"Lt $1000\"))\n\n## view a summary of your transformed data frame\nsummary(df)\n\n\n\n\nstep 5: inspect and transform party variable into two levels\n\n## create a frequency table of each level in the party variable\ndf %&gt;% count(party)\n\n## drop 'No answer', 'Independent' and 'Other Party' levels\ndf &lt;- df %&gt;%  \n  filter(party != \"No answer\",\n         party != \"Independent\",\n         party != \"Other party\") %&gt;% \n  droplevels() # use droplevels() to remove levels from variable for factors\n\n## create two levels: 'Republican' and 'Democrat'\ndf &lt;- df %&gt;% \n  mutate(party = fct_recode(party,\n                            \"Republican\" = \"Strong republican\",\n                            \"Republican\" = \"Not str republican\",\n                            \"Republican\" = \"Ind,near rep\",\n                            \"Democrat\" = \"Ind,near dem\",\n                            \"Democrat\" = \"Not str democrat\",\n                            \"Democrat\" = \"Strong democrat\"))\n\n## remove year from data frame\ndf &lt;- df %&gt;% \n  select(-year)\n\n## view a summary of the data to check for any errors\nsummary(df)\n\n\n\n\nstep 6: visualize data\n\n## create a frequency table and bar graph of income \ntable.income = table(df$income)\ntable.income\nbarplot(table.income,\n        main = \"Bar graph of Income\",\n        xlab = \"Respondent Income\",\n        ylab = \"Frequency\")\n## the below code produces the same output as above with specifications\nbarplot(table(df$income),\n        main = \"Bar graph of Income\",\n        col = \"lightgreen\",\n        xlab = \"Respondent Income\",\n        ylab = \"Frequency\",\n        ylim = c(0,650)) # this y-axis range: (0, 650) works best for my plot\n## create a frequency table and bar graph of party \ntable.party = table(df$party)\ntable.party\nbarplot(table.party,\n        main = \"Bar graph of Party\",\n        xlab = \"Respondent Party\",\n        ylab = \"Frequency\")\n## the below code produces the same output as above with specifications\nbarplot(table(df$party),\n        main = \"Bar graph of Party\",\n        col = c(\"red\",\"blue\"),\n        xlab = \"Respondent Party\",\n        ylab = \"Frequency\",\n        ylim = c(0,600)) # this y-axis range: (0, 550) works best for my plot\n## create a stacked bar plot of the proportions\n#### question: which of the two plots do you prefer, why?\nplot(df$income, df$party)\nplot(df$party, df$income)\n## the below code produces similar outputs as above with specifications\nplot(df$party, df$income,\n     main = \"Mosaic Plot of Political Party and Income\",\n     col = c(\"lightyellow\",\"lightgreen\"),\n     xlab = \"Political Party\",\n     ylab = \"Income\")\n\n\n\n\nstep 7: create a basic cross tab for manual calculations\n\n## gather sample size\nn = count(df)\nn\n\n## view a basic cross tabulation\ntable(df$income, df$party)\n\n\n\n\nstep 8: bivariate analysis\n\n## load required libraries (and packages, where needed)\ninstall.packages(\"descr\", repos = \"http://cran.us.r-project.org\")\nlibrary(descr)\n\ninstall.packages(\"Hmisc\", repos = \"http://cran.us.r-project.org\")\nlibrary(Hmisc)\n\n## create a cross tab (list dependent variable in your hypothesis first)\ncrosstab(df$party, df$income)\n\n## add column percentages to the cross tab\ncrosstab(df$party, df$income,\n         prop.c=T) # add column percentages\n## add row percentages to the cross tab\ncrosstab(df$party, df$income,\n         prop.r=T) # add row percentages\n\n## get expected frequencies and cell chi-square contributions\ncrosstab(df$party, df$income,\n         expected = T, # get expected values\n         prop.chisq=T) # get chi-square contribution\n\n## get critical value of chi-square, p=.05, df=1\n#### recall: df = (r-1)(c-1)\nqchisq(.05, 1, lower.tail=F)\n\n## get chi-square statistic\nchisq.test(df$party, df$income)\n\n\n\n\nstep 9: describe some initial limitations of analysis\n\n### limitation 1: sampling error\n# data come from a sample and there are likely differences in other samples\n\n### limitation 2: category reductions\n# creating two levels for the variables greatly impacted the diversity of responses\n\n### limitation 3: cases dropped\n# sample was further impacted by the number of values dropped in the analysis\n\n### limitation 4: chi-square test\n# the chi-square test does not tell us about the strength or direction of association\n\n\n\n\nNext up: Week 7"
-  },
-  {
-    "objectID": "weeks/week06-slides.html#part-i-context",
-    "href": "weeks/week06-slides.html#part-i-context",
-    "title": "DATA 202 - Week 6",
-    "section": "Part I: Context",
-    "text": "Part I: Context"
-  },
-  {
-    "objectID": "weeks/week06-slides.html#part-ii-content",
-    "href": "weeks/week06-slides.html#part-ii-content",
-    "title": "DATA 202 - Week 6",
-    "section": "Part II: Content",
-    "text": "Part II: Content\nThis week’s topics focus on bivariate analysis.\nThe goal of a bivariate analysis is to understand the relationship between two variables.\nThere are a few common ways to perform bivariate analysis:\n\nEstimating differences in proportions\nScatter plots\nCorrelation coefficients\nSimple linear regression"
-  },
-  {
-    "objectID": "weeks/week06-slides.html#part-iii-code",
-    "href": "weeks/week06-slides.html#part-iii-code",
-    "title": "DATA 202 - Week 6",
-    "section": "Part III: Code",
-    "text": "Part III: Code\nThe code for this week will prepare you to run analyses for Paper #2.\nPaper #2 is a short exploration of a data set in the forcats package.\nRecall that lab 2 will guide you through your analyses; a sample RScript and workflow is also provided here."
-  },
-  {
-    "objectID": "weeks/week09.html",
-    "href": "weeks/week09.html",
-    "title": "DATA 202 - Week 9",
+    "objectID": "labs/template/lab1.html",
+    "href": "labs/template/lab1.html",
+    "title": "Untitled",
     "section": "",
-    "text": "No classes held. Spring Break observed by the University."
+    "text": "Setup the RMarkdown file.\nNext, we’re going to load other packages and libraries.\n\nremotes::install_github(\"professornaite/critstats\", force=TRUE)\n\nUsing GitHub PAT from the git credential store.\n\n\nDownloading GitHub repo professornaite/critstats@HEAD\n\n\nglue (1.7.0 -&gt; 1.8.0) [CRAN]\n\n\nInstalling 1 packages: glue\n\n\n\nThe downloaded binary packages are in\n    /var/folders/54/02xngdrx2277pg5hxjx3z8040000gn/T//RtmpWP6nqB/downloaded_packages\n── R CMD build ─────────────────────────────────────────────────────────────────\n* checking for file ‘/private/var/folders/54/02xngdrx2277pg5hxjx3z8040000gn/T/RtmpWP6nqB/remotese6ad6629c97a/professornaite-critstats-7abb842/DESCRIPTION’ ... OK\n* preparing ‘critstats’:\n* checking DESCRIPTION meta-information ... OK\n* checking for LF line-endings in source and make files and shell scripts\n* checking for empty or unneeded directories\n* building ‘critstats_0.0.0.9000.tar.gz’\n\nlibrary(critstats)\n\n\n??critstats"
   },
   {
-    "objectID": "labs/template/report-template/report-template.html",
-    "href": "labs/template/report-template/report-template.html",
-    "title": "Methods",
+    "objectID": "labs/lab3.html",
+    "href": "labs/lab3.html",
+    "title": "Lab 3",
     "section": "",
-    "text": "# Seed for random number generation\nset.seed(42)\nknitr::opts_chunk$set(cache.extra = knitr::rand_seed)"
+    "text": "For Lab 3, you may submit your work to Canvas as a .pdf or an R Script or even as a .txt file.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
   },
   {
-    "objectID": "labs/template/report-template/report-template.html#participants",
-    "href": "labs/template/report-template/report-template.html#participants",
-    "title": "Methods",
-    "section": "Participants",
-    "text": "Participants"
-  },
-  {
-    "objectID": "labs/template/report-template/report-template.html#material",
-    "href": "labs/template/report-template/report-template.html#material",
-    "title": "Methods",
-    "section": "Material",
-    "text": "Material"
-  },
-  {
-    "objectID": "labs/template/report-template/report-template.html#procedure",
-    "href": "labs/template/report-template/report-template.html#procedure",
-    "title": "Methods",
-    "section": "Procedure",
-    "text": "Procedure"
-  },
-  {
-    "objectID": "labs/template/report-template/report-template.html#data-analysis",
-    "href": "labs/template/report-template/report-template.html#data-analysis",
-    "title": "Methods",
-    "section": "Data analysis",
-    "text": "Data analysis\nWe used R [Version 4.3.1\\; @R-base] and the R-packages papaja [Version 0.1.2\\; @R-papaja], and tinylabels [Version 0.2.4\\; @R-tinylabels] for all our analyses."
-  },
-  {
-    "objectID": "labs/lab2.html",
-    "href": "labs/lab2.html",
-    "title": "Lab 2",
-    "section": "",
-    "text": "For Lab 2, you may submit your solutions to Canvas as a .pdf or an R Script or even as a .txt file.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
-  },
-  {
-    "objectID": "labs/lab2.html#learning-objectives",
-    "href": "labs/lab2.html#learning-objectives",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#learning-objectives",
+    "href": "labs/lab3.html#learning-objectives",
+    "title": "Lab 3",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe Lab 2 assignment focuses on you exploring any two variables located in one of the data frames in the critstats package or in gss_cat. You will also return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on a bivariate analysis between two categorical variables, two numeric variables, or one numeric variable and one categorical variable.\nPlease note: you should not use the same variables from a previous assignment but you may use the same data set."
+    "text": "Learning Objectives\nThe Lab 3 assignment will provide you with an opportunity to self-direct your analysis to write a substantive argument in Paper 3.\nSimilar to Lab 2', this lab focuses on you exploring at least two (or more) variables located in one of the data sets provided for analysis. These data can come from thecritstats,gssr`, or a data set of your choice once approved by the instructor (please email me ahead of time with the raw data and a high-level outline of your plan). You will continue to return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on an analysis between two or more variables, with an emphasis on your research design and analytic goals.\nPlease note: you should not use the same variables from a previous assignment but you may use the same data set."
   },
   {
-    "objectID": "labs/lab2.html#learning-activities",
-    "href": "labs/lab2.html#learning-activities",
-    "title": "Lab 2",
-    "section": "Learning Activities",
-    "text": "Learning Activities\nBy the end of this lab you will be able to:\n\nLocate data sets in the critstats package, or use gss_cat\nDevelop an original research question\nClean and manipulate data for analysis\nExamine the relationship between two variables\n\nYou should submit your final output on Canvas here."
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.1-create-a-new-project",
-    "href": "labs/lab2.html#task-0.1-create-a-new-project",
-    "title": "Lab 2",
-    "section": "Task 0.1: Create a new project",
-    "text": "Task 0.1: Create a new project\nIn your R session, navigate to: File &gt; New Project. Create a new project using an appropriate title"
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.2-check-your-working-directory",
-    "href": "labs/lab2.html#task-0.2-check-your-working-directory",
-    "title": "Lab 2",
-    "section": "Task 0.2: Check your working directory",
-    "text": "Task 0.2: Check your working directory\nCheck your working directory by typing getwd().\nIf you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for the next several weeks.\n\n# insert your desired path in the parenthesis and remove the #\n# setwd(\"/your/working/directory/goes/here\") \n\nYou can add a new sub-folder manually or under the Files tab in the RStudio IDE."
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
-    "href": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
-    "title": "Lab 2",
-    "section": "Task 0.3: Start a new file in your session",
-    "text": "Task 0.3: Start a new file in your session\nOnce you have confirmed that you are in the correct directory, start a new R Script."
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.4-write-a-preamble",
-    "href": "labs/lab2.html#task-0.4-write-a-preamble",
-    "title": "Lab 2",
-    "section": "Task 0.4: Write a preamble",
-    "text": "Task 0.4: Write a preamble\n\n## Name: &lt;include your full name&gt;\n## Assignment: Lab 2\n## Date: &lt;here you may want to add a date&gt;\n## Purpose: &lt;insert the goals or purpose of the RScript&gt;"
-  },
-  {
-    "objectID": "labs/lab2.html#task-0.5-packages-and-libraries",
-    "href": "labs/lab2.html#task-0.5-packages-and-libraries",
-    "title": "Lab 2",
-    "section": "Task 0.5: Packages and libraries",
-    "text": "Task 0.5: Packages and libraries\n\n# install the tidyverse package\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\n\n# load the libraries needed for today's analyses\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(critstats)\n\n## update packages if needed; remove # to run code\n# update.packages(\"package-name\")"
-  },
-  {
-    "objectID": "labs/lab2.html#report-1.1",
-    "href": "labs/lab2.html#report-1.1",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.1",
+    "href": "labs/lab3.html#report-1.1",
+    "title": "Lab 3",
     "section": "Report 1.1",
     "text": "Report 1.1\nWhat data set have you decided to use?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.2",
-    "href": "labs/lab2.html#report-1.2",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.2",
+    "href": "labs/lab3.html#report-1.2",
+    "title": "Lab 3",
     "section": "Report 1.2",
     "text": "Report 1.2\nWhich two variables from your data set will be analyzed?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.3",
-    "href": "labs/lab2.html#report-1.3",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.3",
+    "href": "labs/lab3.html#report-1.3",
+    "title": "Lab 3",
     "section": "Report 1.3",
     "text": "Report 1.3\nWhat is your research question?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.4",
-    "href": "labs/lab2.html#report-1.4",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.4",
+    "href": "labs/lab3.html#report-1.4",
+    "title": "Lab 3",
     "section": "Report 1.4",
     "text": "Report 1.4\nWhat is your data analysis plan? Please be descriptive."
   },
   {
-    "objectID": "labs/lab2.html#report-1.5",
-    "href": "labs/lab2.html#report-1.5",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.5",
+    "href": "labs/lab3.html#report-1.5",
+    "title": "Lab 3",
     "section": "Report 1.5",
     "text": "Report 1.5\nWhat are some potential limitations for your analysis?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.6",
-    "href": "labs/lab2.html#report-1.6",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.6",
+    "href": "labs/lab3.html#report-1.6",
+    "title": "Lab 3",
     "section": "Report 1.6",
     "text": "Report 1.6\nDoes your data contain missing values? If so, how have you dealt with these values?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.7",
-    "href": "labs/lab2.html#report-1.7",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.7",
+    "href": "labs/lab3.html#report-1.7",
+    "title": "Lab 3",
     "section": "Report 1.7",
     "text": "Report 1.7\nPlease include all code used to clean and manipulate the variables."
   },
   {
-    "objectID": "labs/lab2.html#report-1.8",
-    "href": "labs/lab2.html#report-1.8",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.8",
+    "href": "labs/lab3.html#report-1.8",
+    "title": "Lab 3",
     "section": "Report 1.8",
     "text": "Report 1.8\nWhat relationship, if any, exists between the two variables?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.9",
-    "href": "labs/lab2.html#report-1.9",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.9",
+    "href": "labs/lab3.html#report-1.9",
+    "title": "Lab 3",
     "section": "Report 1.9",
     "text": "Report 1.9\nHow do these findings relate to your research question and theory?"
   },
   {
-    "objectID": "labs/lab2.html#report-1.10",
-    "href": "labs/lab2.html#report-1.10",
-    "title": "Lab 2",
+    "objectID": "labs/lab3.html#report-1.10",
+    "href": "labs/lab3.html#report-1.10",
+    "title": "Lab 3",
     "section": "Report 1.10",
     "text": "Report 1.10\nWhat limitations exist as a result of the data analysis?"
   },
@@ -980,158 +931,256 @@
     "text": "Report 1.10\nCreate basic plots (i.e., boxplot(), hist(), plot(), and plot(density())) for the two numeric variables that you used in Report 1.9 (above). Add a title to each plot.\n{Save each plot as a pdf and submit it with Lab 1 files on Canvas here}."
   },
   {
-    "objectID": "labs/lab3.html",
-    "href": "labs/lab3.html",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html",
+    "href": "labs/lab2.html",
+    "title": "Lab 2",
     "section": "",
-    "text": "For Lab 3, you may submit your work to Canvas as a .pdf or an R Script or even as a .txt file.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
+    "text": "For Lab 2, you may submit your solutions to Canvas as a .pdf or an R Script or even as a .txt file.\nPlease see the Preparing Lab Reports at the bottom of the lab 1 assignment."
   },
   {
-    "objectID": "labs/lab3.html#learning-objectives",
-    "href": "labs/lab3.html#learning-objectives",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#learning-objectives",
+    "href": "labs/lab2.html#learning-objectives",
+    "title": "Lab 2",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe Lab 3 assignment will provide you with an opportunity to self-direct your analysis to write a substantive argument in Paper 3.\nSimilar to Lab 2', this lab focuses on you exploring at least two (or more) variables located in one of the data sets provided for analysis. These data can come from thecritstats,gssr`, or a data set of your choice once approved by the instructor (please email me ahead of time with the raw data and a high-level outline of your plan). You will continue to return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on an analysis between two or more variables, with an emphasis on your research design and analytic goals.\nPlease note: you should not use the same variables from a previous assignment but you may use the same data set."
+    "text": "Learning Objectives\nThe Lab 2 assignment focuses on you exploring any two variables located in one of the data frames in the critstats package or in gss_cat. You will also return to some of the functions we have used before to clean variables and manipulate data frames. Your analyses in this lab should focus on a bivariate analysis between two categorical variables, two numeric variables, or one numeric variable and one categorical variable.\nPlease note: you should not use the same variables from a previous assignment but you may use the same data set."
   },
   {
-    "objectID": "labs/lab3.html#report-1.1",
-    "href": "labs/lab3.html#report-1.1",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#learning-activities",
+    "href": "labs/lab2.html#learning-activities",
+    "title": "Lab 2",
+    "section": "Learning Activities",
+    "text": "Learning Activities\nBy the end of this lab you will be able to:\n\nLocate data sets in the critstats package, or use gss_cat\nDevelop an original research question\nClean and manipulate data for analysis\nExamine the relationship between two variables\n\nYou should submit your final output on Canvas here."
+  },
+  {
+    "objectID": "labs/lab2.html#task-0.1-create-a-new-project",
+    "href": "labs/lab2.html#task-0.1-create-a-new-project",
+    "title": "Lab 2",
+    "section": "Task 0.1: Create a new project",
+    "text": "Task 0.1: Create a new project\nIn your R session, navigate to: File &gt; New Project. Create a new project using an appropriate title"
+  },
+  {
+    "objectID": "labs/lab2.html#task-0.2-check-your-working-directory",
+    "href": "labs/lab2.html#task-0.2-check-your-working-directory",
+    "title": "Lab 2",
+    "section": "Task 0.2: Check your working directory",
+    "text": "Task 0.2: Check your working directory\nCheck your working directory by typing getwd().\nIf you are not in the desired directory, you can change your directory using the associated path. This path should be the same as the project folder that you plan to work out of for the next several weeks.\n\n# insert your desired path in the parenthesis and remove the #\n# setwd(\"/your/working/directory/goes/here\") \n\nYou can add a new sub-folder manually or under the Files tab in the RStudio IDE."
+  },
+  {
+    "objectID": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
+    "href": "labs/lab2.html#task-0.3-start-a-new-file-in-your-session",
+    "title": "Lab 2",
+    "section": "Task 0.3: Start a new file in your session",
+    "text": "Task 0.3: Start a new file in your session\nOnce you have confirmed that you are in the correct directory, start a new R Script."
+  },
+  {
+    "objectID": "labs/lab2.html#task-0.4-write-a-preamble",
+    "href": "labs/lab2.html#task-0.4-write-a-preamble",
+    "title": "Lab 2",
+    "section": "Task 0.4: Write a preamble",
+    "text": "Task 0.4: Write a preamble\n\n## Name: &lt;include your full name&gt;\n## Assignment: Lab 2\n## Date: &lt;here you may want to add a date&gt;\n## Purpose: &lt;insert the goals or purpose of the RScript&gt;"
+  },
+  {
+    "objectID": "labs/lab2.html#task-0.5-packages-and-libraries",
+    "href": "labs/lab2.html#task-0.5-packages-and-libraries",
+    "title": "Lab 2",
+    "section": "Task 0.5: Packages and libraries",
+    "text": "Task 0.5: Packages and libraries\n\n# install the tidyverse package\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\n\n# load the libraries needed for today's analyses\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(critstats)\n\n## update packages if needed; remove # to run code\n# update.packages(\"package-name\")"
+  },
+  {
+    "objectID": "labs/lab2.html#report-1.1",
+    "href": "labs/lab2.html#report-1.1",
+    "title": "Lab 2",
     "section": "Report 1.1",
     "text": "Report 1.1\nWhat data set have you decided to use?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.2",
-    "href": "labs/lab3.html#report-1.2",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.2",
+    "href": "labs/lab2.html#report-1.2",
+    "title": "Lab 2",
     "section": "Report 1.2",
     "text": "Report 1.2\nWhich two variables from your data set will be analyzed?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.3",
-    "href": "labs/lab3.html#report-1.3",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.3",
+    "href": "labs/lab2.html#report-1.3",
+    "title": "Lab 2",
     "section": "Report 1.3",
     "text": "Report 1.3\nWhat is your research question?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.4",
-    "href": "labs/lab3.html#report-1.4",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.4",
+    "href": "labs/lab2.html#report-1.4",
+    "title": "Lab 2",
     "section": "Report 1.4",
     "text": "Report 1.4\nWhat is your data analysis plan? Please be descriptive."
   },
   {
-    "objectID": "labs/lab3.html#report-1.5",
-    "href": "labs/lab3.html#report-1.5",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.5",
+    "href": "labs/lab2.html#report-1.5",
+    "title": "Lab 2",
     "section": "Report 1.5",
     "text": "Report 1.5\nWhat are some potential limitations for your analysis?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.6",
-    "href": "labs/lab3.html#report-1.6",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.6",
+    "href": "labs/lab2.html#report-1.6",
+    "title": "Lab 2",
     "section": "Report 1.6",
     "text": "Report 1.6\nDoes your data contain missing values? If so, how have you dealt with these values?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.7",
-    "href": "labs/lab3.html#report-1.7",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.7",
+    "href": "labs/lab2.html#report-1.7",
+    "title": "Lab 2",
     "section": "Report 1.7",
     "text": "Report 1.7\nPlease include all code used to clean and manipulate the variables."
   },
   {
-    "objectID": "labs/lab3.html#report-1.8",
-    "href": "labs/lab3.html#report-1.8",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.8",
+    "href": "labs/lab2.html#report-1.8",
+    "title": "Lab 2",
     "section": "Report 1.8",
     "text": "Report 1.8\nWhat relationship, if any, exists between the two variables?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.9",
-    "href": "labs/lab3.html#report-1.9",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.9",
+    "href": "labs/lab2.html#report-1.9",
+    "title": "Lab 2",
     "section": "Report 1.9",
     "text": "Report 1.9\nHow do these findings relate to your research question and theory?"
   },
   {
-    "objectID": "labs/lab3.html#report-1.10",
-    "href": "labs/lab3.html#report-1.10",
-    "title": "Lab 3",
+    "objectID": "labs/lab2.html#report-1.10",
+    "href": "labs/lab2.html#report-1.10",
+    "title": "Lab 2",
     "section": "Report 1.10",
     "text": "Report 1.10\nWhat limitations exist as a result of the data analysis?"
   },
   {
-    "objectID": "labs/template/lab-template.html",
-    "href": "labs/template/lab-template.html",
+    "objectID": "labs/template/lab1/lab1.html",
+    "href": "labs/template/lab1/lab1.html",
     "title": "Lab 1",
     "section": "",
-    "text": "# install.packages(\"gssr\") # general social survey (GSS) data\n\nThis is an area where you can put in some text.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(dplyr)\n\n\n# remotes::install_github(\"professornaite/critstats\", force=TRUE)\nlibrary(critstats) # make sure you have loaded the library AFTER the pakcage\n\n\ndf1 &lt;- critstats::true_size\n\nIf I want to include my math inline with the text, $ y = mx + b$.\nIf I would like to write a math equation \\[ \\dfrac{1}{3} - x^2 \\]"
+    "text": "Part 0: Pre-lab tasks\nFirst, setup your RMarkdown file. The preamble (above) should have the --- before and after any text. Tabs and spacing matter here, so please pay attention. In the code chunk below, take note of the setup included after r in the first line. Only one chunk of code should be used as a setup chunk.\n\nknitr::opts_chunk$set(echo = TRUE)\n# install.packages(\"devtools\", repos = \"http://cran.us.r-project.org\")\nlibrary(devtools)\n\nYou only need to install a package once. You should and can do this manually even though it is located in your .Rmd file. First, run the individual line of code and then comment out the code by adding the # to start the line.\nI also commented out the remotes package here, as it is installed with the devtools package.\nBe sure to also change the here location of your file to the same name as the file name and use the .Rmd extension.\n\n# install package\n# install.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\n# install.packages(\"remotes\", repos = \"http://cran.us.r-project.org\")\n \n# load the necessary libraries\nlibrary(tidyverse) #collection of R packages designed for data science\nlibrary(here) #helps with filepaths\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(remotes)\n\nhere::i_am(\"lab1.Rmd\")\n\n\n\nPart 1: The true size of Africa\nNext, we will install the data package for our course. I have completed some maintenance and added a new data set but there were no error identified. That said, if you have any issues in the next step, please read the instructions immediately following this next block of code.\n\n# use the remote install function to call in your data\nremotes::install_github(\"professornaite/critstats\", force=TRUE)\n\n# load the `critstats` library\nlibrary(critstats)\n\n# update the `critstats` package if needed\n# update.packages(\"critstats\")\n\nIf you get the following error:\nlazy-load database ‘…rdb’ is corrupt\nTry the following steps and re-install the package.\n\nRestart your R session by running .rs.restartR() in your RStudio Console. The package might have been installed in your computer (even though it does not work).\nYou can also remove it using ?remove.packages().\nRe-install the package using the steps in the code chunk above.\n\n\nNote, in the line below, I am going to change the evaluation (eval) option to TRUE.\nHere a capital T or the entire word TRUE (capitalized) will work.\n\ncritstats::true_size\n\n# A tibble: 18 × 4\n   Country          percent.africa area.sq.km area.sq.mi\n   &lt;chr&gt;                     &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1 United States              32.4       9.83       3.8 \n 2 China                      31.6       9.6        3.71\n 3 India                      10.8       3.29       1.27\n 4 Mexico                      6.5       1.96       0.76\n 5 Peru                        4.2       1.29       0.5 \n 6 France                      2.1       0.64       0.25\n 7 Spain                       1.7       0.51       0.2 \n 8 Papua New Guinea            1.5       0.46       0.18\n 9 Sweden                      1.5       0.45       0.17\n10 Japan                       1.3       0.38       0.15\n11 Germany                     1.2       0.36       0.14\n12 Norway                      1.1       0.32       0.13\n13 Italy                       1         0.3        0.12\n14 New Zealand                 0.9       0.27       0.1 \n15 United Kingdom              0.8       0.24       0.09\n16 Nepal                       0.5       0.15       0.06\n17 Bangladesh                  0.5       0.15       0.06\n18 Greece                      0.4       0.13       0.05"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
+    "objectID": "labs/template/report-template/report-template.html",
+    "href": "labs/template/report-template/report-template.html",
+    "title": "Methods",
     "section": "",
-    "text": "This page contains three sections:\n\nBrief overview of all course assignments.\nInformation about lab 0 (ungraded).\n\n\nOverview of course assignments\nOur course assignments will be split between reading and typing (code and analytic results).\n\n\n\n\n\n\n\n\nCourse component\nAssignment\nDate(s)\n\n\n\n\nPart I: Statistics and society\n\n\n\n\n\nLab #0\nDue: Tue Aug 27\n\n\n\nAnnotated Bibliography\nDue: Sun Sept 8\n\n\n\nLab #1\nDue: Sun Sept 22\n\n\nPart II: Data and people\n\n\n\n\n\nPaper #1\nDue: Fri Sept 25\n\n\n\nMidterm examination\nDue: Sun Oct 6\n\n\nPart III: Data and policy\n\n\n\n\n\nLab #2\nDue: Fri Oct 18\n\n\n\nPaper #2\nDue: Fri Nov 1\n\n\nPart IV: Data in practice\n\n\n\n\n\nLab #3\nDue: Fri Nov 15\n\n\n\nPaper #3\nDue: Fri Nov 29\n\n\n\nPaper #4 (optional)\nDue: Mon Dec 9\n\n\n\n\n\nSample exercises\nBelow are a few sample exercises. This work is ungraded, and while there is no prerequisite for this course, these problems should serve as a review and a preview of content that we’ll explore for the course. Please do not hesitate to reach out with questions.\nExercise 0.1. If an individual’s projected income is to be converted to a z-score, which of these z-scores would a “rational agent” prefer: -2.00, -1.00, 0, 1.00, or 2.00? What is a “rational agent”? Explain why the “rational agent” would prefer the z-score you selected? Cite any sources.\nExercise 0.2. What is an integer? What is the sum of the first 100 positive integers? Explain your solution. Cite any sources. Bonus points (but definitely not required for our course): write a proof of the solution.\nExercise 0.3. Have you ever heard of p-hacking? P-hacking is where a researcher conducts multiple tests and only reports the significant results from those tests. What are some main issues here?\n\n\nLab 0\nFor your first lab, you will install two software programs on your local machine: the first is base R and the second is the RStudio Integrated Development Environment, or IDE. Both programs are required.\n\n\n\n\n\n\nYou must download both R and RStudio!\n\n\n\n\n\nIn order to complete assignments, you must download base R and RStudio to your computer.\n\n\n\nRStudio is now called Posit. When you are searching online you will begin to see language differences.\nIt can all get very confusing. In order to reduce confusion, I am requesting that you watch this short tutorial so that we’re all on the same page. I will discuss this more when we meet.\n\n\nNext up: Computing\nOn the next page, I will walk you through downloading the appropriate software for our work this term."
+    "text": "# Seed for random number generation\nset.seed(42)\nknitr::opts_chunk$set(cache.extra = knitr::rand_seed)"
   },
   {
-    "objectID": "weeks/week08.html",
-    "href": "weeks/week08.html",
-    "title": "DATA 202 - Week 8",
-    "section": "",
-    "text": "The midterm examination can be accessed here."
+    "objectID": "labs/template/report-template/report-template.html#participants",
+    "href": "labs/template/report-template/report-template.html#participants",
+    "title": "Methods",
+    "section": "Participants",
+    "text": "Participants"
   },
   {
-    "objectID": "weeks/week12-slides.html#part-i-context",
-    "href": "weeks/week12-slides.html#part-i-context",
-    "title": "DATA 202 - Week 12",
+    "objectID": "labs/template/report-template/report-template.html#material",
+    "href": "labs/template/report-template/report-template.html#material",
+    "title": "Methods",
+    "section": "Material",
+    "text": "Material"
+  },
+  {
+    "objectID": "labs/template/report-template/report-template.html#procedure",
+    "href": "labs/template/report-template/report-template.html#procedure",
+    "title": "Methods",
+    "section": "Procedure",
+    "text": "Procedure"
+  },
+  {
+    "objectID": "labs/template/report-template/report-template.html#data-analysis",
+    "href": "labs/template/report-template/report-template.html#data-analysis",
+    "title": "Methods",
+    "section": "Data analysis",
+    "text": "Data analysis\nWe used R [Version 4.3.1\\; @R-base] and the R-packages papaja [Version 0.1.2\\; @R-papaja], and tinylabels [Version 0.2.4\\; @R-tinylabels] for all our analyses."
+  },
+  {
+    "objectID": "weeks/week09-slides.html#part-i-context",
+    "href": "weeks/week09-slides.html#part-i-context",
+    "title": "DATA 202 - Week 9",
     "section": "Part I: Context",
-    "text": "Part I: Context\nThis week we focus on more examples from our darta sources; we’ll take a closer look at the General Social Survey data, or GSS.\nThe data is located in the gssr package in R (see part III). You should become very familiar with the GSS data. Please explore the website as we will be prioritizing the use of the GSS data for the remainder of our course. The use of the GSS data will allow us to consider the meaning of social justice in the context of attitudes and beliefs around social issues.\nAhead of modeling multiple variables, we’ll examine the importance of underlying theoretical anlayses ahead of solely doing statistical investigations."
+    "text": "Part I: Context"
   },
   {
-    "objectID": "weeks/week12-slides.html#part-ii-content",
-    "href": "weeks/week12-slides.html#part-ii-content",
-    "title": "DATA 202 - Week 12",
+    "objectID": "weeks/week09-slides.html#part-ii-content",
+    "href": "weeks/week09-slides.html#part-ii-content",
+    "title": "DATA 202 - Week 9",
     "section": "Part II: Content",
-    "text": "Part II: Content\nA tradition: Fitting a straight line\nIn statistics, we often inquire about the relationship between two variables, \\(X\\) and \\(Y\\).\nThese variables are sets that contain values (observations) as noted before. To launch our discussion, we will begin with a sample line.\n\nplot(0:10, type=\"l\", main = \"A sample line\", xlab = \"X-axis\", ylab = \"Y-axis\")\n\n\nMatheamtics and exact relationships\nIn mathematics, two variables, \\(x\\) and \\(y\\) may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.\nA straight line\nThe line in the graphic above follows the standard notation: \\[y = a + bX\\]\nStatistical modeling and inexact relationships\nRegression analysis is a standard analysis in many statistical studies.\nThere are many different types of regression. We’ll continue with our exploration of bivariate regression analysis and focus on some of the base assumptions as it relates to study development.\nWe will begin by looking at the underlying assumptions of regression analysis.\nThese assumptions are the technical (or structural) components of our analyses, and should be checked at the initiation of a research study, starting with data collection or understanding how data was collected if it is a secondary analysis."
+    "text": "Part II: Content"
   },
   {
-    "objectID": "weeks/week12-slides.html#part-iii-code",
-    "href": "weeks/week12-slides.html#part-iii-code",
-    "title": "DATA 202 - Week 12",
+    "objectID": "weeks/week09-slides.html#part-iii-code",
+    "href": "weeks/week09-slides.html#part-iii-code",
+    "title": "DATA 202 - Week 9",
     "section": "Part III: Code",
-    "text": "Part III: Code\nThis week we’ll explore the GSS data in more detail. This is a reminder to deepen your understanding of the General Social Survey (GSS) using the notes provided below from week 11.\nGeneral Social Survey\nThis week we’ll return to our examination of the General Social Survey (GSS) data.\nAs a first task, please identify up to two or three variables that you can utilize to follow along with your analysis.\nNext up: Week 13\n\n\n\nCourse Data GitHub"
+    "text": "Part III: Code\nWe will work through lab 2 files in class.\n\n\n\nCourse Data GitHub"
   },
   {
-    "objectID": "weeks/week12.html",
-    "href": "weeks/week12.html",
-    "title": "DATA 202 - Week 12",
-    "section": "",
-    "text": "We explore the case of bivariate regression when attempting to measure and model conceptions of in/justice."
+    "objectID": "weeks/week09.html#part-ii-content",
+    "href": "weeks/week09.html#part-ii-content",
+    "title": "DATA 202 - Week 9",
+    "section": "Part II: Content",
+    "text": "Part II: Content"
   },
   {
-    "objectID": "weeks/week12.html#part-i-context",
-    "href": "weeks/week12.html#part-i-context",
-    "title": "DATA 202 - Week 12",
+    "objectID": "weeks/week09.html#part-iii-code",
+    "href": "weeks/week09.html#part-iii-code",
+    "title": "DATA 202 - Week 9",
+    "section": "Part III: Code",
+    "text": "Part III: Code\nWe will work through lab 2 files in class."
+  },
+  {
+    "objectID": "weeks/week06-slides.html#part-i-context",
+    "href": "weeks/week06-slides.html#part-i-context",
+    "title": "DATA 202 - Week 6",
     "section": "Part I: Context",
-    "text": "Part I: Context\nThis week we focus on more examples from our darta sources; we’ll take a closer look at the General Social Survey data, or GSS.\nThe data is located in the gssr package in R (see part III). You should become very familiar with the GSS data. Please explore the website as we will be prioritizing the use of the GSS data for the remainder of our course. The use of the GSS data will allow us to consider the meaning of social justice in the context of attitudes and beliefs around social issues.\nAhead of modeling multiple variables, we’ll examine the importance of underlying theoretical anlayses ahead of solely doing statistical investigations.\n\nLet us begin with a set of three variables: \\(x\\), \\(y\\), and \\(z\\).\nWe will assume that there is a hypothesized association between all three variables. However, let us also assume that we have not yet taken time to properly structure the relationships between the variables. Namely, we have yet to consider if \\(z\\), for example, is a mediator, moderator, or spurious variable.\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(x, y)\n\n\n\ncor(x, y)\n\n[1] -0.09107752\n\n\nTake note of the value of the correlation coefficient.\n\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(x, z)\n\n\n\ncor(x, z)\n\n[1] 0.9284953\n\n\nTake note of the value of the correlation coefficient.\n\nLet us take a look at the scatterplots between each pair of variables.\n\nplot(y, z)\n\n\n\ncor(y, z)\n\n[1] -0.04660941\n\n\nTake note of the value of the correlation coefficient.\n\n\nRegression assumptions\nIn our previous lectures, we have discussed the function of assumptions and principles in regression analysis. In progressing towards different types of tests, it is important to consider the specific assumptions for any given test.\nAnalyzing relationships among social science variables has an assumptions of linearity. However, this assumptions is not always correct. The adoption of this assumption is based on a host of factors. Most notably, that many relationships have been found to be linear when considered in the empirical sense.\nSome additional assumptions are as follows:\n\nThe sample is representative of the population\nThe variables of interest are normally distributed\nThere are no outliers in the data\nIndependence\nThere is a linear relationship between the independent variable(s) and dependent variable(s)"
+    "text": "Part I: Context"
   },
   {
-    "objectID": "weeks/week12.html#part-ii-content",
-    "href": "weeks/week12.html#part-ii-content",
-    "title": "DATA 202 - Week 12",
+    "objectID": "weeks/week06-slides.html#part-ii-content",
+    "href": "weeks/week06-slides.html#part-ii-content",
+    "title": "DATA 202 - Week 6",
     "section": "Part II: Content",
-    "text": "Part II: Content\n\nA tradition: Fitting a straight line\nIn statistics, we often inquire about the relationship between two variables, \\(X\\) and \\(Y\\).\nThese variables are sets that contain values (observations) as noted before. To launch our discussion, we will begin with a sample line.\n\nplot(0:10, type=\"l\", main = \"A sample line\", xlab = \"X-axis\", ylab = \"Y-axis\")\n\n\n\n\n\nMatheamtics and exact relationships\nIn mathematics, two variables, \\(x\\) and \\(y\\) may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.\n\nA straight line\nThe line in the graphic above follows the standard notation: \\[y = a + bX\\]\n\n\n\nStatistical modeling and inexact relationships\nRegression analysis is a standard analysis in many statistical studies.\nThere are many different types of regression. We’ll continue with our exploration of bivariate regression analysis and focus on some of the base assumptions as it relates to study development.\nWe will begin by looking at the underlying assumptions of regression analysis.\nThese assumptions are the technical (or structural) components of our analyses, and should be checked at the initiation of a research study, starting with data collection or understanding how data was collected if it is a secondary analysis.\n\n\nAnalyzing two numeric variables\nLet us take two variables, \\(x\\) and \\(y\\).\n\ncor(x, y)\n\n[1] 0.7293926\n\n\n\n# Fit simple linear regression model\nmodel &lt;- lm(y ~ x)\n\n\n# Examine regression outputs\nsummary(model)\n\n\nCall:\nlm(formula = y ~ x)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.4027 -1.0071  0.1154  1.0017  5.8115 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  0.07185    0.20452   0.351    0.726    \nx            2.36515    0.22408  10.555   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.035 on 98 degrees of freedom\nMultiple R-squared:  0.532, Adjusted R-squared:  0.5272 \nF-statistic: 111.4 on 1 and 98 DF,  p-value: &lt; 2.2e-16\n\n\n\n# Check regression coefficients\ncoeff &lt;- coef(model)\ncoeff\n\n(Intercept)           x \n 0.07184615  2.36514669 \n\n\n\n# Check R-squared value\nrsq &lt;- summary(model)$r.squared\nrsq\n\n[1] 0.5320136\n\n\n\n# Generate predictions\npred &lt;- predict(model) # call this object to show the predicted values of the model\n\n\n# Plot the regression line\nplot(x, y)\nabline(model, col=\"blue\")\n\n\n\n\n\n# Check residuals\nresids &lt;- residuals(model)\nplot(x, resids)\n\n\n\n\n\n# Diagnostic plots\npar(mfrow=c(2,2))\nplot(model)\n\n\n\n\n\n# Check significance of predictor\nanova(model)\n\nAnalysis of Variance Table\n\nResponse: y\n          Df Sum Sq Mean Sq F value    Pr(&gt;F)    \nx          1 461.44  461.44  111.41 &lt; 2.2e-16 ***\nResiduals 98 405.91    4.14                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nExamining plots\n\nScatter plots\n\n\nBar plots\n\n\nHistograms\n\n\n\nAnalyzing a categorical and a numeric variable\n\ndesc(df$income)\n\n [1] -25000 -35000 -42000 -31000 -27000 -38000 -29000 -40000 -32000 -39000\n\n# Bar plot of the categorical variable (race)\nggplot(df, aes(x = race)) +\n  geom_bar(fill = \"steelblue\") +\n  labs(x = \"Race\", y = \"Count\") +\n  ggtitle(\"Distribution of Races\")\n\n\n\n# Box plot of income by race\nggplot(df, aes(x = race, y = income)) +\n  geom_boxplot(fill = \"lightgray\", color = \"steelblue\") +\n  labs(x = \"Race\", y = \"Income\") +\n  ggtitle(\"Income by Race\")\n\n\n\n\n\n\nAnalyzing two categorical variables\nIn previous lectures, we discussed some methods to hypothesize around the relationship between two variables that are categorical in nature."
+    "text": "Part II: Content\nThis week’s topics focus on bivariate analysis.\nThe goal of a bivariate analysis is to understand the relationship between two variables.\nThere are a few common ways to perform bivariate analysis:\n\nEstimating differences in proportions\nScatter plots\nCorrelation coefficients\nSimple linear regression"
   },
   {
-    "objectID": "weeks/week12.html#part-iii-code",
-    "href": "weeks/week12.html#part-iii-code",
-    "title": "DATA 202 - Week 12",
+    "objectID": "weeks/week06-slides.html#part-iii-code",
+    "href": "weeks/week06-slides.html#part-iii-code",
+    "title": "DATA 202 - Week 6",
     "section": "Part III: Code",
-    "text": "Part III: Code\nThis week we’ll explore the GSS data in more detail. This is a reminder to deepen your understanding of the General Social Survey (GSS) using the notes provided below from week 11.\n\nGeneral Social Survey\nThis week we’ll return to our examination of the General Social Survey (GSS) data.\nAs a first task, please identify up to two or three variables that you can utilize to follow along with your analysis.\n\n\nNext up: Week 13"
+    "text": "Part III: Code\nThe code for this week will prepare you to run analyses for Paper #2.\nPaper #2 is a short exploration of a data set in the forcats package.\nRecall that lab 2 will guide you through your analyses; a sample RScript and workflow is also provided here."
+  },
+  {
+    "objectID": "weeks/week06.html",
+    "href": "weeks/week06.html",
+    "title": "DATA 202 - Week 6",
+    "section": "",
+    "text": "Building theories and empirical inquiries around various injustices requires a solid foundation.\n\nOne method is to read recent articles in peer-reviewed journals.\nAnother method is to explore the various ways one may view injustice.\nFrom a logical perspective, you may test the validity of certain claims.\n\nHow should we define social justice?\n\nIdentify two to three definitions of social justice to share.\n\nLocate a few open source articles or periodicals.\n\nWhat are the similarities between the different definitions?\nWhat are the differences between the different definitions?\n\n\n\n\n\nThere are many different frameworks that have been developed to examine social justice.\nNorth (2006), as one example, discuss three spheres of social justice in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:\n\n“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”\n\n\n\n\nThree Spheres of Social Justice by North (2006)\n\n\nIn her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.\n\nThere are different ways to consider these interrelated systems in your theory construction.\n\n\n\nMacro: Large-scale analyses, typically on systems or observations in the aggregate\nMicro: Smaller-scale analyses, typically on individuals or localized contexts\n\n\n\n\n\nSameness: Considering homogeneous structures or characteristics; similarity\nDifference: Considering heterogeneous structures or characteristics; non-uniformity\n\n\n\n\n\nRedistribution: Primary considerations in economic or material conditions\nRecognition: Primary considerations in cultural or social conditions"
+  },
+  {
+    "objectID": "weeks/week06.html#part-i-context",
+    "href": "weeks/week06.html#part-i-context",
+    "title": "DATA 202 - Week 6",
+    "section": "",
+    "text": "Building theories and empirical inquiries around various injustices requires a solid foundation.\n\nOne method is to read recent articles in peer-reviewed journals.\nAnother method is to explore the various ways one may view injustice.\nFrom a logical perspective, you may test the validity of certain claims.\n\nHow should we define social justice?\n\nIdentify two to three definitions of social justice to share.\n\nLocate a few open source articles or periodicals.\n\nWhat are the similarities between the different definitions?\nWhat are the differences between the different definitions?\n\n\n\n\n\nThere are many different frameworks that have been developed to examine social justice.\nNorth (2006), as one example, discuss three spheres of social justice in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:\n\n“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”\n\n\n\n\nThree Spheres of Social Justice by North (2006)\n\n\nIn her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.\n\nThere are different ways to consider these interrelated systems in your theory construction.\n\n\n\nMacro: Large-scale analyses, typically on systems or observations in the aggregate\nMicro: Smaller-scale analyses, typically on individuals or localized contexts\n\n\n\n\n\nSameness: Considering homogeneous structures or characteristics; similarity\nDifference: Considering heterogeneous structures or characteristics; non-uniformity\n\n\n\n\n\nRedistribution: Primary considerations in economic or material conditions\nRecognition: Primary considerations in cultural or social conditions"
+  },
+  {
+    "objectID": "weeks/week06.html#part-ii-content",
+    "href": "weeks/week06.html#part-ii-content",
+    "title": "DATA 202 - Week 6",
+    "section": "Part II: Content",
+    "text": "Part II: Content\nThis week’s topics focus on bivariate analysis.\nThe goal of a bivariate analysis is to understand the relationship between two variables.\nThere are a few common ways to perform bivariate analysis:\n\nEstimating differences in proportions\nScatter plots\nCorrelation coefficients\nSimple linear regression\n\n\n\nSimple linear regression\nA simple linear regression (sometimes referenced as a bivariate regression) is a linear equation describing the relationship between an explanatory variable and an outcome variable.\nThere is an assumption that the explanatory variable influences the outcome variable, and not the other way around.\nTake, for example, a variable \\(y_i\\) which denotes the income of some individual in a sample, and we index this data using \\(i\\) where \\(i \\in \\{1, 2, ..., n\\}\\). We can let some other variable in our data \\(x_i\\) represent the years of education for the same individual. A simple linear regression equation of these variables take the following form: \\[y_i = b_0 + b_{1}x_{i} + e_i\\]\nwhere \\(b_1\\) is the sample estimate of the slope of the regression line with respect to the years of education and \\(b_0\\) is the sample estimate for the vertical intercept of the regression line.\n\n\n\nCorrelation coefficients and scatterplots\nAs a reminder, correlation ranges from -1 to 1. It gives us an indication on two things:\n\nThe direction of the relationship between the two variables\nThe strength of the relationship between the two variables\n\nAny outliers can greatly impact the value of a correlation coefficient.\n\nplot(x,y)\n\n\n\n\n\n\n\nEstimating differences in proportions\nWhen generating cross tabulations, we can make sense of a few bivariate tests:\n\nDifferences in proportions\nStandard errors of the difference in proportions\nConfidence intervals for the differences\nT-test for differences in proportions"
+  },
+  {
+    "objectID": "weeks/week06.html#part-iii-code",
+    "href": "weeks/week06.html#part-iii-code",
+    "title": "DATA 202 - Week 6",
+    "section": "Part III: Code",
+    "text": "Part III: Code\nThe code for this week will prepare you to run analyses for Paper #2.\nPaper #2 is a short exploration of a data set in the forcats package.\nRecall that lab 2 will guide you through your analyses; a sample RScript and workflow is also provided here.\n\n\nWrite preamble\n\n# ---\n# title: Exploring associations between income and political party in the US\n# subtitle: sample paper 2\n# author: Nathan Alexander\n# course: DATA 202 - fall 2023\n# ---\n\n# research inquiry: does income relate to political party support in the US?\n# data: 2020 sample data from the General Social Survey (GSS)\n# note(s): variables should be mutated and recoded into two levels\n\n\n\n\nstep 0: install packages and load libraries\n\ninstall.packages(\"tidyverse\", repos = \"http://cran.us.r-project.org\")\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(tidyr)\n\n\n\n\nstep 1: view gss_cat data in the package forcats\n\ngetwd() # check working directory\n?gss_cat # view data documentation\ngss_cat # call data frame\nglimpse(gss_cat) # glimpse data\nsummary(gss_cat) # view summary of data\n\n\n\n\nstep 2: clean and manage data\n\ngss_cat_clean &lt;- gss_cat %&gt;% \n  na.omit() %&gt;% \n  select(year, rincome, partyid) %&gt;% \n  rename(income = rincome) %&gt;% \n  rename(party = partyid)\n\ngss_cat_clean # view cleaned data\n\n\n\n\nstep 3: subset data: year == 2000\n\ndf &lt;- gss_cat_clean %&gt;% \n  filter(year==2000)\n\nhead(df) # view top of data\ntail(df) # view bottom of data\nsummary(df) # check data\n\n\n\n\nstep 4: inspect and transform income variable into two levels\n\n## create a frequency table of each level in the income variable\ndf %&gt;% count(party)\n\n## drop 'No answer', 'Don't know', 'Refused', and 'Not applicable' levels\ndf &lt;- df %&gt;%  \n  filter(income != \"No answer\",\n         income != \"Don't know\",\n         income != \"Refused\",\n         income != \"Not applicable\") %&gt;% \n  droplevels() # use droplevels() to remove levels from variable for factors\n\n## use levels() function to view levels for income variable\nlevels(df$income)\n\n## create two levels: below $20,000 and above $20,000\ndf &lt;- df %&gt;% \n  mutate(income = fct_recode(income, \n                             \"More than 20000\" = \"$25000 or more\",\n                             \"More than 20000\" = \"$20000 - 24999\",\n                             \"Less than 20000\" = \"$15000 - 19999\",\n                             \"Less than 20000\" = \"$10000 - 14999\",\n                             \"Less than 20000\" = \"$8000 to 9999\",\n                             \"Less than 20000\" = \"$7000 to 7999\",\n                             \"Less than 20000\" = \"$6000 to 6999\",\n                             \"Less than 20000\" = \"$5000 to 5999\",\n                             \"Less than 20000\" = \"$4000 to 4999\",\n                             \"Less than 20000\" = \"$3000 to 3999\",\n                             \"Less than 20000\" = \"$1000 to 2999\",\n                             \"Less than 20000\" = \"Lt $1000\"))\n\n## view a summary of your transformed data frame\nsummary(df)\n\n\n\n\nstep 5: inspect and transform party variable into two levels\n\n## create a frequency table of each level in the party variable\ndf %&gt;% count(party)\n\n## drop 'No answer', 'Independent' and 'Other Party' levels\ndf &lt;- df %&gt;%  \n  filter(party != \"No answer\",\n         party != \"Independent\",\n         party != \"Other party\") %&gt;% \n  droplevels() # use droplevels() to remove levels from variable for factors\n\n## create two levels: 'Republican' and 'Democrat'\ndf &lt;- df %&gt;% \n  mutate(party = fct_recode(party,\n                            \"Republican\" = \"Strong republican\",\n                            \"Republican\" = \"Not str republican\",\n                            \"Republican\" = \"Ind,near rep\",\n                            \"Democrat\" = \"Ind,near dem\",\n                            \"Democrat\" = \"Not str democrat\",\n                            \"Democrat\" = \"Strong democrat\"))\n\n## remove year from data frame\ndf &lt;- df %&gt;% \n  select(-year)\n\n## view a summary of the data to check for any errors\nsummary(df)\n\n\n\n\nstep 6: visualize data\n\n## create a frequency table and bar graph of income \ntable.income = table(df$income)\ntable.income\nbarplot(table.income,\n        main = \"Bar graph of Income\",\n        xlab = \"Respondent Income\",\n        ylab = \"Frequency\")\n## the below code produces the same output as above with specifications\nbarplot(table(df$income),\n        main = \"Bar graph of Income\",\n        col = \"lightgreen\",\n        xlab = \"Respondent Income\",\n        ylab = \"Frequency\",\n        ylim = c(0,650)) # this y-axis range: (0, 650) works best for my plot\n## create a frequency table and bar graph of party \ntable.party = table(df$party)\ntable.party\nbarplot(table.party,\n        main = \"Bar graph of Party\",\n        xlab = \"Respondent Party\",\n        ylab = \"Frequency\")\n## the below code produces the same output as above with specifications\nbarplot(table(df$party),\n        main = \"Bar graph of Party\",\n        col = c(\"red\",\"blue\"),\n        xlab = \"Respondent Party\",\n        ylab = \"Frequency\",\n        ylim = c(0,600)) # this y-axis range: (0, 550) works best for my plot\n## create a stacked bar plot of the proportions\n#### question: which of the two plots do you prefer, why?\nplot(df$income, df$party)\nplot(df$party, df$income)\n## the below code produces similar outputs as above with specifications\nplot(df$party, df$income,\n     main = \"Mosaic Plot of Political Party and Income\",\n     col = c(\"lightyellow\",\"lightgreen\"),\n     xlab = \"Political Party\",\n     ylab = \"Income\")\n\n\n\n\nstep 7: create a basic cross tab for manual calculations\n\n## gather sample size\nn = count(df)\nn\n\n## view a basic cross tabulation\ntable(df$income, df$party)\n\n\n\n\nstep 8: bivariate analysis\n\n## load required libraries (and packages, where needed)\ninstall.packages(\"descr\", repos = \"http://cran.us.r-project.org\")\nlibrary(descr)\n\ninstall.packages(\"Hmisc\", repos = \"http://cran.us.r-project.org\")\nlibrary(Hmisc)\n\n## create a cross tab (list dependent variable in your hypothesis first)\ncrosstab(df$party, df$income)\n\n## add column percentages to the cross tab\ncrosstab(df$party, df$income,\n         prop.c=T) # add column percentages\n## add row percentages to the cross tab\ncrosstab(df$party, df$income,\n         prop.r=T) # add row percentages\n\n## get expected frequencies and cell chi-square contributions\ncrosstab(df$party, df$income,\n         expected = T, # get expected values\n         prop.chisq=T) # get chi-square contribution\n\n## get critical value of chi-square, p=.05, df=1\n#### recall: df = (r-1)(c-1)\nqchisq(.05, 1, lower.tail=F)\n\n## get chi-square statistic\nchisq.test(df$party, df$income)\n\n\n\n\nstep 9: describe some initial limitations of analysis\n\n### limitation 1: sampling error\n# data come from a sample and there are likely differences in other samples\n\n### limitation 2: category reductions\n# creating two levels for the variables greatly impacted the diversity of responses\n\n### limitation 3: cases dropped\n# sample was further impacted by the number of values dropped in the analysis\n\n### limitation 4: chi-square test\n# the chi-square test does not tell us about the strength or direction of association\n\n\n\n\nNext up: Week 7"
   },
   {
     "objectID": "weeks/week11-slides.html#part-i-context",
@@ -1488,6 +1537,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Part\nWeek\nDay\nTopics\nLabs\nPapers\nKey readings, exams, other\n\n\n\n\nI\n1\nWed, Aug 21\nIntroduction\nLab 0\n\nCase study 1 files\n\n\n\n2\nWed, Aug 28\nFoundations\n\n\nPelham (2013, ch. 1)\n\n\n\n3\nWed, Sept 4\nTheory construction\n\n\nAnnotated bibliography\n\n\n\n4\nWed, Sept 11\nProbability theory\nLab 1\n\nShore (2008); Zuberi (2000)\n\n\nII\n5\nWed, Sept 18\nUnivariate analysis\n\n\nWilson et al. (2017)\n\n\n\n6\nWed, Sept 25\nBivariate analysis\n\nPaper 1\n\n\n\n\n7\nWed, Oct 2\nExploratory analysis\n\n\nMidterm examination\n\n\n\n8\nWed, Oct 9\nNotes on causal theories\n\n\n\n\n\nIII\n9\nWed, Oct 16\nHypothesis testing\nLab 2\n\n\n\n\n\n10\nWed, Oct 23\nBivariate regression analysis\n\n\n\n\n\n\n11\nWed, Oct 30\nMultivariate regression analysis\n\nPaper 2\n\n\n\n\n12\nWed, Nov 6\nMultiple variable regression\n\n\n\n\n\nIV\n13\nWed, Nov 13\nRegression and classification\nLab 3\n\n\n\n\n\n14\nWed, Nov 20\nStatistical learning\n\n\n\n\n\n\n15\nWed, Nov 27\nOverview of additional models\n\nPaper 3"
+    "text": "Part\nWeek\nDay\nTopics\nLabs\nPapers\nKey readings, exams, other\n\n\n\n\nI\n1\nWed, Aug 21\nIntroduction\nLab 0\n\nCase study 1 files\n\n\n\n2\nWed, Aug 28\nFoundations\n\n\nPelham (2013, ch. 1)\n\n\n\n3\nWed, Sept 4\nTheory construction\n\n\nAnnotated bibliography\n\n\n\n4\nWed, Sept 11\nProbability theory\nLab 1\n\nShore (2008); Zuberi (2000)\n\n\nII\n5\nWed, Sept 18\nUnivariate analysis\n\n\nWilson et al. (2017)\n\n\n\n6\nWed, Sept 25\nBivariate analysis\n\nPaper 1\n\n\n\n\n7\nWed, Oct 2\n\n\n\n\n\n\n\n8\nWed, Oct 9\nExploratory analysis\n\n\n\n\n\nIII\n9\nWed, Oct 16\nHypothesis testing\n\n\n\n\n\n\n10\nWed, Oct 23\nBivariate regression analysis\nLab 2\n\n\n\n\n\n11\nWed, Oct 30\nMultivariate regression analysis\n\n\n\n\n\n\n12\nWed, Nov 6\nMultiple variable regression\n\nPaper 2\n\n\n\nIV\n13\nWed, Nov 13\nRegression and classification\nLab 3\n\n\n\n\n\n14\nWed, Nov 20\nStatistical learning\n\n\n\n\n\n\n15\nWed, Nov 27\nOverview of additional models\n\nPaper 3"
   }
 ]

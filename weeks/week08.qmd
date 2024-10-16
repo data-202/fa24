@@ -355,7 +355,7 @@ $$ P(No) = \dfrac{\text{No} \cap \text{Black}}{n} + \dfrac{\text{No} \cap \text{
 
 We generate a parallel construction for the response 'Yes'.
 
-## $$ P(Yes) = \dfrac{\text{Yes} \cap \text{Black}}{n} + \dfrac{\text{Yes} \cap \text{Hispanic}}{n} + \dfrac{\text{Yes} \cap \text{Other}}{n} + \dfrac{\text{Yes} \cap \text{White}}{n} $$
+$$ P(Yes) = \dfrac{\text{Yes} \cap \text{Black}}{n} + \dfrac{\text{Yes} \cap \text{Hispanic}}{n} + \dfrac{\text{Yes} \cap \text{Other}}{n} + \dfrac{\text{Yes} \cap \text{White}}{n} $$
 
 #### Summary values
 

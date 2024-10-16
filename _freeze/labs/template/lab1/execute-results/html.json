@@ -1,0 +1,14 @@
+{
+  "hash": "9c337e90a018bbf0158a61a897a361ff",
+  "result": {
+    "markdown": "---\ntitle: \"Untitled\"\nauthor: \"Your Name Here\"\noutput: \n  html_document:\n    self_contained: yes\n    mode: selfcontained\n  pdf_document:\ndate: \"2024-09-18\"\n---\n\n\nSetup the RMarkdown file.\n\n\n\n\n\nNext, we're going to load other packages and libraries.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"professornaite/critstats\", force=TRUE)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nUsing GitHub PAT from the git credential store.\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nDownloading GitHub repo professornaite/critstats@HEAD\n```\n:::\n\n::: {.cell-output .cell-output-stdout}\n```\nglue (1.7.0 -> 1.8.0) [CRAN]\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nInstalling 1 packages: glue\n```\n:::\n\n::: {.cell-output .cell-output-stdout}\n```\n\nThe downloaded binary packages are in\n\t/var/folders/54/02xngdrx2277pg5hxjx3z8040000gn/T//RtmpWP6nqB/downloaded_packages\n── R CMD build ─────────────────────────────────────────────────────────────────\n* checking for file ‘/private/var/folders/54/02xngdrx2277pg5hxjx3z8040000gn/T/RtmpWP6nqB/remotese6ad6629c97a/professornaite-critstats-7abb842/DESCRIPTION’ ... OK\n* preparing ‘critstats’:\n* checking DESCRIPTION meta-information ... OK\n* checking for LF line-endings in source and make files and shell scripts\n* checking for empty or unneeded directories\n* building ‘critstats_0.0.0.9000.tar.gz’\n```\n:::\n\n```{.r .cell-code}\nlibrary(critstats)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n??critstats\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
