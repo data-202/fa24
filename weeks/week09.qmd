@@ -24,3 +24,6 @@ format:
 ## Part II: Content
 
 ## Part III: Code
+
+We will work through lab 2 files in class.
+
