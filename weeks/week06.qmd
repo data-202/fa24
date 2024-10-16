@@ -140,7 +140,7 @@ y <- 1 - x*rnorm(50)
 plot(x,y)
 ```
 
----
+------------------------------------------------------------------------
 
 ### Estimating differences in proportions
 
@@ -154,7 +154,7 @@ When generating cross tabulations, we can make sense of a few bivariate tests:
 
 -   T-test for differences in proportions
 
----
+------------------------------------------------------------------------
 
 ## Part III: Code
 
@@ -163,7 +163,6 @@ The code for this week will prepare you to run analyses for [Paper #2](papers/pa
 [Paper #2](papers/paper2.qmd) is a short exploration of a data set in the `forcats` package.
 
 Recall that lab 2 will guide you through your analyses; a sample **RScript** and workflow is also provided here.
-
 
 ------------------------------------------------------------------------
 

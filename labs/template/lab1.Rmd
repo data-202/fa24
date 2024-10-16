@@ -19,7 +19,7 @@ library(devtools)
 
 Next, we're going to load other packages and libraries.
 
-```{r}
+```{r, include=F}
 # install.packages("tidyverse", repos = "http://cran.us.r-project.org")
 library(tidyverse)
 library(dplyr)
@@ -27,3 +27,15 @@ library(here)
 
 here::i_am("lab1.Rmd")
 ```
+
+```{r}
+remotes::install_github("professornaite/critstats", force=TRUE)
+library(critstats)
+```
+
+```{r}
+??critstats
+
+```
+
+

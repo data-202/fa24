@@ -58,6 +58,16 @@ website:
           text: Week 4
         - href: weeks/week05.qmd
           text: Week 5
+        - href: weeks/week06.qmd
+          text: Week 6
+        - href: weeks/week07.qmd
+          text: Week 7
+        - href: weeks/week08.qmd
+          text: Week 8
+        - href: weeks/week09.qmd
+          text: Week 9
+        - href: weeks/week10.qmd
+          text: Week 10
     - section: "Appendix"
       contents:
         - section: "Papers"
@@ -80,6 +90,8 @@ website:
           contents: 
             - href: labs/lab1.qmd
               text: Lab 1
+            - href: labs/lab2.qmd
+              text: Lab 2
         - section: "Resources"
           contents:
             - href: resources.qmd

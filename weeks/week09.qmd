@@ -1,6 +1,6 @@
 ---
 title: "DATA 202 - Week 9"
-subtitle: "Spring Break"
+subtitle: "Hypothesis Testing"
 author: "Nathan Alexander, PhD"
 institute: "Center for Applied Data Science and Analytics"
 format: 
@@ -19,4 +19,8 @@ format:
     incremental: false
 ---
 
-No classes held. Spring Break observed by the University.
+## Part I: Context
+
+## Part II: Content
+
+## Part III: Code
