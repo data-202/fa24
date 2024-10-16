@@ -52,49 +52,65 @@ As you think about your own work, what are some of the main hypothesis that you 
 ## Part II: Content
 
 Null and Alternative Hypotheses
+
         Null hypothesis (H₀): Statement of no effect or no difference
+        
         Alternative hypothesis (H₁): Statement of an effect or difference
 
 ---
 
 Test Statistic
+
         A measure that allows us to quantify the difference between the observed data and what we'd expect under the null hypothesis
+        
         Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic
 
 ---
 
 Probability Distribution
+
         The distribution of the test statistic under the null hypothesis
+        
         Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution
 
 ---
 
 p-value
+
     The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true
+    
     Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)
 
 ---
 
 Significance Level (α)
+
     The threshold below which we reject the null hypothesis
+    
     Common values: 0.05, 0.01
 
 ---
 
 Decision Rule
+
     Reject H₀ if p-value ≤ α
+    
     Fail to reject H₀ if p-value > α
 
 ---
 
 Type I and Type II Errors
+
     Type I error: Rejecting H₀ when it's actually true (false positive)
+    
     Type II error: Failing to reject H₀ when it's actually false (false negative)
 
 ---
 
 Power
+
     The probability of correctly rejecting a false null hypothesis
+    
     Power = 1 - P(Type II error)
 
 ## Part III: Code
