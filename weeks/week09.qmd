@@ -21,7 +21,11 @@ format:
 
 ## Part I: Context
 
-Hypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases.
+What is your hypothesis? We begin today's class with a note about the different studies we are conducting and our hypotheses.
+
+Hypothesis testing requires a solid theory to make sense of the relevant options to develop a hypothesis. 
+
+As a fundamental statistical tool, it is important to be critical wen dealing with social issues and the standars of hypothesis testing. QuantCrit (or critical quantitative methodologies) have been developed as a tool to help guide researchers in the quantitative social sciences, and in education, to consider how hypotheses can reinforce or challenge existing power structues and biases.
 
 ---
 

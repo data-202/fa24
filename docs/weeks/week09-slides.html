@@ -436,52 +436,76 @@ Educational achievement: Investigating the relationship between socioeconomic st
 </section>
 <section id="part-ii-content" class="slide level2">
 <h2>Part II: Content</h2>
-<p>Null and Alternative Hypotheses Null hypothesis (H₀): Statement of no effect or no difference Alternative hypothesis (H₁): Statement of an effect or difference</p>
+<p>Null and Alternative Hypotheses</p>
+<pre><code>    Null hypothesis (H₀): Statement of no effect or no difference
+    
+    Alternative hypothesis (H₁): Statement of an effect or difference</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Test Statistic A measure that allows us to quantify the difference between the observed data and what we’d expect under the null hypothesis Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic</p>
+<p>Test Statistic</p>
+<pre><code>    A measure that allows us to quantify the difference between the observed data and what we'd expect under the null hypothesis
+    
+    Common test statistics: z-score, t-statistic, F-statistic, chi-square statistic</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Probability Distribution The distribution of the test statistic under the null hypothesis Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution</p>
+<p>Probability Distribution</p>
+<pre><code>    The distribution of the test statistic under the null hypothesis
+    
+    Examples: Normal distribution, t-distribution, F-distribution, chi-square distribution</code></pre>
 </section>
 <section class="slide level2">
 
-<p>p-value The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)</p>
+<p>p-value</p>
+<pre><code>The probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is true
+
+Calculated as: p-value = P(test statistic ≥ observed value | H₀ is true)</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Significance Level (α) The threshold below which we reject the null hypothesis Common values: 0.05, 0.01</p>
+<p>Significance Level (α)</p>
+<pre><code>The threshold below which we reject the null hypothesis
+
+Common values: 0.05, 0.01</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Decision Rule Reject H₀ if p-value ≤ α Fail to reject H₀ if p-value &gt; α</p>
+<p>Decision Rule</p>
+<pre><code>Reject H₀ if p-value ≤ α
+
+Fail to reject H₀ if p-value &gt; α</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Type I and Type II Errors Type I error: Rejecting H₀ when it’s actually true (false positive) Type II error: Failing to reject H₀ when it’s actually false (false negative)</p>
+<p>Type I and Type II Errors</p>
+<pre><code>Type I error: Rejecting H₀ when it's actually true (false positive)
+
+Type II error: Failing to reject H₀ when it's actually false (false negative)</code></pre>
 </section>
 <section class="slide level2">
 
-<p>Power The probability of correctly rejecting a false null hypothesis Power = 1 - P(Type II error)</p>
+<p>Power</p>
+<pre><code>The probability of correctly rejecting a false null hypothesis
+
+Power = 1 - P(Type II error)</code></pre>
 </section>
 <section id="part-iii-code" class="slide level2">
 <h2>Part III: Code</h2>
 <h3 id="two-categorical-variables-chi-square-test-of-independence">Two Categorical Variables: Chi-Square Test of Independence</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Example: Testing association between gender and voting preference</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Create sample data</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Male"</span>, <span class="dv">100</span>), <span class="fu">rep</span>(<span class="st">"Female"</span>, <span class="dv">100</span>))</span>
-<span id="cb2-5"><a href="#cb2-5"></a>vote <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">55</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">45</span>), <span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">65</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">35</span>))</span>
-<span id="cb2-6"><a href="#cb2-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(gender, vote)</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Perform chi-square test</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>result <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(data<span class="sc">$</span>gender, data<span class="sc">$</span>vote))</span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Print results</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Example: Testing association between gender and voting preference</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Male"</span>, <span class="dv">100</span>), <span class="fu">rep</span>(<span class="st">"Female"</span>, <span class="dv">100</span>))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>vote <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">55</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">45</span>), <span class="fu">rep</span>(<span class="st">"Party A"</span>, <span class="dv">65</span>), <span class="fu">rep</span>(<span class="st">"Party B"</span>, <span class="dv">35</span>))</span>
+<span id="cb10-6"><a href="#cb10-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(gender, vote)</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># Perform chi-square test</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>result <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(data<span class="sc">$</span>gender, data<span class="sc">$</span>vote))</span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co"># Print results</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test with Yates' continuity correction
@@ -489,88 +513,88 @@ Educational achievement: Investigating the relationship between socioeconomic st
 data:  table(data$gender, data$vote)
 X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Interpret results</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant association between gender and voting preference."</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant association between gender and voting preference."</span>)</span>
-<span id="cb4-6"><a href="#cb4-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant association between gender and voting preference."</span>)</span>
+<span id="cb12-4"><a href="#cb12-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant association between gender and voting preference."</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "There is no significant association between gender and voting preference."</code></pre>
 </div>
 </div>
 <h3 id="two-numeric-variables-pearson-correlation-test">Two Numeric Variables: Pearson Correlation Test</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Example: Testing correlation between study hours and exam scores</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Create sample data</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>study_hours <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>exam_scores <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> study_hours <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(study_hours, exam_scores)</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># Perform correlation test</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a>result <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(data<span class="sc">$</span>study_hours, data<span class="sc">$</span>exam_scores)</span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="co"># Print results</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Example: Testing correlation between study hours and exam scores</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>study_hours <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a>exam_scores <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> study_hours <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb14-6"><a href="#cb14-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(study_hours, exam_scores)</span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="co"># Perform correlation test</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a>result <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(data<span class="sc">$</span>study_hours, data<span class="sc">$</span>exam_scores)</span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co"># Print results</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
 data:  data$study_hours and data$exam_scores
-t = 11.139, df = 98, p-value &lt; 2.2e-16
+t = 10.463, df = 98, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.6458589 0.8230403
+ 0.6181836 0.8075926
 sample estimates:
-     cor 
-0.747456 </code></pre>
+      cor 
+0.7264004 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Interpret results</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"There is a significant correlation between study hours and exam scores. Correlation coefficient:"</span>, <span class="fu">round</span>(result<span class="sc">$</span>estimate, <span class="dv">2</span>)))</span>
-<span id="cb8-4"><a href="#cb8-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
-<span id="cb8-6"><a href="#cb8-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"There is a significant correlation between study hours and exam scores. Correlation coefficient:"</span>, <span class="fu">round</span>(result<span class="sc">$</span>estimate, <span class="dv">2</span>)))</span>
+<span id="cb16-4"><a href="#cb16-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
+<span id="cb16-6"><a href="#cb16-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.75"</code></pre>
+<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.73"</code></pre>
 </div>
 </div>
 <h3 id="one-categorical-and-one-numeric-variable-independent-samples-t-test">One Categorical and One Numeric Variable: Independent Samples t-test</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Example: Testing difference in exam scores between two teaching methods</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Create sample data</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>method <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Method A"</span>, <span class="dv">50</span>), <span class="fu">rep</span>(<span class="st">"Method B"</span>, <span class="dv">50</span>))</span>
-<span id="cb10-5"><a href="#cb10-5"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>))</span>
-<span id="cb10-6"><a href="#cb10-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(method, scores)</span>
-<span id="cb10-7"><a href="#cb10-7"></a></span>
-<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># Perform t-test</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(scores <span class="sc">~</span> method, <span class="at">data =</span> data)</span>
-<span id="cb10-10"><a href="#cb10-10"></a></span>
-<span id="cb10-11"><a href="#cb10-11"></a><span class="co"># Print results</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Example: Testing difference in exam scores between two teaching methods</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="co"># Create sample data</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>method <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Method A"</span>, <span class="dv">50</span>), <span class="fu">rep</span>(<span class="st">"Method B"</span>, <span class="dv">50</span>))</span>
+<span id="cb18-5"><a href="#cb18-5"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">80</span>, <span class="at">sd =</span> <span class="dv">10</span>))</span>
+<span id="cb18-6"><a href="#cb18-6"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(method, scores)</span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a><span class="co"># Perform t-test</span></span>
+<span id="cb18-9"><a href="#cb18-9"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(scores <span class="sc">~</span> method, <span class="at">data =</span> data)</span>
+<span id="cb18-10"><a href="#cb18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11"></a><span class="co"># Print results</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
 
 data:  scores by method
-t = -3.095, df = 97.071, p-value = 0.002572
+t = -1.9297, df = 94.652, p-value = 0.05664
 alternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0
 95 percent confidence interval:
- -8.351586 -1.825418
+ -7.8702259  0.1118902
 sample estimates:
 mean in group Method A mean in group Method B 
-              73.95674               79.04524 </code></pre>
+              75.23863               79.11780 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Interpret results</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant difference in exam scores between the two teaching methods."</span>)</span>
-<span id="cb12-4"><a href="#cb12-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant difference in exam scores between the two teaching methods."</span>)</span>
-<span id="cb12-6"><a href="#cb12-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Interpret results</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">print</span>(<span class="st">"There is a significant difference in exam scores between the two teaching methods."</span>)</span>
+<span id="cb20-4"><a href="#cb20-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="fu">print</span>(<span class="st">"There is no significant difference in exam scores between the two teaching methods."</span>)</span>
+<span id="cb20-6"><a href="#cb20-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant difference in exam scores between the two teaching methods."</code></pre>
+<pre><code>[1] "There is no significant difference in exam scores between the two teaching methods."</code></pre>
 </div>
 </div>
 
