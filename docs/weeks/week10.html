@@ -378,8 +378,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#part-i-context" id="toc-part-i-context" class="nav-link active" data-scroll-target="#part-i-context">Part I: Context</a>
   <ul class="collapse">
   <li><a href="#history-cause-and-effect" id="toc-history-cause-and-effect" class="nav-link" data-scroll-target="#history-cause-and-effect">History, cause, and effect</a></li>
-  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
   <li><a href="#causation" id="toc-causation" class="nav-link" data-scroll-target="#causation">Causation</a></li>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
+  <li><a href="#causation-1" id="toc-causation-1" class="nav-link" data-scroll-target="#causation-1">Causation</a></li>
   <li><a href="#associating-x-and-y" id="toc-associating-x-and-y" class="nav-link" data-scroll-target="#associating-x-and-y">Associating X and Y</a></li>
   <li><a href="#framing-spurious-relationships" id="toc-framing-spurious-relationships" class="nav-link" data-scroll-target="#framing-spurious-relationships">Framing spurious relationships</a></li>
   <li><a href="#confounding-variables" id="toc-confounding-variables" class="nav-link" data-scroll-target="#confounding-variables">Confounding variables</a></li>
@@ -391,7 +392,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#crime-statistics" id="toc-crime-statistics" class="nav-link" data-scroll-target="#crime-statistics">Crime statistics</a></li>
   <li><a href="#education-data" id="toc-education-data" class="nav-link" data-scroll-target="#education-data">Education data</a></li>
-  <li><a href="#u.s.-general-social-survey-gss" id="toc-u.s.-general-social-survey-gss" class="nav-link" data-scroll-target="#u.s.-general-social-survey-gss">U.S. General Social Survey (GSS)</a></li>
   <li><a href="#next-up-week-11" id="toc-next-up-week-11" class="nav-link" data-scroll-target="#next-up-week-11"><strong>Next up</strong>: Week 11</a></li>
   </ul></li>
   </ul>
@@ -452,6 +452,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This popular statement relates to the ability (or inability) to deduce cause-and-effect relationships.</p>
 <hr>
 </section>
+<section id="causation" class="level3">
+<h3 class="anchored" data-anchor-id="causation">Causation</h3>
+<div class="callout callout-style-simple callout-note" data-apperance="simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Causality</strong> is a fundamental concept in scientific inquiry and statistical analysis. It refers to the relationship between cause and effect, where one event (the cause) is understood to be responsible for another event (the effect). In statistics, causal inference aims to identify and quantify these cause-effect relationships.</p>
+</div>
+</div>
+</div>
+<p>Causality can be defined as a relationship between two events where:</p>
+<ul>
+<li><p>The cause precedes the effect in time.</p></li>
+<li><p>There is a consistent association between the cause and effect.</p></li>
+<li><p>Alternative explanations for the association have been ruled out.</p></li>
+</ul>
+<hr>
+</section>
 <section id="correlation" class="level3">
 <h3 class="anchored" data-anchor-id="correlation">Correlation</h3>
 <p>In the traditional setting, correlation is framed as a statistical measure that relays the size and direction of the relationship between two or more variables. From a more critical framework, however, the idea of associations between variables and the attribution of relationships between variables must be both examined and interrogated.</p>
@@ -465,19 +485,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
-<p><img src="week10_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<p><img src="week10_files/figure-revealjs/unnamed-chunk-2-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
 <p>As one value of a first variable increases the other variable’s values may also increase (positive relationship). Alternatively, as the value of one variable increases the other variable’s values may decrease (negative relationship). Key questions to consider focus on how context and other factors shape any seeming bivariate relationship.</p>
@@ -499,8 +508,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="causation" class="level3">
-<h3 class="anchored" data-anchor-id="causation">Causation</h3>
+<section id="causation-1" class="level3">
+<h3 class="anchored" data-anchor-id="causation-1">Causation</h3>
 <p>Causality (<a href="https://www.annualreviews.org/doi/full/10.1146/annurev-psych-010814-015135">See Sloman and Acnado (2015)</a>) is a representation and principle of cause and effect. There are many different viewpoints of causation across disciplines and fields of study. Terminology matters in how one frames cause and effect.</p>
 <p>There are four possible relationships between two variables:</p>
 <ul>
@@ -689,18 +698,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Missing Data</strong></p>
 <p>Data can be missing from a set, and the total number of elements can differ between two or more sets.</p>
 <p>The differences in the number of elements can be due to a host of reasons, but often it is missing data. A data value can be <em>missing at random</em> or <em>not missing at random</em>. The amount of information missing from a data set can have a minimal impact or a major impact on a statistical analysis.</p>
-<div class="callout callout-style-simple callout-note callout-titled" data-apperance="simple">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note" data-apperance="simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<strong>Note – Missing data</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
+<p><strong>Note – Missing data</strong></p>
 <p>A data value is <em>missing completely at random</em> if the likelihood of it being missing is independent of its value or any other values in the data set is just as likely to be missing.</p>
 <p>A data value is <em>not missing at random</em> if the missing value is related to the reason it is missing.</p>
+</div>
 </div>
 </div>
 <hr>
@@ -715,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Data from 1973 on violent crime rates by US State in the <code>USArrests</code> data set.</p>
 <p>Values are per 100,000 residents for assault, murder, and rape.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           Murder Assault UrbanPop Rape
 Alabama      13.2     236       58 21.2
@@ -725,7 +732,7 @@ Arkansas      8.8     190       50 19.5
 California    9.0     276       91 40.6
 Colorado      7.9     204       78 38.7</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              Murder Assault UrbanPop Rape
 Vermont          2.2      48       32 11.2
@@ -736,33 +743,36 @@ Wisconsin        2.6      53       66 10.8
 Wyoming          6.8     161       60 15.6</code></pre>
 </div>
 </div>
+<hr>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.06957262</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder,</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Percent living in urban areas"</span>,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Murders per 100,000 residents"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Percent living in urban areas"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Murders per 100,000 residents"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="week10_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+<p><img src="week10_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
 <p>What are some initial takeaways from this plot?</p>
 <p>Without a guiding theory, where might our analyses take us?</p>
+<hr>
 </section>
 <section id="education-data" class="level3">
 <h3 class="anchored" data-anchor-id="education-data">Education data</h3>
 <p>This data is borrowed from the folks at UCLA’s Statistical Methods and Data Analytics office.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(foreign)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(MASS)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>educ <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(foreign)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(MASS)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>educ <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    id gender math daysabs prog
 1 1001   male   63       4    2
@@ -772,7 +782,7 @@ Wyoming          6.8     161       60 15.6</code></pre>
 5 1005 female    2       3    2
 6 1006 female   71      13    2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      id gender math daysabs prog
 309 2152 female   46       1    3
@@ -782,13 +792,15 @@ Wyoming          6.8     161       60 15.6</code></pre>
 313 2156 female   90       0    3
 314 2157 female   77       2    3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>educ <span class="ot">&lt;-</span> <span class="fu">within</span>(educ, {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  prog <span class="ot">&lt;-</span> <span class="fu">factor</span>(prog, <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"General"</span>, <span class="st">"Academic"</span>, <span class="st">"Vocational"</span>))</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  id <span class="ot">&lt;-</span> <span class="fu">factor</span>(id)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>educ <span class="ot">&lt;-</span> <span class="fu">within</span>(educ, {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  prog <span class="ot">&lt;-</span> <span class="fu">factor</span>(prog, <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"General"</span>, <span class="st">"Academic"</span>, <span class="st">"Vocational"</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  id <span class="ot">&lt;-</span> <span class="fu">factor</span>(id)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       id         gender         math          daysabs               prog    
  1001   :  1   female:160   Min.   : 1.00   Min.   : 0.000   General   : 40  
@@ -800,21 +812,17 @@ Wyoming          6.8     161       60 15.6</code></pre>
  (Other):308                                                                 </code></pre>
 </div>
 </div>
+<hr>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(educ, <span class="fu">aes</span>(daysabs, <span class="at">fill =</span> prog)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(prog <span class="sc">~</span> </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                                                                                     ., <span class="at">margins =</span> <span class="cn">TRUE</span>, <span class="at">scales =</span> <span class="st">"free"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(educ, <span class="fu">aes</span>(daysabs, <span class="at">fill =</span> prog)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(prog <span class="sc">~</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                                                                                     ., <span class="at">margins =</span> <span class="cn">TRUE</span>, <span class="at">scales =</span> <span class="st">"free"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="week10_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+<p><img src="week10_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
 <p>What are some initial takeaways from this plot?</p>
 <p>Without a guiding theory, where might our analyses take us?</p>
-</section>
-<section id="u.s.-general-social-survey-gss" class="level3">
-<h3 class="anchored" data-anchor-id="u.s.-general-social-survey-gss">U.S. General Social Survey (GSS)</h3>
-<p>We will introduce the full version of the <a href="https://gss.norc.org/" target="_blank">General Social Survey, or GSS</a>.</p>
-<p>This survey is an ongoing assessment of attitudes and beliefs of Americans.</p>
-<p>Please read more online about the survey for next week.</p>
+<hr>
 </section>
 <section id="next-up-week-11" class="level3">
 <h3 class="anchored" data-anchor-id="next-up-week-11"><strong>Next up</strong>: Week 11</h3>
@@ -824,6 +832,44 @@ Wyoming          6.8     161       60 15.6</code></pre>
 </section>
 
 </main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

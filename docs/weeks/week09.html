@@ -540,13 +540,13 @@ X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
     Pearson's product-moment correlation
 
 data:  data$study_hours and data$exam_scores
-t = 11.456, df = 98, p-value &lt; 2.2e-16
+t = 9.575, df = 98, p-value = 1.013e-15
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.6580148 0.8297436
+ 0.5776986 0.7845168
 sample estimates:
       cor 
-0.7566402 </code></pre>
+0.6952288 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
@@ -555,7 +555,7 @@ sample estimates:
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.76"</code></pre>
+<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.7"</code></pre>
 </div>
 </div>
 <hr>
@@ -580,13 +580,13 @@ sample estimates:
     Welch Two Sample t-test
 
 data:  scores by method
-t = -2.9654, df = 97.313, p-value = 0.003803
+t = -0.15403, df = 96.72, p-value = 0.8779
 alternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0
 95 percent confidence interval:
- -9.687671 -1.919364
+ -4.277831  3.661669
 sample estimates:
 mean in group Method A mean in group Method B 
-              75.28631               81.08983 </code></pre>
+              77.18853               77.49661 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
@@ -595,7 +595,7 @@ mean in group Method A mean in group Method B
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"There is no significant difference in exam scores between the two teaching methods."</span>)</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant difference in exam scores between the two teaching methods."</code></pre>
+<pre><code>[1] "There is no significant difference in exam scores between the two teaching methods."</code></pre>
 </div>
 </div>
 
@@ -604,6 +604,44 @@ mean in group Method A mean in group Method B
 </section>
 
 </main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
