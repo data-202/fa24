@@ -23,11 +23,11 @@ format:
 
 ![Illustration by Yuko Shimizu from [cigionline.org](https://www.cigionline.org/articles/as-geopolitical-blocs-vie-for-primacy-in-space-the-history-of-colonization-looms-large/){target="_blank"}.](img/wk8-a-3.jpg)
 
-This week launches part 3 of our course: data and policy, as in public policies.
+Last week launched part 3 of our course: data and policy, as in public policies.
 
 Our goals this week will be to consider variations of justice for your particular area(s) of interest and study, and to cite references that allow us to understand the meaning of social justice in your specific intellectual domains.
 
-------------------------------------------------------------------------
+---
 
 ### History, cause, and effect
 
@@ -41,6 +41,22 @@ This popular statement relates to the ability (or inability) to deduce cause-and
 
 ------------------------------------------------------------------------
 
+### Causation
+
+::: {.callout-note apperance="simple"}
+**Causality** is a fundamental concept in scientific inquiry and statistical analysis. It refers to the relationship between cause and effect, where one event (the cause) is understood to be responsible for another event (the effect). In statistics, causal inference aims to identify and quantify these cause-effect relationships.
+:::
+
+Causality can be defined as a relationship between two events where:
+
+- The cause precedes the effect in time.
+
+- There is a consistent association between the cause and effect.
+
+- Alternative explanations for the association have been ruled out.
+
+---
+
 ### Correlation
 
 In the traditional setting, correlation is framed as a statistical measure that relays the size and direction of the relationship between two or more variables. From a more critical framework, however, the idea of associations between variables and the attribution of relationships between variables must be both examined and interrogated.
@@ -50,6 +66,49 @@ Associations should be understood and initiated from the root of a theoretical f
 If two variables are related, in a statistical context, we assume that their values *change* in some ordered fashion. These measures are often represented on an axis depicting the strength of the association.
 
 ![Image from statlect.com](img/wk8-a-2.png)
+
+---
+
+```{r}
+#| echo: false
+#| output: false
+#| warning: false
+
+library(ggplot2)
+library(gridExtra)
+
+# Function to generate correlated data
+generate_correlated_data <- function(n, r) {
+  x <- rnorm(n)
+  y <- r * x + sqrt(1 - r^2) * rnorm(n)
+  data.frame(x = x, y = y)
+}
+
+# Create plots for different correlation coefficients
+create_plot <- function(r) {
+  data <- generate_correlated_data(100, r)
+  ggplot(data, aes(x, y)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE, color = "red") +
+    ggtitle(paste("r =", r)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.25))
+}
+
+```
+
+```{r}
+#| echo: false
+#| output: true
+#| warning: false
+
+# Generate plots
+plots <- lapply(seq(-1, 1, 0.25), create_plot)
+
+# Arrange plots in a grid
+grid.arrange(grobs = plots, ncol = 3)
+```         
+
 
 As one value of a first variable increases the other variable's values may also increase (positive relationship). Alternatively, as the value of one variable increases the other variable's values may decrease (negative relationship). Key questions to consider focus on how context and other factors shape any seeming bivariate relationship.
 
@@ -262,7 +321,7 @@ Data can be missing from a set, and the total number of elements can differ betw
 The differences in the number of elements can be due to a host of reasons, but often it is missing data. A data value can be *missing at random* or *not missing at random*. The amount of information missing from a data set can have a minimal impact or a major impact on a statistical analysis.
 
 ::: {.callout-note apperance="simple"}
-## **Note -- Missing data**
+**Note -- Missing data**
 
 A data value is *missing completely at random* if the likelihood of it being missing is independent of its value or any other values in the data set is just as likely to be missing.
 
@@ -284,6 +343,8 @@ head(USArrests)
 tail(USArrests)
 ```
 
+---
+
 ```{r}
 cor(USArrests$UrbanPop, USArrests$Murder)
 plot(USArrests$UrbanPop, USArrests$Murder,
@@ -294,6 +355,8 @@ plot(USArrests$UrbanPop, USArrests$Murder,
 What are some initial takeaways from this plot?
 
 Without a guiding theory, where might our analyses take us?
+
+---
 
 ### Education data
 
@@ -310,6 +373,8 @@ require(MASS)
 educ <- read.dta("https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta")
 ```
 
+---
+
 ```{r}
 #| echo: true
 #| output: true
@@ -317,18 +382,24 @@ educ <- read.dta("https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta")
 head(educ)
 tail(educ)
 
-educ <- within(educ, {
-  prog <- factor(prog, levels = 1:3, labels = c("General", "Academic", "Vocational"))
-  id <- factor(id)
-})
 ```
+
+---
 
 ```{r}
 #| echo: true
 #| output: true
 #| warning: false
+
+educ <- within(educ, {
+  prog <- factor(prog, levels = 1:3, labels = c("General", "Academic", "Vocational"))
+  id <- factor(id)
+})
+
 summary(educ)
 ```
+
+---
 
 ```{r}
 #| echo: true
@@ -342,12 +413,6 @@ What are some initial takeaways from this plot?
 
 Without a guiding theory, where might our analyses take us?
 
-### U.S. General Social Survey (GSS)
-
-We will introduce the full version of the [General Social Survey, or GSS](https://gss.norc.org/){target="_blank"}.
-
-This survey is an ongoing assessment of attitudes and beliefs of Americans.
-
-Please read more online about the survey for next week.
+---
 
 ### **Next up**: Week 11

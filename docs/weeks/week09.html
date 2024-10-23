@@ -518,6 +518,7 @@ X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
 <pre><code>[1] "There is no significant association between gender and voting preference."</code></pre>
 </div>
 </div>
+<hr>
 </section>
 <section id="two-numeric-variables-pearson-correlation-test" class="level3">
 <h3 class="anchored" data-anchor-id="two-numeric-variables-pearson-correlation-test">Two Numeric Variables: Pearson Correlation Test</h3>
@@ -539,13 +540,13 @@ X-squared = 1.6875, df = 1, p-value = 0.1939</code></pre>
     Pearson's product-moment correlation
 
 data:  data$study_hours and data$exam_scores
-t = 9.4489, df = 98, p-value = 1.902e-15
+t = 11.456, df = 98, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.5715447 0.7809583
+ 0.6580148 0.8297436
 sample estimates:
       cor 
-0.6904515 </code></pre>
+0.7566402 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>
@@ -554,9 +555,10 @@ sample estimates:
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"There is no significant correlation between study hours and exam scores."</span>)</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.69"</code></pre>
+<pre><code>[1] "There is a significant correlation between study hours and exam scores. Correlation coefficient: 0.76"</code></pre>
 </div>
 </div>
+<hr>
 </section>
 <section id="one-categorical-and-one-numeric-variable-independent-samples-t-test" class="level3">
 <h3 class="anchored" data-anchor-id="one-categorical-and-one-numeric-variable-independent-samples-t-test">One Categorical and One Numeric Variable: Independent Samples t-test</h3>
@@ -578,13 +580,13 @@ sample estimates:
     Welch Two Sample t-test
 
 data:  scores by method
-t = -2.0088, df = 97.228, p-value = 0.04733
+t = -2.9654, df = 97.313, p-value = 0.003803
 alternative hypothesis: true difference in means between group Method A and group Method B is not equal to 0
 95 percent confidence interval:
- -8.01269602 -0.04842593
+ -9.687671 -1.919364
 sample estimates:
 mean in group Method A mean in group Method B 
-              74.76057               78.79113 </code></pre>
+              75.28631               81.08983 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpret results</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (result<span class="sc">$</span>p.value <span class="sc">&lt;</span> <span class="fl">0.05</span>) {</span>

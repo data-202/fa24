@@ -415,7 +415,7 @@ Nathan Alexander, PhD
 <section id="part-i-context" class="slide level2">
 <h2>Part I: Context</h2>
 
-<img data-src="img/wk8-a-3.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Yuko Shimizu from <a href="https://www.cigionline.org/articles/as-geopolitical-blocs-vie-for-primacy-in-space-the-history-of-colonization-looms-large/" target="_blank">cigionline.org</a>.</p><p>This week launches part 3 of our course: data and policy, as in public policies.</p>
+<img data-src="img/wk8-a-3.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Yuko Shimizu from <a href="https://www.cigionline.org/articles/as-geopolitical-blocs-vie-for-primacy-in-space-the-history-of-colonization-looms-large/" target="_blank">cigionline.org</a>.</p><p>Last week launched part 3 of our course: data and policy, as in public policies.</p>
 <p>Our goals this week will be to consider variations of justice for your particular area(s) of interest and study, and to cite references that allow us to understand the meaning of social justice in your specific intellectual domains.</p>
 </section>
 <section class="slide level2">
@@ -430,12 +430,39 @@ Nathan Alexander, PhD
 </section>
 <section class="slide level2">
 
+<h3 id="causation">Causation</h3>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Causality</strong> is a fundamental concept in scientific inquiry and statistical analysis. It refers to the relationship between cause and effect, where one event (the cause) is understood to be responsible for another event (the effect). In statistics, causal inference aims to identify and quantify these cause-effect relationships.</p>
+</div>
+</div>
+</div>
+<p>Causality can be defined as a relationship between two events where:</p>
+<ul>
+<li><p>The cause precedes the effect in time.</p></li>
+<li><p>There is a consistent association between the cause and effect.</p></li>
+<li><p>Alternative explanations for the association have been ruled out.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
 <h3 id="correlation">Correlation</h3>
 <p>In the traditional setting, correlation is framed as a statistical measure that relays the size and direction of the relationship between two or more variables. From a more critical framework, however, the idea of associations between variables and the attribution of relationships between variables must be both examined and interrogated.</p>
 <p>Associations should be understood and initiated from the root of a theoretical framework.</p>
 <p>If two variables are related, in a statistical context, we assume that their values <em>change</em> in some ordered fashion. These measures are often represented on an axis depicting the strength of the association.</p>
 
-<img data-src="img/wk8-a-2.png" class="r-stretch quarto-figure-center"><p class="caption">Image from statlect.com</p><p>As one value of a first variable increases the other variable’s values may also increase (positive relationship). Alternatively, as the value of one variable increases the other variable’s values may decrease (negative relationship). Key questions to consider focus on how context and other factors shape any seeming bivariate relationship.</p>
+<img data-src="img/wk8-a-2.png" class="r-stretch quarto-figure-center"><p class="caption">Image from statlect.com</p></section>
+<section class="slide level2">
+
+
+<img data-src="week10_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>As one value of a first variable increases the other variable’s values may also increase (positive relationship). Alternatively, as the value of one variable increases the other variable’s values may decrease (negative relationship). Key questions to consider focus on how context and other factors shape any seeming bivariate relationship.</p>
 </section>
 <section class="slide level2">
 
@@ -455,7 +482,7 @@ Nathan Alexander, PhD
 </section>
 <section class="slide level2">
 
-<h3 id="causation">Causation</h3>
+<h3 id="causation-1">Causation</h3>
 <p>Causality (<a href="https://www.annualreviews.org/doi/full/10.1146/annurev-psych-010814-015135">See Sloman and Acnado (2015)</a>) is a representation and principle of cause and effect. There are many different viewpoints of causation across disciplines and fields of study. Terminology matters in how one frames cause and effect.</p>
 <p>There are four possible relationships between two variables:</p>
 <ul>
@@ -653,9 +680,10 @@ Nathan Alexander, PhD
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong><strong>Note – Missing data</strong></strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
+<p><strong>Note – Missing data</strong></p>
 <p>A data value is <em>missing completely at random</em> if the likelihood of it being missing is independent of its value or any other values in the data set is just as likely to be missing.</p>
 <p>A data value is <em>not missing at random</em> if the missing value is related to the reason it is missing.</p>
 </div>
@@ -689,6 +717,9 @@ Wisconsin        2.6      53       66 10.8
 Wyoming          6.8     161       60 15.6</code></pre>
 </div>
 </div>
+</section>
+<section class="slide level2">
+
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">cor</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -697,12 +728,13 @@ Wyoming          6.8     161       60 15.6</code></pre>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">plot</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder,</span>
 <span id="cb7-2"><a href="#cb7-2"></a>     <span class="at">xlab =</span> <span class="st">"Percent living in urban areas"</span>,</span>
 <span id="cb7-3"><a href="#cb7-3"></a>     <span class="at">ylab =</span> <span class="st">"Murders per 100,000 residents"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="week10_files/figure-html/unnamed-chunk-9-1.png" width="672"></p>
+
 </div>
-</div>
-<p>What are some initial takeaways from this plot?</p>
+<img data-src="week10_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"><p>What are some initial takeaways from this plot?</p>
 <p>Without a guiding theory, where might our analyses take us?</p>
+</section>
+<section class="slide level2">
+
 <h3 id="education-data">Education data</h3>
 <p>This data is borrowed from the folks at UCLA’s Statistical Methods and Data Analytics office.</p>
 <div class="cell">
@@ -712,6 +744,9 @@ Wyoming          6.8     161       60 15.6</code></pre>
 <span id="cb8-4"><a href="#cb8-4"></a></span>
 <span id="cb8-5"><a href="#cb8-5"></a>educ <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section class="slide level2">
+
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">head</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -733,13 +768,17 @@ Wyoming          6.8     161       60 15.6</code></pre>
 313 2156 female   90       0    3
 314 2157 female   77       2    3</code></pre>
 </div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>educ <span class="ot">&lt;-</span> <span class="fu">within</span>(educ, {</span>
 <span id="cb13-2"><a href="#cb13-2"></a>  prog <span class="ot">&lt;-</span> <span class="fu">factor</span>(prog, <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"General"</span>, <span class="st">"Academic"</span>, <span class="st">"Vocational"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3"></a>  id <span class="ot">&lt;-</span> <span class="fu">factor</span>(id)</span>
-<span id="cb13-4"><a href="#cb13-4"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">summary</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4"></a>})</span>
+<span id="cb13-5"><a href="#cb13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="fu">summary</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       id         gender         math          daysabs               prog    
  1001   :  1   female:160   Min.   : 1.00   Min.   : 0.000   General   : 40  
@@ -751,23 +790,23 @@ Wyoming          6.8     161       60 15.6</code></pre>
  (Other):308                                                                 </code></pre>
 </div>
 </div>
+</section>
+<section class="slide level2">
+
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(educ, <span class="fu">aes</span>(daysabs, <span class="at">fill =</span> prog)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(prog <span class="sc">~</span> </span>
-<span id="cb16-2"><a href="#cb16-2"></a>                                                                                     ., <span class="at">margins =</span> <span class="cn">TRUE</span>, <span class="at">scales =</span> <span class="st">"free"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="week10_files/figure-html/unnamed-chunk-13-1.png" width="672"></p>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(educ, <span class="fu">aes</span>(daysabs, <span class="at">fill =</span> prog)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(prog <span class="sc">~</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a>                                                                                     ., <span class="at">margins =</span> <span class="cn">TRUE</span>, <span class="at">scales =</span> <span class="st">"free"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-<p>What are some initial takeaways from this plot?</p>
+<img data-src="week10_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><p>What are some initial takeaways from this plot?</p>
 <p>Without a guiding theory, where might our analyses take us?</p>
-<h3 id="u.s.-general-social-survey-gss">U.S. General Social Survey (GSS)</h3>
-<p>We will introduce the full version of the <a href="https://gss.norc.org/" target="_blank">General Social Survey, or GSS</a>.</p>
-<p>This survey is an ongoing assessment of attitudes and beliefs of Americans.</p>
-<p>Please read more online about the survey for next week.</p>
+</section>
+<section class="slide level2">
+
 <h3 id="next-up-week-11"><strong>Next up</strong>: Week 11</h3>
 
-<p><img src="img/howard-logo.jpg" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img src="img/howard-logo.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/data-202">Course Data GitHub</a></p>
 </div>
 </section>
@@ -982,6 +1021,44 @@ Wyoming          6.8     161       60 15.6</code></pre>
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
