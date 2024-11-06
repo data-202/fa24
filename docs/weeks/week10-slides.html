@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Nathan Alexander, PhD">
-  <title>DATA 202: Statistically Measuring and Modeling Social Justice – DATA 202 - Week 6</title>
+  <title>DATA 202: Statistically Measuring and Modeling Social Justice – DATA 202 - Week 10</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -386,8 +386,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="DATA 202 - Week 6 – DATA 202: Statistically Measuring and Modeling Social Justice">
-<meta property="og:description" content="Bivariate analysis">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<meta property="og:title" content="DATA 202 - Week 10 – DATA 202: Statistically Measuring and Modeling Social Justice">
+<meta property="og:description" content="Notes on causal theories">
 <meta property="og:site_name" content="DATA 202: Statistically Measuring and Modeling Social Justice">
 </head>
 <body class="quarto-light">
@@ -395,8 +398,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">DATA 202 - Week 6</h1>
-  <p class="subtitle">Bivariate analysis</p>
+  <h1 class="title">DATA 202 - Week 10</h1>
+  <p class="subtitle">Notes on causal theories</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -412,347 +415,427 @@ Nathan Alexander, PhD
 </section>
 <section id="part-i-context" class="slide level2">
 <h2>Part I: Context</h2>
+
+<img data-src="img/wk8-a-3.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Yuko Shimizu from <a href="https://www.cigionline.org/articles/as-geopolitical-blocs-vie-for-primacy-in-space-the-history-of-colonization-looms-large/" target="_blank">cigionline.org</a>.</p><p>Last week launched part 3 of our course: data and policy, as in public policies.</p>
+<p>Our goals this week will be to consider variations of justice for your particular area(s) of interest and study, and to cite references that allow us to understand the meaning of social justice in your specific intellectual domains.</p>
 </section>
 <section class="slide level2">
 
-<h3 id="understanding-the-social-in-justice">Understanding the social in justice</h3>
-<p>Building theories and empirical inquiries around various injustices requires a solid foundation.</p>
-<ul>
-<li><p>One method is to read recent articles in peer-reviewed journals.</p></li>
-<li><p>Another method is to explore the various ways one may view injustice.</p></li>
-<li><p>From a logical perspective, you may test the validity of certain claims.</p></li>
-</ul>
-<p>How should we define social justice?</p>
-<ul>
-<li><p>Identify two to three definitions of social justice to share.</p>
-<ul>
-<li>Locate a few open source articles or periodicals.</li>
-</ul></li>
-<li><p>What are the <em>similarities</em> between the different definitions?</p></li>
-<li><p>What are the <em>differences</em> between the different definitions?</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="framing-social-justice">Framing social justice</h3>
-<p>There are many different frameworks that have been developed to examine social justice.</p>
-<p>North (2006), as one example, discuss <em>three spheres of social justice</em> in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:</p>
+<h3 id="history-cause-and-effect">History, cause, and effect</h3>
+<p>Theory is often understood through an investigation of both the literature and the historical contexts surrounding a given issue. Take, for example, the legacies of colonization. As data and scientific developments expand into new fields, new questions arise as to what we can associate and how we understand these associations. For example, how does one theoretically relate a series of events from 150 years ago to a present set of conditions? What are the possibilities? What are the limitations? What are the cautionary tales?</p>
+<p>Statistics was situated as a vehicle to understand and measure observations. As it becomes an ever popular vehicle to inform social justice discourses, the many real-world associations identified in society bring to mind the well-known and readily available cautionary tale:</p>
 <blockquote>
-<p>“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”</p>
+<p>Correlation does not imply causation.</p>
 </blockquote>
-
-<img data-src="img/wk6-a-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><p class="caption">Three Spheres of Social Justice by <a href="https://journals.sagepub.com/doi/10.3102/00346543076004507" target="_blank">North (2006)</a></p><p>In her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.</p>
+<p>This popular statement relates to the ability (or inability) to deduce cause-and-effect relationships.</p>
 </section>
 <section class="slide level2">
 
-<p>There are different ways to consider these interrelated systems in your theory construction.</p>
-<h4 id="macromicro">Macro/Micro</h4>
+<h3 id="causation">Causation</h3>
+<div data-apperance="simple">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Causality</strong> is a fundamental concept in scientific inquiry and statistical analysis. It refers to the relationship between cause and effect, where one event (the cause) is understood to be responsible for another event (the effect). In statistics, causal inference aims to identify and quantify these cause-effect relationships.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Causality can be defined as a relationship between two events where:</p>
 <ul>
-<li><p><u>Macro</u>: Large-scale analyses, typically on systems or observations in the aggregate</p></li>
-<li><p><u>Micro</u>: Smaller-scale analyses, typically on individuals or localized contexts</p></li>
+<li><p>The cause precedes the effect in time.</p></li>
+<li><p>There is a consistent association between the cause and effect.</p></li>
+<li><p>Alternative explanations for the association have been ruled out.</p></li>
 </ul>
-<h4 id="samenessdifference">Sameness/Difference</h4>
+</section>
+<section class="slide level2">
+
+<h3 id="correlation">Correlation</h3>
+<p>In the traditional setting, correlation is framed as a statistical measure that relays the size and direction of the relationship between two or more variables. From a more critical framework, however, the idea of associations between variables and the attribution of relationships between variables must be both examined and interrogated.</p>
+<p>Associations should be understood and initiated from the root of a theoretical framework.</p>
+<p>If two variables are related, in a statistical context, we assume that their values <em>change</em> in some ordered fashion. These measures are often represented on an axis depicting the strength of the association.</p>
+
+<img data-src="img/wk8-a-2.png" class="r-stretch quarto-figure-center"><p class="caption">Image from statlect.com</p></section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+
+</div>
+<img data-src="week10_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"><p>As one value of a first variable increases the other variable’s values may also increase (positive relationship). Alternatively, as the value of one variable increases the other variable’s values may decrease (negative relationship). Key questions to consider focus on how context and other factors shape any seeming bivariate relationship.</p>
+</section>
+<section class="slide level2">
+
+<h4 id="spurious-correlation">Spurious correlation</h4>
+<p>At the intersection of mathematics and statistics is the concept of the <a href="https://www.jstor.org/stable/42001453" target="_blank"><em>spurious correlation</em></a> (Ward, 2013). A few examples:</p>
 <ul>
-<li><p><u>Sameness</u>: Considering homogeneous structures or characteristics; similarity</p></li>
-<li><p><u>Difference</u>: Considering heterogeneous structures or characteristics; non-uniformity</p></li>
-</ul>
-<h4 id="redistributionrecognition">Redistribution/Recognition</h4>
+<li><p><a href="https://blogs.ams.org/blogonmathblogs/2017/04/10/divorce-and-margarine/" target="_blank">Divorce rate has been found to correlate with margarine use</a>.</p></li>
+<li><p>Ice cream sales have been correlated with:</p>
 <ul>
-<li><p><u>Redistribution</u>: Primary considerations in economic or material conditions</p></li>
-<li><p><u>Recognition</u>: Primary considerations in cultural or social conditions</p></li>
+<li><p>Swimming deaths</p></li>
+<li><p>Shark attacks</p></li>
+<li><p>Crime rates</p></li>
+</ul></li>
+<li><p>The use of the popular site <a href="https://academic.oup.com/jcmc/article/21/4/265/4161784" target="_blank">Facebook has been correlated with diminished well-being</a>.</p></li>
 </ul>
+<p>These association help us see the need to investigate relationships further. What are possible unexplained relationships in these associations? We identify potential spurious variables when developing theoretical ideas about associations.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="causation-1">Causation</h3>
+<p>Causality (<a href="https://www.annualreviews.org/doi/full/10.1146/annurev-psych-010814-015135">See Sloman and Acnado (2015)</a>) is a representation and principle of cause and effect. There are many different viewpoints of causation across disciplines and fields of study. Terminology matters in how one frames cause and effect.</p>
+<p>There are four possible relationships between two variables:</p>
+<ul>
+<li><p>X causes Y</p></li>
+<li><p>Y causes X</p></li>
+<li><p>X and Y are both caused by Z</p></li>
+<li><p>X is not related to Y</p></li>
+</ul>
+<p>While these relationships may exist in some combination, it is important to frame their differences.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="associating-x-and-y">Associating X and Y</h3>
+<p>Our initial framing might directly link the variables <code>X</code> and <code>Y</code>.</p>
+<p>First, we have the association X causes Y.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[X] --&gt; B[Y]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Next, we have the association Y causes X.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[Y] --&gt; B[X]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Finally, we have the association X causes Y and Y causes X.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[X] &lt;--&gt; B[Y]
+  B --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="framing-spurious-relationships">Framing spurious relationships</h3>
+<p>However, after further reading, we may find that we need to integrate a third factor Z.</p>
+<p>In this context, a third factor (the “third-cause fallacy”) represents a spurious relationship.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[X]
+  B[Y]
+  C[Z]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Spurious relationships denote an observed or hypothesized association.</p>
+<p>There are important differences in how we depict and deal with third factor associations.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="confounding-variables">Confounding variables</h3>
+<p>Confounding is a causal concept that focuses on spurious or distorted associations.</p>
+<p>Below, Z is considered a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4017459/" target="_blank">confounding variable</a>.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+  A[Z] --&gt; B[X]
+  A --&gt; C[Y]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Z is related to both the independent, <span class="math inline">\(X\)</span>, and dependent, <span class="math inline">\(Y\)</span>, variables in the causal sense.</p></li>
+<li><p>Your analysis should examine if the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> holds.</p></li>
+<li><p>These interactions are described as <em>spurious associations</em>.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="mediating-variables">Mediating variables</h3>
+<p>A <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4165346/" target="_blank">mediating variable</a> explains the process by which two variables are related.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[X] --&gt; B[Z]
+  B --&gt; C[Y]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Z provides the <em>mechanism</em> to relate the independent, <span class="math inline">\(X\)</span>, and dependent, <span class="math inline">\(Y\)</span>, variables.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="moderating-variables">Moderating variables</h3>
+<p>A <a href="https://www.researchgate.net/profile/Hugh-Arnold/publication/240438039_Moderator_Variables_A_Clarification_of_Conceptual_Analytic_and_Psychometric_Issues/links/5ee391fb92851ce9e7dce2ae/Moderator-Variables-A-Clarification-of-Conceptual-Analytic-and-Psychometric-Issues.pdf" target="_blank">moderating variable</a> explains the strength by which two variables are related.</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A[X] --&gt; B[Z]
+  A --&gt; C[Y]
+  B --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Z explains the <em>strength of association</em> between the independent, <span class="math inline">\(X\)</span>, and dependent, <span class="math inline">\(Y\)</span>, variables.</li>
+</ul>
+<p>Let us look at a concrete example.</p>
 </section>
 <section id="part-ii-content" class="slide level2">
 <h2>Part II: Content</h2>
-<p>This week’s topics focus on bivariate analysis.</p>
-<p>The goal of a bivariate analysis is to understand the relationship between two variables.</p>
-<p>There are a few common ways to perform bivariate analysis:</p>
-<ul>
-<li><p>Estimating differences in proportions</p></li>
-<li><p>Scatter plots</p></li>
-<li><p>Correlation coefficients</p></li>
-<li><p>Simple linear regression</p></li>
-</ul>
+<p>The methods used to collect sample data is extremely important.</p>
+<p>If sample data are not collected in an appropriately, any resulting statistical analyses will be futile. As a result, planning a study by identifying research questions, the population and sample of interest, and considering the types of methods that will be used to analyze data that is collected are all essential parts in the statistical data analysis process.</p>
 </section>
 <section class="slide level2">
 
-<h3 id="simple-linear-regression">Simple linear regression</h3>
-<p>A simple linear regression (sometimes referenced as a bivariate regression) is a linear equation describing the relationship between an <strong>explanatory</strong> variable and an <strong>outcome</strong> variable.</p>
-<p>There is an assumption that the explanatory variable influences the outcome variable, and not the other way around.</p>
-<p>Take, for example, a variable <span class="math inline">\(y_i\)</span> which denotes the <em>income</em> of some individual in a sample, and we index this data using <span class="math inline">\(i\)</span> where <span class="math inline">\(i \in \{1, 2, ..., n\}\)</span>. We can let some other variable in our data <span class="math inline">\(x_i\)</span> represent the <em>years of education</em> for the same individual. A simple linear regression equation of these variables take the following form: <span class="math display">\[y_i = b_0 + b_{1}x_{i} + e_i\]</span></p>
-<p>where <span class="math inline">\(b_1\)</span> is the sample estimate of the slope of the regression line with respect to the years of education and <span class="math inline">\(b_0\)</span> is the sample estimate for the vertical intercept of the regression line.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="correlation-coefficients-and-scatterplots">Correlation coefficients and scatterplots</h3>
-<p>As a reminder, correlation ranges from -1 to 1. It gives us an indication on two things:</p>
-<ul>
-<li><p>The direction of the relationship between the two variables</p></li>
-<li><p>The strength of the relationship between the two variables</p></li>
-</ul>
-<p>Any outliers can greatly impact the value of a correlation coefficient.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">plot</span>(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<h4 id="more-on-sampling-methods">More on sampling methods</h4>
+<p>First, let’s revisit and describe the different sampling methods:</p>
+<p>There are two broad categories of selecting members of a population to generate sample data: probability sampling and non-probability sampling.</p>
+<p>Within these two broad categories are other methods based on the needs of the study. Each of these methods is used to support statistical data analysis with some methods providing stronger evidence than others.</p>
+<div class="callout-DEFINITIONS">
+<dl>
+<dt>Probability sampling</dt>
+<dd>
+<p>involves the random selection of subjects in such a way that every member of a sample has the sample probability of being selected.</p>
+</dd>
+<dt>Non-probability sampling</dt>
+<dd>
+<p>involves the use of criteria to select data that is not based on an equal likelihood of selection.</p>
+</dd>
+</dl>
 </div>
-<img data-src="week06_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section>
+</section>
 <section class="slide level2">
 
-<h3 id="estimating-differences-in-proportions">Estimating differences in proportions</h3>
-<p>When generating cross tabulations, we can make sense of a few bivariate tests:</p>
+<h5 id="probability-sampling-methods">Probability sampling methods</h5>
 <ul>
-<li><p>Differences in proportions</p></li>
-<li><p>Standard errors of the difference in proportions</p></li>
-<li><p>Confidence intervals for the differences</p></li>
-<li><p>T-test for differences in proportions</p></li>
+<li><p><strong>Simple random sample</strong> of <span class="math inline">\(n\)</span> subjects ensures that every possible sample of the same size <span class="math inline">\(n\)</span> has the same chance or likelihood of being chosen.</p></li>
+<li><p><strong>Systematic sample</strong> of <span class="math inline">\(n\)</span> subjects involves selecting every <span class="math inline">\(k\)</span>th subject on some regular interval.</p></li>
+<li><p><strong>Stratified sample</strong> involves dividing the population up into strata (groups) with the same characteristics and then randomly sampling within those strata.</p></li>
+<li><p><strong>Cluster sample</strong> involves partitioning the population into clusters (groups), randomly selecting some clusters, and then selecting all members of the selected clusters.</p></li>
 </ul>
+</section>
+<section class="slide level2">
+
+<h5 id="non-prbability-sampling-methods">Non-prbability sampling methods</h5>
+<ul>
+<li><p><strong>Convenience sample</strong> is data gathered from the most accessible or convenient source. Although this is easy and efficient, the data cannot produce generalizable results.</p></li>
+<li><p><strong>Purposive sample</strong> is data gathered based on the purposes of the research or the specific research question. This strategy includes clear criteria and rationale for inclusion.</p></li>
+<li><p><strong>Snowball sample</strong> is data gathered via recruitment by the other participants of a study. The number of subjects included “snowballs” as more contacts are generated.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h6 id="multistage-sampling">Multistage sampling</h6>
+<p>In larger studies, sometimes multistage sampling procedures are used to generate data. In this design, different samples are selected in different stages, and each stage might use a different sampling method. The end result may represent a complicated sampling design but it is often simpler and faster than some designs, such as a simple random sample.</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Missing Data</strong></p>
+<p>Data can be missing from a set, and the total number of elements can differ between two or more sets.</p>
+<p>The differences in the number of elements can be due to a host of reasons, but often it is missing data. A data value can be <em>missing at random</em> or <em>not missing at random</em>. The amount of information missing from a data set can have a minimal impact or a major impact on a statistical analysis.</p>
+<div data-apperance="simple">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Note – Missing data</strong></p>
+<p>A data value is <em>missing completely at random</em> if the likelihood of it being missing is independent of its value or any other values in the data set is just as likely to be missing.</p>
+<p>A data value is <em>not missing at random</em> if the missing value is related to the reason it is missing.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="part-iii-code" class="slide level2">
 <h2>Part III: Code</h2>
-<p>The code for this week will prepare you to run analyses for paper 2, which is a short exploration of a data set in the <code>forcats</code> package or other data sets that you select. Recall that lab 2 will guide you through your analyses; a sample <strong>RScript</strong> and workflow is also provided here.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="write-preamble">Write preamble</h3>
+<h3 id="crime-statistics">Crime statistics</h3>
+<p>Data from 1973 on violent crime rates by US State in the <code>USArrests</code> data set.</p>
+<p>Values are per 100,000 residents for assault, murder, and rape.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># ---</span></span>
-<span id="cb2-2"><a></a><span class="co"># title: Exploring associations between income and political party in the US</span></span>
-<span id="cb2-3"><a></a><span class="co"># subtitle: sample paper 2</span></span>
-<span id="cb2-4"><a></a><span class="co"># author: Nathan Alexander</span></span>
-<span id="cb2-5"><a></a><span class="co"># course: DATA 202 - fall 2023</span></span>
-<span id="cb2-6"><a></a><span class="co"># ---</span></span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="co"># research inquiry: does income relate to political party support in the US?</span></span>
-<span id="cb2-9"><a></a><span class="co"># data: 2020 sample data from the General Social Survey (GSS)</span></span>
-<span id="cb2-10"><a></a><span class="co"># note(s): variables should be mutated and recoded into two levels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">head</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Murder Assault UrbanPop Rape
+Alabama      13.2     236       58 21.2
+Alaska       10.0     263       48 44.5
+Arizona       8.1     294       80 31.0
+Arkansas      8.8     190       50 19.5
+California    9.0     276       91 40.6
+Colorado      7.9     204       78 38.7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">tail</span>(USArrests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Murder Assault UrbanPop Rape
+Vermont          2.2      48       32 11.2
+Virginia         8.5     156       63 20.7
+Washington       4.0     145       73 26.2
+West Virginia    5.7      81       39  9.3
+Wisconsin        2.6      53       66 10.8
+Wyoming          6.8     161       60 15.6</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-0-install-packages-and-load-libraries">step 0: install packages and load libraries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-3"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-4"><a></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">cor</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.06957262</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">plot</span>(USArrests<span class="sc">$</span>UrbanPop, USArrests<span class="sc">$</span>Murder,</span>
+<span id="cb8-2"><a></a>     <span class="at">xlab =</span> <span class="st">"Percent living in urban areas"</span>,</span>
+<span id="cb8-3"><a></a>     <span class="at">ylab =</span> <span class="st">"Murders per 100,000 residents"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week10_files/figure-html/unnamed-chunk-11-1.png" width="672" class="r-stretch"><p>What are some initial takeaways from this plot?</p>
+<p>Without a guiding theory, where might our analyses take us?</p>
+</section>
+<section class="slide level2">
+
+<h3 id="education-data">Education data</h3>
+<p>This data is borrowed from the folks at UCLA’s Statistical Methods and Data Analytics office.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">require</span>(foreign)</span>
+<span id="cb9-2"><a></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb9-3"><a></a><span class="fu">require</span>(MASS)</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>educ <span class="ot">&lt;-</span> <span class="fu">read.dta</span>(<span class="st">"https://stats.idre.ucla.edu/stat/stata/dae/nb_data.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-1-view-gss_cat-data-in-the-package-forcats">step 1: view <code>gss_cat</code> data in the package <code>forcats</code></h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">getwd</span>() <span class="co"># check working directory</span></span>
-<span id="cb4-2"><a></a>?gss_cat <span class="co"># view data documentation</span></span>
-<span id="cb4-3"><a></a>gss_cat <span class="co"># call data frame</span></span>
-<span id="cb4-4"><a></a><span class="fu">glimpse</span>(gss_cat) <span class="co"># glimpse data</span></span>
-<span id="cb4-5"><a></a><span class="fu">summary</span>(gss_cat) <span class="co"># view summary of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">head</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    id gender math daysabs prog
+1 1001   male   63       4    2
+2 1002   male   27       4    2
+3 1003 female   20       2    2
+4 1004 female   16       3    2
+5 1005 female    2       3    2
+6 1006 female   71      13    2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">tail</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      id gender math daysabs prog
+309 2152 female   46       1    3
+310 2153   male   26       1    2
+311 2154 female   79       3    3
+312 2155 female   59       0    2
+313 2156 female   90       0    3
+314 2157 female   77       2    3</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-2-clean-and-manage-data">step 2: clean and manage data</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gss_cat_clean <span class="ot">&lt;-</span> gss_cat <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">na.omit</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">select</span>(year, rincome, partyid) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-4"><a></a>  <span class="fu">rename</span>(<span class="at">income =</span> rincome) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-5"><a></a>  <span class="fu">rename</span>(<span class="at">party =</span> partyid)</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a>gss_cat_clean <span class="co"># view cleaned data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>educ <span class="ot">&lt;-</span> <span class="fu">within</span>(educ, {</span>
+<span id="cb14-2"><a></a>  prog <span class="ot">&lt;-</span> <span class="fu">factor</span>(prog, <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"General"</span>, <span class="st">"Academic"</span>, <span class="st">"Vocational"</span>))</span>
+<span id="cb14-3"><a></a>  id <span class="ot">&lt;-</span> <span class="fu">factor</span>(id)</span>
+<span id="cb14-4"><a></a>})</span>
+<span id="cb14-5"><a></a></span>
+<span id="cb14-6"><a></a><span class="fu">summary</span>(educ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       id         gender         math          daysabs               prog    
+ 1001   :  1   female:160   Min.   : 1.00   Min.   : 0.000   General   : 40  
+ 1002   :  1   male  :154   1st Qu.:28.00   1st Qu.: 1.000   Academic  :167  
+ 1003   :  1                Median :48.00   Median : 4.000   Vocational:107  
+ 1004   :  1                Mean   :48.27   Mean   : 5.955                   
+ 1005   :  1                3rd Qu.:70.00   3rd Qu.: 8.000                   
+ 1006   :  1                Max.   :99.00   Max.   :35.000                   
+ (Other):308                                                                 </code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-3-subset-data-year-2000">step 3: subset data: year == 2000</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df <span class="ot">&lt;-</span> gss_cat_clean <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2000</span>)</span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="fu">head</span>(df) <span class="co"># view top of data</span></span>
-<span id="cb6-5"><a></a><span class="fu">tail</span>(df) <span class="co"># view bottom of data</span></span>
-<span id="cb6-6"><a></a><span class="fu">summary</span>(df) <span class="co"># check data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(educ, <span class="fu">aes</span>(daysabs, <span class="at">fill =</span> prog)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(prog <span class="sc">~</span> </span>
+<span id="cb16-2"><a></a>                                                                                     ., <span class="at">margins =</span> <span class="cn">TRUE</span>, <span class="at">scales =</span> <span class="st">"free"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
+<img data-src="week10_files/figure-html/unnamed-chunk-15-1.png" width="672" class="r-stretch"><p>What are some initial takeaways from this plot?</p>
+<p>Without a guiding theory, where might our analyses take us?</p>
 </section>
 <section class="slide level2">
 
-<h3 id="step-4-inspect-and-transform-income-variable-into-two-levels">step 4: inspect and transform income variable into two levels</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="do">## create a frequency table of each level in the income variable</span></span>
-<span id="cb7-2"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(party)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="do">## drop 'No answer', 'Don't know', 'Refused', and 'Not applicable' levels</span></span>
-<span id="cb7-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb7-6"><a></a>  <span class="fu">filter</span>(income <span class="sc">!=</span> <span class="st">"No answer"</span>,</span>
-<span id="cb7-7"><a></a>         income <span class="sc">!=</span> <span class="st">"Don't know"</span>,</span>
-<span id="cb7-8"><a></a>         income <span class="sc">!=</span> <span class="st">"Refused"</span>,</span>
-<span id="cb7-9"><a></a>         income <span class="sc">!=</span> <span class="st">"Not applicable"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-10"><a></a>  <span class="fu">droplevels</span>() <span class="co"># use droplevels() to remove levels from variable for factors</span></span>
-<span id="cb7-11"><a></a></span>
-<span id="cb7-12"><a></a><span class="do">## use levels() function to view levels for income variable</span></span>
-<span id="cb7-13"><a></a><span class="fu">levels</span>(df<span class="sc">$</span>income)</span>
-<span id="cb7-14"><a></a></span>
-<span id="cb7-15"><a></a><span class="do">## create two levels: below $20,000 and above $20,000</span></span>
-<span id="cb7-16"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb7-17"><a></a>  <span class="fu">mutate</span>(<span class="at">income =</span> <span class="fu">fct_recode</span>(income, </span>
-<span id="cb7-18"><a></a>                             <span class="st">"More than 20000"</span> <span class="ot">=</span> <span class="st">"$25000 or more"</span>,</span>
-<span id="cb7-19"><a></a>                             <span class="st">"More than 20000"</span> <span class="ot">=</span> <span class="st">"$20000 - 24999"</span>,</span>
-<span id="cb7-20"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$15000 - 19999"</span>,</span>
-<span id="cb7-21"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$10000 - 14999"</span>,</span>
-<span id="cb7-22"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$8000 to 9999"</span>,</span>
-<span id="cb7-23"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$7000 to 7999"</span>,</span>
-<span id="cb7-24"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$6000 to 6999"</span>,</span>
-<span id="cb7-25"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$5000 to 5999"</span>,</span>
-<span id="cb7-26"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$4000 to 4999"</span>,</span>
-<span id="cb7-27"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$3000 to 3999"</span>,</span>
-<span id="cb7-28"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$1000 to 2999"</span>,</span>
-<span id="cb7-29"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"Lt $1000"</span>))</span>
-<span id="cb7-30"><a></a></span>
-<span id="cb7-31"><a></a><span class="do">## view a summary of your transformed data frame</span></span>
-<span id="cb7-32"><a></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-5-inspect-and-transform-party-variable-into-two-levels">step 5: inspect and transform party variable into two levels</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="do">## create a frequency table of each level in the party variable</span></span>
-<span id="cb8-2"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(party)</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="do">## drop 'No answer', 'Independent' and 'Other Party' levels</span></span>
-<span id="cb8-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb8-6"><a></a>  <span class="fu">filter</span>(party <span class="sc">!=</span> <span class="st">"No answer"</span>,</span>
-<span id="cb8-7"><a></a>         party <span class="sc">!=</span> <span class="st">"Independent"</span>,</span>
-<span id="cb8-8"><a></a>         party <span class="sc">!=</span> <span class="st">"Other party"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-9"><a></a>  <span class="fu">droplevels</span>() <span class="co"># use droplevels() to remove levels from variable for factors</span></span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a><span class="do">## create two levels: 'Republican' and 'Democrat'</span></span>
-<span id="cb8-12"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb8-13"><a></a>  <span class="fu">mutate</span>(<span class="at">party =</span> <span class="fu">fct_recode</span>(party,</span>
-<span id="cb8-14"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Strong republican"</span>,</span>
-<span id="cb8-15"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Not str republican"</span>,</span>
-<span id="cb8-16"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Ind,near rep"</span>,</span>
-<span id="cb8-17"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Ind,near dem"</span>,</span>
-<span id="cb8-18"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Not str democrat"</span>,</span>
-<span id="cb8-19"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Strong democrat"</span>))</span>
-<span id="cb8-20"><a></a></span>
-<span id="cb8-21"><a></a><span class="do">## remove year from data frame</span></span>
-<span id="cb8-22"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb8-23"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>year)</span>
-<span id="cb8-24"><a></a></span>
-<span id="cb8-25"><a></a><span class="do">## view a summary of the data to check for any errors</span></span>
-<span id="cb8-26"><a></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-6-visualize-data">step 6: visualize data</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="do">## create a frequency table and bar graph of income </span></span>
-<span id="cb9-2"><a></a>table.income <span class="ot">=</span> <span class="fu">table</span>(df<span class="sc">$</span>income)</span>
-<span id="cb9-3"><a></a>table.income</span>
-<span id="cb9-4"><a></a><span class="fu">barplot</span>(table.income,</span>
-<span id="cb9-5"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Income"</span>,</span>
-<span id="cb9-6"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Income"</span>,</span>
-<span id="cb9-7"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="do">## the below code produces the same output as above with specifications</span></span>
-<span id="cb10-2"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(df<span class="sc">$</span>income),</span>
-<span id="cb10-3"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Income"</span>,</span>
-<span id="cb10-4"><a></a>        <span class="at">col =</span> <span class="st">"lightgreen"</span>,</span>
-<span id="cb10-5"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Income"</span>,</span>
-<span id="cb10-6"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
-<span id="cb10-7"><a></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">650</span>)) <span class="co"># this y-axis range: (0, 650) works best for my plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="do">## create a frequency table and bar graph of party </span></span>
-<span id="cb11-2"><a></a>table.party <span class="ot">=</span> <span class="fu">table</span>(df<span class="sc">$</span>party)</span>
-<span id="cb11-3"><a></a>table.party</span>
-<span id="cb11-4"><a></a><span class="fu">barplot</span>(table.party,</span>
-<span id="cb11-5"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Party"</span>,</span>
-<span id="cb11-6"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Party"</span>,</span>
-<span id="cb11-7"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="do">## the below code produces the same output as above with specifications</span></span>
-<span id="cb12-2"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(df<span class="sc">$</span>party),</span>
-<span id="cb12-3"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Party"</span>,</span>
-<span id="cb12-4"><a></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>),</span>
-<span id="cb12-5"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Party"</span>,</span>
-<span id="cb12-6"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
-<span id="cb12-7"><a></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">600</span>)) <span class="co"># this y-axis range: (0, 550) works best for my plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="do">## create a stacked bar plot of the proportions</span></span>
-<span id="cb13-2"><a></a><span class="do">#### question: which of the two plots do you prefer, why?</span></span>
-<span id="cb13-3"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>income, df<span class="sc">$</span>party)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="do">## the below code produces similar outputs as above with specifications</span></span>
-<span id="cb15-2"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb15-3"><a></a>     <span class="at">main =</span> <span class="st">"Mosaic Plot of Political Party and Income"</span>,</span>
-<span id="cb15-4"><a></a>     <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"lightyellow"</span>,<span class="st">"lightgreen"</span>),</span>
-<span id="cb15-5"><a></a>     <span class="at">xlab =</span> <span class="st">"Political Party"</span>,</span>
-<span id="cb15-6"><a></a>     <span class="at">ylab =</span> <span class="st">"Income"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-7-create-a-basic-cross-tab-for-manual-calculations">step 7: create a basic cross tab for manual calculations</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="do">## gather sample size</span></span>
-<span id="cb16-2"><a></a>n <span class="ot">=</span> <span class="fu">count</span>(df)</span>
-<span id="cb16-3"><a></a>n</span>
-<span id="cb16-4"><a></a></span>
-<span id="cb16-5"><a></a><span class="do">## view a basic cross tabulation</span></span>
-<span id="cb16-6"><a></a><span class="fu">table</span>(df<span class="sc">$</span>income, df<span class="sc">$</span>party)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-8-bivariate-analysis">step 8: bivariate analysis</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="do">## load required libraries (and packages, where needed)</span></span>
-<span id="cb17-2"><a></a><span class="fu">install.packages</span>(<span class="st">"descr"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb17-3"><a></a><span class="fu">library</span>(descr)</span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a><span class="fu">install.packages</span>(<span class="st">"Hmisc"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb17-6"><a></a><span class="fu">library</span>(Hmisc)</span>
-<span id="cb17-7"><a></a></span>
-<span id="cb17-8"><a></a><span class="do">## create a cross tab (list dependent variable in your hypothesis first)</span></span>
-<span id="cb17-9"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span>
-<span id="cb17-10"><a></a></span>
-<span id="cb17-11"><a></a><span class="do">## add column percentages to the cross tab</span></span>
-<span id="cb17-12"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb17-13"><a></a>         <span class="at">prop.c=</span>T) <span class="co"># add column percentages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="do">## add row percentages to the cross tab</span></span>
-<span id="cb18-2"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb18-3"><a></a>         <span class="at">prop.r=</span>T) <span class="co"># add row percentages</span></span>
-<span id="cb18-4"><a></a></span>
-<span id="cb18-5"><a></a><span class="do">## get expected frequencies and cell chi-square contributions</span></span>
-<span id="cb18-6"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb18-7"><a></a>         <span class="at">expected =</span> T, <span class="co"># get expected values</span></span>
-<span id="cb18-8"><a></a>         <span class="at">prop.chisq=</span>T) <span class="co"># get chi-square contribution</span></span>
-<span id="cb18-9"><a></a></span>
-<span id="cb18-10"><a></a><span class="do">## get critical value of chi-square, p=.05, df=1</span></span>
-<span id="cb18-11"><a></a><span class="do">#### recall: df = (r-1)(c-1)</span></span>
-<span id="cb18-12"><a></a><span class="fu">qchisq</span>(.<span class="dv">05</span>, <span class="dv">1</span>, <span class="at">lower.tail=</span>F)</span>
-<span id="cb18-13"><a></a></span>
-<span id="cb18-14"><a></a><span class="do">## get chi-square statistic</span></span>
-<span id="cb18-15"><a></a><span class="fu">chisq.test</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="step-9-describe-some-initial-limitations-of-analysis">step 9: describe some initial limitations of analysis</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="do">### limitation 1: sampling error</span></span>
-<span id="cb19-2"><a></a><span class="co"># data come from a sample and there are likely differences in other samples</span></span>
-<span id="cb19-3"><a></a></span>
-<span id="cb19-4"><a></a><span class="do">### limitation 2: category reductions</span></span>
-<span id="cb19-5"><a></a><span class="co"># creating two levels for the variables greatly impacted the diversity of responses</span></span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a><span class="do">### limitation 3: cases dropped</span></span>
-<span id="cb19-8"><a></a><span class="co"># sample was further impacted by the number of values dropped in the analysis</span></span>
-<span id="cb19-9"><a></a></span>
-<span id="cb19-10"><a></a><span class="do">### limitation 4: chi-square test</span></span>
-<span id="cb19-11"><a></a><span class="co"># the chi-square test does not tell us about the strength or direction of association</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="next-up-week-7"><strong>Next up</strong>: Week 7</h3>
+<h3 id="next-up-week-11"><strong>Next up</strong>: Week 11</h3>
 
 <div class="quarto-auto-generated-content">
 <p><img src="img/howard-logo.jpg" class="slide-logo"></p>
