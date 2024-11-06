@@ -47,27 +47,6 @@ data(gss_doc) # this is the documentation for the GSS data
 
 ---
 
-#### Use the GSSR dictionary documentation
-
-```{r}
-#| echo: true
-#| output: true
-#| warning: false
-# use the dictionary to get information in a different format
-data(gss_dict)
-gss_dict
-gss_dict %>% 
-  filter(variable == "race")
-gss_dict %>% 
-  filter(variable == "sex")
-gss_dict %>% 
-  filter(variable == "hrs2")
-gss_dict %>% 
-  filter(variable == "educ")
-```
-
----
-
 #### View information on a specific variable
 
 ```{r}
