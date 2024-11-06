@@ -1,0 +1,319 @@
+---
+title: "General Social Survey (GSS) data"
+author: "Nathan Alexander"
+output: html_document
+---
+
+The package `gssr` is located [here](https://kjhealy.github.io/gssr/).
+
+
+We will run through a sample analysis using the `gssr` package.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+# install packages
+install.packages("remotes", repos = "http://cran.us.r-project.org")
+install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+install.packages("tidyr", repos = "http://cran.us.r-project.org")
+
+# Install 'gssr' from 'ropensci' universe
+install.packages('gssr', repos =
+  c('https://kjhealy.r-universe.dev', 'https://cloud.r-project.org'))
+
+# Also recommended: install 'gssrdoc' as well
+install.packages('gssrdoc', repos =
+  c('https://kjhealy.r-universe.dev', 'https://cloud.r-project.org'))
+
+# load libraries
+library(gssr)
+library(dplyr)
+library(tidyr)
+```
+
+---
+
+#### Explore variables in the GSSR documentation file
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# load the master documentation files
+data(gss_all) # note that this is a large file of all GSS data
+data(gss_doc) # this is the documentation for the GSS data
+```
+
+---
+
+#### Use the GSSR dictionary documentation
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# use the dictionary to get information in a different format
+data(gss_dict)
+gss_dict
+gss_dict %>% 
+  filter(variable == "race")
+gss_dict %>% 
+  filter(variable == "sex")
+gss_dict %>% 
+  filter(variable == "hrs2")
+gss_dict %>% 
+  filter(variable == "educ")
+```
+
+---
+
+#### View information on a specific variable
+
+```{r}
+# view information on a specific variable
+gss_doc %>% filter(id == "race") %>% 
+  select(id, description, text)
+
+gss_doc %>% filter(id == "sex") %>% 
+  select(id, description, text)
+
+gss_doc %>% filter(id == "hrs2") %>% 
+  select(id, description, text)
+
+gss_doc %>% filter(id == "educ") %>% 
+  select(id, description, text)
+```
+
+---
+
+#### Examine the years available for any given variable
+
+```{r}
+# check which years your variables are available
+gss_which_years(gss_all, race)
+gss_which_years(gss_all, sex)
+gss_which_years(gss_all, hrs2)
+gss_which_years(gss_all, educ)
+
+# when you want to return information for multiple variables
+gss_all %>%
+  gss_which_years(c(race, sex, hrs2, educ)) %>%
+  print(n = Inf)
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# get information on the properties of the data
+gss_get_props(varnames = c("race", "sex", "hrs1", "educ"))
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# loading single year data
+gss12 <- gss_get_yr(2012)
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# loading panel data by year (not necessary for our course)
+data(gss_panel08_long) # 2008 three wave panel data (2008, 2010, 2012)
+data(gss_panel_doc) # loading panel documentation
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# select your variables for a single year using cross sectional file
+gss12 %>% 
+  select(race, sex, hrs2, educ, wtssall)
+
+gss12 %>% 
+  select(race, sex, hrs2, educ, wtssall) %>% 
+  count(race, sex, wtssall)
+```
+
+---
+
+# Get data via `gss_all` data set
+
+We can use a more direct method but we must be careful about our outputs.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+gss_all %>% 
+  select(year, race, sex, hrs2, educ, wtssall, wtss, wtssnr) %>% 
+  filter(year == 2014) %>% 
+  drop_na() -> df
+
+sapply(df, function(x) sum(is.na(x))) # take note that the hrs2 variable will cause issue
+df
+```
+
+---
+
+```{r}
+# run your model and diagnostic plots
+model2 <- lm(df$educ ~ df$hrs2)
+summary(model2)
+# Plot the regression line
+plot(df$educ, df$hrs2)
+abline(model2, col="blue")
+# Check residuals
+resids2 <- residuals(model2)
+plot(df$educ, resids2)
+# Diagnostic plots
+par(mfrow=c(2,2))
+plot(model2)
+# Check significance of predictor
+anova(model2)
+```
+
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# select your variables for a single year using gss_all
+gss_all %>% 
+  filter(year == 2012) %>% 
+  select(race, sex, hrs2, educ, wtssall, wtss, wtssnr)
+
+gss_all %>% 
+  filter(year == 2018) %>% 
+  select(race, sex, hrs2, educ, wtssall, wtss, wtssnr)
+```
+
+
+---
+
+#### Cleaning data
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# clean data for analysis
+gss12 %>% 
+  select(race, sex, hrs2, educ, wtssall, wtss, wtssnr) %>% 
+  drop_na() -> gss12_analysis
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# check for missing values
+sapply(gss12_analysis, function(x) sum(is.na(x)))
+str(gss12_analysis)
+```
+
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# exploratory analysis
+gss12 %>% 
+  select(race, sex, hrs2, educ, wtssall, wtss, wtssnr) %>% 
+  count(race, sex)
+
+gss12_analysis %>% 
+  count(race, sex)
+```
+
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+model <- lm(gss12_analysis$hrs2 ~ gss12_analysis$educ, weight = gss12_analysis$wtssall)
+summary(model)
+```
+
+
+---
+
+# Plot the variable relationships 
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# Plot the regression line
+plot(gss12_analysis$educ, gss12_analysis$hrs2)
+abline(model, col="blue")
+```
+
+---
+
+# Examine residuals
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# Check residuals
+resids <- residuals(model)
+plot(gss12_analysis$hrs2, resids)
+
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# Diagnostic plots
+par(mfrow=c(2,2))
+plot(model)
+```
+
+---
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# Check significance of predictor
+anova(model)
+```
+
+---
+
+# Preview of multivariate analysis
+
+Try to examine the assumptions of the multivariate analysis and model below.
+
+```{r}
+## conducting a multivariate linear analysis
+mlm1 <- lm(cbind(hrs2, educ) ~ race + sex, data = df, weight = wtssall)
+summary(mlm1)
+```
+
