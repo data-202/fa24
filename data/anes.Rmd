@@ -1,0 +1,40 @@
+---
+title: "American National Election Survey (ANES) data"
+author: "Nathan Alexander"
+output: html_document
+---
+
+The pacakge for the ANES data is located [here](https://github.com/jamesmartherus/anesr).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(devtools)
+install_github("jamesmartherus/anesr")
+```
+
+A few examples on how to access data and use the pacakge are provided below:
+
+```{r}
+library(anesr)
+data(package="anesr") #View a list of available datasets
+
+data(timeseries_cum) #Load Time Series Cumulative File (1948-2016)
+data(timeseries_cum_doc) #Load documentation for the Time Series Cumulative File
+
+data(pilot_2018) #Load 2018 Pilot Study
+```
+
+View the documentation for the data. Be sure to put `echo=F` to remove the very long output.
+
+```{r, echo=F}
+timeseries_cum
+timeseries_cum_doc
+```
+
+View the pilot data from 2018.
+
+```{r}
+df <- pilot_2018
+df
+```
