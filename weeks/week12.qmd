@@ -1,6 +1,6 @@
 ---
 title: "DATA 202 - Week 12"
-subtitle: "Bivariate regression analysis"
+subtitle: "On regression"
 author: "Nathan Alexander, PhD"
 institute: "Center for Applied Data Science and Analytics"
 format: 
