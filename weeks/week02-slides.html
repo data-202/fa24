@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Nathan Alexander, PhD">
-  <title>DATA 202: Statistically Measuring and Modeling Social Justice – DATA 202 - Week 6</title>
+  <title>DATA 202: Statistically Measuring and Modeling Social Justice – DATA 202 - Week 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -309,7 +309,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -386,8 +385,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="DATA 202 - Week 6 – DATA 202: Statistically Measuring and Modeling Social Justice">
-<meta property="og:description" content="Bivariate analysis">
+<meta property="og:title" content="DATA 202 - Week 2 – DATA 202: Statistically Measuring and Modeling Social Justice">
+<meta property="og:description" content="Foundations">
 <meta property="og:site_name" content="DATA 202: Statistically Measuring and Modeling Social Justice">
 </head>
 <body class="quarto-light">
@@ -395,8 +394,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">DATA 202 - Week 6</h1>
-  <p class="subtitle">Bivariate analysis</p>
+  <h1 class="title">DATA 202 - Week 2</h1>
+  <p class="subtitle">Foundations</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -410,348 +409,438 @@ Nathan Alexander, PhD
 </div>
 
 </section>
-<section id="part-i-context" class="slide level2">
-<h2>Part I: Context</h2>
+<section>
+<section id="part-i-context" class="title-slide slide level1 center">
+<h1>Part I: Context</h1>
+
+</section>
+<section id="what-is-statistics" class="slide level2">
+<h2>What is statistics?</h2>
+<p>Statistics is a science. As a result, it follows a set of well-defined steps or methods. As we explore new terms and definitions, we will gain a better understanding of what statistics encompasses.</p>
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>DEFINITION</strong>: Statistics</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Statistics</strong> is the science of collecting, organizing, analyzing, interpreting, communicating, and visualizing data and information.</p>
+</div>
+</div>
+</div>
+<p>There are a multitude of ways to describe the steps, terms, and various processes undertaken in a statistical study. Importantly, statistics calls for questions where we explore difference or change. We use variation to understand differences within or between a set (or sets) of measurements.</p>
 </section>
 <section class="slide level2">
 
-<h3 id="understanding-the-social-in-justice">Understanding the social in justice</h3>
-<p>Building theories and empirical inquiries around various injustices requires a solid foundation.</p>
+<h3 id="notes-from-pelham-2013-reading">Notes from <em>Pelham (2013)</em> reading</h3>
+<p>“Statistics are a set of mathematical procedures for summarizing and interpreting observations” (p.5).</p>
+<p><strong>Descriptive statistics</strong> vs.&nbsp;<strong>Inferential statistics</strong></p>
+<p>Pelham describes <em>descriptive</em> statistics as “statistics used to summarize or describe a set of observations”, whereas <em>inferential</em> statistics are defined as “statistics used to draw inferences about a set of observations” (p.&nbsp;5).</p>
+</section>
+<section class="slide level2">
+
+<h4 id="descritpve-measures">Descritpve measures</h4>
 <ul>
-<li><p>One method is to read recent articles in peer-reviewed journals.</p></li>
-<li><p>Another method is to explore the various ways one may view injustice.</p></li>
-<li><p>From a logical perspective, you may test the validity of certain claims.</p></li>
+<li><p>Central tendency: the “average” of a set of observations (i.e., mean, median, mode)</p></li>
+<li><p>Dispersion: how data vary (i.e., range, variance, standard deviation)</p></li>
 </ul>
-<p>How should we define social justice?</p>
+<h5 id="example-entering-values-in-r"><strong>EXAMPLE – entering values in R</strong></h5>
+<p>Assume we have a small set of data: 2, 2, 4, 4. We can input and compute this data in <em>R</em> using the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Generate sample data</span></span>
+<span id="cb1-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># compute the mean</span></span>
+<span id="cb2-2"><a></a>m <span class="ot">=</span> <span class="fu">sum</span>(x)<span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb2-3"><a></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># compute the median</span></span>
+<span id="cb4-2"><a></a><span class="fu">median</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># compute the mode</span></span>
+<span id="cb6-2"><a></a><span class="fu">mode</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>table.x <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
+<span id="cb8-2"><a></a>table.x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x
+2 4 
+2 2 </code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># create a histogram</span></span>
+<span id="cb10-2"><a></a><span class="fu">hist</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week02_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section>
+<section class="slide level2">
+
+<p>You also may recall the standard deviation, <span class="math inline">\(S\)</span>, of a set of values is calculated using: <span class="math display">\[ S = \sqrt{\dfrac{\Sigma (x - m)^2}{n}}\]</span></p>
+<h5 id="example-standard-deviation-of-a-set"><strong>EXAMPLE – Standard deviation of a set</strong></h5>
+<p>Assume we have a small set of data: 2, 2, 4, 4. Using the formula for standard deviation above, where <span class="math inline">\(x\)</span> is the score, <span class="math inline">\(m\)</span> is the mean (sometimes referred to as <span class="math inline">\(\bar{x}\)</span>), and <span class="math inline">\(n\)</span> is the sample size, we get the following:</p>
+<p><span class="math display">\[\dfrac{(2-3)^2 + (2-3)^2 + (4-3)^2 + (4-3)^2}{4} = \dfrac{1 + 1 + 1 + 1}{4} = 1 \]</span> Most formulas of this nature are programmed into <em>R/RStudio</em>, but for more advanced modeling, we learn how to input raw data and formula into the software.</p>
+</section>
+<section class="slide level2">
+
+<h4 id="inferential-measures">Inferential measures</h4>
+<p>Pelham notes that “the basic idea behind inferential statistical testing is that decisions about what to conclude from a set of research findings need to be made in a logical, unbiased fashoion” (p.&nbsp;13). However, with a more critical lens on the development of statistics and some of the assumptions made in the mathematical models, we need to consider more concretely about the role of <strong>theory</strong> and <strong>context</strong> in making inferences about data.</p>
+</section>
+<section id="what-should-it-mean-to-be-critical-in-the-context-of-statistics" class="slide level2">
+<h2>What should it mean to be critical in the context of statistics?</h2>
+<h3 id="notes-from-duncan-n.d.-reading.">Notes from <em>Duncan (n.d.)</em> reading.</h3>
+<p>On Canvas, in the Week 2 folder, there is a document titled “Critical Thinking” by Jennifer Duncan. This document is one example of how we can frame what it could or should mean to be critical in statistics. Please review this document.</p>
+</section>
+<section class="slide level2">
+
 <ul>
-<li><p>Identify two to three definitions of social justice to share.</p>
+<li><p><strong>Using a higher order of thinking</strong>. Duncan emphasizes that <em>critical thinking is a higher order of thinking</em> with different advanced thinking skills, and offers a few suggestions.</p>
 <ul>
-<li>Locate a few open source articles or periodicals.</li>
+<li><p>We base our thinking on logic and not on feelings.</p></li>
+<li><p>We should look deeper into inferences for hidden assumptions or values.</p></li>
+<li><p>Ask complex questions that help build a critical inquiry.</p></li>
 </ul></li>
-<li><p>What are the <em>similarities</em> between the different definitions?</p></li>
-<li><p>What are the <em>differences</em> between the different definitions?</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="framing-social-justice">Framing social justice</h3>
-<p>There are many different frameworks that have been developed to examine social justice.</p>
-<p>North (2006), as one example, discuss <em>three spheres of social justice</em> in the article “More Than Words? Delving Into the Substantive Meaning(s) of Social Justice in Education.” The abstract reads as follows:</p>
-<blockquote>
-<p>“At the dawning of the 21st century, the term”social justice” is appearing in numerous public texts and discourses throughout the field of education. However, and as Gewirtz argued in 1998, the conceptual underpinnings of this catchphrase frequently remain tacit or underexplored. This article elaborates Gewirtz’s earlier “mapping” of social justice theories by examining the tensions that emerge when various conceptualizations of social justice collide and, in turn, their implications for the field of education. By presenting a model of the complex, fraught interactions among diverse claims about social justice, the author seeks to promote continued dialogue and reflexivity on the purposes and possibilities of education for social justice.”</p>
-</blockquote>
-
-<img data-src="img/wk6-a-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><p class="caption">Three Spheres of Social Justice by <a href="https://journals.sagepub.com/doi/10.3102/00346543076004507" target="_blank">North (2006)</a></p><p>In her analysis, North deals specifically with three conceptions of social justice and their implications for educational research and practice. These frameworks, however, can be extended over to other fields of study. Consider how this framework might apply to your area of study.</p>
-</section>
-<section class="slide level2">
-
-<p>There are different ways to consider these interrelated systems in your theory construction.</p>
-<h4 id="macromicro">Macro/Micro</h4>
 <ul>
-<li><p><u>Macro</u>: Large-scale analyses, typically on systems or observations in the aggregate</p></li>
-<li><p><u>Micro</u>: Smaller-scale analyses, typically on individuals or localized contexts</p></li>
-</ul>
-<h4 id="samenessdifference">Sameness/Difference</h4>
+<li><p><strong>Asking complex questions</strong>. Duncan breaks down the process into a few sub-questions.</p>
 <ul>
-<li><p><u>Sameness</u>: Considering homogeneous structures or characteristics; similarity</p></li>
-<li><p><u>Difference</u>: Considering heterogeneous structures or characteristics; non-uniformity</p></li>
+<li><p>Who is the implied audience?</p></li>
+<li><p>What are the strengths and weaknesses of the argument?</p></li>
+<li><p>What are the underlying assumptions and values?</p></li>
+</ul></li>
 </ul>
-<h4 id="redistributionrecognition">Redistribution/Recognition</h4>
+</section>
+<section class="slide level2">
+
 <ul>
-<li><p><u>Redistribution</u>: Primary considerations in economic or material conditions</p></li>
-<li><p><u>Recognition</u>: Primary considerations in cultural or social conditions</p></li>
+<li><strong>Using a variety of thinking processes</strong>. Duncan defines a process around <em>analyzing</em>, <em>synthesizing</em>, <em>interpreting</em>, and <em>evaluating</em> information that helps with our thinking.</li>
 </ul>
 </section>
-<section id="part-ii-content" class="slide level2">
-<h2>Part II: Content</h2>
-<p>This week’s topics focus on bivariate analysis.</p>
-<p>The goal of a bivariate analysis is to understand the relationship between two variables.</p>
-<p>There are a few common ways to perform bivariate analysis:</p>
+<section class="slide level2">
+
 <ul>
-<li><p>Estimating differences in proportions</p></li>
-<li><p>Scatter plots</p></li>
-<li><p>Correlation coefficients</p></li>
-<li><p>Simple linear regression</p></li>
+<li><strong>Reflecting on how we answer a question</strong>. Duncan ends with a set of questions that help us think about different points of view, if we have clarity, and if more details are needed.</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="simple-linear-regression">Simple linear regression</h3>
-<p>A simple linear regression (sometimes referenced as a bivariate regression) is a linear equation describing the relationship between an <strong>explanatory</strong> variable and an <strong>outcome</strong> variable.</p>
-<p>There is an assumption that the explanatory variable influences the outcome variable, and not the other way around.</p>
-<p>Take, for example, a variable <span class="math inline">\(y_i\)</span> which denotes the <em>income</em> of some individual in a sample, and we index this data using <span class="math inline">\(i\)</span> where <span class="math inline">\(i \in \{1, 2, ..., n\}\)</span>. We can let some other variable in our data <span class="math inline">\(x_i\)</span> represent the <em>years of education</em> for the same individual. A simple linear regression equation of these variables take the following form: <span class="math display">\[y_i = b_0 + b_{1}x_{i} + e_i\]</span></p>
-<p>where <span class="math inline">\(b_1\)</span> is the sample estimate of the slope of the regression line with respect to the years of education and <span class="math inline">\(b_0\)</span> is the sample estimate for the vertical intercept of the regression line.</p>
+</section></section>
+<section>
+<section id="part-ii-content" class="title-slide slide level1 center">
+<h1>Part II: Content</h1>
+
 </section>
 <section class="slide level2">
 
-<h3 id="correlation-coefficients-and-scatterplots">Correlation coefficients and scatterplots</h3>
-<p>As a reminder, correlation ranges from -1 to 1. It gives us an indication on two things:</p>
+<p>The quantification of information can help us understand and represent important situations. We’ll begin by exploring the concept of a set, and how it is defined in mathematics and used to frame various situations.</p>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>DEFINITION</strong>: Set</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>set</strong> is a well-defined collection of elements or items.</p>
+</div>
+</div>
+</div>
+<p>A set is characterized by its contents, or what is generally referred to as a set’s <em>elements</em>. If we are given two sets, the sets are considered equal if and only if they have exactly the same elements. The basic relation for sets is that of membership in a particular set.</p>
 <ul>
-<li><p>The direction of the relationship between the two variables</p></li>
-<li><p>The strength of the relationship between the two variables</p></li>
+<li>We write <span class="math inline">\(x \in X\)</span> to indicate that the object <span class="math inline">\(x\)</span> is an element (or member) of the set <span class="math inline">\(X\)</span>.</li>
 </ul>
-<p>Any outliers can greatly impact the value of a correlation coefficient.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">plot</span>(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="week07_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section>
+</section>
 <section class="slide level2">
 
-<h3 id="estimating-differences-in-proportions">Estimating differences in proportions</h3>
-<p>When generating cross tabulations, we can make sense of a few bivariate tests:</p>
+<p><strong>A FEW IMPORTANT NOTES</strong>:</p>
+<p><strong>Note 1</strong>: We tend to <em>label sets using capital letters</em>.</p>
 <ul>
-<li><p>Differences in proportions</p></li>
-<li><p>Standard errors of the difference in proportions</p></li>
-<li><p>Confidence intervals for the differences</p></li>
-<li><p>T-test for differences in proportions</p></li>
+<li>For example, we may label two different sets as <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> or as <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</li>
+</ul>
+<p><strong>Note 2</strong>: We <em>use curly brackets</em> { and } <em>to enclose the elements of a set</em>.</p>
+<ul>
+<li>Parentheses ( and ) are often used to indicate a point like <span class="math inline">\((x, f(x))\)</span> or an open interval</li>
+<li>Square brackets [ and ] are often used to separate sets or to indicate a closed interval.</li>
+</ul>
+<p><strong>Note 3</strong>: We tend to <em>list the elements of a set using lower case letters</em> with subscripts, <span class="math inline">\(x_i\)</span>.</p>
+<ul>
+<li>The <span class="math inline">\(i\)</span> in <span class="math inline">\(x_i\)</span> is a subscript that is used as a “position indicator,” with <span class="math inline">\(i = 1, 2, 3, ...\)</span></li>
+<li>We use subscripts to index the elements of a set: <span class="math inline">\(X = \{x_1, x_2, ..., x_n\}\)</span> and <span class="math inline">\(A = \{a_1, a_2, ..., a_n\}\)</span>.</li>
 </ul>
 </section>
-<section id="part-iii-code" class="slide level2">
-<h2>Part III: Code</h2>
-</section>
 <section class="slide level2">
 
-<h3 id="write-preamble">Write preamble</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># ---</span></span>
-<span id="cb2-2"><a></a><span class="co"># title: Exploring associations between income and political party in the US</span></span>
-<span id="cb2-3"><a></a><span class="co"># subtitle: sample paper 2</span></span>
-<span id="cb2-4"><a></a><span class="co"># author: Nathan Alexander</span></span>
-<span id="cb2-5"><a></a><span class="co"># course: DATA 202 - fall 2023</span></span>
-<span id="cb2-6"><a></a><span class="co"># ---</span></span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="co"># research inquiry: does income relate to political party support in the US?</span></span>
-<span id="cb2-9"><a></a><span class="co"># data: 2020 sample data from the General Social Survey (GSS)</span></span>
-<span id="cb2-10"><a></a><span class="co"># note(s): variables should be mutated and recoded into two levels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>EXAMPLES – Sets as a collection of elements or items</strong></strong></p>
+</div>
+<div class="callout-content">
+<p>Sets can be defined in many different ways.</p>
+<ol type="i">
+<li><p>Consider a set of electronics <span class="math inline">\(E\)</span> = {laptop, phone, tablet, watch} = <span class="math inline">\(\{e_1, e_2, e_3, e_4\}\)</span></p></li>
+<li><p>Consider a set of friends <span class="math inline">\(F\)</span> = {Akeah, Brandon, Cris, Daveon, Evelyn}</p></li>
+<li><p>Consider a set of numbers <span class="math inline">\(N = \{1, 2, 3, ...\}\)</span> = <span class="math inline">\(\{n_1, n_2, n_3, ...\}\)</span>, so <span class="math inline">\(n_1 = 1\)</span>, <span class="math inline">\(n_2 = 2\)</span>, …</p></li>
+<li><p>Consider a set of sets <span class="math inline">\(S\)</span> = {{laptop, phone, tablet, watch}, {1, 2, 3, …}, …}</p></li>
+</ol>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-0-install-packages-and-load-libraries">step 0: install packages and load libraries</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-3"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-4"><a></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quantifying elements of a set allows us to perform mathematical <em>operations</em> on those elements.</p>
+<p>Together, the elements and operations combine to create <em>equations</em>, <em>functions</em>, and <em>models</em> that help us understand and communicate details about the elements of a set – which is a form of data.</p>
+<p>We will need a host of math concepts. The different sets of numbers can be a fun starting point.</p>
+</section>
+<section id="sets-and-numbers" class="slide level2">
+<h2>Sets and numbers</h2>
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>DEFINITIONS</strong>: Sets of numbers</strong></p>
+</div>
+<div class="callout-content">
+<p>– Natural numbers: <span class="math inline">\(\mathbb{N} = \{1, 2, 3, ...\}\)</span></p>
+<p>– Whole numbers: <span class="math inline">\(\mathbb{N_0} = \{0, 1, 2, 3, ...\}\)</span></p>
+<p>– Integers: <span class="math inline">\(\mathbb{Z} = \{..., -3, -2, -1, 0, 1, 2, 3, ...\}\)</span></p>
+<p>– Rational numbers: <span class="math inline">\(\mathbb{Q} = \Big\{\dfrac{p}{q}, p \in \mathbb{Z}, q \in \mathbb{Z}, q \neq 0 \Big\}\)</span></p>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-1-view-gss_cat-data-in-the-package-forcats">step 1: view <code>gss_cat</code> data in the package <code>forcats</code></h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">getwd</span>() <span class="co"># check working directory</span></span>
-<span id="cb4-2"><a></a>?gss_cat <span class="co"># view data documentation</span></span>
-<span id="cb4-3"><a></a>gss_cat <span class="co"># call data frame</span></span>
-<span id="cb4-4"><a></a><span class="fu">glimpse</span>(gss_cat) <span class="co"># glimpse data</span></span>
-<span id="cb4-5"><a></a><span class="fu">summary</span>(gss_cat) <span class="co"># view summary of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>DEFINITIONS</strong>: Sets of numbers, continued…</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p>Irrational numbers</p>
+<ul>
+<li>any number that is not a rational number; irrational means <em>not</em> rational (no ratio)</li>
+<li>e.g., you may know some irrational numbers such as <span class="math inline">\(\pi\)</span>, <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(e\)</span> (Euler’s number)</li>
+</ul></li>
+<li><p>Real numbers: <span class="math inline">\(\mathbb{R}\)</span></p>
+<ul>
+<li>The set of numbers on the real number line</li>
+<li>This set is constructed by combining the <em>rational</em> and <em>irrational</em> numbers</li>
+</ul></li>
+<li><p>Imaginary numbers: <span class="math inline">\(\mathbb{I}\)</span></p>
+<ul>
+<li>a number that has a negative value when it is squared</li>
+<li><span class="math inline">\(i\)</span> is the unit imaginary number, <span class="math inline">\(\sqrt{-1} = i\)</span> by definition</li>
+<li>so <span class="math inline">\(i\)</span> is a complex number since <span class="math inline">\(i^2 = -1\)</span></li>
+</ul></li>
+<li><p>Complex numbers: <span class="math inline">\(\mathbb{C}\)</span></p>
+<ul>
+<li>a number in the form <span class="math inline">\(a + bi\)</span> where <span class="math inline">\(a \in \mathbb{R}\)</span>, <span class="math inline">\(b \in \mathbb{R}\)</span>, and <span class="math inline">\(i\)</span> is an imaginary number</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-2-clean-and-manage-data">step 2: clean and manage data</h3>
+</section></section>
+<section>
+<section id="part-iii-code" class="title-slide slide level1 center">
+<h1>Part III: Code</h1>
+
+</section>
+<section id="getting-started-in-rstudio" class="slide level2">
+<h2>Getting started in RStudio</h2>
+<p>In <a href="computing.html">Lab 0</a>, you downloaded and installed base R and RStudio. In this section, we will learn more about R and RStudio.</p>
+<p>Let’s start with a little fun!</p>
+</section>
+<section class="slide level2">
+
+<p>First, install the ‘praise’ package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gss_cat_clean <span class="ot">&lt;-</span> gss_cat <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">na.omit</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">select</span>(year, rincome, partyid) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-4"><a></a>  <span class="fu">rename</span>(<span class="at">income =</span> rincome) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-5"><a></a>  <span class="fu">rename</span>(<span class="at">party =</span> partyid)</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a>gss_cat_clean <span class="co"># view cleaned data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># install the package</span></span>
+<span id="cb11-2"><a></a><span class="fu">install.packages</span>(<span class="st">"praise"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-3-subset-data-year-2000">step 3: subset data: year == 2000</h3>
+<p>Next, load the library for the ‘praise’ package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df <span class="ot">&lt;-</span> gss_cat_clean <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2000</span>)</span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="fu">head</span>(df) <span class="co"># view top of data</span></span>
-<span id="cb6-5"><a></a><span class="fu">tail</span>(df) <span class="co"># view bottom of data</span></span>
-<span id="cb6-6"><a></a><span class="fu">summary</span>(df) <span class="co"># check data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># load library</span></span>
+<span id="cb12-2"><a></a><span class="fu">library</span>(praise)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-4-inspect-and-transform-income-variable-into-two-levels">step 4: inspect and transform income variable into two levels</h3>
+<p>Now, get some praise!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="do">## create a frequency table of each level in the income variable</span></span>
-<span id="cb7-2"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(party)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="do">## drop 'No answer', 'Don't know', 'Refused', and 'Not applicable' levels</span></span>
-<span id="cb7-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb7-6"><a></a>  <span class="fu">filter</span>(income <span class="sc">!=</span> <span class="st">"No answer"</span>,</span>
-<span id="cb7-7"><a></a>         income <span class="sc">!=</span> <span class="st">"Don't know"</span>,</span>
-<span id="cb7-8"><a></a>         income <span class="sc">!=</span> <span class="st">"Refused"</span>,</span>
-<span id="cb7-9"><a></a>         income <span class="sc">!=</span> <span class="st">"Not applicable"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-10"><a></a>  <span class="fu">droplevels</span>() <span class="co"># use droplevels() to remove levels from variable for factors</span></span>
-<span id="cb7-11"><a></a></span>
-<span id="cb7-12"><a></a><span class="do">## use levels() function to view levels for income variable</span></span>
-<span id="cb7-13"><a></a><span class="fu">levels</span>(df<span class="sc">$</span>income)</span>
-<span id="cb7-14"><a></a></span>
-<span id="cb7-15"><a></a><span class="do">## create two levels: below $20,000 and above $20,000</span></span>
-<span id="cb7-16"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb7-17"><a></a>  <span class="fu">mutate</span>(<span class="at">income =</span> <span class="fu">fct_recode</span>(income, </span>
-<span id="cb7-18"><a></a>                             <span class="st">"More than 20000"</span> <span class="ot">=</span> <span class="st">"$25000 or more"</span>,</span>
-<span id="cb7-19"><a></a>                             <span class="st">"More than 20000"</span> <span class="ot">=</span> <span class="st">"$20000 - 24999"</span>,</span>
-<span id="cb7-20"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$15000 - 19999"</span>,</span>
-<span id="cb7-21"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$10000 - 14999"</span>,</span>
-<span id="cb7-22"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$8000 to 9999"</span>,</span>
-<span id="cb7-23"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$7000 to 7999"</span>,</span>
-<span id="cb7-24"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$6000 to 6999"</span>,</span>
-<span id="cb7-25"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$5000 to 5999"</span>,</span>
-<span id="cb7-26"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$4000 to 4999"</span>,</span>
-<span id="cb7-27"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$3000 to 3999"</span>,</span>
-<span id="cb7-28"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"$1000 to 2999"</span>,</span>
-<span id="cb7-29"><a></a>                             <span class="st">"Less than 20000"</span> <span class="ot">=</span> <span class="st">"Lt $1000"</span>))</span>
-<span id="cb7-30"><a></a></span>
-<span id="cb7-31"><a></a><span class="do">## view a summary of your transformed data frame</span></span>
-<span id="cb7-32"><a></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># get some praise</span></span>
+<span id="cb13-2"><a></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can keep inserting the code above to get praise when you need it!</p>
+</section>
+<section id="arithmetic-in-r" class="slide level2">
+<h2>Arithmetic in R</h2>
+<p>We will learn how to calculate values in R.</p>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span>  <span class="co"># the 'plus sign' computes the sum</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-5-inspect-and-transform-party-variable-into-two-levels">step 5: inspect and transform party variable into two levels</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="do">## create a frequency table of each level in the party variable</span></span>
-<span id="cb8-2"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(party)</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="do">## drop 'No answer', 'Independent' and 'Other Party' levels</span></span>
-<span id="cb8-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  </span>
-<span id="cb8-6"><a></a>  <span class="fu">filter</span>(party <span class="sc">!=</span> <span class="st">"No answer"</span>,</span>
-<span id="cb8-7"><a></a>         party <span class="sc">!=</span> <span class="st">"Independent"</span>,</span>
-<span id="cb8-8"><a></a>         party <span class="sc">!=</span> <span class="st">"Other party"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-9"><a></a>  <span class="fu">droplevels</span>() <span class="co"># use droplevels() to remove levels from variable for factors</span></span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a><span class="do">## create two levels: 'Republican' and 'Democrat'</span></span>
-<span id="cb8-12"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb8-13"><a></a>  <span class="fu">mutate</span>(<span class="at">party =</span> <span class="fu">fct_recode</span>(party,</span>
-<span id="cb8-14"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Strong republican"</span>,</span>
-<span id="cb8-15"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Not str republican"</span>,</span>
-<span id="cb8-16"><a></a>                            <span class="st">"Republican"</span> <span class="ot">=</span> <span class="st">"Ind,near rep"</span>,</span>
-<span id="cb8-17"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Ind,near dem"</span>,</span>
-<span id="cb8-18"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Not str democrat"</span>,</span>
-<span id="cb8-19"><a></a>                            <span class="st">"Democrat"</span> <span class="ot">=</span> <span class="st">"Strong democrat"</span>))</span>
-<span id="cb8-20"><a></a></span>
-<span id="cb8-21"><a></a><span class="do">## remove year from data frame</span></span>
-<span id="cb8-22"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb8-23"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>year)</span>
-<span id="cb8-24"><a></a></span>
-<span id="cb8-25"><a></a><span class="do">## view a summary of the data to check for any errors</span></span>
-<span id="cb8-26"><a></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="dv">2</span> <span class="sc">-</span> <span class="dv">3</span>  <span class="co"># the 'minus sign' computes the difference</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-6-visualize-data">step 6: visualize data</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="do">## create a frequency table and bar graph of income </span></span>
-<span id="cb9-2"><a></a>table.income <span class="ot">=</span> <span class="fu">table</span>(df<span class="sc">$</span>income)</span>
-<span id="cb9-3"><a></a>table.income</span>
-<span id="cb9-4"><a></a><span class="fu">barplot</span>(table.income,</span>
-<span id="cb9-5"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Income"</span>,</span>
-<span id="cb9-6"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Income"</span>,</span>
-<span id="cb9-7"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="do">## the below code produces the same output as above with specifications</span></span>
-<span id="cb10-2"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(df<span class="sc">$</span>income),</span>
-<span id="cb10-3"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Income"</span>,</span>
-<span id="cb10-4"><a></a>        <span class="at">col =</span> <span class="st">"lightgreen"</span>,</span>
-<span id="cb10-5"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Income"</span>,</span>
-<span id="cb10-6"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
-<span id="cb10-7"><a></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">650</span>)) <span class="co"># this y-axis range: (0, 650) works best for my plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="do">## create a frequency table and bar graph of party </span></span>
-<span id="cb11-2"><a></a>table.party <span class="ot">=</span> <span class="fu">table</span>(df<span class="sc">$</span>party)</span>
-<span id="cb11-3"><a></a>table.party</span>
-<span id="cb11-4"><a></a><span class="fu">barplot</span>(table.party,</span>
-<span id="cb11-5"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Party"</span>,</span>
-<span id="cb11-6"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Party"</span>,</span>
-<span id="cb11-7"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="do">## the below code produces the same output as above with specifications</span></span>
-<span id="cb12-2"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(df<span class="sc">$</span>party),</span>
-<span id="cb12-3"><a></a>        <span class="at">main =</span> <span class="st">"Bar graph of Party"</span>,</span>
-<span id="cb12-4"><a></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>),</span>
-<span id="cb12-5"><a></a>        <span class="at">xlab =</span> <span class="st">"Respondent Party"</span>,</span>
-<span id="cb12-6"><a></a>        <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
-<span id="cb12-7"><a></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">600</span>)) <span class="co"># this y-axis range: (0, 550) works best for my plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="do">## create a stacked bar plot of the proportions</span></span>
-<span id="cb13-2"><a></a><span class="do">#### question: which of the two plots do you prefer, why?</span></span>
-<span id="cb13-3"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>income, df<span class="sc">$</span>party)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="do">## the below code produces similar outputs as above with specifications</span></span>
-<span id="cb15-2"><a></a><span class="fu">plot</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb15-3"><a></a>     <span class="at">main =</span> <span class="st">"Mosaic Plot of Political Party and Income"</span>,</span>
-<span id="cb15-4"><a></a>     <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"lightyellow"</span>,<span class="st">"lightgreen"</span>),</span>
-<span id="cb15-5"><a></a>     <span class="at">xlab =</span> <span class="st">"Political Party"</span>,</span>
-<span id="cb15-6"><a></a>     <span class="at">ylab =</span> <span class="st">"Income"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">4</span>  <span class="co"># the 'asterisk' computes the product</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-7-create-a-basic-cross-tab-for-manual-calculations">step 7: create a basic cross tab for manual calculations</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="do">## gather sample size</span></span>
-<span id="cb16-2"><a></a>n <span class="ot">=</span> <span class="fu">count</span>(df)</span>
-<span id="cb16-3"><a></a>n</span>
-<span id="cb16-4"><a></a></span>
-<span id="cb16-5"><a></a><span class="do">## view a basic cross tabulation</span></span>
-<span id="cb16-6"><a></a><span class="fu">table</span>(df<span class="sc">$</span>income, df<span class="sc">$</span>party)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="dv">4</span> <span class="sc">/</span> <span class="dv">5</span> <span class="co"># the 'forward slash' computes the quotient</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-8-bivariate-analysis">step 8: bivariate analysis</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="do">## load required libraries (and packages, where needed)</span></span>
-<span id="cb17-2"><a></a><span class="fu">install.packages</span>(<span class="st">"descr"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb17-3"><a></a><span class="fu">library</span>(descr)</span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a><span class="fu">install.packages</span>(<span class="st">"Hmisc"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb17-6"><a></a><span class="fu">library</span>(Hmisc)</span>
-<span id="cb17-7"><a></a></span>
-<span id="cb17-8"><a></a><span class="do">## create a cross tab (list dependent variable in your hypothesis first)</span></span>
-<span id="cb17-9"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span>
-<span id="cb17-10"><a></a></span>
-<span id="cb17-11"><a></a><span class="do">## add column percentages to the cross tab</span></span>
-<span id="cb17-12"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb17-13"><a></a>         <span class="at">prop.c=</span>T) <span class="co"># add column percentages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="do">## add row percentages to the cross tab</span></span>
-<span id="cb18-2"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb18-3"><a></a>         <span class="at">prop.r=</span>T) <span class="co"># add row percentages</span></span>
-<span id="cb18-4"><a></a></span>
-<span id="cb18-5"><a></a><span class="do">## get expected frequencies and cell chi-square contributions</span></span>
-<span id="cb18-6"><a></a><span class="fu">crosstab</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income,</span>
-<span id="cb18-7"><a></a>         <span class="at">expected =</span> T, <span class="co"># get expected values</span></span>
-<span id="cb18-8"><a></a>         <span class="at">prop.chisq=</span>T) <span class="co"># get chi-square contribution</span></span>
-<span id="cb18-9"><a></a></span>
-<span id="cb18-10"><a></a><span class="do">## get critical value of chi-square, p=.05, df=1</span></span>
-<span id="cb18-11"><a></a><span class="do">#### recall: df = (r-1)(c-1)</span></span>
-<span id="cb18-12"><a></a><span class="fu">qchisq</span>(.<span class="dv">05</span>, <span class="dv">1</span>, <span class="at">lower.tail=</span>F)</span>
-<span id="cb18-13"><a></a></span>
-<span id="cb18-14"><a></a><span class="do">## get chi-square statistic</span></span>
-<span id="cb18-15"><a></a><span class="fu">chisq.test</span>(df<span class="sc">$</span>party, df<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># from hw exercise 0.2, we can compute the sum of the first 100 positive integers</span></span>
+<span id="cb22-2"><a></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5050</code></pre>
+</div>
+</div>
+</section>
+<section id="variables-in-r" class="slide level2">
+<h2>Variables in R</h2>
+<p>We will learn to give a variable (or character) a value.</p>
+</section>
+<section class="slide level2">
+
+<p>Use the different assignment operators</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>y <span class="ot">=</span> <span class="dv">2</span> <span class="co"># the equal sign can be used as an assignment operator</span></span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>y <span class="ot">&lt;-</span><span class="dv">2</span> <span class="co"># a "less than" sign and dash can also be used as an assignment operator</span></span>
+<span id="cb24-4"><a></a></span>
+<span id="cb24-5"><a></a>y <span class="co"># R stores all values you assign, so you must "call" any variables to see their values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="step-9-describe-some-initial-limitations-of-analysis">step 9: describe some initial limitations of analysis</h3>
+<p>Set x equal to two added to three</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="do">### limitation 1: sampling error</span></span>
-<span id="cb19-2"><a></a><span class="co"># data come from a sample and there are likely differences in other samples</span></span>
-<span id="cb19-3"><a></a></span>
-<span id="cb19-4"><a></a><span class="do">### limitation 2: category reductions</span></span>
-<span id="cb19-5"><a></a><span class="co"># creating two levels for the variables greatly impacted the diversity of responses</span></span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a><span class="do">### limitation 3: cases dropped</span></span>
-<span id="cb19-8"><a></a><span class="co"># sample was further impacted by the number of values dropped in the analysis</span></span>
-<span id="cb19-9"><a></a></span>
-<span id="cb19-10"><a></a><span class="do">### limitation 4: chi-square test</span></span>
-<span id="cb19-11"><a></a><span class="co"># the chi-square test does not tell us about the strength or direction of association</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>x <span class="ot">=</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span></span>
+<span id="cb26-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="next-up-week-7"><strong>Next up</strong>: Week 7</h3>
+<p>Set y equal to two minus three</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>y <span class="ot">=</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">3</span></span>
+<span id="cb28-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Set z equal to two times three</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>z <span class="ot">=</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span></span>
+<span id="cb30-2"><a></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Overwrite the value of y by setting y equal to x divided by z</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>y <span class="ot">=</span> x <span class="sc">/</span> z</span>
+<span id="cb32-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8333333</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Paper 1 is due on Monday September 16 at 11:59pm ET</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>In the next module, we will continue our explorations in R by learning how to load data sets into our data frame, and perform some basic operations using some additional packages. These packages will allow us to consider how we can construct original data sets to develop unique questions for our analysis.</p>
+</section></section>
+<section id="references" class="title-slide slide level1 center">
+<h1>References</h1>
 
 <div class="quarto-auto-generated-content">
 <p><img src="img/howard-logo.jpg" class="slide-logo"></p>
