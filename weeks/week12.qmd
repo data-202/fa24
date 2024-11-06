@@ -119,17 +119,23 @@ In statistics, we often inquire about the relationship between two variables, $X
 
 These variables are sets that contain values (observations) as noted before. To launch our discussion, we will begin with a sample line.
 
-```{r}
+```{r, echo=T}
 plot(0:10, type="l", main = "A sample line", xlab = "X-axis", ylab = "Y-axis")
 ```
+
+---
 
 #### Matheamtics and exact relationships
 
 In mathematics, two variables, $x$ and $y$ may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.
 
+---
+
 ##### A straight line
 
 The line in the graphic above follows the standard notation: $$y = a + bX$$
+
+---
 
 #### Statistical modeling and inexact relationships
 
@@ -255,13 +261,19 @@ df <- data.frame(
 
 ```{r}
 desc(df$income)
+```
 
+---
+
+```{r}
 # Bar plot of the categorical variable (race)
 ggplot(df, aes(x = race)) +
   geom_bar(fill = "steelblue") +
   labs(x = "Race", y = "Count") +
   ggtitle("Distribution of Races")
+```
 
+```{r}
 # Box plot of income by race
 ggplot(df, aes(x = race, y = income)) +
   geom_boxplot(fill = "lightgray", color = "steelblue") +
