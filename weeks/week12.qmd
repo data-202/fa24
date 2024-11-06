@@ -163,15 +163,21 @@ Let us take two variables, $x$ and $y$.
 cor(x, y)
 ```
 
+---
+
 ```{r}
 # Fit simple linear regression model
 model <- lm(y ~ x)
 ```
 
+---
+
 ```{r}
 # Examine regression outputs
 summary(model)
 ```
+
+---
 
 ```{r}
 # Check regression coefficients
@@ -179,16 +185,22 @@ coeff <- coef(model)
 coeff
 ```
 
+---
+
 ```{r}
 # Check R-squared value
 rsq <- summary(model)$r.squared
 rsq
 ```
 
+---
+
 ```{r}
 # Generate predictions
 pred <- predict(model) # call this object to show the predicted values of the model
 ```
+
+---
 
 ```{r}
 # Plot the regression line
@@ -196,11 +208,15 @@ plot(x, y)
 abline(model, col="blue")
 ```
 
+---
+
 ```{r}
 # Check residuals
 resids <- residuals(model)
 plot(x, resids)
 ```
+
+---
 
 ```{r}
 # Diagnostic plots
@@ -208,18 +224,14 @@ par(mfrow=c(2,2))
 plot(model)
 ```
 
+---
+
 ```{r}
 # Check significance of predictor
 anova(model)
 ```
 
-#### Examining plots
-
-##### Scatter plots
-
-##### Bar plots
-
-##### Histograms
+---
 
 #### Analyzing a categorical and a numeric variable
 
@@ -238,6 +250,8 @@ df <- data.frame(
   income = c(25000, 35000, 42000, 31000, 27000, 38000, 29000, 40000, 32000, 39000)
 )
 ```
+
+---
 
 ```{r}
 desc(df$income)
@@ -261,14 +275,12 @@ In previous lectures, we discussed some methods to hypothesize around the relati
 
 ## Part III: Code
 
-This week we'll explore the GSS data in more detail. This is a reminder to deepen your understanding of the General Social Survey (GSS) using the notes provided below from [week 11](week11.qmd).
+This week we'll explore the GSS and ANES data in more detail. This is a reminder to deepen your understanding of the data set you will use based on the notes provided below from [week 11](week11.qmd).
 
 ### General Social Survey
 
 This week we'll return to our examination of the General Social Survey (GSS) data.
 
 As a first task, please identify up to two or three variables that you can utilize to follow along with your analysis.
-
-
 
 ### **Next up**: Week 13
