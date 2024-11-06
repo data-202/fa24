@@ -4,16 +4,24 @@ author: "Nathan Alexander"
 output: html_document
 ---
 
-The pacakge for the ANES data is located [here](https://github.com/jamesmartherus/anesr).
+There are at least two packages at the time of this file's compilation for the ANES data.
+
+One package `anesr` is located [here](https://github.com/jamesmartherus/anesr).
+
+You can find the documentation for the other package `anesrake` [here](https://cran.r-project.org/web/packages/anesrake/anesrake.pdf).
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 library(devtools)
+
 install_github("jamesmartherus/anesr")
+install.packages("anesrake")
 ```
 
-A few examples on how to access data and use the pacakge are provided below:
+A few examples on how to access data and use the package are provided below:
+
+## ANESR
 
 ```{r}
 library(anesr)
@@ -37,4 +45,10 @@ View the pilot data from 2018.
 ```{r}
 df <- pilot_2018
 df
+```
+
+## ANESRAKE
+
+```{r}
+library(anesrake)
 ```
