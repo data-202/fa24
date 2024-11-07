@@ -6,7 +6,6 @@ output: html_document
 
 The package `gssr` is located [here](https://kjhealy.github.io/gssr/).
 
-
 We will run through a sample analysis using the `gssr` package.
 
 ```{r}
@@ -42,26 +41,7 @@ library(tidyr)
 #| warning: false
 # load the master documentation files
 data(gss_all) # note that this is a large file of all GSS data
-data(gss_doc) # this is the documentation for the GSS data
-```
-
----
-
-#### View information on a specific variable
-
-```{r}
-# view information on a specific variable
-gss_doc %>% filter(id == "race") %>% 
-  select(id, description, text)
-
-gss_doc %>% filter(id == "sex") %>% 
-  select(id, description, text)
-
-gss_doc %>% filter(id == "hrs2") %>% 
-  select(id, description, text)
-
-gss_doc %>% filter(id == "educ") %>% 
-  select(id, description, text)
+data(gssrdoc) # this is the documentation for the GSS data
 ```
 
 ---
@@ -87,29 +67,11 @@ gss_all %>%
 #| echo: true
 #| output: true
 #| warning: false
-# get information on the properties of the data
-gss_get_props(varnames = c("race", "sex", "hrs1", "educ"))
-```
-
----
-
-```{r}
-#| echo: true
-#| output: true
-#| warning: false
 # loading single year data
 gss12 <- gss_get_yr(2012)
-```
+gss22 <- gss_get_yr(2022)
 
----
-
-```{r}
-#| echo: true
-#| output: true
-#| warning: false
-# loading panel data by year (not necessary for our course)
-data(gss_panel08_long) # 2008 three wave panel data (2008, 2010, 2012)
-data(gss_panel_doc) # loading panel documentation
+# View(gss22)
 ```
 
 ---
@@ -148,23 +110,7 @@ df
 
 ---
 
-```{r}
-# run your model and diagnostic plots
-model2 <- lm(df$educ ~ df$hrs2)
-summary(model2)
-# Plot the regression line
-plot(df$educ, df$hrs2)
-abline(model2, col="blue")
-# Check residuals
-resids2 <- residuals(model2)
-plot(df$educ, resids2)
-# Diagnostic plots
-par(mfrow=c(2,2))
-plot(model2)
-# Check significance of predictor
-anova(model2)
-```
-
+# Model 1
 
 ---
 
@@ -240,15 +186,57 @@ summary(model)
 
 # Plot the variable relationships 
 
+Here, I use some dated code, namely the base R abline() function discussed in class.
+
 ```{r}
 #| echo: true
 #| output: true
 #| warning: false
 # Plot the regression line
 plot(gss12_analysis$educ, gss12_analysis$hrs2)
-abline(model, col="blue")
+
+# Some alternate code
+plot(gss12_analysis$educ, gss12_analysis$hrs2, 
+     main="Education vs Hours Worked",
+     xlab="Years of Education", 
+     ylab="Hours Worked")
+
+# Add the regression line
+abline(lm(hrs2 ~ educ, data = gss12_analysis), col = "red")
 ```
 
+---
+
+Here, I use some more frequent code with additional parameters given that we've made a ggplot object. The code also provides some labels to our plot.
+
+# Plot the variable relationships 
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+
+# Create a basic scatter plot
+plot(gss12_analysis$educ, gss12_analysis$hrs2, 
+     main="Education vs Hours Worked",
+     xlab="Years of Education", 
+     ylab="Hours Worked",
+     pch=16,  # Use filled circles for points
+     col="blue",  # Make the points blue
+     cex=0.8)  # Slightly smaller point size
+
+# Add the regression line
+abline(model, col = "red", lwd = 2)
+
+# Add a legend
+legend("topleft", legend=c("Data points", "Regression line"),
+       col=c("blue", "red"), pch=c(16, NA), lty=c(NA, 1))
+
+# Add text for R-squared value
+r_squared <- summary(model)$r.squared
+text(x = max(gss12_analysis$educ), y = min(gss12_analysis$hrs2), 
+     labels = paste("R-squared =", round(r_squared, 3)), 
+     pos = 2)
+```
 ---
 
 # Examine residuals
@@ -282,6 +270,32 @@ plot(model)
 #| warning: false
 # Check significance of predictor
 anova(model)
+```
+
+---
+
+# Model 2
+
+```{r}
+# run your model and diagnostic plots
+model2 <- lm(df$educ ~ df$hrs2)
+summary(model2)
+
+pred <- predict(model2) 
+
+# Plot the scatterplot
+plot(df$educ, df$hrs2)
+
+# Check residuals
+resids2 <- residuals(model2)
+plot(df$educ, resids2)
+
+# Diagnostic plots
+par(mfrow=c(2,2))
+plot(model2)
+
+# Check significance of predictor
+anova(model2)
 ```
 
 ---

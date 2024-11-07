@@ -123,19 +123,19 @@ These variables are sets that contain values (observations) as noted before. To 
 plot(0:10, type="l", main = "A sample line", xlab = "X-axis", ylab = "Y-axis")
 ```
 
----
+------------------------------------------------------------------------
 
 #### Matheamtics and exact relationships
 
 In mathematics, two variables, $x$ and $y$ may be related to each other in various ways. These relationships form the basis for many inquiries in statistics. However, mathematical modeling most often involves identifying the parameters in which we can use to assess the validity of the stated relationship. In this way, we examine the difference between exact and inexact relationships.
 
----
+------------------------------------------------------------------------
 
 ##### A straight line
 
 The line in the graphic above follows the standard notation: $$y = a + bX$$
 
----
+------------------------------------------------------------------------
 
 #### Statistical modeling and inexact relationships
 
@@ -169,21 +169,21 @@ Let us take two variables, $x$ and $y$.
 cor(x, y)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Fit simple linear regression model
 model <- lm(y ~ x)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Examine regression outputs
 summary(model)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Check regression coefficients
@@ -191,7 +191,7 @@ coeff <- coef(model)
 coeff
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Check R-squared value
@@ -199,14 +199,14 @@ rsq <- summary(model)$r.squared
 rsq
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Generate predictions
 pred <- predict(model) # call this object to show the predicted values of the model
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Plot the regression line
@@ -214,7 +214,7 @@ plot(x, y)
 abline(model, col="blue")
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Check residuals
@@ -222,7 +222,7 @@ resids <- residuals(model)
 plot(x, resids)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Diagnostic plots
@@ -230,14 +230,14 @@ par(mfrow=c(2,2))
 plot(model)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Check significance of predictor
 anova(model)
 ```
 
----
+------------------------------------------------------------------------
 
 #### Analyzing a categorical and a numeric variable
 
@@ -257,13 +257,13 @@ df <- data.frame(
 )
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 desc(df$income)
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r}
 # Bar plot of the categorical variable (race)
