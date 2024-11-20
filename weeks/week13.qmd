@@ -60,11 +60,11 @@ More generally, equality focuses on treating everyone the same, while equity emp
 
 There are many ways to take a theoretical approach to social justice, and often too many to list. As a result, it may be helpful for us to consider the principles of social justice as a framework to adapt your specific analyses (using real-world data) and your theoretical framework to a subset of these principles.
 
-| Principle  | Component 1       | Component 2           | Component 3               |
+| Principle | Component 1 | Component 2 | Component 3 |
 |------------------|------------------|------------------|------------------|
-| Fairness   | Equal opportunity | Systemic disadvantage | Reducing inequality       |
-| Solidarity | Social cohesion   | Self-determination    | Collective responsibility |
-| Dignity    | Human rights      | Worth of all          | Combating marginalization |
+| Fairness | Equal opportunity | Systemic disadvantage | Reducing inequality |
+| Solidarity | Social cohesion | Self-determination | Collective responsibility |
+| Dignity | Human rights | Worth of all | Combating marginalization |
 
 : Principles of social justice {.striped .hover}
 
@@ -74,12 +74,12 @@ There are many ways to take a theoretical approach to social justice, and often 
 
 Just as there are many theoretical entry points to social justice, there are also dimensional components that may be used to help focus your analysis. These dimensions help to clarify the specific principles noted above in a more concrete way. Importantly, these principles and dimensions are neither rigid or fixed.
 
-| Dimension         | Component 1                               | Component 2                                                       | Component 3                                    |
+| Dimension | Component 1 | Component 2 | Component 3 |
 |------------------|------------------|------------------|------------------|
-| Economic          | Poverty and income inequality             | Fair distribution of resources and wealth                         | Access to education, employment, healthcare    |
-| Environmental     | Protecting and preserving the environment | Mitigating environmental degradation                              | Ensuring equitable access to natural resources |
-| Racial and ethnic | Combating racism and discrimination       | Promoting racial and ethnic equality                              | Recognizing and valuing cultural diversity     |
-| Gender and LGBTQ+ | Achieving gender equality and empowerment | Addressing discrimination based on sexuality or gender expression | Ensuring equal rights for all genders          |
+| Economic | Poverty and income inequality | Fair distribution of resources and wealth | Access to education, employment, healthcare |
+| Environmental | Protecting and preserving the environment | Mitigating environmental degradation | Ensuring equitable access to natural resources |
+| Racial and ethnic | Combating racism and discrimination | Promoting racial and ethnic equality | Recognizing and valuing cultural diversity |
+| Gender and LGBTQ+ | Achieving gender equality and empowerment | Addressing discrimination based on sexuality or gender expression | Ensuring equal rights for all genders |
 
 : Dimensions of social justice {.striped .hover}
 
@@ -214,5 +214,6 @@ z <- -4 + 3*x - rnorm(100)
 
 ## Part III: Code
 
+We will discuss specific code for your projects.
 
 ### Next up: Week 14

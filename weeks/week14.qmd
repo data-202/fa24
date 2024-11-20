@@ -539,31 +539,48 @@ When an interaction term (e.g., horsepower \* weight) is included in the model, 
 
 ------------------------------------------------------------------------
 
-### Sample code discussed in class
-
+```{r}
 # do some exploratory analysis on the survey data in the MASS package
 
-library(dplyr) survey survey \<- as_tibble(survey)
+library(dplyr) 
+survey 
+
+survey <- as_tibble(survey)
 
 # check the structure of the data
 
-str(survey) pairs(survey)
+str(survey) 
+
+pairs(survey)
 
 # subset the data
 
-survey %\>% select(Wr.Hnd, NW.Hnd, Pulse, Height, Age) -\> df1 df1 pairs(df1)
+survey %>% 
+  select(Wr.Hnd, NW.Hnd, Pulse, Height, Age) -> df1 
+df1 
+pairs(df1)
 
 # build our model with one indicator
 
-mlm1 \<- lm(cbind(df1$Height, df1$Pulse) \~ df1\$Age) mlm1 \<- lm(cbind(Height, Pulse) \~ Age, data = df1) summary(mlm1)
+mlm1 <- lm(cbind(df1$Height, df1$Pulse) ~ df1$Age) 
+
+mlm1 <- lm(cbind(Height, Pulse) ~ Age, data = df1) 
+
+summary(mlm1)
 
 # build our model with more than one indicator
 
-mlm2 \<- lm(cbind(Height, Pulse) \~ Age + Wr.Hnd + NW.Hnd, data = df1) summary(mlm2)
+mlm2 <- lm(cbind(Height, Pulse) ~ Age + Wr.Hnd + NW.Hnd, data = df1) 
 
-head(resid(mlm1)) \# residuals head(fitted(mlm1)) \# estimates fitted for the model
+summary(mlm2)
 
-head(resid(mlm2)) \# residuals head(fitted(mlm2)) \# estimates fitted for the model
+head(resid(mlm1)) # residuals 
+
+head(fitted(mlm1)) # estimates fitted for the model
+
+head(resid(mlm2)) # residuals 
+
+head(fitted(mlm2)) # estimates fitted for the model
 
 # gather coefficients
 
@@ -572,6 +589,7 @@ coef(mlm2)
 # variance-covariance matrix
 
 vcov(mlm2)
+```
 
 ------------------------------------------------------------------------
 

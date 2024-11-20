@@ -1,0 +1,17 @@
+{
+  "hash": "4d5166fa8cb4ab3af0681a787e56d2f7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"American National Election Survey (ANES) data\"\nauthor: \"Nathan Alexander\"\noutput: html_document\n---\n\n\n\n\n\nThere are at least two packages at the time of this file's compilation for the ANES data.\n\nOne package `anesr` is located [here](https://github.com/jamesmartherus/anesr).\n\nYou can find the documentation for the other package `anesrake` [here](https://cran.r-project.org/web/packages/anesrake/anesrake.pdf).\n\n\n\n\n\n\n\n\n\n\n\nA few examples on how to access data and use the package are provided below:\n\n## ANESR\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(anesr)\ndata(package=\"anesr\") #View a list of available datasets\n\ndata(timeseries_cum) #Load Time Series Cumulative File (1948-2016)\ndata(timeseries_cum_doc) #Load documentation for the Time Series Cumulative File\n\ndata(pilot_2018) #Load 2018 Pilot Study\n```\n:::\n\n\n\n\n\nView the documentation for the data. Be sure to put `echo=F` to remove the very long output.\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\nView the pilot data from 2018.\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndf <- pilot_2018\ndf\n```\n:::\n\n\n\n\n\n## ANESRAKE\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(anesrake)\n```\n:::\n",
+    "supporting": [
+      "anes_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

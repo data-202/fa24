@@ -15,15 +15,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(devtools)
 
-install_github("jamesmartherus/anesr")
-install.packages("anesrake")
+install_github("jamesmartherus/anesr", repos = "http://cran.us.r-project.org")
+install.packages("anesrake", repos = "http://cran.us.r-project.org")
 ```
 
 A few examples on how to access data and use the package are provided below:
 
 ## ANESR
 
-```{r}
+```{r, eval=FALSE}
 library(anesr)
 data(package="anesr") #View a list of available datasets
 
@@ -35,20 +35,20 @@ data(pilot_2018) #Load 2018 Pilot Study
 
 View the documentation for the data. Be sure to put `echo=F` to remove the very long output.
 
-```{r, echo=F}
+```{r, echo=F, eval=FALSE}
 timeseries_cum
 timeseries_cum_doc
 ```
 
 View the pilot data from 2018.
 
-```{r}
+```{r, eval=FALSE}
 df <- pilot_2018
 df
 ```
 
 ## ANESRAKE
 
-```{r}
+```{r, eval=FALSE}
 library(anesrake)
 ```

@@ -18,9 +18,9 @@ subtitle: "Statistically Measuring and Modeling Social Justice"
 |  | [10](weeks/week10.html) | Wed, Oct 23 | [Notes on causal theories](weeks/week10-slides.html) | [Lab 2](labs/lab2.html) |  |  |
 |  | [11](weeks/week11.html) | Wed, Oct 30 | [Modeling social in/justice](weeks/week11-slides.html) |  |  |  |
 |  | [12](weeks/week12.html) | Wed, Nov 6 | [On regression](weeks/week12-slides.html) |  | [Paper 2](papers/paper2.html) |  |
-| IV | [13](weeks/week13.html) | Wed, Nov 13 | [More on regression](weeks/week13-slides.html) | [Lab 3](labs/lab3.html) |  |  |
-|  | [14](weeks/week14.html) | Wed, Nov 20 | [Statistical learning](weeks/week14-slides.html) |  |  |  |
-|  | [15](weeks/week15.html) | Wed, Nov 27 | [Overview of additional models](weeks/week15-slides.html) |  | [Paper 3](papers/paper3.html) |  |
+| IV | [13](weeks/week13.html) | Wed, Nov 13 | [More on regression](weeks/week13-slides.html) |  |  |  |
+|  | [14](weeks/week14.html) | Wed, Nov 20 | [Statistical learning](weeks/week14-slides.html) | [Lab 3](labs/lab3.html) |  |  |
+|  | [15](weeks/week15.html) | Wed, Dec 4 | [Overview of additional models](weeks/week15-slides.html) |  | [Paper 3](papers/paper3.html) |  |
 :::
 
 ## Site Description
