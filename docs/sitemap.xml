@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/data-202/schedule.html</loc>
-    <lastmod>2024-11-06T21:00:46.217Z</lastmod>
+    <lastmod>2024-11-20T22:08:52.645Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/data-202/data/gssr.html</loc>
+    <lastmod>2024-11-07T00:58:43.622Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/computing.html</loc>
@@ -66,11 +70,11 @@
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week12.html</loc>
-    <lastmod>2024-11-06T21:12:03.563Z</lastmod>
+    <lastmod>2024-11-07T01:03:27.490Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week12-slides.html</loc>
-    <lastmod>2024-11-06T22:26:07.354Z</lastmod>
+    <lastmod>2024-11-07T01:03:27.490Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week09.html</loc>
@@ -102,11 +106,11 @@
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week13-slides.html</loc>
-    <lastmod>2024-10-30T19:53:27.742Z</lastmod>
+    <lastmod>2024-11-20T21:44:30.604Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week13.html</loc>
-    <lastmod>2024-10-30T19:53:27.742Z</lastmod>
+    <lastmod>2024-11-20T21:44:30.604Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week11-slides.html</loc>
@@ -126,15 +130,15 @@
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week14-slides.html</loc>
-    <lastmod>2024-11-20T22:03:18.547Z</lastmod>
+    <lastmod>2024-11-20T22:09:56.349Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week14.html</loc>
-    <lastmod>2024-11-20T22:03:18.547Z</lastmod>
+    <lastmod>2024-11-20T22:09:56.349Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week15-slides.html</loc>
-    <lastmod>2024-10-30T19:53:27.849Z</lastmod>
+    <lastmod>2024-11-20T22:06:43.173Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/weeks/week15.html</loc>
@@ -162,18 +166,14 @@
   </url>
   <url>
     <loc>https://github.com/data-202/index.html</loc>
-    <lastmod>2024-11-06T21:00:54.895Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/data-202/resources.html</loc>
-    <lastmod>2024-10-30T19:53:27.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/data-202/data/gssr.html</loc>
-    <lastmod>2024-11-07T00:58:43.622Z</lastmod>
+    <lastmod>2024-11-20T22:08:54.611Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/data-202/data/anes.html</loc>
     <lastmod>2024-11-20T22:03:15.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/data-202/resources.html</loc>
+    <lastmod>2024-10-30T19:53:27.118Z</lastmod>
   </url>
 </urlset>
